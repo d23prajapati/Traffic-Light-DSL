@@ -20,8 +20,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Board">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="pins" upperBound="-1" eType="#//Pin"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pinGroups" upperBound="-1"
+        eType="#//PinGroup" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Component" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -54,23 +54,17 @@
         upperBound="4" eType="#//PedestrianController" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TrafficLightModule" eSuperTypes="#//Component">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="redPin" lowerBound="1"
-        eType="#//Pin"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="yellowPin" lowerBound="1"
-        eType="#//Pin"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="greenPin" lowerBound="1"
-        eType="#//Pin"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="gndPin" lowerBound="1"
-        eType="#//Pin"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pinGroups" upperBound="-1"
+        eType="#//PinGroup" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LED" eSuperTypes="#//Component">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="color" eType="#//LightColor"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="pins" lowerBound="2" upperBound="2"
-        eType="#//Pin" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pinGroups" upperBound="-1"
+        eType="#//PinGroup" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Button" eSuperTypes="#//Component">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="pins" lowerBound="2" upperBound="2"
-        eType="#//Pin" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pinGroups" upperBound="-1"
+        eType="#//PinGroup" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TrafficLight">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="direction" eType="#//Direction"/>
@@ -109,4 +103,5 @@
     <eLiterals name="YELLOW" value="1"/>
     <eLiterals name="GREEN" value="2"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PinGroup"/>
 </ecore:EPackage>
