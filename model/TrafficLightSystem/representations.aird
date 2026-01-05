@@ -1,4 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" uid="_frwjsOoUEfCYCJuytFSM3A" version="15.4.1.202403191723">
-  <semanticResources>MyFirstTrafficModel.trafficlightsystem</semanticResources>
-</viewpoint:DAnalysis>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:trafficLightSystem="http://www.example.org/trafficLightSystem" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
+  <viewpoint:DAnalysis uid="_frwjsOoUEfCYCJuytFSM3A" selectedViews="_WH5acOpZEfCDSYN1AvDxkw" version="15.4.1.202403191723">
+    <semanticResources>MyFirstTrafficModel.trafficlightsystem</semanticResources>
+    <ownedViews xmi:type="viewpoint:DView" uid="_WH5acOpZEfCDSYN1AvDxkw">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_e-PwEOpZEfCDSYN1AvDxkw" name="new SystemStructureDiagram" repPath="#_e-BGkOpZEfCDSYN1AvDxkw" changeId="1767633148690">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']"/>
+        <target xmi:type="trafficLightSystem:SystemStructure" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+  </viewpoint:DAnalysis>
+  <diagram:DSemanticDiagram uid="_e-BGkOpZEfCDSYN1AvDxkw">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_e-jSEOpZEfCDSYN1AvDxkw" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_e-jSEepZEfCDSYN1AvDxkw" type="Sirius" element="_e-BGkOpZEfCDSYN1AvDxkw" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_lH_8kOpZEfCDSYN1AvDxkw" type="2001" element="_lHyhMOpZEfCDSYN1AvDxkw">
+          <children xmi:type="notation:Node" xmi:id="_lIC_4OpZEfCDSYN1AvDxkw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_lIC_4epZEfCDSYN1AvDxkw" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_mscK0OpZEfCDSYN1AvDxkw" type="3003" element="_msGMkOpZEfCDSYN1AvDxkw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_mscK0epZEfCDSYN1AvDxkw" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mscK0upZEfCDSYN1AvDxkw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_lH_8kepZEfCDSYN1AvDxkw" fontName="Segoe UI"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lH_8kupZEfCDSYN1AvDxkw" x="135" y="175" width="110" height="85"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_e-jSEupZEfCDSYN1AvDxkw"/>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_e-oKkOpZEfCDSYN1AvDxkw" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_e-oKkepZEfCDSYN1AvDxkw"/>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_lHyhMOpZEfCDSYN1AvDxkw" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="trafficLightSystem:TrafficLightModule" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@components.0"/>
+      <semanticElements xmi:type="trafficLightSystem:TrafficLightModule" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@components.0"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_msGMkOpZEfCDSYN1AvDxkw" labelSize="12" showIcon="false" labelPosition="node" color="252,233,79">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='ComponentNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='ComponentNode']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_e-JCYOpZEfCDSYN1AvDxkw"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer"/>
+    <target xmi:type="trafficLightSystem:SystemStructure" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure"/>
+  </diagram:DSemanticDiagram>
+</xmi:XMI>
