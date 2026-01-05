@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated trafficLightSystem -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="trafficLightSystem.presentation.TrafficLightSystemModelWizardID"
+            name="%_UI_TrafficLightSystemModelWizard_label"
+            class="trafficLightSystem.presentation.TrafficLightSystemModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/TrafficLightSystemModelFile.gif">
+         <description>%_UI_TrafficLightSystemModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated trafficLightSystem -->
+      <editor
+            id="trafficLightSystem.presentation.TrafficLightSystemEditorID"
+            name="%_UI_TrafficLightSystemEditor_label"
+            icon="icons/full/obj16/TrafficLightSystemModelFile.gif"
+            extensions="trafficlightsystem"
+            class="trafficLightSystem.presentation.TrafficLightSystemEditor"
+            contributorClass="trafficLightSystem.presentation.TrafficLightSystemActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

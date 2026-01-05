@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<trafficLightSystem:TrafficLightSystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:trafficLightSystem="http://www.example.org/trafficLightSystem">
+  <systemstructure>
+    <board>
+      <pinGroups>
+        <pins/>
+        <pins pinNr="1"/>
+      </pinGroups>
+    </board>
+    <components xsi:type="trafficLightSystem:TrafficLightModule">
+      <pinGroups>
+        <pins name="RED"/>
+        <pins pinNr="1" name="YELLOW"/>
+        <pins pinNr="2" name="GREEN"/>
+        <pins pinNr="3" name="GND" type="GND"/>
+      </pinGroups>
+    </components>
+  </systemstructure>
+</trafficLightSystem:TrafficLightSystem>
