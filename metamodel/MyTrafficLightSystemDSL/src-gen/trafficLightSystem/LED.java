@@ -2,8 +2,6 @@
  */
 package trafficLightSystem;
 
-import org.eclipse.emf.common.util.EList;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>LED</b></em>'.
@@ -14,7 +12,6 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link trafficLightSystem.LED#getColor <em>Color</em>}</li>
- *   <li>{@link trafficLightSystem.LED#getPinGroups <em>Pin Groups</em>}</li>
  * </ul>
  *
  * @see trafficLightSystem.TrafficLightSystemPackage#getLED()
@@ -46,17 +43,5 @@ public interface LED extends Component {
 	 * @generated
 	 */
 	void setColor(LightColor value);
-
-	/**
-	 * Returns the value of the '<em><b>Pin Groups</b></em>' containment reference list.
-	 * The list contents are of type {@link trafficLightSystem.PinGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Pin Groups</em>' containment reference list.
-	 * @see trafficLightSystem.TrafficLightSystemPackage#getLED_PinGroups()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<PinGroup> getPinGroups();
 
 } // LED

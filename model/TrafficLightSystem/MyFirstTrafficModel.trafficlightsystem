@@ -3,11 +3,13 @@
   <systemstructure>
     <board>
       <pinGroups>
-        <pins/>
-        <pins pinNr="1"/>
+        <pins pinNr="8" name="D8"/>
+        <pins pinNr="9" name="D9"/>
+        <pins pinNr="10" name="D10"/>
+        <pins pinNr="14" name="GND" type="GND"/>
       </pinGroups>
     </board>
-    <components xsi:type="trafficLightSystem:TrafficLightModule">
+    <components xsi:type="trafficLightSystem:TrafficLightModule" name="Traffic Light">
       <pinGroups>
         <pins name="RED"/>
         <pins pinNr="1" name="YELLOW"/>
@@ -15,5 +17,9 @@
         <pins pinNr="3" name="GND" type="GND"/>
       </pinGroups>
     </components>
+    <connections src="//@systemstructure/@components.0/@pinGroups.0/@pins.3" target="//@systemstructure/@board/@pinGroups.0/@pins.3"/>
+    <connections src="//@systemstructure/@components.0/@pinGroups.0/@pins.0" target="//@systemstructure/@board/@pinGroups.0/@pins.0"/>
+    <connections src="//@systemstructure/@components.0/@pinGroups.0/@pins.1" target="//@systemstructure/@board/@pinGroups.0/@pins.1"/>
+    <connections src="//@systemstructure/@components.0/@pinGroups.0/@pins.2" target="//@systemstructure/@board/@pinGroups.0/@pins.2"/>
   </systemstructure>
 </trafficLightSystem:TrafficLightSystem>
