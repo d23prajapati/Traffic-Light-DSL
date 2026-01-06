@@ -242,22 +242,13 @@ public interface TrafficLightSystemPackage extends EPackage {
 	int COMPONENT__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Pin Groups</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPONENT__PIN_GROUPS = 1;
-
-	/**
 	 * The number of structural features of the '<em>Component</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_FEATURE_COUNT = 2;
+	int COMPONENT_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Component</em>' class.
@@ -459,7 +450,7 @@ public interface TrafficLightSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAFFIC_LIGHT_MODULE__PIN_GROUPS = COMPONENT__PIN_GROUPS;
+	int TRAFFIC_LIGHT_MODULE__PIN_GROUPS = COMPONENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Traffic Light Module</em>' class.
@@ -468,7 +459,7 @@ public interface TrafficLightSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAFFIC_LIGHT_MODULE_FEATURE_COUNT = COMPONENT_FEATURE_COUNT + 0;
+	int TRAFFIC_LIGHT_MODULE_FEATURE_COUNT = COMPONENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Traffic Light Module</em>' class.
@@ -499,15 +490,6 @@ public interface TrafficLightSystemPackage extends EPackage {
 	int LED__NAME = COMPONENT__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Pin Groups</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LED__PIN_GROUPS = COMPONENT__PIN_GROUPS;
-
-	/**
 	 * The feature id for the '<em><b>Color</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -517,13 +499,22 @@ public interface TrafficLightSystemPackage extends EPackage {
 	int LED__COLOR = COMPONENT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Pin Groups</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LED__PIN_GROUPS = COMPONENT_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>LED</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LED_FEATURE_COUNT = COMPONENT_FEATURE_COUNT + 1;
+	int LED_FEATURE_COUNT = COMPONENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>LED</em>' class.
@@ -560,7 +551,7 @@ public interface TrafficLightSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BUTTON__PIN_GROUPS = COMPONENT__PIN_GROUPS;
+	int BUTTON__PIN_GROUPS = COMPONENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Button</em>' class.
@@ -569,7 +560,7 @@ public interface TrafficLightSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BUTTON_FEATURE_COUNT = COMPONENT_FEATURE_COUNT + 0;
+	int BUTTON_FEATURE_COUNT = COMPONENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Button</em>' class.
@@ -820,13 +811,22 @@ public interface TrafficLightSystemPackage extends EPackage {
 	int PIN_GROUP__PINS = 0;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PIN_GROUP__NAME = 1;
+
+	/**
 	 * The number of structural features of the '<em>Pin Group</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PIN_GROUP_FEATURE_COUNT = 1;
+	int PIN_GROUP_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Pin Group</em>' class.
@@ -1018,17 +1018,6 @@ public interface TrafficLightSystemPackage extends EPackage {
 	EAttribute getComponent_Name();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link trafficLightSystem.Component#getPinGroups <em>Pin Groups</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Pin Groups</em>'.
-	 * @see trafficLightSystem.Component#getPinGroups()
-	 * @see #getComponent()
-	 * @generated
-	 */
-	EReference getComponent_PinGroups();
-
-	/**
 	 * Returns the meta object for class '{@link trafficLightSystem.Pin <em>Pin</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1168,6 +1157,17 @@ public interface TrafficLightSystemPackage extends EPackage {
 	EClass getTrafficLightModule();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link trafficLightSystem.TrafficLightModule#getPinGroups <em>Pin Groups</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Pin Groups</em>'.
+	 * @see trafficLightSystem.TrafficLightModule#getPinGroups()
+	 * @see #getTrafficLightModule()
+	 * @generated
+	 */
+	EReference getTrafficLightModule_PinGroups();
+
+	/**
 	 * Returns the meta object for class '{@link trafficLightSystem.LED <em>LED</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1189,6 +1189,17 @@ public interface TrafficLightSystemPackage extends EPackage {
 	EAttribute getLED_Color();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link trafficLightSystem.LED#getPinGroups <em>Pin Groups</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Pin Groups</em>'.
+	 * @see trafficLightSystem.LED#getPinGroups()
+	 * @see #getLED()
+	 * @generated
+	 */
+	EReference getLED_PinGroups();
+
+	/**
 	 * Returns the meta object for class '{@link trafficLightSystem.Button <em>Button</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1197,6 +1208,17 @@ public interface TrafficLightSystemPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getButton();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link trafficLightSystem.Button#getPinGroups <em>Pin Groups</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Pin Groups</em>'.
+	 * @see trafficLightSystem.Button#getPinGroups()
+	 * @see #getButton()
+	 * @generated
+	 */
+	EReference getButton_PinGroups();
 
 	/**
 	 * Returns the meta object for class '{@link trafficLightSystem.TrafficLight <em>Traffic Light</em>}'.
@@ -1392,6 +1414,17 @@ public interface TrafficLightSystemPackage extends EPackage {
 	EReference getPinGroup_Pins();
 
 	/**
+	 * Returns the meta object for the attribute '{@link trafficLightSystem.PinGroup#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see trafficLightSystem.PinGroup#getName()
+	 * @see #getPinGroup()
+	 * @generated
+	 */
+	EAttribute getPinGroup_Name();
+
+	/**
 	 * Returns the meta object for enum '{@link trafficLightSystem.PinType <em>Pin Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1565,14 +1598,6 @@ public interface TrafficLightSystemPackage extends EPackage {
 		EAttribute COMPONENT__NAME = eINSTANCE.getComponent_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Pin Groups</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference COMPONENT__PIN_GROUPS = eINSTANCE.getComponent_PinGroups();
-
-		/**
 		 * The meta object literal for the '{@link trafficLightSystem.impl.PinImpl <em>Pin</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1685,6 +1710,14 @@ public interface TrafficLightSystemPackage extends EPackage {
 		EClass TRAFFIC_LIGHT_MODULE = eINSTANCE.getTrafficLightModule();
 
 		/**
+		 * The meta object literal for the '<em><b>Pin Groups</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRAFFIC_LIGHT_MODULE__PIN_GROUPS = eINSTANCE.getTrafficLightModule_PinGroups();
+
+		/**
 		 * The meta object literal for the '{@link trafficLightSystem.impl.LEDImpl <em>LED</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1703,6 +1736,14 @@ public interface TrafficLightSystemPackage extends EPackage {
 		EAttribute LED__COLOR = eINSTANCE.getLED_Color();
 
 		/**
+		 * The meta object literal for the '<em><b>Pin Groups</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LED__PIN_GROUPS = eINSTANCE.getLED_PinGroups();
+
+		/**
 		 * The meta object literal for the '{@link trafficLightSystem.impl.ButtonImpl <em>Button</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1711,6 +1752,14 @@ public interface TrafficLightSystemPackage extends EPackage {
 		 * @generated
 		 */
 		EClass BUTTON = eINSTANCE.getButton();
+
+		/**
+		 * The meta object literal for the '<em><b>Pin Groups</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BUTTON__PIN_GROUPS = eINSTANCE.getButton_PinGroups();
 
 		/**
 		 * The meta object literal for the '{@link trafficLightSystem.impl.TrafficLightImpl <em>Traffic Light</em>}' class.
@@ -1865,6 +1914,14 @@ public interface TrafficLightSystemPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PIN_GROUP__PINS = eINSTANCE.getPinGroup_Pins();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PIN_GROUP__NAME = eINSTANCE.getPinGroup_Name();
 
 		/**
 		 * The meta object literal for the '{@link trafficLightSystem.PinType <em>Pin Type</em>}' enum.

@@ -2,8 +2,6 @@
  */
 package trafficLightSystem;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -16,7 +14,6 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link trafficLightSystem.Component#getName <em>Name</em>}</li>
- *   <li>{@link trafficLightSystem.Component#getPinGroups <em>Pin Groups</em>}</li>
  * </ul>
  *
  * @see trafficLightSystem.TrafficLightSystemPackage#getComponent()
@@ -45,17 +42,5 @@ public interface Component extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Pin Groups</b></em>' containment reference list.
-	 * The list contents are of type {@link trafficLightSystem.PinGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Pin Groups</em>' containment reference list.
-	 * @see trafficLightSystem.TrafficLightSystemPackage#getComponent_PinGroups()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<PinGroup> getPinGroups();
 
 } // Component

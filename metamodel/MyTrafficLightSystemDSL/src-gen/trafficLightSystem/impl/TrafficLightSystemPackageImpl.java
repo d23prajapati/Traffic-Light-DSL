@@ -379,16 +379,6 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 	 * @generated
 	 */
 	@Override
-	public EReference getComponent_PinGroups() {
-		return (EReference) componentEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getPin() {
 		return pinEClass;
 	}
@@ -519,6 +509,16 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 	 * @generated
 	 */
 	@Override
+	public EReference getTrafficLightModule_PinGroups() {
+		return (EReference) trafficLightModuleEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getLED() {
 		return ledEClass;
 	}
@@ -539,8 +539,28 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 	 * @generated
 	 */
 	@Override
+	public EReference getLED_PinGroups() {
+		return (EReference) ledEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getButton() {
 		return buttonEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getButton_PinGroups() {
+		return (EReference) buttonEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -729,6 +749,16 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 	 * @generated
 	 */
 	@Override
+	public EAttribute getPinGroup_Name() {
+		return (EAttribute) pinGroupEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EEnum getPinType() {
 		return pinTypeEEnum;
 	}
@@ -800,7 +830,6 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 
 		componentEClass = createEClass(COMPONENT);
 		createEAttribute(componentEClass, COMPONENT__NAME);
-		createEReference(componentEClass, COMPONENT__PIN_GROUPS);
 
 		pinEClass = createEClass(PIN);
 		createEAttribute(pinEClass, PIN__PIN_NR);
@@ -818,11 +847,14 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 		createEReference(trafficControllerEClass, TRAFFIC_CONTROLLER__PEDESTRIAN_CONTROLLERS);
 
 		trafficLightModuleEClass = createEClass(TRAFFIC_LIGHT_MODULE);
+		createEReference(trafficLightModuleEClass, TRAFFIC_LIGHT_MODULE__PIN_GROUPS);
 
 		ledEClass = createEClass(LED);
 		createEAttribute(ledEClass, LED__COLOR);
+		createEReference(ledEClass, LED__PIN_GROUPS);
 
 		buttonEClass = createEClass(BUTTON);
+		createEReference(buttonEClass, BUTTON__PIN_GROUPS);
 
 		trafficLightEClass = createEClass(TRAFFIC_LIGHT);
 		createEAttribute(trafficLightEClass, TRAFFIC_LIGHT__DIRECTION);
@@ -846,6 +878,7 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 
 		pinGroupEClass = createEClass(PIN_GROUP);
 		createEReference(pinGroupEClass, PIN_GROUP__PINS);
+		createEAttribute(pinGroupEClass, PIN_GROUP__NAME);
 
 		// Create enums
 		pinTypeEEnum = createEEnum(PIN_TYPE);
@@ -928,9 +961,6 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getComponent_Name(), ecorePackage.getEString(), "name", null, 0, 1, Component.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getComponent_PinGroups(), this.getPinGroup(), null, "pinGroups", null, 0, -1, Component.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(pinEClass, Pin.class, "Pin", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPin_PinNr(), ecorePackage.getEInt(), "pinNr", null, 0, 1, Pin.class, !IS_TRANSIENT,
@@ -966,13 +996,22 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 
 		initEClass(trafficLightModuleEClass, TrafficLightModule.class, "TrafficLightModule", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTrafficLightModule_PinGroups(), this.getPinGroup(), null, "pinGroups", null, 0, -1,
+				TrafficLightModule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(ledEClass, trafficLightSystem.LED.class, "LED", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLED_Color(), this.getLightColor(), "color", null, 0, 1, trafficLightSystem.LED.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLED_PinGroups(), this.getPinGroup(), null, "pinGroups", null, 0, -1,
+				trafficLightSystem.LED.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(buttonEClass, Button.class, "Button", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getButton_PinGroups(), this.getPinGroup(), null, "pinGroups", null, 0, -1, Button.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(trafficLightEClass, TrafficLight.class, "TrafficLight", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1024,6 +1063,8 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 		initEReference(getPinGroup_Pins(), this.getPin(), null, "pins", null, 0, -1, PinGroup.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
+		initEAttribute(getPinGroup_Name(), ecorePackage.getEString(), "name", null, 0, 1, PinGroup.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(pinTypeEEnum, PinType.class, "PinType");
