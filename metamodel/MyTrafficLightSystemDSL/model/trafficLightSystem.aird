@@ -5,7 +5,7 @@
     <semanticResources>trafficLightSystem.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_tjeIQOiREfCbk8pinDXzQA">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_tnrS0OiREfCbk8pinDXzQA" name="trafficLightSystem" repPath="#_tmHMkOiREfCbk8pinDXzQA" changeId="1767719836654">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_tnrS0OiREfCbk8pinDXzQA" name="trafficLightSystem" repPath="#_tmHMkOiREfCbk8pinDXzQA" changeId="1767734994062">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="trafficLightSystem.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -678,14 +678,14 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fUZXdesjEfCJ6aMXRaiJVw" y="-10"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_fUZXdusjEfCJ6aMXRaiJVw" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fUZXd-sjEfCJ6aMXRaiJVw" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fUZXd-sjEfCJ6aMXRaiJVw" x="55" y="10"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_fUZXeOsjEfCJ6aMXRaiJVw" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fUZXeesjEfCJ6aMXRaiJVw" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fUZXeesjEfCJ6aMXRaiJVw" x="-67" y="10"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_fUZXcesjEfCJ6aMXRaiJVw" routing="Rectilinear"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_fUZXcusjEfCJ6aMXRaiJVw" fontColor="7490599" fontName="Segoe UI" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_fUZXc-sjEfCJ6aMXRaiJVw" points="[0, 0, -247, 0]$[247, 0, 0, 0]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_fUZXc-sjEfCJ6aMXRaiJVw" points="[-58, 11, -305, 11]$[-58, 33, -305, 33]$[307, 33, 60, 33]$[307, 1, 60, 1]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_fUZXeusjEfCJ6aMXRaiJVw" id="(1.0,0.8877551020408163)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_fUZXe-sjEfCJ6aMXRaiJVw" id="(0.0,0.9897959183673469)"/>
         </edges>
