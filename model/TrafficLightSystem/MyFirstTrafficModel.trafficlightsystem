@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<trafficLightSystem:TrafficLightSystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:trafficLightSystem="http://www.example.org/trafficLightSystem" name="">
+<trafficLightSystem:TrafficLightSystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:trafficLightSystem="http://www.example.org/trafficLightSystem" name="TrafficLightSystem">
   <systemstructure name="new Component">
     <board name="ArduinoUNO">
       <pinGroups>
@@ -23,6 +23,6 @@
     <connections src="//@systemstructure/@components.0/@pinGroups.0/@pins.2" target="//@systemstructure/@board/@pinGroups.0/@pins.2"/>
   </systemstructure>
   <systemBehaviors name="name">
-    <behaviors xsi:type="trafficLightSystem:OpaqueBehavior" name="Test"/>
+    <behaviors xsi:type="trafficLightSystem:OpaqueBehavior" name="Test" commandLine="Serial.println(&quot;Hello World&quot;);" isMain="true"/>
   </systemBehaviors>
 </trafficLightSystem:TrafficLightSystem>
