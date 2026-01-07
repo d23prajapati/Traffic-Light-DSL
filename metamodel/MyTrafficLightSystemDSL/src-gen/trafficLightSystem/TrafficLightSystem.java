@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link trafficLightSystem.TrafficLightSystem#getName <em>Name</em>}</li>
  *   <li>{@link trafficLightSystem.TrafficLightSystem#getSystemstructure <em>Systemstructure</em>}</li>
- *   <li>{@link trafficLightSystem.TrafficLightSystem#getTrafficControllers <em>Traffic Controllers</em>}</li>
+ *   <li>{@link trafficLightSystem.TrafficLightSystem#getSystemBehaviors <em>System Behaviors</em>}</li>
  * </ul>
  *
  * @see trafficLightSystem.TrafficLightSystemPackage#getTrafficLightSystem()
@@ -70,15 +70,15 @@ public interface TrafficLightSystem extends EObject {
 	void setSystemstructure(SystemStructure value);
 
 	/**
-	 * Returns the value of the '<em><b>Traffic Controllers</b></em>' containment reference list.
-	 * The list contents are of type {@link trafficLightSystem.TrafficController}.
+	 * Returns the value of the '<em><b>System Behaviors</b></em>' containment reference list.
+	 * The list contents are of type {@link trafficLightSystem.SystemBehavior}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Traffic Controllers</em>' containment reference list.
-	 * @see trafficLightSystem.TrafficLightSystemPackage#getTrafficLightSystem_TrafficControllers()
+	 * @return the value of the '<em>System Behaviors</em>' containment reference list.
+	 * @see trafficLightSystem.TrafficLightSystemPackage#getTrafficLightSystem_SystemBehaviors()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<TrafficController> getTrafficControllers();
+	EList<SystemBehavior> getSystemBehaviors();
 
 } // TrafficLightSystem

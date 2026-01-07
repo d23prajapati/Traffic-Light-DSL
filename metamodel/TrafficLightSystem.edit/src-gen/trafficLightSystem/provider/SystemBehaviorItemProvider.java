@@ -12,26 +12,28 @@ import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import trafficLightSystem.TrafficCycle;
+import trafficLightSystem.SystemBehavior;
 import trafficLightSystem.TrafficLightSystemFactory;
 import trafficLightSystem.TrafficLightSystemPackage;
 
 /**
- * This is the item provider adapter for a {@link trafficLightSystem.TrafficCycle} object.
+ * This is the item provider adapter for a {@link trafficLightSystem.SystemBehavior} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class TrafficCycleItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
+public class SystemBehaviorItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
 		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
@@ -39,7 +41,7 @@ public class TrafficCycleItemProvider extends ItemProviderAdapter implements IEd
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TrafficCycleItemProvider(AdapterFactory adapterFactory) {
+	public SystemBehaviorItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -54,8 +56,25 @@ public class TrafficCycleItemProvider extends ItemProviderAdapter implements IEd
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_SystemBehavior_name_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_SystemBehavior_name_feature",
+								"_UI_SystemBehavior_type"),
+						TrafficLightSystemPackage.Literals.SYSTEM_BEHAVIOR__NAME, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -70,7 +89,7 @@ public class TrafficCycleItemProvider extends ItemProviderAdapter implements IEd
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(TrafficLightSystemPackage.Literals.TRAFFIC_CYCLE__TRAFFICSTATE);
+			childrenFeatures.add(TrafficLightSystemPackage.Literals.SYSTEM_BEHAVIOR__BEHAVIORS);
 		}
 		return childrenFeatures;
 	}
@@ -89,14 +108,14 @@ public class TrafficCycleItemProvider extends ItemProviderAdapter implements IEd
 	}
 
 	/**
-	 * This returns TrafficCycle.gif.
+	 * This returns SystemBehavior.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/TrafficCycle"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/SystemBehavior"));
 	}
 
 	/**
@@ -117,7 +136,9 @@ public class TrafficCycleItemProvider extends ItemProviderAdapter implements IEd
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_TrafficCycle_type");
+		String label = ((SystemBehavior) object).getName();
+		return label == null || label.length() == 0 ? getString("_UI_SystemBehavior_type")
+				: getString("_UI_SystemBehavior_type") + " " + label;
 	}
 
 	/**
@@ -131,8 +152,11 @@ public class TrafficCycleItemProvider extends ItemProviderAdapter implements IEd
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(TrafficCycle.class)) {
-		case TrafficLightSystemPackage.TRAFFIC_CYCLE__TRAFFICSTATE:
+		switch (notification.getFeatureID(SystemBehavior.class)) {
+		case TrafficLightSystemPackage.SYSTEM_BEHAVIOR__NAME:
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+			return;
+		case TrafficLightSystemPackage.SYSTEM_BEHAVIOR__BEHAVIORS:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -150,8 +174,8 @@ public class TrafficCycleItemProvider extends ItemProviderAdapter implements IEd
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(TrafficLightSystemPackage.Literals.TRAFFIC_CYCLE__TRAFFICSTATE,
-				TrafficLightSystemFactory.eINSTANCE.createTrafficState()));
+		newChildDescriptors.add(createChildParameter(TrafficLightSystemPackage.Literals.SYSTEM_BEHAVIOR__BEHAVIORS,
+				TrafficLightSystemFactory.eINSTANCE.createOpaqueBehavior()));
 	}
 
 	/**

@@ -90,7 +90,7 @@ public class TrafficLightSystemItemProvider extends ItemProviderAdapter implemen
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(TrafficLightSystemPackage.Literals.TRAFFIC_LIGHT_SYSTEM__SYSTEMSTRUCTURE);
-			childrenFeatures.add(TrafficLightSystemPackage.Literals.TRAFFIC_LIGHT_SYSTEM__TRAFFIC_CONTROLLERS);
+			childrenFeatures.add(TrafficLightSystemPackage.Literals.TRAFFIC_LIGHT_SYSTEM__SYSTEM_BEHAVIORS);
 		}
 		return childrenFeatures;
 	}
@@ -158,7 +158,7 @@ public class TrafficLightSystemItemProvider extends ItemProviderAdapter implemen
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		case TrafficLightSystemPackage.TRAFFIC_LIGHT_SYSTEM__SYSTEMSTRUCTURE:
-		case TrafficLightSystemPackage.TRAFFIC_LIGHT_SYSTEM__TRAFFIC_CONTROLLERS:
+		case TrafficLightSystemPackage.TRAFFIC_LIGHT_SYSTEM__SYSTEM_BEHAVIORS:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -181,8 +181,8 @@ public class TrafficLightSystemItemProvider extends ItemProviderAdapter implemen
 						TrafficLightSystemFactory.eINSTANCE.createSystemStructure()));
 
 		newChildDescriptors
-				.add(createChildParameter(TrafficLightSystemPackage.Literals.TRAFFIC_LIGHT_SYSTEM__TRAFFIC_CONTROLLERS,
-						TrafficLightSystemFactory.eINSTANCE.createTrafficController()));
+				.add(createChildParameter(TrafficLightSystemPackage.Literals.TRAFFIC_LIGHT_SYSTEM__SYSTEM_BEHAVIORS,
+						TrafficLightSystemFactory.eINSTANCE.createSystemBehavior()));
 	}
 
 	/**

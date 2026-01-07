@@ -188,29 +188,6 @@ public class TrafficLightSystemItemProviderAdapterFactory extends TrafficLightSy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link trafficLightSystem.TrafficController} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected TrafficControllerItemProvider trafficControllerItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link trafficLightSystem.TrafficController}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createTrafficControllerAdapter() {
-		if (trafficControllerItemProvider == null) {
-			trafficControllerItemProvider = new TrafficControllerItemProvider(this);
-		}
-
-		return trafficControllerItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link trafficLightSystem.TrafficLightModule} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -280,98 +257,6 @@ public class TrafficLightSystemItemProviderAdapterFactory extends TrafficLightSy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link trafficLightSystem.TrafficLight} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected TrafficLightItemProvider trafficLightItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link trafficLightSystem.TrafficLight}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createTrafficLightAdapter() {
-		if (trafficLightItemProvider == null) {
-			trafficLightItemProvider = new TrafficLightItemProvider(this);
-		}
-
-		return trafficLightItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link trafficLightSystem.TrafficCycle} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected TrafficCycleItemProvider trafficCycleItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link trafficLightSystem.TrafficCycle}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createTrafficCycleAdapter() {
-		if (trafficCycleItemProvider == null) {
-			trafficCycleItemProvider = new TrafficCycleItemProvider(this);
-		}
-
-		return trafficCycleItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link trafficLightSystem.PedestrianController} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected PedestrianControllerItemProvider pedestrianControllerItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link trafficLightSystem.PedestrianController}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createPedestrianControllerAdapter() {
-		if (pedestrianControllerItemProvider == null) {
-			pedestrianControllerItemProvider = new PedestrianControllerItemProvider(this);
-		}
-
-		return pedestrianControllerItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link trafficLightSystem.TrafficState} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected TrafficStateItemProvider trafficStateItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link trafficLightSystem.TrafficState}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createTrafficStateAdapter() {
-		if (trafficStateItemProvider == null) {
-			trafficStateItemProvider = new TrafficStateItemProvider(this);
-		}
-
-		return trafficStateItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link trafficLightSystem.PinGroup} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -392,6 +277,52 @@ public class TrafficLightSystemItemProviderAdapterFactory extends TrafficLightSy
 		}
 
 		return pinGroupItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link trafficLightSystem.SystemBehavior} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SystemBehaviorItemProvider systemBehaviorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link trafficLightSystem.SystemBehavior}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSystemBehaviorAdapter() {
+		if (systemBehaviorItemProvider == null) {
+			systemBehaviorItemProvider = new SystemBehaviorItemProvider(this);
+		}
+
+		return systemBehaviorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link trafficLightSystem.OpaqueBehavior} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected OpaqueBehaviorItemProvider opaqueBehaviorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link trafficLightSystem.OpaqueBehavior}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createOpaqueBehaviorAdapter() {
+		if (opaqueBehaviorItemProvider == null) {
+			opaqueBehaviorItemProvider = new OpaqueBehaviorItemProvider(this);
+		}
+
+		return opaqueBehaviorItemProvider;
 	}
 
 	/**
@@ -509,24 +440,18 @@ public class TrafficLightSystemItemProviderAdapterFactory extends TrafficLightSy
 			pinItemProvider.dispose();
 		if (connectionItemProvider != null)
 			connectionItemProvider.dispose();
-		if (trafficControllerItemProvider != null)
-			trafficControllerItemProvider.dispose();
 		if (trafficLightModuleItemProvider != null)
 			trafficLightModuleItemProvider.dispose();
 		if (ledItemProvider != null)
 			ledItemProvider.dispose();
 		if (buttonItemProvider != null)
 			buttonItemProvider.dispose();
-		if (trafficLightItemProvider != null)
-			trafficLightItemProvider.dispose();
-		if (trafficCycleItemProvider != null)
-			trafficCycleItemProvider.dispose();
-		if (pedestrianControllerItemProvider != null)
-			pedestrianControllerItemProvider.dispose();
-		if (trafficStateItemProvider != null)
-			trafficStateItemProvider.dispose();
 		if (pinGroupItemProvider != null)
 			pinGroupItemProvider.dispose();
+		if (systemBehaviorItemProvider != null)
+			systemBehaviorItemProvider.dispose();
+		if (opaqueBehaviorItemProvider != null)
+			opaqueBehaviorItemProvider.dispose();
 	}
 
 }

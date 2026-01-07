@@ -67,15 +67,6 @@ public interface TrafficLightSystemFactory extends EFactory {
 	Connection createConnection();
 
 	/**
-	 * Returns a new object of class '<em>Traffic Controller</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Traffic Controller</em>'.
-	 * @generated
-	 */
-	TrafficController createTrafficController();
-
-	/**
 	 * Returns a new object of class '<em>Traffic Light Module</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -103,42 +94,6 @@ public interface TrafficLightSystemFactory extends EFactory {
 	Button createButton();
 
 	/**
-	 * Returns a new object of class '<em>Traffic Light</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Traffic Light</em>'.
-	 * @generated
-	 */
-	TrafficLight createTrafficLight();
-
-	/**
-	 * Returns a new object of class '<em>Traffic Cycle</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Traffic Cycle</em>'.
-	 * @generated
-	 */
-	TrafficCycle createTrafficCycle();
-
-	/**
-	 * Returns a new object of class '<em>Pedestrian Controller</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Pedestrian Controller</em>'.
-	 * @generated
-	 */
-	PedestrianController createPedestrianController();
-
-	/**
-	 * Returns a new object of class '<em>Traffic State</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Traffic State</em>'.
-	 * @generated
-	 */
-	TrafficState createTrafficState();
-
-	/**
 	 * Returns a new object of class '<em>Pin Group</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -146,6 +101,24 @@ public interface TrafficLightSystemFactory extends EFactory {
 	 * @generated
 	 */
 	PinGroup createPinGroup();
+
+	/**
+	 * Returns a new object of class '<em>System Behavior</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>System Behavior</em>'.
+	 * @generated
+	 */
+	SystemBehavior createSystemBehavior();
+
+	/**
+	 * Returns a new object of class '<em>Opaque Behavior</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Opaque Behavior</em>'.
+	 * @generated
+	 */
+	OpaqueBehavior createOpaqueBehavior();
 
 	/**
 	 * Returns the package supported by this factory.

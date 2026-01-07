@@ -18,8 +18,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import trafficLightSystem.SystemBehavior;
 import trafficLightSystem.SystemStructure;
-import trafficLightSystem.TrafficController;
 import trafficLightSystem.TrafficLightSystem;
 import trafficLightSystem.TrafficLightSystemPackage;
 
@@ -33,7 +33,7 @@ import trafficLightSystem.TrafficLightSystemPackage;
  * <ul>
  *   <li>{@link trafficLightSystem.impl.TrafficLightSystemImpl#getName <em>Name</em>}</li>
  *   <li>{@link trafficLightSystem.impl.TrafficLightSystemImpl#getSystemstructure <em>Systemstructure</em>}</li>
- *   <li>{@link trafficLightSystem.impl.TrafficLightSystemImpl#getTrafficControllers <em>Traffic Controllers</em>}</li>
+ *   <li>{@link trafficLightSystem.impl.TrafficLightSystemImpl#getSystemBehaviors <em>System Behaviors</em>}</li>
  * </ul>
  *
  * @generated
@@ -70,14 +70,14 @@ public class TrafficLightSystemImpl extends MinimalEObjectImpl.Container impleme
 	protected SystemStructure systemstructure;
 
 	/**
-	 * The cached value of the '{@link #getTrafficControllers() <em>Traffic Controllers</em>}' containment reference list.
+	 * The cached value of the '{@link #getSystemBehaviors() <em>System Behaviors</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTrafficControllers()
+	 * @see #getSystemBehaviors()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<TrafficController> trafficControllers;
+	protected EList<SystemBehavior> systemBehaviors;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -184,12 +184,12 @@ public class TrafficLightSystemImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 */
 	@Override
-	public EList<TrafficController> getTrafficControllers() {
-		if (trafficControllers == null) {
-			trafficControllers = new EObjectContainmentEList<TrafficController>(TrafficController.class, this,
-					TrafficLightSystemPackage.TRAFFIC_LIGHT_SYSTEM__TRAFFIC_CONTROLLERS);
+	public EList<SystemBehavior> getSystemBehaviors() {
+		if (systemBehaviors == null) {
+			systemBehaviors = new EObjectContainmentEList<SystemBehavior>(SystemBehavior.class, this,
+					TrafficLightSystemPackage.TRAFFIC_LIGHT_SYSTEM__SYSTEM_BEHAVIORS);
 		}
-		return trafficControllers;
+		return systemBehaviors;
 	}
 
 	/**
@@ -202,8 +202,8 @@ public class TrafficLightSystemImpl extends MinimalEObjectImpl.Container impleme
 		switch (featureID) {
 		case TrafficLightSystemPackage.TRAFFIC_LIGHT_SYSTEM__SYSTEMSTRUCTURE:
 			return basicSetSystemstructure(null, msgs);
-		case TrafficLightSystemPackage.TRAFFIC_LIGHT_SYSTEM__TRAFFIC_CONTROLLERS:
-			return ((InternalEList<?>) getTrafficControllers()).basicRemove(otherEnd, msgs);
+		case TrafficLightSystemPackage.TRAFFIC_LIGHT_SYSTEM__SYSTEM_BEHAVIORS:
+			return ((InternalEList<?>) getSystemBehaviors()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -220,8 +220,8 @@ public class TrafficLightSystemImpl extends MinimalEObjectImpl.Container impleme
 			return getName();
 		case TrafficLightSystemPackage.TRAFFIC_LIGHT_SYSTEM__SYSTEMSTRUCTURE:
 			return getSystemstructure();
-		case TrafficLightSystemPackage.TRAFFIC_LIGHT_SYSTEM__TRAFFIC_CONTROLLERS:
-			return getTrafficControllers();
+		case TrafficLightSystemPackage.TRAFFIC_LIGHT_SYSTEM__SYSTEM_BEHAVIORS:
+			return getSystemBehaviors();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -241,9 +241,9 @@ public class TrafficLightSystemImpl extends MinimalEObjectImpl.Container impleme
 		case TrafficLightSystemPackage.TRAFFIC_LIGHT_SYSTEM__SYSTEMSTRUCTURE:
 			setSystemstructure((SystemStructure) newValue);
 			return;
-		case TrafficLightSystemPackage.TRAFFIC_LIGHT_SYSTEM__TRAFFIC_CONTROLLERS:
-			getTrafficControllers().clear();
-			getTrafficControllers().addAll((Collection<? extends TrafficController>) newValue);
+		case TrafficLightSystemPackage.TRAFFIC_LIGHT_SYSTEM__SYSTEM_BEHAVIORS:
+			getSystemBehaviors().clear();
+			getSystemBehaviors().addAll((Collection<? extends SystemBehavior>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -263,8 +263,8 @@ public class TrafficLightSystemImpl extends MinimalEObjectImpl.Container impleme
 		case TrafficLightSystemPackage.TRAFFIC_LIGHT_SYSTEM__SYSTEMSTRUCTURE:
 			setSystemstructure((SystemStructure) null);
 			return;
-		case TrafficLightSystemPackage.TRAFFIC_LIGHT_SYSTEM__TRAFFIC_CONTROLLERS:
-			getTrafficControllers().clear();
+		case TrafficLightSystemPackage.TRAFFIC_LIGHT_SYSTEM__SYSTEM_BEHAVIORS:
+			getSystemBehaviors().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -282,8 +282,8 @@ public class TrafficLightSystemImpl extends MinimalEObjectImpl.Container impleme
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		case TrafficLightSystemPackage.TRAFFIC_LIGHT_SYSTEM__SYSTEMSTRUCTURE:
 			return systemstructure != null;
-		case TrafficLightSystemPackage.TRAFFIC_LIGHT_SYSTEM__TRAFFIC_CONTROLLERS:
-			return trafficControllers != null && !trafficControllers.isEmpty();
+		case TrafficLightSystemPackage.TRAFFIC_LIGHT_SYSTEM__SYSTEM_BEHAVIORS:
+			return systemBehaviors != null && !systemBehaviors.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

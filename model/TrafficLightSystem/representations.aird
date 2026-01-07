@@ -4,9 +4,13 @@
     <semanticResources>MyFirstTrafficModel.trafficlightsystem</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_WH5acOpZEfCDSYN1AvDxkw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_e-PwEOpZEfCDSYN1AvDxkw" name="new SystemStructureDiagram" repPath="#_e-BGkOpZEfCDSYN1AvDxkw" changeId="1767780641194">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_e-PwEOpZEfCDSYN1AvDxkw" name="new SystemStructureDiagram" repPath="#_e-BGkOpZEfCDSYN1AvDxkw" changeId="1767786453997">
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']"/>
         <target xmi:type="trafficLightSystem:SystemStructure" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure"/>
+      </ownedRepresentationDescriptors>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_ZtXSsOvBEfC-Orl9FF90JA" name="new BehaviorDiagram" repPath="#_ZtWEkOvBEfC-Orl9FF90JA" changeId="1767795091699">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='BehaviorDiagram']"/>
+        <target xmi:type="trafficLightSystem:SystemBehavior" href="MyFirstTrafficModel.trafficlightsystem#//@systemBehaviors.0"/>
       </ownedRepresentationDescriptors>
     </ownedViews>
   </viewpoint:DAnalysis>
@@ -353,5 +357,38 @@
     <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_e-JCYOpZEfCDSYN1AvDxkw"/>
     <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer"/>
     <target xmi:type="trafficLightSystem:SystemStructure" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure"/>
+  </diagram:DSemanticDiagram>
+  <diagram:DSemanticDiagram uid="_ZtWEkOvBEfC-Orl9FF90JA">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_ZtgcoOvBEfC-Orl9FF90JA" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_ZtgcoevBEfC-Orl9FF90JA" type="Sirius" element="_ZtWEkOvBEfC-Orl9FF90JA" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_MEE9EOvCEfC-Orl9FF90JA" type="2001" element="_MEDu8OvCEfC-Orl9FF90JA">
+          <children xmi:type="notation:Node" xmi:id="_MEGLMOvCEfC-Orl9FF90JA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_MEGLMevCEfC-Orl9FF90JA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_MEGLMuvCEfC-Orl9FF90JA" type="3016" element="_MEDu8evCEfC-Orl9FF90JA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_MEGLM-vCEfC-Orl9FF90JA" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MEGLNOvCEfC-Orl9FF90JA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_MEFkIOvCEfC-Orl9FF90JA" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MEFkIevCEfC-Orl9FF90JA" x="90" y="5" width="186" height="136"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_ZtgcouvBEfC-Orl9FF90JA"/>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_ZtkHAOvBEfC-Orl9FF90JA" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_ZtkHAevBEfC-Orl9FF90JA"/>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_MEDu8OvCEfC-Orl9FF90JA" name="Test" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="trafficLightSystem:OpaqueBehavior" href="MyFirstTrafficModel.trafficlightsystem#//@systemBehaviors.0/@behaviors.0"/>
+      <semanticElements xmi:type="trafficLightSystem:OpaqueBehavior" href="MyFirstTrafficModel.trafficlightsystem#//@systemBehaviors.0/@behaviors.0"/>
+      <ownedStyle xmi:type="diagram:Ellipse" uid="_MEDu8evCEfC-Orl9FF90JA" labelSize="12" labelPosition="node" color="252,233,79">
+        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='BehaviorDiagram']/@defaultLayer/@nodeMappings[name='BehaviorNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='BehaviorDiagram']/@defaultLayer/@nodeMappings[name='BehaviorNode']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='BehaviorDiagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_ZtWroOvBEfC-Orl9FF90JA"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='BehaviorDiagram']/@defaultLayer"/>
+    <target xmi:type="trafficLightSystem:SystemBehavior" href="MyFirstTrafficModel.trafficlightsystem#//@systemBehaviors.0"/>
   </diagram:DSemanticDiagram>
 </xmi:XMI>

@@ -67,24 +67,18 @@ public class TrafficLightSystemFactoryImpl extends EFactoryImpl implements Traff
 			return createPin();
 		case TrafficLightSystemPackage.CONNECTION:
 			return createConnection();
-		case TrafficLightSystemPackage.TRAFFIC_CONTROLLER:
-			return createTrafficController();
 		case TrafficLightSystemPackage.TRAFFIC_LIGHT_MODULE:
 			return createTrafficLightModule();
 		case TrafficLightSystemPackage.LED:
 			return createLED();
 		case TrafficLightSystemPackage.BUTTON:
 			return createButton();
-		case TrafficLightSystemPackage.TRAFFIC_LIGHT:
-			return createTrafficLight();
-		case TrafficLightSystemPackage.TRAFFIC_CYCLE:
-			return createTrafficCycle();
-		case TrafficLightSystemPackage.PEDESTRIAN_CONTROLLER:
-			return createPedestrianController();
-		case TrafficLightSystemPackage.TRAFFIC_STATE:
-			return createTrafficState();
 		case TrafficLightSystemPackage.PIN_GROUP:
 			return createPinGroup();
+		case TrafficLightSystemPackage.SYSTEM_BEHAVIOR:
+			return createSystemBehavior();
+		case TrafficLightSystemPackage.OPAQUE_BEHAVIOR:
+			return createOpaqueBehavior();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -189,17 +183,6 @@ public class TrafficLightSystemFactoryImpl extends EFactoryImpl implements Traff
 	 * @generated
 	 */
 	@Override
-	public TrafficController createTrafficController() {
-		TrafficControllerImpl trafficController = new TrafficControllerImpl();
-		return trafficController;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public TrafficLightModule createTrafficLightModule() {
 		TrafficLightModuleImpl trafficLightModule = new TrafficLightModuleImpl();
 		return trafficLightModule;
@@ -233,53 +216,31 @@ public class TrafficLightSystemFactoryImpl extends EFactoryImpl implements Traff
 	 * @generated
 	 */
 	@Override
-	public TrafficLight createTrafficLight() {
-		TrafficLightImpl trafficLight = new TrafficLightImpl();
-		return trafficLight;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public TrafficCycle createTrafficCycle() {
-		TrafficCycleImpl trafficCycle = new TrafficCycleImpl();
-		return trafficCycle;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public PedestrianController createPedestrianController() {
-		PedestrianControllerImpl pedestrianController = new PedestrianControllerImpl();
-		return pedestrianController;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public TrafficState createTrafficState() {
-		TrafficStateImpl trafficState = new TrafficStateImpl();
-		return trafficState;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public PinGroup createPinGroup() {
 		PinGroupImpl pinGroup = new PinGroupImpl();
 		return pinGroup;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public SystemBehavior createSystemBehavior() {
+		SystemBehaviorImpl systemBehavior = new SystemBehaviorImpl();
+		return systemBehavior;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public OpaqueBehavior createOpaqueBehavior() {
+		OpaqueBehaviorImpl opaqueBehavior = new OpaqueBehaviorImpl();
+		return opaqueBehavior;
 	}
 
 	/**

@@ -10,8 +10,6 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
-import org.eclipse.emf.ecore.EStructuralFeature;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -23,17 +21,16 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import trafficLightSystem.TrafficController;
-import trafficLightSystem.TrafficLightSystemFactory;
+import trafficLightSystem.Behavior;
 import trafficLightSystem.TrafficLightSystemPackage;
 
 /**
- * This is the item provider adapter for a {@link trafficLightSystem.TrafficController} object.
+ * This is the item provider adapter for a {@link trafficLightSystem.Behavior} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class TrafficControllerItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
+public class BehaviorItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
 		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
@@ -41,7 +38,7 @@ public class TrafficControllerItemProvider extends ItemProviderAdapter implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TrafficControllerItemProvider(AdapterFactory adapterFactory) {
+	public BehaviorItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -68,56 +65,24 @@ public class TrafficControllerItemProvider extends ItemProviderAdapter implement
 	 * @generated
 	 */
 	protected void addNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_TrafficController_name_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_TrafficController_name_feature",
-						"_UI_TrafficController_type"),
-				TrafficLightSystemPackage.Literals.TRAFFIC_CONTROLLER__NAME, true, false, false,
-				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Behavior_name_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Behavior_name_feature",
+								"_UI_Behavior_type"),
+						TrafficLightSystemPackage.Literals.BEHAVIOR__NAME, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
-	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-		if (childrenFeatures == null) {
-			super.getChildrenFeatures(object);
-			childrenFeatures.add(TrafficLightSystemPackage.Literals.TRAFFIC_CONTROLLER__TRAFFIC_LIGHTS);
-			childrenFeatures.add(TrafficLightSystemPackage.Literals.TRAFFIC_CONTROLLER__CYCLE);
-			childrenFeatures.add(TrafficLightSystemPackage.Literals.TRAFFIC_CONTROLLER__PEDESTRIAN_CONTROLLERS);
-		}
-		return childrenFeatures;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EStructuralFeature getChildFeature(Object object, Object child) {
-		// Check the type of the specified child object and return the proper feature to use for
-		// adding (see {@link AddCommand}) it as a child.
-
-		return super.getChildFeature(object, child);
-	}
-
-	/**
-	 * This returns TrafficController.gif.
+	 * This returns Behavior.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/TrafficController"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Behavior"));
 	}
 
 	/**
@@ -138,9 +103,9 @@ public class TrafficControllerItemProvider extends ItemProviderAdapter implement
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((TrafficController) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_TrafficController_type")
-				: getString("_UI_TrafficController_type") + " " + label;
+		String label = ((Behavior) object).getName();
+		return label == null || label.length() == 0 ? getString("_UI_Behavior_type")
+				: getString("_UI_Behavior_type") + " " + label;
 	}
 
 	/**
@@ -154,14 +119,9 @@ public class TrafficControllerItemProvider extends ItemProviderAdapter implement
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(TrafficController.class)) {
-		case TrafficLightSystemPackage.TRAFFIC_CONTROLLER__NAME:
+		switch (notification.getFeatureID(Behavior.class)) {
+		case TrafficLightSystemPackage.BEHAVIOR__NAME:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-			return;
-		case TrafficLightSystemPackage.TRAFFIC_CONTROLLER__TRAFFIC_LIGHTS:
-		case TrafficLightSystemPackage.TRAFFIC_CONTROLLER__CYCLE:
-		case TrafficLightSystemPackage.TRAFFIC_CONTROLLER__PEDESTRIAN_CONTROLLERS:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -177,17 +137,6 @@ public class TrafficControllerItemProvider extends ItemProviderAdapter implement
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors
-				.add(createChildParameter(TrafficLightSystemPackage.Literals.TRAFFIC_CONTROLLER__TRAFFIC_LIGHTS,
-						TrafficLightSystemFactory.eINSTANCE.createTrafficLight()));
-
-		newChildDescriptors.add(createChildParameter(TrafficLightSystemPackage.Literals.TRAFFIC_CONTROLLER__CYCLE,
-				TrafficLightSystemFactory.eINSTANCE.createTrafficCycle()));
-
-		newChildDescriptors
-				.add(createChildParameter(TrafficLightSystemPackage.Literals.TRAFFIC_CONTROLLER__PEDESTRIAN_CONTROLLERS,
-						TrafficLightSystemFactory.eINSTANCE.createPedestrianController()));
 	}
 
 	/**

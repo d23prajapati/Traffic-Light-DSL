@@ -108,13 +108,6 @@ public class TrafficLightSystemSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case TrafficLightSystemPackage.TRAFFIC_CONTROLLER: {
-			TrafficController trafficController = (TrafficController) theEObject;
-			T result = caseTrafficController(trafficController);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case TrafficLightSystemPackage.TRAFFIC_LIGHT_MODULE: {
 			TrafficLightModule trafficLightModule = (TrafficLightModule) theEObject;
 			T result = caseTrafficLightModule(trafficLightModule);
@@ -142,37 +135,32 @@ public class TrafficLightSystemSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case TrafficLightSystemPackage.TRAFFIC_LIGHT: {
-			TrafficLight trafficLight = (TrafficLight) theEObject;
-			T result = caseTrafficLight(trafficLight);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case TrafficLightSystemPackage.TRAFFIC_CYCLE: {
-			TrafficCycle trafficCycle = (TrafficCycle) theEObject;
-			T result = caseTrafficCycle(trafficCycle);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case TrafficLightSystemPackage.PEDESTRIAN_CONTROLLER: {
-			PedestrianController pedestrianController = (PedestrianController) theEObject;
-			T result = casePedestrianController(pedestrianController);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case TrafficLightSystemPackage.TRAFFIC_STATE: {
-			TrafficState trafficState = (TrafficState) theEObject;
-			T result = caseTrafficState(trafficState);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case TrafficLightSystemPackage.PIN_GROUP: {
 			PinGroup pinGroup = (PinGroup) theEObject;
 			T result = casePinGroup(pinGroup);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case TrafficLightSystemPackage.SYSTEM_BEHAVIOR: {
+			SystemBehavior systemBehavior = (SystemBehavior) theEObject;
+			T result = caseSystemBehavior(systemBehavior);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case TrafficLightSystemPackage.BEHAVIOR: {
+			Behavior behavior = (Behavior) theEObject;
+			T result = caseBehavior(behavior);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case TrafficLightSystemPackage.OPAQUE_BEHAVIOR: {
+			OpaqueBehavior opaqueBehavior = (OpaqueBehavior) theEObject;
+			T result = caseOpaqueBehavior(opaqueBehavior);
+			if (result == null)
+				result = caseBehavior(opaqueBehavior);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -273,21 +261,6 @@ public class TrafficLightSystemSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Traffic Controller</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Traffic Controller</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTrafficController(TrafficController object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Traffic Light Module</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -333,66 +306,6 @@ public class TrafficLightSystemSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Traffic Light</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Traffic Light</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTrafficLight(TrafficLight object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Traffic Cycle</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Traffic Cycle</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTrafficCycle(TrafficCycle object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Pedestrian Controller</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Pedestrian Controller</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casePedestrianController(PedestrianController object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Traffic State</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Traffic State</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTrafficState(TrafficState object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Pin Group</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -404,6 +317,51 @@ public class TrafficLightSystemSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T casePinGroup(PinGroup object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>System Behavior</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>System Behavior</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSystemBehavior(SystemBehavior object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Behavior</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Behavior</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBehavior(Behavior object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Opaque Behavior</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Opaque Behavior</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseOpaqueBehavior(OpaqueBehavior object) {
 		return null;
 	}
 

@@ -97,11 +97,6 @@ public class TrafficLightSystemAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseTrafficController(TrafficController object) {
-			return createTrafficControllerAdapter();
-		}
-
-		@Override
 		public Adapter caseTrafficLightModule(TrafficLightModule object) {
 			return createTrafficLightModuleAdapter();
 		}
@@ -117,28 +112,23 @@ public class TrafficLightSystemAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseTrafficLight(TrafficLight object) {
-			return createTrafficLightAdapter();
-		}
-
-		@Override
-		public Adapter caseTrafficCycle(TrafficCycle object) {
-			return createTrafficCycleAdapter();
-		}
-
-		@Override
-		public Adapter casePedestrianController(PedestrianController object) {
-			return createPedestrianControllerAdapter();
-		}
-
-		@Override
-		public Adapter caseTrafficState(TrafficState object) {
-			return createTrafficStateAdapter();
-		}
-
-		@Override
 		public Adapter casePinGroup(PinGroup object) {
 			return createPinGroupAdapter();
+		}
+
+		@Override
+		public Adapter caseSystemBehavior(SystemBehavior object) {
+			return createSystemBehaviorAdapter();
+		}
+
+		@Override
+		public Adapter caseBehavior(Behavior object) {
+			return createBehaviorAdapter();
+		}
+
+		@Override
+		public Adapter caseOpaqueBehavior(OpaqueBehavior object) {
+			return createOpaqueBehaviorAdapter();
 		}
 
 		@Override
@@ -245,20 +235,6 @@ public class TrafficLightSystemAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link trafficLightSystem.TrafficController <em>Traffic Controller</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see trafficLightSystem.TrafficController
-	 * @generated
-	 */
-	public Adapter createTrafficControllerAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link trafficLightSystem.TrafficLightModule <em>Traffic Light Module</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -301,62 +277,6 @@ public class TrafficLightSystemAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link trafficLightSystem.TrafficLight <em>Traffic Light</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see trafficLightSystem.TrafficLight
-	 * @generated
-	 */
-	public Adapter createTrafficLightAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link trafficLightSystem.TrafficCycle <em>Traffic Cycle</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see trafficLightSystem.TrafficCycle
-	 * @generated
-	 */
-	public Adapter createTrafficCycleAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link trafficLightSystem.PedestrianController <em>Pedestrian Controller</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see trafficLightSystem.PedestrianController
-	 * @generated
-	 */
-	public Adapter createPedestrianControllerAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link trafficLightSystem.TrafficState <em>Traffic State</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see trafficLightSystem.TrafficState
-	 * @generated
-	 */
-	public Adapter createTrafficStateAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link trafficLightSystem.PinGroup <em>Pin Group</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -367,6 +287,48 @@ public class TrafficLightSystemAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPinGroupAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link trafficLightSystem.SystemBehavior <em>System Behavior</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see trafficLightSystem.SystemBehavior
+	 * @generated
+	 */
+	public Adapter createSystemBehaviorAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link trafficLightSystem.Behavior <em>Behavior</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see trafficLightSystem.Behavior
+	 * @generated
+	 */
+	public Adapter createBehaviorAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link trafficLightSystem.OpaqueBehavior <em>Opaque Behavior</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see trafficLightSystem.OpaqueBehavior
+	 * @generated
+	 */
+	public Adapter createOpaqueBehaviorAdapter() {
 		return null;
 	}
 

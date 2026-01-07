@@ -6,8 +6,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="systemstructure" eType="#//SystemStructure"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="trafficControllers" upperBound="-1"
-        eType="#//TrafficController" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="systemBehaviors" upperBound="-1"
+        eType="#//SystemBehavior" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SystemStructure">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -44,15 +44,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="src" eType="#//Pin"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Pin"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TrafficController">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="trafficLights" upperBound="4"
-        eType="#//TrafficLight" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="cycle" eType="#//TrafficCycle"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="pedestrianControllers"
-        upperBound="4" eType="#//PedestrianController" containment="true"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TrafficLightModule" eSuperTypes="#//Component">
     <eStructuralFeatures xsi:type="ecore:EReference" name="pinGroups" upperBound="-1"
         eType="#//PinGroup" containment="true"/>
@@ -66,37 +57,11 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="pinGroups" upperBound="-1"
         eType="#//PinGroup" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TrafficLight">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="direction" eType="#//Direction"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="module" upperBound="-1"
-        eType="#//TrafficLightModule"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TrafficCycle">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="trafficstate" lowerBound="1"
-        upperBound="-1" eType="#//TrafficState" containment="true"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Direction">
     <eLiterals name="NORTH"/>
     <eLiterals name="EAST" value="1"/>
     <eLiterals name="WEST" value="2"/>
     <eLiterals name="SOUTH" value="3"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PedestrianController">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="requestState" lowerBound="1"
-        upperBound="-1" eType="#//TrafficState"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="redLED" lowerBound="1"
-        eType="#//LED"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="greenLED" lowerBound="1"
-        eType="#//LED"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="button" eType="#//Button"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TrafficState">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="duration" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="activeTrafficLights" lowerBound="1"
-        upperBound="-1" eType="#//TrafficLight"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="activeColor" eType="#//LightColor"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="next" upperBound="-1" eType="#//TrafficState"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="LightColor">
     <eLiterals name="RED"/>
@@ -107,5 +72,17 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="pins" upperBound="-1" eType="#//Pin"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SystemBehavior">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="behaviors" upperBound="-1"
+        eType="#//Behavior" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Behavior" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OpaqueBehavior" eSuperTypes="#//Behavior">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="commandLine" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isMain" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
 </ecore:EPackage>

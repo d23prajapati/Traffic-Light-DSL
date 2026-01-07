@@ -1,6 +1,7 @@
 package TrafficLightSystem.project.design;
 
 import org.eclipse.emf.ecore.EObject;
+import trafficLightSystem.*;
 
 /**
  * The services class used by VSM.
@@ -14,4 +15,9 @@ public class Services {
        // TODO Auto-generated code
       return self;
     }
+    
+    public EObject printComponentName(trafficLightSystem.Component component) {
+        System.out.println(component.getName());
+        return component;
+     }
 }

@@ -10,27 +10,23 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
-import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
-
+import trafficLightSystem.Behavior;
 import trafficLightSystem.Board;
 import trafficLightSystem.Button;
 import trafficLightSystem.Component;
 import trafficLightSystem.Connection;
 import trafficLightSystem.Direction;
 import trafficLightSystem.LightColor;
-import trafficLightSystem.PedestrianController;
+import trafficLightSystem.OpaqueBehavior;
 import trafficLightSystem.Pin;
 import trafficLightSystem.PinGroup;
 import trafficLightSystem.PinType;
+import trafficLightSystem.SystemBehavior;
 import trafficLightSystem.SystemStructure;
-import trafficLightSystem.TrafficController;
-import trafficLightSystem.TrafficCycle;
-import trafficLightSystem.TrafficLight;
 import trafficLightSystem.TrafficLightModule;
 import trafficLightSystem.TrafficLightSystem;
 import trafficLightSystem.TrafficLightSystemFactory;
 import trafficLightSystem.TrafficLightSystemPackage;
-import trafficLightSystem.TrafficState;
 
 /**
  * <!-- begin-user-doc -->
@@ -86,13 +82,6 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass trafficControllerEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass trafficLightModuleEClass = null;
 
 	/**
@@ -114,35 +103,28 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass trafficLightEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass trafficCycleEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass pedestrianControllerEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass trafficStateEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass pinGroupEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass systemBehaviorEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass behaviorEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass opaqueBehaviorEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -216,9 +198,6 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 
 		isInited = true;
 
-		// Initialize simple dependencies
-		XMLTypePackage.eINSTANCE.eClass();
-
 		// Create package meta-data objects
 		theTrafficLightSystemPackage.createPackageContents();
 
@@ -269,7 +248,7 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 	 * @generated
 	 */
 	@Override
-	public EReference getTrafficLightSystem_TrafficControllers() {
+	public EReference getTrafficLightSystem_SystemBehaviors() {
 		return (EReference) trafficLightSystemEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -449,56 +428,6 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 	 * @generated
 	 */
 	@Override
-	public EClass getTrafficController() {
-		return trafficControllerEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getTrafficController_Name() {
-		return (EAttribute) trafficControllerEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getTrafficController_TrafficLights() {
-		return (EReference) trafficControllerEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getTrafficController_Cycle() {
-		return (EReference) trafficControllerEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getTrafficController_PedestrianControllers() {
-		return (EReference) trafficControllerEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getTrafficLightModule() {
 		return trafficLightModuleEClass;
 	}
@@ -569,166 +498,6 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 	 * @generated
 	 */
 	@Override
-	public EClass getTrafficLight() {
-		return trafficLightEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getTrafficLight_Direction() {
-		return (EAttribute) trafficLightEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getTrafficLight_Module() {
-		return (EReference) trafficLightEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getTrafficCycle() {
-		return trafficCycleEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getTrafficCycle_Trafficstate() {
-		return (EReference) trafficCycleEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getPedestrianController() {
-		return pedestrianControllerEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getPedestrianController_RequestState() {
-		return (EReference) pedestrianControllerEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getPedestrianController_RedLED() {
-		return (EReference) pedestrianControllerEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getPedestrianController_GreenLED() {
-		return (EReference) pedestrianControllerEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getPedestrianController_Button() {
-		return (EReference) pedestrianControllerEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getTrafficState() {
-		return trafficStateEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getTrafficState_Name() {
-		return (EAttribute) trafficStateEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getTrafficState_Duration() {
-		return (EAttribute) trafficStateEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getTrafficState_ActiveTrafficLights() {
-		return (EReference) trafficStateEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getTrafficState_ActiveColor() {
-		return (EAttribute) trafficStateEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getTrafficState_Next() {
-		return (EReference) trafficStateEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getPinGroup() {
 		return pinGroupEClass;
 	}
@@ -751,6 +520,86 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 	@Override
 	public EAttribute getPinGroup_Name() {
 		return (EAttribute) pinGroupEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getSystemBehavior() {
+		return systemBehaviorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getSystemBehavior_Name() {
+		return (EAttribute) systemBehaviorEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSystemBehavior_Behaviors() {
+		return (EReference) systemBehaviorEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getBehavior() {
+		return behaviorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getBehavior_Name() {
+		return (EAttribute) behaviorEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getOpaqueBehavior() {
+		return opaqueBehaviorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getOpaqueBehavior_CommandLine() {
+		return (EAttribute) opaqueBehaviorEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getOpaqueBehavior_IsMain() {
+		return (EAttribute) opaqueBehaviorEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -816,7 +665,7 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 		trafficLightSystemEClass = createEClass(TRAFFIC_LIGHT_SYSTEM);
 		createEAttribute(trafficLightSystemEClass, TRAFFIC_LIGHT_SYSTEM__NAME);
 		createEReference(trafficLightSystemEClass, TRAFFIC_LIGHT_SYSTEM__SYSTEMSTRUCTURE);
-		createEReference(trafficLightSystemEClass, TRAFFIC_LIGHT_SYSTEM__TRAFFIC_CONTROLLERS);
+		createEReference(trafficLightSystemEClass, TRAFFIC_LIGHT_SYSTEM__SYSTEM_BEHAVIORS);
 
 		systemStructureEClass = createEClass(SYSTEM_STRUCTURE);
 		createEAttribute(systemStructureEClass, SYSTEM_STRUCTURE__NAME);
@@ -840,12 +689,6 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 		createEReference(connectionEClass, CONNECTION__SRC);
 		createEReference(connectionEClass, CONNECTION__TARGET);
 
-		trafficControllerEClass = createEClass(TRAFFIC_CONTROLLER);
-		createEAttribute(trafficControllerEClass, TRAFFIC_CONTROLLER__NAME);
-		createEReference(trafficControllerEClass, TRAFFIC_CONTROLLER__TRAFFIC_LIGHTS);
-		createEReference(trafficControllerEClass, TRAFFIC_CONTROLLER__CYCLE);
-		createEReference(trafficControllerEClass, TRAFFIC_CONTROLLER__PEDESTRIAN_CONTROLLERS);
-
 		trafficLightModuleEClass = createEClass(TRAFFIC_LIGHT_MODULE);
 		createEReference(trafficLightModuleEClass, TRAFFIC_LIGHT_MODULE__PIN_GROUPS);
 
@@ -856,29 +699,20 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 		buttonEClass = createEClass(BUTTON);
 		createEReference(buttonEClass, BUTTON__PIN_GROUPS);
 
-		trafficLightEClass = createEClass(TRAFFIC_LIGHT);
-		createEAttribute(trafficLightEClass, TRAFFIC_LIGHT__DIRECTION);
-		createEReference(trafficLightEClass, TRAFFIC_LIGHT__MODULE);
-
-		trafficCycleEClass = createEClass(TRAFFIC_CYCLE);
-		createEReference(trafficCycleEClass, TRAFFIC_CYCLE__TRAFFICSTATE);
-
-		pedestrianControllerEClass = createEClass(PEDESTRIAN_CONTROLLER);
-		createEReference(pedestrianControllerEClass, PEDESTRIAN_CONTROLLER__REQUEST_STATE);
-		createEReference(pedestrianControllerEClass, PEDESTRIAN_CONTROLLER__RED_LED);
-		createEReference(pedestrianControllerEClass, PEDESTRIAN_CONTROLLER__GREEN_LED);
-		createEReference(pedestrianControllerEClass, PEDESTRIAN_CONTROLLER__BUTTON);
-
-		trafficStateEClass = createEClass(TRAFFIC_STATE);
-		createEAttribute(trafficStateEClass, TRAFFIC_STATE__NAME);
-		createEAttribute(trafficStateEClass, TRAFFIC_STATE__DURATION);
-		createEReference(trafficStateEClass, TRAFFIC_STATE__ACTIVE_TRAFFIC_LIGHTS);
-		createEAttribute(trafficStateEClass, TRAFFIC_STATE__ACTIVE_COLOR);
-		createEReference(trafficStateEClass, TRAFFIC_STATE__NEXT);
-
 		pinGroupEClass = createEClass(PIN_GROUP);
 		createEReference(pinGroupEClass, PIN_GROUP__PINS);
 		createEAttribute(pinGroupEClass, PIN_GROUP__NAME);
+
+		systemBehaviorEClass = createEClass(SYSTEM_BEHAVIOR);
+		createEAttribute(systemBehaviorEClass, SYSTEM_BEHAVIOR__NAME);
+		createEReference(systemBehaviorEClass, SYSTEM_BEHAVIOR__BEHAVIORS);
+
+		behaviorEClass = createEClass(BEHAVIOR);
+		createEAttribute(behaviorEClass, BEHAVIOR__NAME);
+
+		opaqueBehaviorEClass = createEClass(OPAQUE_BEHAVIOR);
+		createEAttribute(opaqueBehaviorEClass, OPAQUE_BEHAVIOR__COMMAND_LINE);
+		createEAttribute(opaqueBehaviorEClass, OPAQUE_BEHAVIOR__IS_MAIN);
 
 		// Create enums
 		pinTypeEEnum = createEEnum(PIN_TYPE);
@@ -910,10 +744,6 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
-		// Obtain other dependent packages
-		XMLTypePackage theXMLTypePackage = (XMLTypePackage) EPackage.Registry.INSTANCE
-				.getEPackage(XMLTypePackage.eNS_URI);
-
 		// Create type parameters
 
 		// Set bounds for type parameters
@@ -922,6 +752,7 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 		trafficLightModuleEClass.getESuperTypes().add(this.getComponent());
 		ledEClass.getESuperTypes().add(this.getComponent());
 		buttonEClass.getESuperTypes().add(this.getComponent());
+		opaqueBehaviorEClass.getESuperTypes().add(this.getBehavior());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(trafficLightSystemEClass, TrafficLightSystem.class, "TrafficLightSystem", !IS_ABSTRACT,
@@ -932,9 +763,9 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 		initEReference(getTrafficLightSystem_Systemstructure(), this.getSystemStructure(), null, "systemstructure",
 				null, 0, 1, TrafficLightSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTrafficLightSystem_TrafficControllers(), this.getTrafficController(), null,
-				"trafficControllers", null, 0, -1, TrafficLightSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTrafficLightSystem_SystemBehaviors(), this.getSystemBehavior(), null, "systemBehaviors", null,
+				0, -1, TrafficLightSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(systemStructureEClass, SystemStructure.class, "SystemStructure", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -979,21 +810,6 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(trafficControllerEClass, TrafficController.class, "TrafficController", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getTrafficController_Name(), ecorePackage.getEString(), "name", null, 0, 1,
-				TrafficController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-		initEReference(getTrafficController_TrafficLights(), this.getTrafficLight(), null, "trafficLights", null, 0, 4,
-				TrafficController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTrafficController_Cycle(), this.getTrafficCycle(), null, "cycle", null, 0, 1,
-				TrafficController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTrafficController_PedestrianControllers(), this.getPedestrianController(), null,
-				"pedestrianControllers", null, 0, 4, TrafficController.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEClass(trafficLightModuleEClass, TrafficLightModule.class, "TrafficLightModule", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTrafficLightModule_PinGroups(), this.getPinGroup(), null, "pinGroups", null, 0, -1,
@@ -1013,51 +829,6 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(trafficLightEClass, TrafficLight.class, "TrafficLight", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getTrafficLight_Direction(), this.getDirection(), "direction", null, 0, 1, TrafficLight.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTrafficLight_Module(), this.getTrafficLightModule(), null, "module", null, 0, -1,
-				TrafficLight.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(trafficCycleEClass, TrafficCycle.class, "TrafficCycle", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTrafficCycle_Trafficstate(), this.getTrafficState(), null, "trafficstate", null, 1, -1,
-				TrafficCycle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(pedestrianControllerEClass, PedestrianController.class, "PedestrianController", !IS_ABSTRACT,
-				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPedestrianController_RequestState(), this.getTrafficState(), null, "requestState", null, 1,
-				-1, PedestrianController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPedestrianController_RedLED(), this.getLED(), null, "redLED", null, 1, 1,
-				PedestrianController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPedestrianController_GreenLED(), this.getLED(), null, "greenLED", null, 1, 1,
-				PedestrianController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPedestrianController_Button(), this.getButton(), null, "button", null, 0, 1,
-				PedestrianController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(trafficStateEClass, TrafficState.class, "TrafficState", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getTrafficState_Name(), theXMLTypePackage.getString(), "name", null, 0, 1, TrafficState.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTrafficState_Duration(), ecorePackage.getEInt(), "duration", null, 0, 1, TrafficState.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTrafficState_ActiveTrafficLights(), this.getTrafficLight(), null, "activeTrafficLights", null,
-				1, -1, TrafficState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTrafficState_ActiveColor(), this.getLightColor(), "activeColor", null, 0, 1,
-				TrafficState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-		initEReference(getTrafficState_Next(), this.getTrafficState(), null, "next", null, 0, -1, TrafficState.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEClass(pinGroupEClass, PinGroup.class, "PinGroup", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPinGroup_Pins(), this.getPin(), null, "pins", null, 0, -1, PinGroup.class, !IS_TRANSIENT,
@@ -1065,6 +836,27 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 				IS_ORDERED);
 		initEAttribute(getPinGroup_Name(), ecorePackage.getEString(), "name", null, 0, 1, PinGroup.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(systemBehaviorEClass, SystemBehavior.class, "SystemBehavior", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getSystemBehavior_Name(), ecorePackage.getEString(), "name", null, 0, 1, SystemBehavior.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSystemBehavior_Behaviors(), this.getBehavior(), null, "behaviors", null, 0, -1,
+				SystemBehavior.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(behaviorEClass, Behavior.class, "Behavior", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getBehavior_Name(), ecorePackage.getEString(), "name", null, 0, 1, Behavior.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(opaqueBehaviorEClass, OpaqueBehavior.class, "OpaqueBehavior", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getOpaqueBehavior_CommandLine(), ecorePackage.getEString(), "commandLine", null, 0, 1,
+				OpaqueBehavior.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getOpaqueBehavior_IsMain(), ecorePackage.getEBoolean(), "isMain", null, 0, 1,
+				OpaqueBehavior.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(pinTypeEEnum, PinType.class, "PinType");
