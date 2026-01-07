@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:properties="http://www.eclipse.org/sirius/properties/1.0.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="project" version="12.0.0.2017041100">
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:properties="http://www.eclipse.org/sirius/properties/1.0.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" xmlns:validation="http://www.eclipse.org/sirius/description/validation/1.1.0" name="project" version="12.0.0.2017041100">
   <ownedViewpoints name="TrafficLightSystemViewPoint">
+    <validationSet name="ModelCheck">
+      <ownedRules xsi:type="validation:SemanticValidationRule" name="CheckWire" level="ERROR" message="There is a short circuit" targetClass="trafficLightSystem::Connection">
+        <audits auditExpression="aql: if (self.src.type=trafficLightSystem::PinType::GND) or (self.target.type=trafficLightSystem::PinType::GND) then not((self.src.type=trafficLightSystem::PinType::VCC) or (self.target.type=trafficLightSystem::PinType::VCC)) else true endif"/>
+      </ownedRules>
+    </validationSet>
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="SystemStructureDiagram" domainClass="trafficLightSystem::SystemStructure" enablePopupBars="true">
       <metamodel href="http://www.example.org/trafficLightSystem#/"/>
       <defaultLayer name="Default">
@@ -149,11 +154,41 @@
   </ownedViewpoints>
   <extensions xsi:type="properties:ViewExtensionDescription" name="Properties">
     <categories name="Default Category">
-      <pages name="TrafficLightModulePage" labelExpression="Traffic Light Module Setup" domainClass="trafficLightSystem::TrafficLightModule" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.0"/>
-      <pages name="LEDPage" labelExpression="LED Setup" domainClass="trafficLightSystem::LED" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.0 //@extensions.0/@categories.0/@groups.2"/>
-      <pages name="ButtonPage" labelExpression="Button Setup" domainClass="trafficLightSystem::Button" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.0"/>
-      <pages name="PinPage" labelExpression="Pin Setup " domainClass="trafficLightSystem::Pin" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.0 //@extensions.0/@categories.0/@groups.1"/>
-      <pages name="BoardPage" labelExpression="Board Setup" domainClass="trafficLightSystem::Board" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.0"/>
+      <pages name="TrafficLightModulePage" labelExpression="Traffic Light Module Setup" domainClass="trafficLightSystem::TrafficLightModule" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.0">
+        <validationSet>
+          <semanticValidationRules name="NameCheck" level="ERROR" message="Empty name" targetClass="trafficLightSystem::TrafficLightModule">
+            <audits auditExpression="aql:self.oclAsType(trafficLightSystem::TrafficLightModule).name.size()>0"/>
+          </semanticValidationRules>
+        </validationSet>
+      </pages>
+      <pages name="LEDPage" labelExpression="LED Setup" domainClass="trafficLightSystem::LED" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.0 //@extensions.0/@categories.0/@groups.2">
+        <validationSet>
+          <semanticValidationRules name="NameCheck" level="ERROR" message="Empty name" targetClass="trafficLightSystem::LED">
+            <audits auditExpression="aql:self.oclAsType(trafficLightSystem::LED).name.size()>0"/>
+          </semanticValidationRules>
+        </validationSet>
+      </pages>
+      <pages name="ButtonPage" labelExpression="Button Setup" domainClass="trafficLightSystem::Button" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.0">
+        <validationSet>
+          <semanticValidationRules name="NameCheck" level="ERROR" message="Empty name" targetClass="trafficLightSystem::Button">
+            <audits auditExpression="aql:self.oclAsType(trafficLightSystem::Button).name.size()>0"/>
+          </semanticValidationRules>
+        </validationSet>
+      </pages>
+      <pages name="PinPage" labelExpression="Pin Setup " domainClass="trafficLightSystem::Pin" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.0 //@extensions.0/@categories.0/@groups.1">
+        <validationSet>
+          <semanticValidationRules name="NameCheck" level="ERROR" message="Empty name" targetClass="trafficLightSystem::Pin">
+            <audits auditExpression="aql:self.oclAsType(trafficLightSystem::PIN).name.size()>0"/>
+          </semanticValidationRules>
+        </validationSet>
+      </pages>
+      <pages name="BoardPage" labelExpression="Board Setup" domainClass="trafficLightSystem::Board" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.0">
+        <validationSet>
+          <semanticValidationRules name="NameCheck" level="ERROR" message="Empty name" targetClass="trafficLightSystem::Board">
+            <audits auditExpression="aql:self.oclAsType(trafficLightSystem::Board).name.size()>0"/>
+          </semanticValidationRules>
+        </validationSet>
+      </pages>
       <groups name="GeneralGroup" labelExpression="General Setup" domainClass="EObject" semanticCandidateExpression="var:self" preconditionExpression="aql:self.oclIsKindOf(trafficLightSystem::Board) or self.oclIsKindOf(trafficLightSystem::TrafficLightModule) or self.oclIsKindOf(trafficLightSystem::LED) or self.oclIsKindOf(trafficLightSystem::Button) or self.oclIsKindOf(trafficLightSystem::Pin)">
         <controls xsi:type="properties:TextDescription" name="NameTextEdit" labelExpression="Name" valueExpression="aql:if self.oclIsKindOf(trafficLightSystem::Board) then self.oclAsType(trafficLightSystem::Board).name else if self.oclIsKindOf(trafficLightSystem::TrafficLightModule) then self.oclAsType(trafficLightSystem::TrafficLightModule).name else if self.oclIsKindOf(trafficLightSystem::LED) then self.oclAsType(trafficLightSystem::LED).name else if self.oclIsKindOf(trafficLightSystem::Button) then self.oclAsType(trafficLightSystem::Button).name else if self.oclIsKindOf(trafficLightSystem::Pin) then self.oclAsType(trafficLightSystem::Pin).name else '' endif endif endif endif endif&#xD;">
           <initialOperation>

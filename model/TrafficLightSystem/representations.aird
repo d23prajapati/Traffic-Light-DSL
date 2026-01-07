@@ -4,7 +4,7 @@
     <semanticResources>MyFirstTrafficModel.trafficlightsystem</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_WH5acOpZEfCDSYN1AvDxkw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_e-PwEOpZEfCDSYN1AvDxkw" name="new SystemStructureDiagram" repPath="#_e-BGkOpZEfCDSYN1AvDxkw" changeId="1767734663553">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_e-PwEOpZEfCDSYN1AvDxkw" name="new SystemStructureDiagram" repPath="#_e-BGkOpZEfCDSYN1AvDxkw" changeId="1767780641194">
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']"/>
         <target xmi:type="trafficLightSystem:SystemStructure" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure"/>
       </ownedRepresentationDescriptors>
@@ -145,39 +145,6 @@
           <styles xmi:type="notation:ShapeStyle" xmi:id="_pGl7AesHEfCnILZln8XTJQ" fontName="Segoe UI" fontHeight="12"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pGl7AusHEfCnILZln8XTJQ" x="110" y="50" width="181" height="245"/>
         </children>
-        <children xmi:type="notation:Node" xmi:id="_FuwtIOs7EfCsLbzDeMEY8g" type="2001" element="_FuuQ4Os7EfCsLbzDeMEY8g">
-          <children xmi:type="notation:Node" xmi:id="_FuwtI-s7EfCsLbzDeMEY8g" type="5002">
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_FuwtJOs7EfCsLbzDeMEY8g" y="5"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_Fu0XgOs7EfCsLbzDeMEY8g" type="3005" element="_FuuQ4es7EfCsLbzDeMEY8g">
-            <styles xmi:type="notation:ShapeStyle" xmi:id="_Fu0Xges7EfCsLbzDeMEY8g" fontName="Segoe UI"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Fu0Xgus7EfCsLbzDeMEY8g"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_JXDCcOs7EfCsLbzDeMEY8g" type="3001" element="_JXBNWOs7EfCsLbzDeMEY8g">
-            <children xmi:type="notation:Node" xmi:id="_JXDpgOs7EfCsLbzDeMEY8g" type="5001">
-              <layoutConstraint xmi:type="notation:Location" xmi:id="_JXDpges7EfCsLbzDeMEY8g" x="-1" y="2"/>
-            </children>
-            <children xmi:type="notation:Node" xmi:id="_JXDpgus7EfCsLbzDeMEY8g" type="3003" element="_JXB0UOs7EfCsLbzDeMEY8g">
-              <styles xmi:type="notation:ShapeStyle" xmi:id="_JXDpg-s7EfCsLbzDeMEY8g" fontName="Segoe UI"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JXDphOs7EfCsLbzDeMEY8g"/>
-            </children>
-            <children xmi:type="notation:Node" xmi:id="_JXEQkOs7EfCsLbzDeMEY8g" type="3001" element="_JXB0Uus7EfCsLbzDeMEY8g">
-              <children xmi:type="notation:Node" xmi:id="_JXEQk-s7EfCsLbzDeMEY8g" type="5001">
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_JXEQlOs7EfCsLbzDeMEY8g" y="5"/>
-              </children>
-              <children xmi:type="notation:Node" xmi:id="_JXEQles7EfCsLbzDeMEY8g" type="3002" element="_JXB0U-s7EfCsLbzDeMEY8g">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_JXEQlus7EfCsLbzDeMEY8g" fontName="Segoe UI"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JXEQl-s7EfCsLbzDeMEY8g"/>
-              </children>
-              <styles xmi:type="notation:ShapeStyle" xmi:id="_JXEQkes7EfCsLbzDeMEY8g" fontName="Segoe UI" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JXEQkus7EfCsLbzDeMEY8g" x="10" y="22" width="30" height="30"/>
-            </children>
-            <styles xmi:type="notation:ShapeStyle" xmi:id="_JXDCces7EfCsLbzDeMEY8g" fontName="Segoe UI" fontHeight="12"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JXDCcus7EfCsLbzDeMEY8g" x="10" y="108" width="65" height="30"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_FuwtIes7EfCsLbzDeMEY8g" fontName="Segoe UI" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FuwtIus7EfCsLbzDeMEY8g" x="350" y="105" width="116" height="176"/>
-        </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_e-jSEupZEfCDSYN1AvDxkw"/>
         <edges xmi:type="notation:Edge" xmi:id="_FFeipusaEfCnILZln8XTJQ" type="4001" element="_FExX8OsaEfCnILZln8XTJQ" source="_FFeilesaEfCnILZln8XTJQ" target="_FFdUd-saEfCnILZln8XTJQ">
           <children xmi:type="notation:Node" xmi:id="_FFeiqusaEfCnILZln8XTJQ" type="6001">
@@ -248,7 +215,7 @@
     <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_e-oKkOpZEfCDSYN1AvDxkw" source="DANNOTATION_CUSTOMIZATION_KEY">
       <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_e-oKkepZEfCDSYN1AvDxkw"/>
     </ownedAnnotationEntries>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_Dv7-sOroEfCulNjD1BK4kQ" name="zsdjfgasdjk" width="-1" height="-1" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_Dv7-sOroEfCulNjD1BK4kQ" name="ArduinoUNO" width="-1" height="-1" resizeKind="NSEW">
       <target xmi:type="trafficLightSystem:Board" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@board"/>
       <semanticElements xmi:type="trafficLightSystem:Board" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@board"/>
       <ownedBorderedNodes xmi:type="diagram:DNode" uid="_FEww4esaEfCnILZln8XTJQ" width="3" height="3" resizeKind="NSEW">
@@ -381,30 +348,6 @@
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_J7-rnusnEfCsLbzDeMEY8g" labelSize="12"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@edgeMappings[name='WireEdge']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_FuuQ4Os7EfCsLbzDeMEY8g" name="LEDf" width="-1" height="-1" resizeKind="NSEW">
-      <target xmi:type="trafficLightSystem:LED" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@components.1"/>
-      <semanticElements xmi:type="trafficLightSystem:LED" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@components.1"/>
-      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_JXBNWOs7EfCsLbzDeMEY8g" width="3" height="3" resizeKind="NSEW">
-        <target xmi:type="trafficLightSystem:PinGroup" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@components.1/@pinGroups.0"/>
-        <semanticElements xmi:type="trafficLightSystem:PinGroup" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@components.1/@pinGroups.0"/>
-        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_JXB0Uus7EfCsLbzDeMEY8g" width="3" height="3" resizeKind="NSEW">
-          <target xmi:type="trafficLightSystem:Pin" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@components.1/@pinGroups.0/@pins.0"/>
-          <semanticElements xmi:type="trafficLightSystem:Pin" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@components.1/@pinGroups.0/@pins.0"/>
-          <ownedStyle xmi:type="diagram:Dot" uid="_JXB0U-s7EfCsLbzDeMEY8g" labelSize="12" labelPosition="node" backgroundColor="173,127,168">
-            <description xmi:type="style:DotDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']/@borderedNodeMappings[name='PinNode']/@style"/>
-          </ownedStyle>
-          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']/@borderedNodeMappings[name='PinNode']"/>
-        </ownedBorderedNodes>
-        <ownedStyle xmi:type="diagram:Square" uid="_JXB0UOs7EfCsLbzDeMEY8g" labelSize="12" color="233,185,110">
-          <description xmi:type="style:SquareDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']"/>
-      </ownedBorderedNodes>
-      <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_FuuQ4es7EfCsLbzDeMEY8g" labelSize="12" labelPosition="node" workspacePath="/TrafficLightSystem.project.design/arduinoImages/images/svg/led_unit.svg">
-        <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='LEDNode']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='LEDNode']"/>
     </ownedDiagramElements>
     <description xmi:type="description_1:DiagramDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']"/>
     <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_e-JCYOpZEfCDSYN1AvDxkw"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <trafficLightSystem:TrafficLightSystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:trafficLightSystem="http://www.example.org/trafficLightSystem">
   <systemstructure name="new Component">
-    <board name="zsdjfgasdjk">
+    <board name="ArduinoUNO">
       <pinGroups>
         <pins pinNr="8" name="D8"/>
         <pins pinNr="9" name="D9"/>
@@ -9,17 +9,12 @@
         <pins pinNr="14" name="GND" type="GND"/>
       </pinGroups>
     </board>
-    <components xsi:type="trafficLightSystem:TrafficLightModule" name="Traffic Light">
+    <components xsi:type="trafficLightSystem:TrafficLightModule" name="TrafficLight">
       <pinGroups>
         <pins name="RED"/>
         <pins pinNr="1" name="YELLOW"/>
         <pins pinNr="2" name="GREEN"/>
         <pins pinNr="3" name="GND" type="GND"/>
-      </pinGroups>
-    </components>
-    <components xsi:type="trafficLightSystem:LED" name="LEDf">
-      <pinGroups>
-        <pins pinNr="3" name="Pin LED" type="ANALOG_IN"/>
       </pinGroups>
     </components>
     <connections src="//@systemstructure/@components.0/@pinGroups.0/@pins.3" target="//@systemstructure/@board/@pinGroups.0/@pins.3"/>
