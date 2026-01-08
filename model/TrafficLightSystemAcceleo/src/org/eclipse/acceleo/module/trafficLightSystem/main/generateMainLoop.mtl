@@ -1,0 +1,25 @@
+[comment encoding = UTF-8 /]
+[module generateMainLoop('http://www.example.org/trafficLightSystem')]
+
+[template public generateMainLoop(aTrafficLightSystem : TrafficLightSystem)]
+void loop()
+{
+[for (aBehavior:OpaqueBehavior | aTrafficLightSystem.systemBehaviors.behaviors
+	->filter(OpaqueBehavior)) ? (aBehavior.isMain = true)]
+[aBehavior.commandLine/]
+[/for]
+
+switch(currentState) {
+	[let aSystemBehavior : SystemBehavior = aTrafficLightSystem.systemBehaviors->first()]
+	[let aBehaviors : OrderedSet(Behavior) = aSystemBehavior.behaviors]
+		[for (aBehavior : Behavior | aBehaviors)]
+			[if (aBehavior.oclIsKindOf(StateMachine))]
+				
+			[/if]
+		[/for]
+	[/let]
+
+[/let]
+}
+}
+[/template]

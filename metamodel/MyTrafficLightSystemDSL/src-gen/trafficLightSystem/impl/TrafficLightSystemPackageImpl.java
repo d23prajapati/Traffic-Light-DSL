@@ -10,6 +10,8 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
+
 import trafficLightSystem.Behavior;
 import trafficLightSystem.Board;
 import trafficLightSystem.Button;
@@ -21,12 +23,16 @@ import trafficLightSystem.OpaqueBehavior;
 import trafficLightSystem.Pin;
 import trafficLightSystem.PinGroup;
 import trafficLightSystem.PinType;
+import trafficLightSystem.State;
+import trafficLightSystem.StateMachine;
 import trafficLightSystem.SystemBehavior;
 import trafficLightSystem.SystemStructure;
 import trafficLightSystem.TrafficLightModule;
+import trafficLightSystem.TrafficLightState;
 import trafficLightSystem.TrafficLightSystem;
 import trafficLightSystem.TrafficLightSystemFactory;
 import trafficLightSystem.TrafficLightSystemPackage;
+import trafficLightSystem.Transition;
 
 /**
  * <!-- begin-user-doc -->
@@ -131,6 +137,34 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass trafficLightStateEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass stateMachineEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass transitionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass stateEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum pinTypeEEnum = null;
 
 	/**
@@ -197,6 +231,9 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 				: new TrafficLightSystemPackageImpl();
 
 		isInited = true;
+
+		// Initialize simple dependencies
+		XMLTypePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theTrafficLightSystemPackage.createPackageContents();
@@ -608,6 +645,156 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 	 * @generated
 	 */
 	@Override
+	public EClass getTrafficLightState() {
+		return trafficLightStateEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTrafficLightState_Duration() {
+		return (EAttribute) trafficLightStateEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTrafficLightState_ActiveColor() {
+		return (EAttribute) trafficLightStateEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getTrafficLightState_TrafficLightModule() {
+		return (EReference) trafficLightStateEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getStateMachine() {
+		return stateMachineEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getStateMachine_Transitions() {
+		return (EReference) stateMachineEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getStateMachine_States() {
+		return (EReference) stateMachineEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getTransition() {
+		return transitionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getTransition_Src() {
+		return (EReference) transitionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getTransition_Target() {
+		return (EReference) transitionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getState() {
+		return stateEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getState_Name() {
+		return (EAttribute) stateEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getState_IsInitialState() {
+		return (EAttribute) stateEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getState_Behavior() {
+		return (EReference) stateEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getState_Transitions() {
+		return (EReference) stateEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EEnum getPinType() {
 		return pinTypeEEnum;
 	}
@@ -714,6 +901,25 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 		createEAttribute(opaqueBehaviorEClass, OPAQUE_BEHAVIOR__COMMAND_LINE);
 		createEAttribute(opaqueBehaviorEClass, OPAQUE_BEHAVIOR__IS_MAIN);
 
+		trafficLightStateEClass = createEClass(TRAFFIC_LIGHT_STATE);
+		createEAttribute(trafficLightStateEClass, TRAFFIC_LIGHT_STATE__DURATION);
+		createEAttribute(trafficLightStateEClass, TRAFFIC_LIGHT_STATE__ACTIVE_COLOR);
+		createEReference(trafficLightStateEClass, TRAFFIC_LIGHT_STATE__TRAFFIC_LIGHT_MODULE);
+
+		stateMachineEClass = createEClass(STATE_MACHINE);
+		createEReference(stateMachineEClass, STATE_MACHINE__TRANSITIONS);
+		createEReference(stateMachineEClass, STATE_MACHINE__STATES);
+
+		transitionEClass = createEClass(TRANSITION);
+		createEReference(transitionEClass, TRANSITION__SRC);
+		createEReference(transitionEClass, TRANSITION__TARGET);
+
+		stateEClass = createEClass(STATE);
+		createEAttribute(stateEClass, STATE__NAME);
+		createEAttribute(stateEClass, STATE__IS_INITIAL_STATE);
+		createEReference(stateEClass, STATE__BEHAVIOR);
+		createEReference(stateEClass, STATE__TRANSITIONS);
+
 		// Create enums
 		pinTypeEEnum = createEEnum(PIN_TYPE);
 		directionEEnum = createEEnum(DIRECTION);
@@ -744,6 +950,10 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
+		// Obtain other dependent packages
+		XMLTypePackage theXMLTypePackage = (XMLTypePackage) EPackage.Registry.INSTANCE
+				.getEPackage(XMLTypePackage.eNS_URI);
+
 		// Create type parameters
 
 		// Set bounds for type parameters
@@ -753,6 +963,8 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 		ledEClass.getESuperTypes().add(this.getComponent());
 		buttonEClass.getESuperTypes().add(this.getComponent());
 		opaqueBehaviorEClass.getESuperTypes().add(this.getBehavior());
+		trafficLightStateEClass.getESuperTypes().add(this.getState());
+		stateMachineEClass.getESuperTypes().add(this.getBehavior());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(trafficLightSystemEClass, TrafficLightSystem.class, "TrafficLightSystem", !IS_ABSTRACT,
@@ -857,6 +1069,49 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 		initEAttribute(getOpaqueBehavior_IsMain(), ecorePackage.getEBoolean(), "isMain", null, 0, 1,
 				OpaqueBehavior.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(trafficLightStateEClass, TrafficLightState.class, "TrafficLightState", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTrafficLightState_Duration(), ecorePackage.getEInt(), "duration", null, 0, 1,
+				TrafficLightState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTrafficLightState_ActiveColor(), this.getLightColor(), "activeColor", null, 0, 1,
+				TrafficLightState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEReference(getTrafficLightState_TrafficLightModule(), this.getTrafficLightModule(), null,
+				"trafficLightModule", null, 0, 1, TrafficLightState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(stateMachineEClass, StateMachine.class, "StateMachine", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getStateMachine_Transitions(), this.getTransition(), null, "transitions", null, 0, -1,
+				StateMachine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getStateMachine_States(), this.getState(), null, "states", null, 0, -1, StateMachine.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(transitionEClass, Transition.class, "Transition", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTransition_Src(), this.getState(), null, "src", null, 0, 1, Transition.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEReference(getTransition_Target(), this.getState(), null, "target", null, 0, 1, Transition.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(stateEClass, State.class, "State", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getState_Name(), ecorePackage.getEString(), "name", null, 0, 1, State.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getState_IsInitialState(), theXMLTypePackage.getBoolean(), "isInitialState", null, 0, 1,
+				State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEReference(getState_Behavior(), this.getBehavior(), null, "behavior", null, 0, 1, State.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getState_Transitions(), this.getTransition(), null, "transitions", null, 0, -1, State.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(pinTypeEEnum, PinType.class, "PinType");

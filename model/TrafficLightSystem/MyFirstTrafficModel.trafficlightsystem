@@ -22,7 +22,13 @@
     <connections src="//@systemstructure/@components.0/@pinGroups.0/@pins.1" target="//@systemstructure/@board/@pinGroups.0/@pins.1"/>
     <connections src="//@systemstructure/@components.0/@pinGroups.0/@pins.2" target="//@systemstructure/@board/@pinGroups.0/@pins.2"/>
   </systemstructure>
-  <systemBehaviors name="name">
-    <behaviors xsi:type="trafficLightSystem:OpaqueBehavior" name="Test" commandLine="Serial.println(&quot;Hello World&quot;);" isMain="true"/>
+  <systemBehaviors name="TrafficLightBehavior">
+    <behaviors xsi:type="trafficLightSystem:StateMachine" name="TrafficLightSystem">
+      <transitions src="//@systemBehaviors.0/@behaviors.0/@states.0" target="//@systemBehaviors.0/@behaviors.0/@states.2"/>
+      <transitions src="//@systemBehaviors.0/@behaviors.0/@states.2" target="//@systemBehaviors.0/@behaviors.0/@states.1"/>
+      <states xsi:type="trafficLightSystem:TrafficLightState" name="RED" isInitialState="true" duration="30"/>
+      <states xsi:type="trafficLightSystem:TrafficLightState" name="GREEN" activeColor="GREEN"/>
+      <states xsi:type="trafficLightSystem:TrafficLightState" name="YELLOW" duration="15" activeColor="YELLOW"/>
+    </behaviors>
   </systemBehaviors>
 </trafficLightSystem:TrafficLightSystem>

@@ -1,0 +1,16 @@
+[comment encoding = UTF-8 /]
+[module generateSetup('http://www.example.org/trafficLightSystem')]
+
+
+[import org::eclipse::acceleo::module::trafficLightSystem::main::generatePinVariables /]
+[template public generateSetup(aSystemStructure : SystemStructure)]
+void setup()
+{
+[for (aPin: Pin | aSystemStructure.board.pinGroups.pins)]
+		[if (not (aPin.type = PinType::GND)
+				or (aPin.type = PinType::VCC))]
+			pinMode([aPin.getPinVariableName()/], OUTPUT);
+		[/if]
+[/for]
+}
+[/template]

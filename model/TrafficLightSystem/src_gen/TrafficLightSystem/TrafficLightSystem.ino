@@ -2,14 +2,32 @@
 			const int PIN_D9 = 9;
 			const int PIN_D10 = 10;
 
-void setup() 
+
+				enum TrafficState {
+						STATE_RED
+				,
+						STATE_GREEN
+				,
+						STATE_YELLOW
+				}
+				
+TrafficState currentState = STATE_RED;
+unsigned long stateStartTime = millis();
+
+
+
+void setup()
 {
 			pinMode(PIN_D8, OUTPUT);
 			pinMode(PIN_D9, OUTPUT);
 			pinMode(PIN_D10, OUTPUT);
-
 }
+
 void loop()
 {
-Serial.println("Hello World");
+
+switch(currentState) {
+				
+
+}
 }

@@ -79,6 +79,12 @@ public class TrafficLightSystemFactoryImpl extends EFactoryImpl implements Traff
 			return createSystemBehavior();
 		case TrafficLightSystemPackage.OPAQUE_BEHAVIOR:
 			return createOpaqueBehavior();
+		case TrafficLightSystemPackage.TRAFFIC_LIGHT_STATE:
+			return createTrafficLightState();
+		case TrafficLightSystemPackage.STATE_MACHINE:
+			return createStateMachine();
+		case TrafficLightSystemPackage.TRANSITION:
+			return createTransition();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -241,6 +247,39 @@ public class TrafficLightSystemFactoryImpl extends EFactoryImpl implements Traff
 	public OpaqueBehavior createOpaqueBehavior() {
 		OpaqueBehaviorImpl opaqueBehavior = new OpaqueBehaviorImpl();
 		return opaqueBehavior;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public TrafficLightState createTrafficLightState() {
+		TrafficLightStateImpl trafficLightState = new TrafficLightStateImpl();
+		return trafficLightState;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public StateMachine createStateMachine() {
+		StateMachineImpl stateMachine = new StateMachineImpl();
+		return stateMachine;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Transition createTransition() {
+		TransitionImpl transition = new TransitionImpl();
+		return transition;
 	}
 
 	/**

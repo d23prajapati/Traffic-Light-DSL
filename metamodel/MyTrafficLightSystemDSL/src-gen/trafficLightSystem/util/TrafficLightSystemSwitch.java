@@ -165,6 +165,38 @@ public class TrafficLightSystemSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case TrafficLightSystemPackage.TRAFFIC_LIGHT_STATE: {
+			TrafficLightState trafficLightState = (TrafficLightState) theEObject;
+			T result = caseTrafficLightState(trafficLightState);
+			if (result == null)
+				result = caseState(trafficLightState);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case TrafficLightSystemPackage.STATE_MACHINE: {
+			StateMachine stateMachine = (StateMachine) theEObject;
+			T result = caseStateMachine(stateMachine);
+			if (result == null)
+				result = caseBehavior(stateMachine);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case TrafficLightSystemPackage.TRANSITION: {
+			Transition transition = (Transition) theEObject;
+			T result = caseTransition(transition);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case TrafficLightSystemPackage.STATE: {
+			State state = (State) theEObject;
+			T result = caseState(state);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		default:
 			return defaultCase(theEObject);
 		}
@@ -362,6 +394,66 @@ public class TrafficLightSystemSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseOpaqueBehavior(OpaqueBehavior object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Traffic Light State</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Traffic Light State</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTrafficLightState(TrafficLightState object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>State Machine</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>State Machine</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseStateMachine(StateMachine object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Transition</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Transition</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTransition(Transition object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>State</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>State</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseState(State object) {
 		return null;
 	}
 

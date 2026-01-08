@@ -132,6 +132,26 @@ public class TrafficLightSystemAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseTrafficLightState(TrafficLightState object) {
+			return createTrafficLightStateAdapter();
+		}
+
+		@Override
+		public Adapter caseStateMachine(StateMachine object) {
+			return createStateMachineAdapter();
+		}
+
+		@Override
+		public Adapter caseTransition(Transition object) {
+			return createTransitionAdapter();
+		}
+
+		@Override
+		public Adapter caseState(State object) {
+			return createStateAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -329,6 +349,62 @@ public class TrafficLightSystemAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createOpaqueBehaviorAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link trafficLightSystem.TrafficLightState <em>Traffic Light State</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see trafficLightSystem.TrafficLightState
+	 * @generated
+	 */
+	public Adapter createTrafficLightStateAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link trafficLightSystem.StateMachine <em>State Machine</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see trafficLightSystem.StateMachine
+	 * @generated
+	 */
+	public Adapter createStateMachineAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link trafficLightSystem.Transition <em>Transition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see trafficLightSystem.Transition
+	 * @generated
+	 */
+	public Adapter createTransitionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link trafficLightSystem.State <em>State</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see trafficLightSystem.State
+	 * @generated
+	 */
+	public Adapter createStateAdapter() {
 		return null;
 	}
 

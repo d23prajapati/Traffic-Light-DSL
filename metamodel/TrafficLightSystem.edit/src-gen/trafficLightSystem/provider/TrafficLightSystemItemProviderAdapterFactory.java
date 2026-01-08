@@ -326,6 +326,75 @@ public class TrafficLightSystemItemProviderAdapterFactory extends TrafficLightSy
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link trafficLightSystem.TrafficLightState} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TrafficLightStateItemProvider trafficLightStateItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link trafficLightSystem.TrafficLightState}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTrafficLightStateAdapter() {
+		if (trafficLightStateItemProvider == null) {
+			trafficLightStateItemProvider = new TrafficLightStateItemProvider(this);
+		}
+
+		return trafficLightStateItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link trafficLightSystem.StateMachine} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected StateMachineItemProvider stateMachineItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link trafficLightSystem.StateMachine}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createStateMachineAdapter() {
+		if (stateMachineItemProvider == null) {
+			stateMachineItemProvider = new StateMachineItemProvider(this);
+		}
+
+		return stateMachineItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link trafficLightSystem.Transition} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TransitionItemProvider transitionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link trafficLightSystem.Transition}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTransitionAdapter() {
+		if (transitionItemProvider == null) {
+			transitionItemProvider = new TransitionItemProvider(this);
+		}
+
+		return transitionItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -452,6 +521,12 @@ public class TrafficLightSystemItemProviderAdapterFactory extends TrafficLightSy
 			systemBehaviorItemProvider.dispose();
 		if (opaqueBehaviorItemProvider != null)
 			opaqueBehaviorItemProvider.dispose();
+		if (trafficLightStateItemProvider != null)
+			trafficLightStateItemProvider.dispose();
+		if (stateMachineItemProvider != null)
+			stateMachineItemProvider.dispose();
+		if (transitionItemProvider != null)
+			transitionItemProvider.dispose();
 	}
 
 }

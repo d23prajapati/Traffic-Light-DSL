@@ -692,6 +692,262 @@ public interface TrafficLightSystemPackage extends EPackage {
 	int OPAQUE_BEHAVIOR_OPERATION_COUNT = BEHAVIOR_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link trafficLightSystem.impl.StateImpl <em>State</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see trafficLightSystem.impl.StateImpl
+	 * @see trafficLightSystem.impl.TrafficLightSystemPackageImpl#getState()
+	 * @generated
+	 */
+	int STATE = 16;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATE__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Is Initial State</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATE__IS_INITIAL_STATE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Behavior</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATE__BEHAVIOR = 2;
+
+	/**
+	 * The feature id for the '<em><b>Transitions</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATE__TRANSITIONS = 3;
+
+	/**
+	 * The number of structural features of the '<em>State</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATE_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>State</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link trafficLightSystem.impl.TrafficLightStateImpl <em>Traffic Light State</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see trafficLightSystem.impl.TrafficLightStateImpl
+	 * @see trafficLightSystem.impl.TrafficLightSystemPackageImpl#getTrafficLightState()
+	 * @generated
+	 */
+	int TRAFFIC_LIGHT_STATE = 13;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAFFIC_LIGHT_STATE__NAME = STATE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Is Initial State</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAFFIC_LIGHT_STATE__IS_INITIAL_STATE = STATE__IS_INITIAL_STATE;
+
+	/**
+	 * The feature id for the '<em><b>Behavior</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAFFIC_LIGHT_STATE__BEHAVIOR = STATE__BEHAVIOR;
+
+	/**
+	 * The feature id for the '<em><b>Transitions</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAFFIC_LIGHT_STATE__TRANSITIONS = STATE__TRANSITIONS;
+
+	/**
+	 * The feature id for the '<em><b>Duration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAFFIC_LIGHT_STATE__DURATION = STATE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Active Color</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAFFIC_LIGHT_STATE__ACTIVE_COLOR = STATE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Traffic Light Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAFFIC_LIGHT_STATE__TRAFFIC_LIGHT_MODULE = STATE_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Traffic Light State</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAFFIC_LIGHT_STATE_FEATURE_COUNT = STATE_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of operations of the '<em>Traffic Light State</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAFFIC_LIGHT_STATE_OPERATION_COUNT = STATE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link trafficLightSystem.impl.StateMachineImpl <em>State Machine</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see trafficLightSystem.impl.StateMachineImpl
+	 * @see trafficLightSystem.impl.TrafficLightSystemPackageImpl#getStateMachine()
+	 * @generated
+	 */
+	int STATE_MACHINE = 14;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATE_MACHINE__NAME = BEHAVIOR__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Transitions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATE_MACHINE__TRANSITIONS = BEHAVIOR_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>States</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATE_MACHINE__STATES = BEHAVIOR_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>State Machine</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATE_MACHINE_FEATURE_COUNT = BEHAVIOR_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>State Machine</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATE_MACHINE_OPERATION_COUNT = BEHAVIOR_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link trafficLightSystem.impl.TransitionImpl <em>Transition</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see trafficLightSystem.impl.TransitionImpl
+	 * @see trafficLightSystem.impl.TrafficLightSystemPackageImpl#getTransition()
+	 * @generated
+	 */
+	int TRANSITION = 15;
+
+	/**
+	 * The feature id for the '<em><b>Src</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSITION__SRC = 0;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSITION__TARGET = 1;
+
+	/**
+	 * The number of structural features of the '<em>Transition</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSITION_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Transition</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSITION_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link trafficLightSystem.PinType <em>Pin Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -699,7 +955,7 @@ public interface TrafficLightSystemPackage extends EPackage {
 	 * @see trafficLightSystem.impl.TrafficLightSystemPackageImpl#getPinType()
 	 * @generated
 	 */
-	int PIN_TYPE = 13;
+	int PIN_TYPE = 17;
 
 	/**
 	 * The meta object id for the '{@link trafficLightSystem.Direction <em>Direction</em>}' enum.
@@ -709,7 +965,7 @@ public interface TrafficLightSystemPackage extends EPackage {
 	 * @see trafficLightSystem.impl.TrafficLightSystemPackageImpl#getDirection()
 	 * @generated
 	 */
-	int DIRECTION = 14;
+	int DIRECTION = 18;
 
 	/**
 	 * The meta object id for the '{@link trafficLightSystem.LightColor <em>Light Color</em>}' enum.
@@ -719,7 +975,7 @@ public interface TrafficLightSystemPackage extends EPackage {
 	 * @see trafficLightSystem.impl.TrafficLightSystemPackageImpl#getLightColor()
 	 * @generated
 	 */
-	int LIGHT_COLOR = 15;
+	int LIGHT_COLOR = 19;
 
 	/**
 	 * Returns the meta object for class '{@link trafficLightSystem.TrafficLightSystem <em>Traffic Light System</em>}'.
@@ -1138,6 +1394,167 @@ public interface TrafficLightSystemPackage extends EPackage {
 	EAttribute getOpaqueBehavior_IsMain();
 
 	/**
+	 * Returns the meta object for class '{@link trafficLightSystem.TrafficLightState <em>Traffic Light State</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Traffic Light State</em>'.
+	 * @see trafficLightSystem.TrafficLightState
+	 * @generated
+	 */
+	EClass getTrafficLightState();
+
+	/**
+	 * Returns the meta object for the attribute '{@link trafficLightSystem.TrafficLightState#getDuration <em>Duration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Duration</em>'.
+	 * @see trafficLightSystem.TrafficLightState#getDuration()
+	 * @see #getTrafficLightState()
+	 * @generated
+	 */
+	EAttribute getTrafficLightState_Duration();
+
+	/**
+	 * Returns the meta object for the attribute '{@link trafficLightSystem.TrafficLightState#getActiveColor <em>Active Color</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Active Color</em>'.
+	 * @see trafficLightSystem.TrafficLightState#getActiveColor()
+	 * @see #getTrafficLightState()
+	 * @generated
+	 */
+	EAttribute getTrafficLightState_ActiveColor();
+
+	/**
+	 * Returns the meta object for the reference '{@link trafficLightSystem.TrafficLightState#getTrafficLightModule <em>Traffic Light Module</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Traffic Light Module</em>'.
+	 * @see trafficLightSystem.TrafficLightState#getTrafficLightModule()
+	 * @see #getTrafficLightState()
+	 * @generated
+	 */
+	EReference getTrafficLightState_TrafficLightModule();
+
+	/**
+	 * Returns the meta object for class '{@link trafficLightSystem.StateMachine <em>State Machine</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>State Machine</em>'.
+	 * @see trafficLightSystem.StateMachine
+	 * @generated
+	 */
+	EClass getStateMachine();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link trafficLightSystem.StateMachine#getTransitions <em>Transitions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Transitions</em>'.
+	 * @see trafficLightSystem.StateMachine#getTransitions()
+	 * @see #getStateMachine()
+	 * @generated
+	 */
+	EReference getStateMachine_Transitions();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link trafficLightSystem.StateMachine#getStates <em>States</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>States</em>'.
+	 * @see trafficLightSystem.StateMachine#getStates()
+	 * @see #getStateMachine()
+	 * @generated
+	 */
+	EReference getStateMachine_States();
+
+	/**
+	 * Returns the meta object for class '{@link trafficLightSystem.Transition <em>Transition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Transition</em>'.
+	 * @see trafficLightSystem.Transition
+	 * @generated
+	 */
+	EClass getTransition();
+
+	/**
+	 * Returns the meta object for the reference '{@link trafficLightSystem.Transition#getSrc <em>Src</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Src</em>'.
+	 * @see trafficLightSystem.Transition#getSrc()
+	 * @see #getTransition()
+	 * @generated
+	 */
+	EReference getTransition_Src();
+
+	/**
+	 * Returns the meta object for the reference '{@link trafficLightSystem.Transition#getTarget <em>Target</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Target</em>'.
+	 * @see trafficLightSystem.Transition#getTarget()
+	 * @see #getTransition()
+	 * @generated
+	 */
+	EReference getTransition_Target();
+
+	/**
+	 * Returns the meta object for class '{@link trafficLightSystem.State <em>State</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>State</em>'.
+	 * @see trafficLightSystem.State
+	 * @generated
+	 */
+	EClass getState();
+
+	/**
+	 * Returns the meta object for the attribute '{@link trafficLightSystem.State#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see trafficLightSystem.State#getName()
+	 * @see #getState()
+	 * @generated
+	 */
+	EAttribute getState_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link trafficLightSystem.State#isIsInitialState <em>Is Initial State</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Initial State</em>'.
+	 * @see trafficLightSystem.State#isIsInitialState()
+	 * @see #getState()
+	 * @generated
+	 */
+	EAttribute getState_IsInitialState();
+
+	/**
+	 * Returns the meta object for the reference '{@link trafficLightSystem.State#getBehavior <em>Behavior</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Behavior</em>'.
+	 * @see trafficLightSystem.State#getBehavior()
+	 * @see #getState()
+	 * @generated
+	 */
+	EReference getState_Behavior();
+
+	/**
+	 * Returns the meta object for the reference list '{@link trafficLightSystem.State#getTransitions <em>Transitions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Transitions</em>'.
+	 * @see trafficLightSystem.State#getTransitions()
+	 * @see #getState()
+	 * @generated
+	 */
+	EReference getState_Transitions();
+
+	/**
 	 * Returns the meta object for enum '{@link trafficLightSystem.PinType <em>Pin Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1527,6 +1944,134 @@ public interface TrafficLightSystemPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute OPAQUE_BEHAVIOR__IS_MAIN = eINSTANCE.getOpaqueBehavior_IsMain();
+
+		/**
+		 * The meta object literal for the '{@link trafficLightSystem.impl.TrafficLightStateImpl <em>Traffic Light State</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see trafficLightSystem.impl.TrafficLightStateImpl
+		 * @see trafficLightSystem.impl.TrafficLightSystemPackageImpl#getTrafficLightState()
+		 * @generated
+		 */
+		EClass TRAFFIC_LIGHT_STATE = eINSTANCE.getTrafficLightState();
+
+		/**
+		 * The meta object literal for the '<em><b>Duration</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRAFFIC_LIGHT_STATE__DURATION = eINSTANCE.getTrafficLightState_Duration();
+
+		/**
+		 * The meta object literal for the '<em><b>Active Color</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRAFFIC_LIGHT_STATE__ACTIVE_COLOR = eINSTANCE.getTrafficLightState_ActiveColor();
+
+		/**
+		 * The meta object literal for the '<em><b>Traffic Light Module</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRAFFIC_LIGHT_STATE__TRAFFIC_LIGHT_MODULE = eINSTANCE.getTrafficLightState_TrafficLightModule();
+
+		/**
+		 * The meta object literal for the '{@link trafficLightSystem.impl.StateMachineImpl <em>State Machine</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see trafficLightSystem.impl.StateMachineImpl
+		 * @see trafficLightSystem.impl.TrafficLightSystemPackageImpl#getStateMachine()
+		 * @generated
+		 */
+		EClass STATE_MACHINE = eINSTANCE.getStateMachine();
+
+		/**
+		 * The meta object literal for the '<em><b>Transitions</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STATE_MACHINE__TRANSITIONS = eINSTANCE.getStateMachine_Transitions();
+
+		/**
+		 * The meta object literal for the '<em><b>States</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STATE_MACHINE__STATES = eINSTANCE.getStateMachine_States();
+
+		/**
+		 * The meta object literal for the '{@link trafficLightSystem.impl.TransitionImpl <em>Transition</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see trafficLightSystem.impl.TransitionImpl
+		 * @see trafficLightSystem.impl.TrafficLightSystemPackageImpl#getTransition()
+		 * @generated
+		 */
+		EClass TRANSITION = eINSTANCE.getTransition();
+
+		/**
+		 * The meta object literal for the '<em><b>Src</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRANSITION__SRC = eINSTANCE.getTransition_Src();
+
+		/**
+		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRANSITION__TARGET = eINSTANCE.getTransition_Target();
+
+		/**
+		 * The meta object literal for the '{@link trafficLightSystem.impl.StateImpl <em>State</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see trafficLightSystem.impl.StateImpl
+		 * @see trafficLightSystem.impl.TrafficLightSystemPackageImpl#getState()
+		 * @generated
+		 */
+		EClass STATE = eINSTANCE.getState();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STATE__NAME = eINSTANCE.getState_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Initial State</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STATE__IS_INITIAL_STATE = eINSTANCE.getState_IsInitialState();
+
+		/**
+		 * The meta object literal for the '<em><b>Behavior</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STATE__BEHAVIOR = eINSTANCE.getState_Behavior();
+
+		/**
+		 * The meta object literal for the '<em><b>Transitions</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STATE__TRANSITIONS = eINSTANCE.getState_Transitions();
 
 		/**
 		 * The meta object literal for the '{@link trafficLightSystem.PinType <em>Pin Type</em>}' enum.

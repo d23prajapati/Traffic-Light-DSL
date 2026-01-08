@@ -121,6 +121,33 @@ public interface TrafficLightSystemFactory extends EFactory {
 	OpaqueBehavior createOpaqueBehavior();
 
 	/**
+	 * Returns a new object of class '<em>Traffic Light State</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Traffic Light State</em>'.
+	 * @generated
+	 */
+	TrafficLightState createTrafficLightState();
+
+	/**
+	 * Returns a new object of class '<em>State Machine</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>State Machine</em>'.
+	 * @generated
+	 */
+	StateMachine createStateMachine();
+
+	/**
+	 * Returns a new object of class '<em>Transition</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Transition</em>'.
+	 * @generated
+	 */
+	Transition createTransition();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
