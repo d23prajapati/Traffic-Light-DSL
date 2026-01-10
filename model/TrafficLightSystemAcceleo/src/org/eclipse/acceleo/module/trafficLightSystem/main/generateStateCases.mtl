@@ -2,11 +2,18 @@
 [module generateStateCases('http://www.example.org/trafficLightSystem')]
 
 [import org::eclipse::acceleo::module::trafficLightSystem::main::generatePinVariables /]
+[import org::eclipse::acceleo::module::trafficLightSystem::requests::generateTargetState /]
 [template public generateStateCases(aStateMachine : StateMachine)]
 [for (aState : State | aStateMachine.states->select(s | s.oclIsKindOf(TrafficLightState)))]
 	[let aTrafficLightState : TrafficLightState = aState.oclAsType(TrafficLightState)]		
 		case ['STATE_'+aTrafficLightState.name.toUpper()/]:
-		digitalWrite([aTrafficLightState.trafficLightModule.pinGroups.pins.getPinVariableName()/], HIGH);
+		digitalWrite(['PIN_'+aTrafficLightState.activeColor /], HIGH);
+		if(millis() - stateStartTime >= [aTrafficLightState.duration/]) {
+			digitalWrite(['PIN_'+aTrafficLightState.activeColor /], LOW);
+			currentState = STATE_[generateTargetState(aStateMachine, aState)/];
+			stateStartTime = millis();
+		}
+		break;
 	[/let]
 [/for]
 [/template]

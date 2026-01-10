@@ -829,13 +829,22 @@ public interface TrafficLightSystemPackage extends EPackage {
 	int TRAFFIC_LIGHT_STATE__TRAFFIC_LIGHT_MODULE = STATE_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Board</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAFFIC_LIGHT_STATE__BOARD = STATE_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>Traffic Light State</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRAFFIC_LIGHT_STATE_FEATURE_COUNT = STATE_FEATURE_COUNT + 3;
+	int TRAFFIC_LIGHT_STATE_FEATURE_COUNT = STATE_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Traffic Light State</em>' class.
@@ -1437,6 +1446,17 @@ public interface TrafficLightSystemPackage extends EPackage {
 	EReference getTrafficLightState_TrafficLightModule();
 
 	/**
+	 * Returns the meta object for the reference '{@link trafficLightSystem.TrafficLightState#getBoard <em>Board</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Board</em>'.
+	 * @see trafficLightSystem.TrafficLightState#getBoard()
+	 * @see #getTrafficLightState()
+	 * @generated
+	 */
+	EReference getTrafficLightState_Board();
+
+	/**
 	 * Returns the meta object for class '{@link trafficLightSystem.StateMachine <em>State Machine</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1978,6 +1998,14 @@ public interface TrafficLightSystemPackage extends EPackage {
 		 * @generated
 		 */
 		EReference TRAFFIC_LIGHT_STATE__TRAFFIC_LIGHT_MODULE = eINSTANCE.getTrafficLightState_TrafficLightModule();
+
+		/**
+		 * The meta object literal for the '<em><b>Board</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRAFFIC_LIGHT_STATE__BOARD = eINSTANCE.getTrafficLightState_Board();
 
 		/**
 		 * The meta object literal for the '{@link trafficLightSystem.impl.StateMachineImpl <em>State Machine</em>}' class.

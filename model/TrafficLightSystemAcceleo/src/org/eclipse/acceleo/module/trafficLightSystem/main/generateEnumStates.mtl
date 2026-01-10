@@ -8,6 +8,6 @@ enum TrafficState {
 	[for (aState : State | aStateMachine.states) separator (',\n')]
 		STATE_[aState.name.toUpper()/]
 	[/for]
-}
+};
 
 [/template]

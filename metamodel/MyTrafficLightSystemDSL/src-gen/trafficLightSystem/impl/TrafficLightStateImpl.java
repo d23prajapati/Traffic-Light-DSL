@@ -9,6 +9,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import trafficLightSystem.Board;
 import trafficLightSystem.LightColor;
 import trafficLightSystem.TrafficLightModule;
 import trafficLightSystem.TrafficLightState;
@@ -25,6 +26,7 @@ import trafficLightSystem.TrafficLightSystemPackage;
  *   <li>{@link trafficLightSystem.impl.TrafficLightStateImpl#getDuration <em>Duration</em>}</li>
  *   <li>{@link trafficLightSystem.impl.TrafficLightStateImpl#getActiveColor <em>Active Color</em>}</li>
  *   <li>{@link trafficLightSystem.impl.TrafficLightStateImpl#getTrafficLightModule <em>Traffic Light Module</em>}</li>
+ *   <li>{@link trafficLightSystem.impl.TrafficLightStateImpl#getBoard <em>Board</em>}</li>
  * </ul>
  *
  * @generated
@@ -79,6 +81,16 @@ public class TrafficLightStateImpl extends StateImpl implements TrafficLightStat
 	 * @ordered
 	 */
 	protected TrafficLightModule trafficLightModule;
+
+	/**
+	 * The cached value of the '{@link #getBoard() <em>Board</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBoard()
+	 * @generated
+	 * @ordered
+	 */
+	protected Board board;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -197,6 +209,48 @@ public class TrafficLightStateImpl extends StateImpl implements TrafficLightStat
 	 * @generated
 	 */
 	@Override
+	public Board getBoard() {
+		if (board != null && board.eIsProxy()) {
+			InternalEObject oldBoard = (InternalEObject) board;
+			board = (Board) eResolveProxy(oldBoard);
+			if (board != oldBoard) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+							TrafficLightSystemPackage.TRAFFIC_LIGHT_STATE__BOARD, oldBoard, board));
+			}
+		}
+		return board;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Board basicGetBoard() {
+		return board;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setBoard(Board newBoard) {
+		Board oldBoard = board;
+		board = newBoard;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TrafficLightSystemPackage.TRAFFIC_LIGHT_STATE__BOARD,
+					oldBoard, board));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case TrafficLightSystemPackage.TRAFFIC_LIGHT_STATE__DURATION:
@@ -207,6 +261,10 @@ public class TrafficLightStateImpl extends StateImpl implements TrafficLightStat
 			if (resolve)
 				return getTrafficLightModule();
 			return basicGetTrafficLightModule();
+		case TrafficLightSystemPackage.TRAFFIC_LIGHT_STATE__BOARD:
+			if (resolve)
+				return getBoard();
+			return basicGetBoard();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -227,6 +285,9 @@ public class TrafficLightStateImpl extends StateImpl implements TrafficLightStat
 			return;
 		case TrafficLightSystemPackage.TRAFFIC_LIGHT_STATE__TRAFFIC_LIGHT_MODULE:
 			setTrafficLightModule((TrafficLightModule) newValue);
+			return;
+		case TrafficLightSystemPackage.TRAFFIC_LIGHT_STATE__BOARD:
+			setBoard((Board) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -249,6 +310,9 @@ public class TrafficLightStateImpl extends StateImpl implements TrafficLightStat
 		case TrafficLightSystemPackage.TRAFFIC_LIGHT_STATE__TRAFFIC_LIGHT_MODULE:
 			setTrafficLightModule((TrafficLightModule) null);
 			return;
+		case TrafficLightSystemPackage.TRAFFIC_LIGHT_STATE__BOARD:
+			setBoard((Board) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -267,6 +331,8 @@ public class TrafficLightStateImpl extends StateImpl implements TrafficLightStat
 			return activeColor != ACTIVE_COLOR_EDEFAULT;
 		case TrafficLightSystemPackage.TRAFFIC_LIGHT_STATE__TRAFFIC_LIGHT_MODULE:
 			return trafficLightModule != null;
+		case TrafficLightSystemPackage.TRAFFIC_LIGHT_STATE__BOARD:
+			return board != null;
 		}
 		return super.eIsSet(featureID);
 	}

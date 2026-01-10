@@ -1,6 +1,8 @@
 [comment encoding = UTF-8 /]
 [module generateMainLoop('http://www.example.org/trafficLightSystem')]
 
+[import org::eclipse::acceleo::module::trafficLightSystem::main::generateStateCases /]
+
 [template public generateMainLoop(aTrafficLightSystem : TrafficLightSystem)]
 void loop()
 {
@@ -14,7 +16,7 @@ switch(currentState) {
 	[let aBehaviors : OrderedSet(Behavior) = aSystemBehavior.behaviors]
 		[for (aBehavior : Behavior | aBehaviors)]
 			[if (aBehavior.oclIsKindOf(StateMachine))]
-				
+				[generateStateCases(aBehavior.oclAsType(StateMachine))/]
 			[/if]
 		[/for]
 	[/let]

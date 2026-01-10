@@ -85,6 +85,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trafficLightSystem.ecore#//TrafficLightState/duration"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trafficLightSystem.ecore#//TrafficLightState/activeColor"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference trafficLightSystem.ecore#//TrafficLightState/trafficLightModule"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference trafficLightSystem.ecore#//TrafficLightState/board"/>
     </genClasses>
     <genClasses ecoreClass="trafficLightSystem.ecore#//StateMachine">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference trafficLightSystem.ecore#//StateMachine/transitions"/>

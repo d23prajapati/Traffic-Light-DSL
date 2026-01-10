@@ -685,6 +685,16 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 	 * @generated
 	 */
 	@Override
+	public EReference getTrafficLightState_Board() {
+		return (EReference) trafficLightStateEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getStateMachine() {
 		return stateMachineEClass;
 	}
@@ -905,6 +915,7 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 		createEAttribute(trafficLightStateEClass, TRAFFIC_LIGHT_STATE__DURATION);
 		createEAttribute(trafficLightStateEClass, TRAFFIC_LIGHT_STATE__ACTIVE_COLOR);
 		createEReference(trafficLightStateEClass, TRAFFIC_LIGHT_STATE__TRAFFIC_LIGHT_MODULE);
+		createEReference(trafficLightStateEClass, TRAFFIC_LIGHT_STATE__BOARD);
 
 		stateMachineEClass = createEClass(STATE_MACHINE);
 		createEReference(stateMachineEClass, STATE_MACHINE__TRANSITIONS);
@@ -1081,6 +1092,9 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 		initEReference(getTrafficLightState_TrafficLightModule(), this.getTrafficLightModule(), null,
 				"trafficLightModule", null, 0, 1, TrafficLightState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTrafficLightState_Board(), this.getBoard(), null, "board", null, 0, 1,
+				TrafficLightState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(stateMachineEClass, StateMachine.class, "StateMachine", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);

@@ -47,6 +47,7 @@ public class TrafficLightStateItemProvider extends StateItemProvider {
 			addDurationPropertyDescriptor(object);
 			addActiveColorPropertyDescriptor(object);
 			addTrafficLightModulePropertyDescriptor(object);
+			addBoardPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -97,6 +98,21 @@ public class TrafficLightStateItemProvider extends StateItemProvider {
 								"_UI_TrafficLightState_trafficLightModule_feature", "_UI_TrafficLightState_type"),
 						TrafficLightSystemPackage.Literals.TRAFFIC_LIGHT_STATE__TRAFFIC_LIGHT_MODULE, true, false, true,
 						null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Board feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addBoardPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_TrafficLightState_board_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_TrafficLightState_board_feature",
+						"_UI_TrafficLightState_type"),
+				TrafficLightSystemPackage.Literals.TRAFFIC_LIGHT_STATE__BOARD, true, false, true, null, null, null));
 	}
 
 	/**

@@ -4,11 +4,11 @@
     <semanticResources>MyFirstTrafficModel.trafficlightsystem</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_WH5acOpZEfCDSYN1AvDxkw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_e-PwEOpZEfCDSYN1AvDxkw" name="new SystemStructureDiagram" repPath="#_e-BGkOpZEfCDSYN1AvDxkw" changeId="1767786453997">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_e-PwEOpZEfCDSYN1AvDxkw" name="new SystemStructureDiagram" repPath="#_e-BGkOpZEfCDSYN1AvDxkw" changeId="1768061068261">
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']"/>
         <target xmi:type="trafficLightSystem:SystemStructure" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_ZtXSsOvBEfC-Orl9FF90JA" name="new BehaviorDiagram" repPath="#_ZtWEkOvBEfC-Orl9FF90JA" changeId="1767882297591">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_ZtXSsOvBEfC-Orl9FF90JA" name="new BehaviorDiagram" repPath="#_ZtWEkOvBEfC-Orl9FF90JA" changeId="1768061223877">
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='BehaviorDiagram']"/>
         <target xmi:type="trafficLightSystem:SystemBehavior" href="MyFirstTrafficModel.trafficlightsystem#//@systemBehaviors.0"/>
       </ownedRepresentationDescriptors>
@@ -42,7 +42,7 @@
                 <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FFd7gusaEfCnILZln8XTJQ"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_FFctZOsaEfCnILZln8XTJQ" fontName="Segoe UI" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FFctZesaEfCnILZln8XTJQ" x="110" y="-22" width="30" height="30"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FFctZesaEfCnILZln8XTJQ" x="40" y="-22" width="30" height="30"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_FFctaOsaEfCnILZln8XTJQ" type="3001" element="_FEww5-saEfCnILZln8XTJQ">
               <children xmi:type="notation:Node" xmi:id="_FFdUcOsaEfCnILZln8XTJQ" type="5001">
@@ -53,7 +53,7 @@
                 <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FFd7hesaEfCnILZln8XTJQ"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_FFctaesaEfCnILZln8XTJQ" fontName="Segoe UI" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FFctausaEfCnILZln8XTJQ" x="151" y="-22" width="30" height="30"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FFctausaEfCnILZln8XTJQ" x="85" y="-22" width="30" height="30"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_FFdUcusaEfCnILZln8XTJQ" type="3001" element="_FEww6usaEfCnILZln8XTJQ">
               <children xmi:type="notation:Node" xmi:id="_FFdUdesaEfCnILZln8XTJQ" type="5001">
@@ -75,13 +75,68 @@
                 <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FFd7i-saEfCnILZln8XTJQ"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_FFdUeOsaEfCnILZln8XTJQ" fontName="Segoe UI" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FFdUeesaEfCnILZln8XTJQ" x="60" y="-22" width="30" height="30"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FFdUeesaEfCnILZln8XTJQ" x="178" y="-22" width="30" height="30"/>
             </children>
             <styles xmi:type="notation:ShapeStyle" xmi:id="_FFcGUesaEfCnILZln8XTJQ" fontName="Segoe UI" fontHeight="12"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FFcGUusaEfCnILZln8XTJQ" y="-22" width="208" height="30"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FFcGUusaEfCnILZln8XTJQ" x="85" y="-22" width="208" height="30"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_9hM98O48EfCs4_zQrLUTww" type="3001" element="_9hLIwu48EfCs4_zQrLUTww">
+            <children xmi:type="notation:Node" xmi:id="_9hNlAO48EfCs4_zQrLUTww" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_9hNlAe48EfCs4_zQrLUTww" x="-1"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_9hNlAu48EfCs4_zQrLUTww" type="3003" element="_9hLIw-48EfCs4_zQrLUTww">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_9hNlA-48EfCs4_zQrLUTww" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9hNlBO48EfCs4_zQrLUTww"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_9hNlBe48EfCs4_zQrLUTww" type="3001" element="_9hLv0u48EfCs4_zQrLUTww">
+              <children xmi:type="notation:Node" xmi:id="_9hOMEO48EfCs4_zQrLUTww" type="5001">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_9hOMEe48EfCs4_zQrLUTww" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_9hOMEu48EfCs4_zQrLUTww" type="3002" element="_9hLv0-48EfCs4_zQrLUTww">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_9hOME-48EfCs4_zQrLUTww" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9hOMFO48EfCs4_zQrLUTww"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_9hNlBu48EfCs4_zQrLUTww" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9hNlB-48EfCs4_zQrLUTww" x="22" y="60" width="30" height="30"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_OGofM-49EfCs4_zQrLUTww" type="3001" element="_OGmC4O49EfCs4_zQrLUTww">
+              <children xmi:type="notation:Node" xmi:id="_OGofNu49EfCs4_zQrLUTww" type="5001">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_OGofN-49EfCs4_zQrLUTww" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_OGpGMO49EfCs4_zQrLUTww" type="3002" element="_OGmC4e49EfCs4_zQrLUTww">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_OGpGMe49EfCs4_zQrLUTww" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OGpGMu49EfCs4_zQrLUTww"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_OGofNO49EfCs4_zQrLUTww" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OGofNe49EfCs4_zQrLUTww" x="22" y="10" width="30" height="30"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_9hM98e48EfCs4_zQrLUTww" fontName="Segoe UI" fontHeight="12"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9hM98u48EfCs4_zQrLUTww" x="372" y="25" width="30" height="111"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_cG-0cO49EfCs4_zQrLUTww" type="3001" element="_cG8YMu49EfCs4_zQrLUTww">
+            <children xmi:type="notation:Node" xmi:id="_cG_bgO49EfCs4_zQrLUTww" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_cG_bge49EfCs4_zQrLUTww" x="-1"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_cG_bgu49EfCs4_zQrLUTww" type="3003" element="_cG8YM-49EfCs4_zQrLUTww">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_cG_bg-49EfCs4_zQrLUTww" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cG_bhO49EfCs4_zQrLUTww"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_cG_bhe49EfCs4_zQrLUTww" type="3001" element="_cG8YOe49EfCs4_zQrLUTww">
+              <children xmi:type="notation:Node" xmi:id="_cG_biO49EfCs4_zQrLUTww" type="5001">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_cG_bie49EfCs4_zQrLUTww" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_cHACkO49EfCs4_zQrLUTww" type="3002" element="_cG8YOu49EfCs4_zQrLUTww">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_cHACke49EfCs4_zQrLUTww" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cHACku49EfCs4_zQrLUTww"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_cG_bhu49EfCs4_zQrLUTww" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cG_bh-49EfCs4_zQrLUTww" x="22" width="30" height="30"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_cG-0ce49EfCs4_zQrLUTww" fontName="Segoe UI" fontHeight="12"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cG-0cu49EfCs4_zQrLUTww" x="372" y="165" width="30" height="37"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_DwW1ceroEfCulNjD1BK4kQ" fontName="Segoe UI"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DwW1curoEfCulNjD1BK4kQ" x="110" y="470" width="216" height="166"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DwW1curoEfCulNjD1BK4kQ" x="25" y="470" width="380" height="286"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_pGl7AOsHEfCnILZln8XTJQ" type="2001" element="_pGBTQOsHEfCnILZln8XTJQ">
           <children xmi:type="notation:Node" xmi:id="_pGl7A-sHEfCnILZln8XTJQ" type="5002">
@@ -108,7 +163,7 @@
                 <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FFeinOsaEfCnILZln8XTJQ"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_FFd7lesaEfCnILZln8XTJQ" fontName="Segoe UI" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FFd7lusaEfCnILZln8XTJQ" x="115" y="26" width="30" height="30"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FFd7lusaEfCnILZln8XTJQ" x="37" y="26" width="30" height="30"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_FFd7mesaEfCnILZln8XTJQ" type="3001" element="_FEww-OsaEfCnILZln8XTJQ">
               <children xmi:type="notation:Node" xmi:id="_FFd7nOsaEfCnILZln8XTJQ" type="5001">
@@ -119,7 +174,7 @@
                 <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FFein-saEfCnILZln8XTJQ"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_FFd7musaEfCnILZln8XTJQ" fontName="Segoe UI" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FFd7m-saEfCnILZln8XTJQ" x="151" y="26" width="30" height="30"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FFd7m-saEfCnILZln8XTJQ" x="78" y="26" width="30" height="30"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_FFeikOsaEfCnILZln8XTJQ" type="3001" element="_FEww--saEfCnILZln8XTJQ">
               <children xmi:type="notation:Node" xmi:id="_FFeik-saEfCnILZln8XTJQ" type="5001">
@@ -141,7 +196,7 @@
                 <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FFeipesaEfCnILZln8XTJQ"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_FFeilusaEfCnILZln8XTJQ" fontName="Segoe UI" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FFeil-saEfCnILZln8XTJQ" x="70" y="26" width="30" height="30"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FFeil-saEfCnILZln8XTJQ" x="117" y="26" width="30" height="30"/>
             </children>
             <styles xmi:type="notation:ShapeStyle" xmi:id="_FFd7jesaEfCnILZln8XTJQ" fontName="Segoe UI" fontHeight="12"/>
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FFd7jusaEfCnILZln8XTJQ" x="-2" y="237" width="186" height="34"/>
@@ -149,70 +204,298 @@
           <styles xmi:type="notation:ShapeStyle" xmi:id="_pGl7AesHEfCnILZln8XTJQ" fontName="Segoe UI" fontHeight="12"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pGl7AusHEfCnILZln8XTJQ" x="110" y="50" width="181" height="245"/>
         </children>
+        <children xmi:type="notation:Node" xmi:id="_Q6n7se47EfCs4_zQrLUTww" type="2001" element="_Q6kRQO47EfCs4_zQrLUTww">
+          <children xmi:type="notation:Node" xmi:id="_Q6oisu47EfCs4_zQrLUTww" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_Q6ois-47EfCs4_zQrLUTww" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_812JQO47EfCs4_zQrLUTww" type="3005" element="_810UIO47EfCs4_zQrLUTww">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_812JQe47EfCs4_zQrLUTww" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_812JQu47EfCs4_zQrLUTww"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_VwMuAO48EfCs4_zQrLUTww" type="3001" element="_VwK42u48EfCs4_zQrLUTww">
+            <children xmi:type="notation:Node" xmi:id="_VwMuA-48EfCs4_zQrLUTww" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_VwMuBO48EfCs4_zQrLUTww" x="-1" y="4"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_VwNVEO48EfCs4_zQrLUTww" type="3003" element="_VwK42-48EfCs4_zQrLUTww">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_VwNVEe48EfCs4_zQrLUTww" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VwNVEu48EfCs4_zQrLUTww"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_VwNVE-48EfCs4_zQrLUTww" type="3001" element="_VwK43e48EfCs4_zQrLUTww">
+              <children xmi:type="notation:Node" xmi:id="_VwNVFu48EfCs4_zQrLUTww" type="5001">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_VwNVF-48EfCs4_zQrLUTww" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_VwNVGO48EfCs4_zQrLUTww" type="3002" element="_VwK43u48EfCs4_zQrLUTww">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_VwNVGe48EfCs4_zQrLUTww" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VwNVGu48EfCs4_zQrLUTww"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_VwNVFO48EfCs4_zQrLUTww" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VwNVFe48EfCs4_zQrLUTww" x="50" y="22" width="30" height="30"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_W0O96O48EfCs4_zQrLUTww" type="3001" element="_W0L6kO48EfCs4_zQrLUTww">
+              <children xmi:type="notation:Node" xmi:id="_W0O96-48EfCs4_zQrLUTww" type="5001">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_W0O97O48EfCs4_zQrLUTww" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_XNTlMO48EfCs4_zQrLUTww" type="3002" element="_XNQh_-48EfCs4_zQrLUTww">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_XNTlMe48EfCs4_zQrLUTww" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XNTlMu48EfCs4_zQrLUTww"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_W0O96e48EfCs4_zQrLUTww" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_W0O96u48EfCs4_zQrLUTww" x="15" y="22" width="30" height="30"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_VwMuAe48EfCs4_zQrLUTww" fontName="Segoe UI" fontHeight="12"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VwMuAu48EfCs4_zQrLUTww" x="40" y="133" width="90" height="30"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_Q6oisO47EfCs4_zQrLUTww" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Q6oise47EfCs4_zQrLUTww" x="450" y="150" width="189" height="174"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_UOgHOO47EfCs4_zQrLUTww" type="2001" element="_UOanoO47EfCs4_zQrLUTww">
+          <children xmi:type="notation:Node" xmi:id="_UOguQO47EfCs4_zQrLUTww" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_UOguQe47EfCs4_zQrLUTww" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_UO2sgO47EfCs4_zQrLUTww" type="3005" element="_UOanoe47EfCs4_zQrLUTww">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_UO2sge47EfCs4_zQrLUTww" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UO2sgu47EfCs4_zQrLUTww"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_XtuKoO48EfCs4_zQrLUTww" type="3001" element="_XtrHYu48EfCs4_zQrLUTww">
+            <children xmi:type="notation:Node" xmi:id="_XtuKo-48EfCs4_zQrLUTww" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_XtuKpO48EfCs4_zQrLUTww" x="-1" y="1"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_XtuxsO48EfCs4_zQrLUTww" type="3003" element="_XtrHY-48EfCs4_zQrLUTww">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_Xtuxse48EfCs4_zQrLUTww" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Xtuxsu48EfCs4_zQrLUTww"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_Xtuxs-48EfCs4_zQrLUTww" type="3001" element="_XtrHZe48EfCs4_zQrLUTww">
+              <children xmi:type="notation:Node" xmi:id="_Xtuxtu48EfCs4_zQrLUTww" type="5001">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_Xtuxt-48EfCs4_zQrLUTww" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_XtvYwO48EfCs4_zQrLUTww" type="3002" element="_XtrHZu48EfCs4_zQrLUTww">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_XtvYwe48EfCs4_zQrLUTww" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XtvYwu48EfCs4_zQrLUTww"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_XtuxtO48EfCs4_zQrLUTww" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Xtuxte48EfCs4_zQrLUTww" x="65" y="22" width="30" height="30"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_Yn9lUO48EfCs4_zQrLUTww" type="3001" element="_Yn7JEO48EfCs4_zQrLUTww">
+              <children xmi:type="notation:Node" xmi:id="_Yn9lU-48EfCs4_zQrLUTww" type="5001">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_Yn9lVO48EfCs4_zQrLUTww" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_eOK_4O48EfCs4_zQrLUTww" type="3002" element="_eOIjtO48EfCs4_zQrLUTww">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_eOK_4e48EfCs4_zQrLUTww" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eOK_4u48EfCs4_zQrLUTww"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_Yn9lUe48EfCs4_zQrLUTww" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Yn9lUu48EfCs4_zQrLUTww" x="15" y="22" width="30" height="30"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_XtuKoe48EfCs4_zQrLUTww" fontName="Segoe UI" fontHeight="12"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XtuKou48EfCs4_zQrLUTww" x="50" y="154" width="95" height="30"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_UOgHOe47EfCs4_zQrLUTww" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UOgHOu47EfCs4_zQrLUTww" x="647" y="198" width="216" height="137"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_wWtvEO47EfCs4_zQrLUTww" type="2001" element="_wWo2kO47EfCs4_zQrLUTww">
+          <children xmi:type="notation:Node" xmi:id="_wWtvE-47EfCs4_zQrLUTww" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_wWtvFO47EfCs4_zQrLUTww" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_wWwyYO47EfCs4_zQrLUTww" type="3005" element="_wWo2ke47EfCs4_zQrLUTww">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_wWwyYe47EfCs4_zQrLUTww" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wWwyYu47EfCs4_zQrLUTww"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_1vOE0O47EfCs4_zQrLUTww" type="3001" element="_1vLom-47EfCs4_zQrLUTww">
+            <children xmi:type="notation:Node" xmi:id="_1vOr4O47EfCs4_zQrLUTww" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_1vOr4e47EfCs4_zQrLUTww" x="-1"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_1vOr4u47EfCs4_zQrLUTww" type="3003" element="_1vLonO47EfCs4_zQrLUTww">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_1vOr4-47EfCs4_zQrLUTww" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1vOr5O47EfCs4_zQrLUTww"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_1vPS8O47EfCs4_zQrLUTww" type="3001" element="_1vLonu47EfCs4_zQrLUTww">
+              <children xmi:type="notation:Node" xmi:id="_1vPS8-47EfCs4_zQrLUTww" type="5001">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_1vPS9O47EfCs4_zQrLUTww" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_1vPS9e47EfCs4_zQrLUTww" type="3002" element="_1vLon-47EfCs4_zQrLUTww">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_1vPS9u47EfCs4_zQrLUTww" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1vPS9-47EfCs4_zQrLUTww"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_1vPS8e47EfCs4_zQrLUTww" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1vPS8u47EfCs4_zQrLUTww" x="-22" y="5" width="30" height="30"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_4IWfYO47EfCs4_zQrLUTww" type="3001" element="_4IRm4O47EfCs4_zQrLUTww">
+              <children xmi:type="notation:Node" xmi:id="_4IWfY-47EfCs4_zQrLUTww" type="5001">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_4IWfZO47EfCs4_zQrLUTww" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_4pHqIO47EfCs4_zQrLUTww" type="3002" element="_4pF1Ae47EfCs4_zQrLUTww">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_4pHqIe47EfCs4_zQrLUTww" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4pHqIu47EfCs4_zQrLUTww"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_4IWfYe47EfCs4_zQrLUTww" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4IWfYu47EfCs4_zQrLUTww" x="-22" y="55" width="30" height="30"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_1vOE0e47EfCs4_zQrLUTww" fontName="Segoe UI" fontHeight="12"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1vOE0u47EfCs4_zQrLUTww" x="-22" y="35" width="30" height="91"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_wWtvEe47EfCs4_zQrLUTww" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wWtvEu47EfCs4_zQrLUTww" x="680" y="515" width="150" height="130"/>
+        </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_e-jSEupZEfCDSYN1AvDxkw"/>
         <edges xmi:type="notation:Edge" xmi:id="_FFeipusaEfCnILZln8XTJQ" type="4001" element="_FExX8OsaEfCnILZln8XTJQ" source="_FFeilesaEfCnILZln8XTJQ" target="_FFdUd-saEfCnILZln8XTJQ">
           <children xmi:type="notation:Node" xmi:id="_FFeiqusaEfCnILZln8XTJQ" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FFeiq-saEfCnILZln8XTJQ" y="4"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FFeiq-saEfCnILZln8XTJQ" x="-3" y="4"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_FFfJoOsaEfCnILZln8XTJQ" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FFfJoesaEfCnILZln8XTJQ" x="-4" y="5"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FFfJoesaEfCnILZln8XTJQ" x="-7" y="5"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_FFfJousaEfCnILZln8XTJQ" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FFfJo-saEfCnILZln8XTJQ" x="-4" y="6"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FFfJo-saEfCnILZln8XTJQ" x="-7" y="8"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_FFeip-saEfCnILZln8XTJQ"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_FFeiqOsaEfCnILZln8XTJQ" fontName="Segoe UI" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_FFeiqesaEfCnILZln8XTJQ" points="[-2, 15, 6, -98]$[-7, 98, 1, -15]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_FFeiqesaEfCnILZln8XTJQ" points="[5, 15, -58, -162]$[57, 162, -6, -15]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_FFfJpOsaEfCnILZln8XTJQ" id="(0.5,0.5)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_FFfJpesaEfCnILZln8XTJQ" id="(0.5,0.5)"/>
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_FFfJpusaEfCnILZln8XTJQ" type="4001" element="_FExX9esaEfCnILZln8XTJQ" source="_FFd7lOsaEfCnILZln8XTJQ" target="_FFctY-saEfCnILZln8XTJQ">
           <children xmi:type="notation:Node" xmi:id="_FFfJqusaEfCnILZln8XTJQ" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FFfJq-saEfCnILZln8XTJQ" x="7"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FFfJq-saEfCnILZln8XTJQ" x="5" y="1"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_FFfJrOsaEfCnILZln8XTJQ" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FFfJresaEfCnILZln8XTJQ" x="-7" y="11"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FFfJresaEfCnILZln8XTJQ" x="-9" y="11"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_FFfJrusaEfCnILZln8XTJQ" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FFfJr-saEfCnILZln8XTJQ" x="-8" y="9"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FFfJr-saEfCnILZln8XTJQ" x="-9" y="9"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_FFfJp-saEfCnILZln8XTJQ"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_FFfJqOsaEfCnILZln8XTJQ" fontName="Segoe UI" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_FFfJqesaEfCnILZln8XTJQ" points="[-1, 15, 2, -98]$[-3, 98, 0, -15]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_FFfJqesaEfCnILZln8XTJQ" points="[0, 15, -5, -162]$[4, 162, -1, -15]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_FFfJsOsaEfCnILZln8XTJQ" id="(0.5,0.5)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_FFfJsesaEfCnILZln8XTJQ" id="(0.5,0.5)"/>
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_FFfJsusaEfCnILZln8XTJQ" type="4001" element="_FExX-usaEfCnILZln8XTJQ" source="_FFd7mesaEfCnILZln8XTJQ" target="_FFctaOsaEfCnILZln8XTJQ">
           <children xmi:type="notation:Node" xmi:id="_FFfJtusaEfCnILZln8XTJQ" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FFfJt-saEfCnILZln8XTJQ" x="2" y="-1"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FFfJt-saEfCnILZln8XTJQ" y="1"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_FFfJuOsaEfCnILZln8XTJQ" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FFfJuesaEfCnILZln8XTJQ" x="-7" y="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FFfJuesaEfCnILZln8XTJQ" x="-9" y="10"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_FFfJuusaEfCnILZln8XTJQ" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FFfJu-saEfCnILZln8XTJQ" x="-7" y="9"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FFfJu-saEfCnILZln8XTJQ" x="-9" y="11"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_FFfJs-saEfCnILZln8XTJQ"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_FFfJtOsaEfCnILZln8XTJQ" fontName="Segoe UI" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_FFfJtesaEfCnILZln8XTJQ" points="[0, 15, -2, -98]$[1, 98, -1, -15]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_FFfJtesaEfCnILZln8XTJQ" points="[0, 15, -9, -162]$[8, 162, -1, -15]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_FFfJvOsaEfCnILZln8XTJQ" id="(0.5,0.5)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_FFfJvesaEfCnILZln8XTJQ" id="(0.5,0.5)"/>
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_J8CV8OsnEfCsLbzDeMEY8g" type="4001" element="_J7-rnOsnEfCsLbzDeMEY8g" source="_FFeikOsaEfCnILZln8XTJQ" target="_FFdUcusaEfCnILZln8XTJQ">
           <children xmi:type="notation:Node" xmi:id="_J8C9AOsnEfCsLbzDeMEY8g" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_J8C9AesnEfCsLbzDeMEY8g" y="-10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_J8C9AesnEfCsLbzDeMEY8g" x="-10"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_J8DkEOsnEfCsLbzDeMEY8g" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_J8DkEesnEfCsLbzDeMEY8g" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_J8DkEesnEfCsLbzDeMEY8g" x="10"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_J8DkEusnEfCsLbzDeMEY8g" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_J8DkE-snEfCsLbzDeMEY8g" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_J8DkE-snEfCsLbzDeMEY8g" x="10"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_J8CV8esnEfCsLbzDeMEY8g"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_J8CV8usnEfCsLbzDeMEY8g" fontName="Segoe UI" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_J8CV8-snEfCsLbzDeMEY8g" points="[0, 0, -7, -113]$[7, 113, 0, 0]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_J8CV8-snEfCsLbzDeMEY8g" points="[0, 15, -7, -162]$[0, 70, -7, -107]$[0, 162, -7, -15]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_J8ELIOsnEfCsLbzDeMEY8g" id="(0.5,0.5)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_J8ELIesnEfCsLbzDeMEY8g" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_WrPkgO49EfCs4_zQrLUTww" type="4001" element="_WrJd7u49EfCs4_zQrLUTww" source="_VwNVE-48EfCs4_zQrLUTww" target="_OGofM-49EfCs4_zQrLUTww">
+          <children xmi:type="notation:Node" xmi:id="_WrPkhO49EfCs4_zQrLUTww" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WrPkhe49EfCs4_zQrLUTww" x="-12" y="3"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_WrQLkO49EfCs4_zQrLUTww" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WrQLke49EfCs4_zQrLUTww" x="9" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_WrQLku49EfCs4_zQrLUTww" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WrQLk-49EfCs4_zQrLUTww" x="15" y="3"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_WrPkge49EfCs4_zQrLUTww"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_WrPkgu49EfCs4_zQrLUTww" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_WrPkg-49EfCs4_zQrLUTww" points="[0, 0, 110, -137]$[-110, 137, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_WrQyoO49EfCs4_zQrLUTww" id="(0.5,1.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_WrQyoe49EfCs4_zQrLUTww" id="(0.8666666666666667,0.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_ZDaVwO49EfCs4_zQrLUTww" type="4001" element="_ZDUPMu49EfCs4_zQrLUTww" source="_W0O96O48EfCs4_zQrLUTww" target="_FFdUd-saEfCnILZln8XTJQ">
+          <children xmi:type="notation:Node" xmi:id="_ZDaVxO49EfCs4_zQrLUTww" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZDaVxe49EfCs4_zQrLUTww" x="1" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_ZDaVxu49EfCs4_zQrLUTww" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZDaVx-49EfCs4_zQrLUTww" y="11"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_ZDaVyO49EfCs4_zQrLUTww" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZDaVye49EfCs4_zQrLUTww" x="-2" y="11"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_ZDaVwe49EfCs4_zQrLUTww"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_ZDaVwu49EfCs4_zQrLUTww" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ZDaVw-49EfCs4_zQrLUTww" points="[0, 0, 187, -85]$[-187, 85, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ZDaVyu49EfCs4_zQrLUTww" id="(0.0,0.4)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ZDaVy-49EfCs4_zQrLUTww" id="(1.0,0.3)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_Z7a70O49EfCs4_zQrLUTww" type="4001" element="_Z7WqYu49EfCs4_zQrLUTww" source="_Yn9lUO48EfCs4_zQrLUTww" target="_FFdUd-saEfCnILZln8XTJQ">
+          <children xmi:type="notation:Node" xmi:id="_Z7a71O49EfCs4_zQrLUTww" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Z7a71e49EfCs4_zQrLUTww" x="-1" y="-9"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Z7a71u49EfCs4_zQrLUTww" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Z7a71-49EfCs4_zQrLUTww" y="11"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Z7a72O49EfCs4_zQrLUTww" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Z7a72e49EfCs4_zQrLUTww" x="1" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_Z7a70e49EfCs4_zQrLUTww"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_Z7a70u49EfCs4_zQrLUTww" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Z7a70-49EfCs4_zQrLUTww" points="[0, 0, 394, -92]$[-394, 92, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Z7bi4O49EfCs4_zQrLUTww" id="(0.0,0.13333333333333333)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Z7bi4e49EfCs4_zQrLUTww" id="(1.0,0.6333333333333333)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_a0OzIO49EfCs4_zQrLUTww" type="4001" element="_a0J6vO49EfCs4_zQrLUTww" source="_Xtuxs-48EfCs4_zQrLUTww" target="_9hNlBe48EfCs4_zQrLUTww">
+          <children xmi:type="notation:Node" xmi:id="_a0PaMO49EfCs4_zQrLUTww" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_a0PaMe49EfCs4_zQrLUTww" x="1" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_a0PaMu49EfCs4_zQrLUTww" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_a0PaM-49EfCs4_zQrLUTww" x="-1" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_a0PaNO49EfCs4_zQrLUTww" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_a0PaNe49EfCs4_zQrLUTww" y="12"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_a0OzIe49EfCs4_zQrLUTww"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_a0OzIu49EfCs4_zQrLUTww" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_a0OzI-49EfCs4_zQrLUTww" points="[0, 0, 313, -197]$[-313, 197, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_a0PaNu49EfCs4_zQrLUTww" id="(0.0,0.6333333333333333)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_a0PaN-49EfCs4_zQrLUTww" id="(1.0,0.3333333333333333)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_t5zV0O49EfCs4_zQrLUTww" type="4001" element="_t5t2YO49EfCs4_zQrLUTww" source="_1vPS8O47EfCs4_zQrLUTww" target="_cG_bhe49EfCs4_zQrLUTww">
+          <children xmi:type="notation:Node" xmi:id="_t5zV1O49EfCs4_zQrLUTww" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_t5zV1e49EfCs4_zQrLUTww" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_t5z84O49EfCs4_zQrLUTww" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_t5z84e49EfCs4_zQrLUTww" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_t5z84u49EfCs4_zQrLUTww" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_t5z84-49EfCs4_zQrLUTww" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_t5zV0e49EfCs4_zQrLUTww"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_t5zV0u49EfCs4_zQrLUTww" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_t5zV0-49EfCs4_zQrLUTww" points="[0, 0, 187, -85]$[-187, 85, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_t50j8O49EfCs4_zQrLUTww" id="(0.0,0.3333333333333333)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_t50j8e49EfCs4_zQrLUTww" id="(1.0,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_CDm8uO4-EfCs4_zQrLUTww" type="4001" element="_CDirWO4-EfCs4_zQrLUTww" source="_4IWfYO47EfCs4_zQrLUTww" target="_FFdUd-saEfCnILZln8XTJQ">
+          <children xmi:type="notation:Node" xmi:id="_CDnjwO4-EfCs4_zQrLUTww" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_CDnjwe4-EfCs4_zQrLUTww" x="2" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_CDoK0O4-EfCs4_zQrLUTww" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_CDoK0e4-EfCs4_zQrLUTww" x="-9" y="-4"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_CDoK0u4-EfCs4_zQrLUTww" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_CDoK0-4-EfCs4_zQrLUTww" x="-2" y="-10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_CDm8ue4-EfCs4_zQrLUTww"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_CDm8uu4-EfCs4_zQrLUTww" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_CDm8u-4-EfCs4_zQrLUTww" points="[0, 0, 318, 175]$[-42, -106, 276, 69]$[-318, -175, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_CDoK1O4-EfCs4_zQrLUTww" id="(0.0,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_CDoK1e4-EfCs4_zQrLUTww" id="(1.0,0.6333333333333333)"/>
         </edges>
       </data>
     </ownedAnnotationEntries>
@@ -228,7 +511,7 @@
         <ownedBorderedNodes xmi:type="diagram:DNode" uid="_FEww5OsaEfCnILZln8XTJQ" incomingEdges="_FExX9esaEfCnILZln8XTJQ" width="3" height="3" resizeKind="NSEW">
           <target xmi:type="trafficLightSystem:Pin" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@board/@pinGroups.0/@pins.0"/>
           <semanticElements xmi:type="trafficLightSystem:Pin" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@board/@pinGroups.0/@pins.0"/>
-          <ownedStyle xmi:type="diagram:Dot" uid="_FEww5esaEfCnILZln8XTJQ" labelSize="12" labelPosition="node" backgroundColor="173,127,168">
+          <ownedStyle xmi:type="diagram:Dot" uid="_FEww5esaEfCnILZln8XTJQ" labelSize="12" showIcon="false" labelPosition="node" backgroundColor="173,127,168">
             <description xmi:type="style:DotDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']/@borderedNodeMappings[name='PinNode']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']/@borderedNodeMappings[name='PinNode']"/>
@@ -236,7 +519,7 @@
         <ownedBorderedNodes xmi:type="diagram:DNode" uid="_FEww5-saEfCnILZln8XTJQ" incomingEdges="_FExX-usaEfCnILZln8XTJQ" width="3" height="3" resizeKind="NSEW">
           <target xmi:type="trafficLightSystem:Pin" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@board/@pinGroups.0/@pins.1"/>
           <semanticElements xmi:type="trafficLightSystem:Pin" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@board/@pinGroups.0/@pins.1"/>
-          <ownedStyle xmi:type="diagram:Dot" uid="_FEww6OsaEfCnILZln8XTJQ" labelSize="12" labelPosition="node" backgroundColor="173,127,168">
+          <ownedStyle xmi:type="diagram:Dot" uid="_FEww6OsaEfCnILZln8XTJQ" labelSize="12" showIcon="false" labelPosition="node" backgroundColor="173,127,168">
             <description xmi:type="style:DotDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']/@borderedNodeMappings[name='PinNode']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']/@borderedNodeMappings[name='PinNode']"/>
@@ -244,20 +527,60 @@
         <ownedBorderedNodes xmi:type="diagram:DNode" uid="_FEww6usaEfCnILZln8XTJQ" incomingEdges="_J7-rnOsnEfCsLbzDeMEY8g" width="3" height="3" resizeKind="NSEW">
           <target xmi:type="trafficLightSystem:Pin" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@board/@pinGroups.0/@pins.2"/>
           <semanticElements xmi:type="trafficLightSystem:Pin" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@board/@pinGroups.0/@pins.2"/>
-          <ownedStyle xmi:type="diagram:Dot" uid="_FEww6-saEfCnILZln8XTJQ" labelSize="12" labelPosition="node" backgroundColor="173,127,168">
+          <ownedStyle xmi:type="diagram:Dot" uid="_FEww6-saEfCnILZln8XTJQ" labelSize="12" showIcon="false" labelPosition="node" backgroundColor="173,127,168">
             <description xmi:type="style:DotDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']/@borderedNodeMappings[name='PinNode']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']/@borderedNodeMappings[name='PinNode']"/>
         </ownedBorderedNodes>
-        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_FEww7esaEfCnILZln8XTJQ" name="GND" incomingEdges="_FExX8OsaEfCnILZln8XTJQ" width="3" height="3" resizeKind="NSEW">
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_FEww7esaEfCnILZln8XTJQ" name="GND" incomingEdges="_FExX8OsaEfCnILZln8XTJQ _ZDUPMu49EfCs4_zQrLUTww _Z7WqYu49EfCs4_zQrLUTww _CDirWO4-EfCs4_zQrLUTww" width="3" height="3" resizeKind="NSEW">
           <target xmi:type="trafficLightSystem:Pin" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@board/@pinGroups.0/@pins.3"/>
           <semanticElements xmi:type="trafficLightSystem:Pin" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@board/@pinGroups.0/@pins.3"/>
-          <ownedStyle xmi:type="diagram:Dot" uid="_FEww7usaEfCnILZln8XTJQ" labelSize="12" labelPosition="node" backgroundColor="0,0,0">
+          <ownedStyle xmi:type="diagram:Dot" uid="_FEww7usaEfCnILZln8XTJQ" labelSize="12" showIcon="false" labelPosition="node" backgroundColor="0,0,0">
             <description xmi:type="style:DotDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']/@borderedNodeMappings[name='PinNode']/@conditionnalStyles.0/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']/@borderedNodeMappings[name='PinNode']"/>
         </ownedBorderedNodes>
-        <ownedStyle xmi:type="diagram:Square" uid="_FEww4usaEfCnILZln8XTJQ" labelSize="12" color="233,185,110">
+        <ownedStyle xmi:type="diagram:Square" uid="_FEww4usaEfCnILZln8XTJQ" labelSize="12" showIcon="false" color="233,185,110">
+          <description xmi:type="style:SquareDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']"/>
+      </ownedBorderedNodes>
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_9hLIwu48EfCs4_zQrLUTww" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="trafficLightSystem:PinGroup" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@board/@pinGroups.1"/>
+        <semanticElements xmi:type="trafficLightSystem:PinGroup" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@board/@pinGroups.1"/>
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_9hLv0u48EfCs4_zQrLUTww" incomingEdges="_a0J6vO49EfCs4_zQrLUTww" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="trafficLightSystem:Pin" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@board/@pinGroups.1/@pins.0"/>
+          <semanticElements xmi:type="trafficLightSystem:Pin" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@board/@pinGroups.1/@pins.0"/>
+          <ownedStyle xmi:type="diagram:Dot" uid="_9hLv0-48EfCs4_zQrLUTww" labelSize="12" showIcon="false" labelPosition="node" backgroundColor="173,127,168">
+            <description xmi:type="style:DotDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']/@borderedNodeMappings[name='PinNode']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']/@borderedNodeMappings[name='PinNode']"/>
+        </ownedBorderedNodes>
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_OGmC4O49EfCs4_zQrLUTww" incomingEdges="_WrJd7u49EfCs4_zQrLUTww" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="trafficLightSystem:Pin" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@board/@pinGroups.1/@pins.1"/>
+          <semanticElements xmi:type="trafficLightSystem:Pin" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@board/@pinGroups.1/@pins.1"/>
+          <ownedStyle xmi:type="diagram:Dot" uid="_OGmC4e49EfCs4_zQrLUTww" labelSize="12" showIcon="false" labelPosition="node" backgroundColor="173,127,168">
+            <description xmi:type="style:DotDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']/@borderedNodeMappings[name='PinNode']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']/@borderedNodeMappings[name='PinNode']"/>
+        </ownedBorderedNodes>
+        <ownedStyle xmi:type="diagram:Square" uid="_9hLIw-48EfCs4_zQrLUTww" labelSize="12" showIcon="false" color="233,185,110">
+          <description xmi:type="style:SquareDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']"/>
+      </ownedBorderedNodes>
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_cG8YMu49EfCs4_zQrLUTww" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="trafficLightSystem:PinGroup" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@board/@pinGroups.2"/>
+        <semanticElements xmi:type="trafficLightSystem:PinGroup" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@board/@pinGroups.2"/>
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_cG8YOe49EfCs4_zQrLUTww" incomingEdges="_t5t2YO49EfCs4_zQrLUTww" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="trafficLightSystem:Pin" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@board/@pinGroups.2/@pins.0"/>
+          <semanticElements xmi:type="trafficLightSystem:Pin" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@board/@pinGroups.2/@pins.0"/>
+          <ownedStyle xmi:type="diagram:Dot" uid="_cG8YOu49EfCs4_zQrLUTww" labelSize="12" showIcon="false" labelPosition="node" backgroundColor="173,127,168">
+            <description xmi:type="style:DotDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']/@borderedNodeMappings[name='PinNode']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']/@borderedNodeMappings[name='PinNode']"/>
+        </ownedBorderedNodes>
+        <ownedStyle xmi:type="diagram:Square" uid="_cG8YM-49EfCs4_zQrLUTww" labelSize="12" showIcon="false" color="233,185,110">
           <description xmi:type="style:SquareDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']"/>
@@ -277,7 +600,7 @@
         <ownedBorderedNodes xmi:type="diagram:DNode" uid="_FEww9esaEfCnILZln8XTJQ" outgoingEdges="_FExX9esaEfCnILZln8XTJQ" width="3" height="3" resizeKind="NSEW">
           <target xmi:type="trafficLightSystem:Pin" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@components.0/@pinGroups.0/@pins.0"/>
           <semanticElements xmi:type="trafficLightSystem:Pin" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@components.0/@pinGroups.0/@pins.0"/>
-          <ownedStyle xmi:type="diagram:Dot" uid="_FEww9usaEfCnILZln8XTJQ" labelSize="12" labelPosition="node" backgroundColor="173,127,168">
+          <ownedStyle xmi:type="diagram:Dot" uid="_FEww9usaEfCnILZln8XTJQ" labelSize="12" showIcon="false" labelPosition="node" backgroundColor="173,127,168">
             <description xmi:type="style:DotDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']/@borderedNodeMappings[name='PinNode']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']/@borderedNodeMappings[name='PinNode']"/>
@@ -294,7 +617,7 @@
         <ownedBorderedNodes xmi:type="diagram:DNode" uid="_FEww--saEfCnILZln8XTJQ" outgoingEdges="_J7-rnOsnEfCsLbzDeMEY8g" width="3" height="3" resizeKind="NSEW">
           <target xmi:type="trafficLightSystem:Pin" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@components.0/@pinGroups.0/@pins.2"/>
           <semanticElements xmi:type="trafficLightSystem:Pin" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@components.0/@pinGroups.0/@pins.2"/>
-          <ownedStyle xmi:type="diagram:Dot" uid="_FEww_OsaEfCnILZln8XTJQ" labelSize="12" labelPosition="node" backgroundColor="173,127,168">
+          <ownedStyle xmi:type="diagram:Dot" uid="_FEww_OsaEfCnILZln8XTJQ" labelSize="12" showIcon="false" labelPosition="node" backgroundColor="173,127,168">
             <description xmi:type="style:DotDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']/@borderedNodeMappings[name='PinNode']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']/@borderedNodeMappings[name='PinNode']"/>
@@ -302,12 +625,12 @@
         <ownedBorderedNodes xmi:type="diagram:DNode" uid="_FEww_usaEfCnILZln8XTJQ" name="GND" outgoingEdges="_FExX8OsaEfCnILZln8XTJQ" width="3" height="3" resizeKind="NSEW">
           <target xmi:type="trafficLightSystem:Pin" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@components.0/@pinGroups.0/@pins.3"/>
           <semanticElements xmi:type="trafficLightSystem:Pin" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@components.0/@pinGroups.0/@pins.3"/>
-          <ownedStyle xmi:type="diagram:Dot" uid="_FEww_-saEfCnILZln8XTJQ" labelSize="12" labelPosition="node" backgroundColor="0,0,0">
+          <ownedStyle xmi:type="diagram:Dot" uid="_FEww_-saEfCnILZln8XTJQ" labelSize="12" showIcon="false" labelPosition="node" backgroundColor="0,0,0">
             <description xmi:type="style:DotDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']/@borderedNodeMappings[name='PinNode']/@conditionnalStyles.0/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']/@borderedNodeMappings[name='PinNode']"/>
         </ownedBorderedNodes>
-        <ownedStyle xmi:type="diagram:Square" uid="_FEww8-saEfCnILZln8XTJQ" labelSize="12" color="233,185,110">
+        <ownedStyle xmi:type="diagram:Square" uid="_FEww8-saEfCnILZln8XTJQ" labelSize="12" showIcon="false" color="233,185,110">
           <description xmi:type="style:SquareDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']"/>
@@ -322,7 +645,7 @@
       <semanticElements xmi:type="trafficLightSystem:Connection" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@connections.0"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_FExX8esaEfCnILZln8XTJQ" size="2" strokeColor="0,0,0">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@edgeMappings[name='WireEdge']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_FExX8usaEfCnILZln8XTJQ" labelSize="12"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_FExX8usaEfCnILZln8XTJQ" labelSize="12" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@edgeMappings[name='WireEdge']"/>
     </ownedDiagramElements>
@@ -331,7 +654,7 @@
       <semanticElements xmi:type="trafficLightSystem:Connection" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@connections.1"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_FExX9usaEfCnILZln8XTJQ" size="2" strokeColor="0,0,0">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@edgeMappings[name='WireEdge']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_FExX9-saEfCnILZln8XTJQ" labelSize="12"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_FExX9-saEfCnILZln8XTJQ" labelSize="12" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@edgeMappings[name='WireEdge']"/>
     </ownedDiagramElements>
@@ -340,7 +663,7 @@
       <semanticElements xmi:type="trafficLightSystem:Connection" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@connections.2"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_FExX--saEfCnILZln8XTJQ" size="2" strokeColor="0,0,0">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@edgeMappings[name='WireEdge']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_FExX_OsaEfCnILZln8XTJQ" labelSize="12"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_FExX_OsaEfCnILZln8XTJQ" labelSize="12" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@edgeMappings[name='WireEdge']"/>
     </ownedDiagramElements>
@@ -349,7 +672,157 @@
       <semanticElements xmi:type="trafficLightSystem:Connection" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@connections.3"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_J7-rnesnEfCsLbzDeMEY8g" size="2" strokeColor="0,0,0">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@edgeMappings[name='WireEdge']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_J7-rnusnEfCsLbzDeMEY8g" labelSize="12"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_J7-rnusnEfCsLbzDeMEY8g" labelSize="12" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@edgeMappings[name='WireEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_Q6kRQO47EfCs4_zQrLUTww" width="-1" height="-1" resizeKind="NSEW">
+      <target xmi:type="trafficLightSystem:LED" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@components.1"/>
+      <semanticElements xmi:type="trafficLightSystem:LED" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@components.1"/>
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_VwK42u48EfCs4_zQrLUTww" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="trafficLightSystem:PinGroup" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@components.1/@pinGroups.0"/>
+        <semanticElements xmi:type="trafficLightSystem:PinGroup" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@components.1/@pinGroups.0"/>
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_VwK43e48EfCs4_zQrLUTww" outgoingEdges="_WrJd7u49EfCs4_zQrLUTww" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="trafficLightSystem:Pin" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@components.1/@pinGroups.0/@pins.0"/>
+          <semanticElements xmi:type="trafficLightSystem:Pin" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@components.1/@pinGroups.0/@pins.0"/>
+          <ownedStyle xmi:type="diagram:Dot" uid="_VwK43u48EfCs4_zQrLUTww" labelSize="12" showIcon="false" labelPosition="node" backgroundColor="173,127,168">
+            <description xmi:type="style:DotDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']/@borderedNodeMappings[name='PinNode']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']/@borderedNodeMappings[name='PinNode']"/>
+        </ownedBorderedNodes>
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_W0L6kO48EfCs4_zQrLUTww" name="GND" outgoingEdges="_ZDUPMu49EfCs4_zQrLUTww" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="trafficLightSystem:Pin" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@components.1/@pinGroups.0/@pins.1"/>
+          <semanticElements xmi:type="trafficLightSystem:Pin" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@components.1/@pinGroups.0/@pins.1"/>
+          <ownedStyle xmi:type="diagram:Dot" uid="_XNQh_-48EfCs4_zQrLUTww" labelSize="12" showIcon="false" labelPosition="node" backgroundColor="0,0,0">
+            <description xmi:type="style:DotDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']/@borderedNodeMappings[name='PinNode']/@conditionnalStyles.0/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']/@borderedNodeMappings[name='PinNode']"/>
+        </ownedBorderedNodes>
+        <ownedStyle xmi:type="diagram:Square" uid="_VwK42-48EfCs4_zQrLUTww" labelSize="12" showIcon="false" color="233,185,110">
+          <description xmi:type="style:SquareDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']"/>
+      </ownedBorderedNodes>
+      <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_810UIO47EfCs4_zQrLUTww" labelSize="12" showIcon="false" labelPosition="node" workspacePath="/TrafficLightSystem.project.design/arduinoImages/images/svg/led-green.svg">
+        <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='LEDNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='LEDNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_UOanoO47EfCs4_zQrLUTww" width="-1" height="-1" resizeKind="NSEW">
+      <target xmi:type="trafficLightSystem:LED" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@components.2"/>
+      <semanticElements xmi:type="trafficLightSystem:LED" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@components.2"/>
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_XtrHYu48EfCs4_zQrLUTww" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="trafficLightSystem:PinGroup" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@components.2/@pinGroups.0"/>
+        <semanticElements xmi:type="trafficLightSystem:PinGroup" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@components.2/@pinGroups.0"/>
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_XtrHZe48EfCs4_zQrLUTww" outgoingEdges="_a0J6vO49EfCs4_zQrLUTww" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="trafficLightSystem:Pin" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@components.2/@pinGroups.0/@pins.0"/>
+          <semanticElements xmi:type="trafficLightSystem:Pin" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@components.2/@pinGroups.0/@pins.0"/>
+          <ownedStyle xmi:type="diagram:Dot" uid="_XtrHZu48EfCs4_zQrLUTww" labelSize="12" showIcon="false" labelPosition="node" backgroundColor="173,127,168">
+            <description xmi:type="style:DotDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']/@borderedNodeMappings[name='PinNode']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']/@borderedNodeMappings[name='PinNode']"/>
+        </ownedBorderedNodes>
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_Yn7JEO48EfCs4_zQrLUTww" name="GND" outgoingEdges="_Z7WqYu49EfCs4_zQrLUTww" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="trafficLightSystem:Pin" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@components.2/@pinGroups.0/@pins.1"/>
+          <semanticElements xmi:type="trafficLightSystem:Pin" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@components.2/@pinGroups.0/@pins.1"/>
+          <ownedStyle xmi:type="diagram:Dot" uid="_eOIjtO48EfCs4_zQrLUTww" labelSize="12" showIcon="false" labelPosition="node" backgroundColor="0,0,0">
+            <description xmi:type="style:DotDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']/@borderedNodeMappings[name='PinNode']/@conditionnalStyles.0/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']/@borderedNodeMappings[name='PinNode']"/>
+        </ownedBorderedNodes>
+        <ownedStyle xmi:type="diagram:Square" uid="_XtrHY-48EfCs4_zQrLUTww" labelSize="12" showIcon="false" color="233,185,110">
+          <description xmi:type="style:SquareDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']"/>
+      </ownedBorderedNodes>
+      <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_UOanoe47EfCs4_zQrLUTww" labelSize="12" showIcon="false" labelPosition="node" workspacePath="/TrafficLightSystem.project.design/arduinoImages/images/svg/led-red.svg">
+        <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='LEDNode']/@conditionnalStyles.0/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='LEDNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_wWo2kO47EfCs4_zQrLUTww" width="-1" height="-1" resizeKind="NSEW">
+      <target xmi:type="trafficLightSystem:Button" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@components.3"/>
+      <semanticElements xmi:type="trafficLightSystem:Button" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@components.3"/>
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_1vLom-47EfCs4_zQrLUTww" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="trafficLightSystem:PinGroup" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@components.3/@pinGroups.0"/>
+        <semanticElements xmi:type="trafficLightSystem:PinGroup" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@components.3/@pinGroups.0"/>
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_1vLonu47EfCs4_zQrLUTww" outgoingEdges="_t5t2YO49EfCs4_zQrLUTww" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="trafficLightSystem:Pin" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@components.3/@pinGroups.0/@pins.0"/>
+          <semanticElements xmi:type="trafficLightSystem:Pin" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@components.3/@pinGroups.0/@pins.0"/>
+          <ownedStyle xmi:type="diagram:Dot" uid="_1vLon-47EfCs4_zQrLUTww" labelSize="12" showIcon="false" labelPosition="node" backgroundColor="173,127,168">
+            <description xmi:type="style:DotDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']/@borderedNodeMappings[name='PinNode']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']/@borderedNodeMappings[name='PinNode']"/>
+        </ownedBorderedNodes>
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_4IRm4O47EfCs4_zQrLUTww" name="GND" outgoingEdges="_CDirWO4-EfCs4_zQrLUTww" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="trafficLightSystem:Pin" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@components.3/@pinGroups.0/@pins.1"/>
+          <semanticElements xmi:type="trafficLightSystem:Pin" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@components.3/@pinGroups.0/@pins.1"/>
+          <ownedStyle xmi:type="diagram:Dot" uid="_4pF1Ae47EfCs4_zQrLUTww" labelSize="12" showIcon="false" labelPosition="node" backgroundColor="0,0,0">
+            <description xmi:type="style:DotDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']/@borderedNodeMappings[name='PinNode']/@conditionnalStyles.0/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']/@borderedNodeMappings[name='PinNode']"/>
+        </ownedBorderedNodes>
+        <ownedStyle xmi:type="diagram:Square" uid="_1vLonO47EfCs4_zQrLUTww" labelSize="12" showIcon="false" color="233,185,110">
+          <description xmi:type="style:SquareDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']"/>
+      </ownedBorderedNodes>
+      <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_wWo2ke47EfCs4_zQrLUTww" labelSize="12" showIcon="false" labelPosition="node" workspacePath="/TrafficLightSystem.project.design/arduinoImages/images/svg/Push_button.svg">
+        <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='ButtonNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='ButtonNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_WrJd7u49EfCs4_zQrLUTww" sourceNode="_VwK43e48EfCs4_zQrLUTww" targetNode="_OGmC4O49EfCs4_zQrLUTww">
+      <target xmi:type="trafficLightSystem:Connection" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@connections.4"/>
+      <semanticElements xmi:type="trafficLightSystem:Connection" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@connections.4"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_WrJd7-49EfCs4_zQrLUTww" size="2" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@edgeMappings[name='WireEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_WrJd8O49EfCs4_zQrLUTww" labelSize="12" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@edgeMappings[name='WireEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_ZDUPMu49EfCs4_zQrLUTww" sourceNode="_W0L6kO48EfCs4_zQrLUTww" targetNode="_FEww7esaEfCnILZln8XTJQ">
+      <target xmi:type="trafficLightSystem:Connection" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@connections.5"/>
+      <semanticElements xmi:type="trafficLightSystem:Connection" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@connections.5"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_ZDUPM-49EfCs4_zQrLUTww" size="2" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@edgeMappings[name='WireEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_ZDUPNO49EfCs4_zQrLUTww" labelSize="12" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@edgeMappings[name='WireEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_Z7WqYu49EfCs4_zQrLUTww" sourceNode="_Yn7JEO48EfCs4_zQrLUTww" targetNode="_FEww7esaEfCnILZln8XTJQ">
+      <target xmi:type="trafficLightSystem:Connection" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@connections.6"/>
+      <semanticElements xmi:type="trafficLightSystem:Connection" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@connections.6"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_Z7WqY-49EfCs4_zQrLUTww" size="2" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@edgeMappings[name='WireEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_Z7WqZO49EfCs4_zQrLUTww" labelSize="12" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@edgeMappings[name='WireEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_a0J6vO49EfCs4_zQrLUTww" sourceNode="_XtrHZe48EfCs4_zQrLUTww" targetNode="_9hLv0u48EfCs4_zQrLUTww">
+      <target xmi:type="trafficLightSystem:Connection" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@connections.7"/>
+      <semanticElements xmi:type="trafficLightSystem:Connection" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@connections.7"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_a0KhsO49EfCs4_zQrLUTww" size="2" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@edgeMappings[name='WireEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_a0Khse49EfCs4_zQrLUTww" labelSize="12" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@edgeMappings[name='WireEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_t5t2YO49EfCs4_zQrLUTww" sourceNode="_1vLonu47EfCs4_zQrLUTww" targetNode="_cG8YOe49EfCs4_zQrLUTww">
+      <target xmi:type="trafficLightSystem:Connection" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@connections.8"/>
+      <semanticElements xmi:type="trafficLightSystem:Connection" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@connections.8"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_t5udUO49EfCs4_zQrLUTww" size="2" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@edgeMappings[name='WireEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_t5udUe49EfCs4_zQrLUTww" labelSize="12" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@edgeMappings[name='WireEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_CDirWO4-EfCs4_zQrLUTww" sourceNode="_4IRm4O47EfCs4_zQrLUTww" targetNode="_FEww7esaEfCnILZln8XTJQ">
+      <target xmi:type="trafficLightSystem:Connection" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@connections.9"/>
+      <semanticElements xmi:type="trafficLightSystem:Connection" href="MyFirstTrafficModel.trafficlightsystem#//@systemstructure/@connections.9"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_CDirWe4-EfCs4_zQrLUTww" size="2" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@edgeMappings[name='WireEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_CDirWu4-EfCs4_zQrLUTww" labelSize="12" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@edgeMappings[name='WireEdge']"/>
     </ownedDiagramElements>
@@ -361,61 +834,6 @@
   <diagram:DSemanticDiagram uid="_ZtWEkOvBEfC-Orl9FF90JA">
     <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_ZtgcoOvBEfC-Orl9FF90JA" source="GMF_DIAGRAMS">
       <data xmi:type="notation:Diagram" xmi:id="_ZtgcoevBEfC-Orl9FF90JA" type="Sirius" element="_ZtWEkOvBEfC-Orl9FF90JA" measurementUnit="Pixel">
-        <children xmi:type="notation:Node" xmi:id="_UX2gIOx9EfCcGb54_K0fxQ" visible="false" type="2001" element="_UX0D4ex9EfCcGb54_K0fxQ">
-          <children xmi:type="notation:Node" xmi:id="_UX2gI-x9EfCcGb54_K0fxQ" type="5002">
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_UX2gJOx9EfCcGb54_K0fxQ" y="5"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_MNFPYOyDEfCcGb54_K0fxQ" type="3016" element="_MNCzIeyDEfCcGb54_K0fxQ">
-            <styles xmi:type="notation:ShapeStyle" xmi:id="_MNFPYeyDEfCcGb54_K0fxQ" fontName="Segoe UI"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MNFPYuyDEfCcGb54_K0fxQ"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_UX2gIex9EfCcGb54_K0fxQ" fontName="Segoe UI" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UX2gIux9EfCcGb54_K0fxQ" x="145" y="30" width="176" height="106"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_CTCoMOyDEfCcGb54_K0fxQ" visible="false" type="2001" element="_CTAL4OyDEfCcGb54_K0fxQ">
-          <children xmi:type="notation:Node" xmi:id="_CTDPMOyDEfCcGb54_K0fxQ" type="5002">
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_CTDPMeyDEfCcGb54_K0fxQ" y="5"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_FVQb8OyDEfCcGb54_K0fxQ" type="3016" element="_FVOmw-yDEfCcGb54_K0fxQ">
-            <styles xmi:type="notation:ShapeStyle" xmi:id="_FVQb8eyDEfCcGb54_K0fxQ" fontName="Segoe UI"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FVQb8uyDEfCcGb54_K0fxQ"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_CTCoMeyDEfCcGb54_K0fxQ" fontName="Segoe UI" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_CTCoMuyDEfCcGb54_K0fxQ" x="65" y="200" width="156" height="86"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_HQI0QOyDEfCcGb54_K0fxQ" visible="false" type="2001" element="_HQFw8OyDEfCcGb54_K0fxQ">
-          <children xmi:type="notation:Node" xmi:id="_HQI0Q-yDEfCcGb54_K0fxQ" type="5002">
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_HQI0ROyDEfCcGb54_K0fxQ" y="5"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_Iu7GcOyDEfCcGb54_K0fxQ" type="3016" element="_Iu4qNeyDEfCcGb54_K0fxQ">
-            <styles xmi:type="notation:ShapeStyle" xmi:id="_Iu7GceyDEfCcGb54_K0fxQ" fontName="Segoe UI"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Iu7GcuyDEfCcGb54_K0fxQ"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_HQI0QeyDEfCcGb54_K0fxQ" fontName="Segoe UI" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HQI0QuyDEfCcGb54_K0fxQ" x="305" y="165" width="156" height="101"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_ovw2oOyMEfCJ7Ir8TmI2hg" visible="false" type="2001" element="_ovrXEOyMEfCJ7Ir8TmI2hg">
-          <children xmi:type="notation:Node" xmi:id="_ov3kUOyMEfCJ7Ir8TmI2hg" type="5002">
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_ov3kUeyMEfCJ7Ir8TmI2hg" y="5"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_2T9bcOyMEfCJ7Ir8TmI2hg" type="3004" element="_2RTwEeyMEfCJ7Ir8TmI2hg">
-            <styles xmi:type="notation:ShapeStyle" xmi:id="_2T9bceyMEfCJ7Ir8TmI2hg" fontName="Segoe UI"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2T9bcuyMEfCJ7Ir8TmI2hg"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_ovw2oeyMEfCJ7Ir8TmI2hg" fontName="Segoe UI" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ovw2ouyMEfCJ7Ir8TmI2hg" x="20" y="15" width="451" height="286"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_MSBxEOyUEfCJ7Ir8TmI2hg" visible="false" type="2001" element="_MPbJAOyUEfCJ7Ir8TmI2hg">
-          <children xmi:type="notation:Node" xmi:id="_MSBxE-yUEfCJ7Ir8TmI2hg" type="5002">
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_MSBxFOyUEfCJ7Ir8TmI2hg" y="5"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_MSCYIOyUEfCJ7Ir8TmI2hg" type="3004" element="_MPcXIOyUEfCJ7Ir8TmI2hg">
-            <styles xmi:type="notation:ShapeStyle" xmi:id="_MSCYIeyUEfCJ7Ir8TmI2hg" fontName="Segoe UI"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MSCYIuyUEfCJ7Ir8TmI2hg"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_MSBxEeyUEfCJ7Ir8TmI2hg" fontName="Segoe UI" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MSBxEuyUEfCJ7Ir8TmI2hg" x="115" y="95" width="171" height="111"/>
-        </children>
         <children xmi:type="notation:Node" xmi:id="_TiCbAOyUEfCJ7Ir8TmI2hg" type="2002" element="_TfePMOyUEfCJ7Ir8TmI2hg">
           <children xmi:type="notation:Node" xmi:id="_TiIhoOyUEfCJ7Ir8TmI2hg" type="5006"/>
           <children xmi:type="notation:Node" xmi:id="_TiMzEOyUEfCJ7Ir8TmI2hg" type="7001">
@@ -428,7 +846,7 @@
                 <layoutConstraint xmi:type="notation:Bounds" xmi:id="_68XQUuyUEfCJ7Ir8TmI2hg"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_4a71YeyUEfCJ7Ir8TmI2hg" fontName="Segoe UI"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4a71YuyUEfCJ7Ir8TmI2hg" x="15" y="49" width="96" height="75"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4a71YuyUEfCJ7Ir8TmI2hg" x="25" y="49" width="96" height="75"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_S1BukOyVEfCJ7Ir8TmI2hg" type="3007" element="_S05LsOyVEfCJ7Ir8TmI2hg">
               <children xmi:type="notation:Node" xmi:id="_S1Buk-yVEfCJ7Ir8TmI2hg" type="5003">
@@ -439,7 +857,7 @@
                 <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UcpzsuyVEfCJ7Ir8TmI2hg"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_S1BukeyVEfCJ7Ir8TmI2hg" fontName="Segoe UI" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_S1BukuyVEfCJ7Ir8TmI2hg" x="260" y="54" width="110" height="76"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_S1BukuyVEfCJ7Ir8TmI2hg" x="270" y="54" width="110" height="76"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_tTqzwOyZEfCJ7Ir8TmI2hg" type="3007" element="_tTl7QOyZEfCJ7Ir8TmI2hg">
               <children xmi:type="notation:Node" xmi:id="_tTra0OyZEfCJ7Ir8TmI2hg" type="5003">
@@ -450,92 +868,68 @@
                 <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0RBncuyZEfCJ7Ir8TmI2hg"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_tTqzweyZEfCJ7Ir8TmI2hg" fontName="Segoe UI" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tTqzwuyZEfCJ7Ir8TmI2hg" x="150" y="159" width="106" height="76"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tTqzwuyZEfCJ7Ir8TmI2hg" x="160" y="159" width="106" height="76"/>
             </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_TiMzEeyUEfCJ7Ir8TmI2hg"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_TiMzEuyUEfCJ7Ir8TmI2hg"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_TiFeUOyUEfCJ7Ir8TmI2hg" fontName="Segoe UI"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_TiFeUeyUEfCJ7Ir8TmI2hg" x="75" y="25" width="418" height="293"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_TiFeUeyUEfCJ7Ir8TmI2hg" x="55" y="20" width="833" height="488"/>
         </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_ZtgcouvBEfC-Orl9FF90JA"/>
-        <edges xmi:type="notation:Edge" xmi:id="_23FqwOyZEfCJ7Ir8TmI2hg" type="4001" element="_229H4OyZEfCJ7Ir8TmI2hg" source="_4a71YOyUEfCJ7Ir8TmI2hg" target="_tTqzwOyZEfCJ7Ir8TmI2hg">
-          <children xmi:type="notation:Node" xmi:id="_23FqxOyZEfCJ7Ir8TmI2hg" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_23FqxeyZEfCJ7Ir8TmI2hg" y="-10"/>
+        <edges xmi:type="notation:Edge" xmi:id="_Yr6x4O40EfCs4_zQrLUTww" type="4001" element="_YrtWgO40EfCs4_zQrLUTww" source="_4a71YOyUEfCJ7Ir8TmI2hg" target="_S1BukOyVEfCJ7Ir8TmI2hg">
+          <children xmi:type="notation:Node" xmi:id="_Yr6x5O40EfCs4_zQrLUTww" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Yr6x5e40EfCs4_zQrLUTww" y="-10"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_23FqxuyZEfCJ7Ir8TmI2hg" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_23Fqx-yZEfCJ7Ir8TmI2hg" y="10"/>
+          <children xmi:type="notation:Node" xmi:id="_Yr6x5u40EfCs4_zQrLUTww" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Yr6x5-40EfCs4_zQrLUTww" y="10"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_23FqyOyZEfCJ7Ir8TmI2hg" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_23FqyeyZEfCJ7Ir8TmI2hg" y="10"/>
+          <children xmi:type="notation:Node" xmi:id="_Yr7Y8O40EfCs4_zQrLUTww" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Yr7Y8e40EfCs4_zQrLUTww" y="10"/>
           </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_23FqweyZEfCJ7Ir8TmI2hg"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_23FqwuyZEfCJ7Ir8TmI2hg" fontName="Segoe UI" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_23Fqw-yZEfCJ7Ir8TmI2hg" points="[0, 0, -39, -85]$[39, 85, 0, 0]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_23FqyuyZEfCJ7Ir8TmI2hg" id="(1.0,0.6)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_23Fqy-yZEfCJ7Ir8TmI2hg" id="(0.0,0.2631578947368421)"/>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_Yr6x4e40EfCs4_zQrLUTww"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_Yr6x4u40EfCs4_zQrLUTww" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Yr6x4-40EfCs4_zQrLUTww" points="[0, 0, -149, 0]$[149, 0, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Yr7Y8u40EfCs4_zQrLUTww" id="(1.0,0.5733333333333334)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Yr7Y8-40EfCs4_zQrLUTww" id="(0.0,0.5)"/>
         </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_3bVARuyZEfCJ7Ir8TmI2hg" type="4001" element="_3bOSlOyZEfCJ7Ir8TmI2hg" source="_tTqzwOyZEfCJ7Ir8TmI2hg" target="_S1BukOyVEfCJ7Ir8TmI2hg">
-          <children xmi:type="notation:Node" xmi:id="_3bVnUOyZEfCJ7Ir8TmI2hg" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3bVnUeyZEfCJ7Ir8TmI2hg" y="-10"/>
+        <edges xmi:type="notation:Edge" xmi:id="_adTP8O40EfCs4_zQrLUTww" type="4001" element="_adIQ0u40EfCs4_zQrLUTww" source="_S1BukOyVEfCJ7Ir8TmI2hg" target="_tTqzwOyZEfCJ7Ir8TmI2hg">
+          <children xmi:type="notation:Node" xmi:id="_adT3AO40EfCs4_zQrLUTww" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_adT3Ae40EfCs4_zQrLUTww" y="-10"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_3bVnUuyZEfCJ7Ir8TmI2hg" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3bVnU-yZEfCJ7Ir8TmI2hg" y="10"/>
+          <children xmi:type="notation:Node" xmi:id="_adT3Au40EfCs4_zQrLUTww" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_adT3A-40EfCs4_zQrLUTww" y="10"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_3bVnVOyZEfCJ7Ir8TmI2hg" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3bVnVeyZEfCJ7Ir8TmI2hg" y="10"/>
+          <children xmi:type="notation:Node" xmi:id="_adT3BO40EfCs4_zQrLUTww" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_adT3Be40EfCs4_zQrLUTww" y="10"/>
           </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_3bVAR-yZEfCJ7Ir8TmI2hg"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_3bVASOyZEfCJ7Ir8TmI2hg" fontName="Segoe UI" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_3bVASeyZEfCJ7Ir8TmI2hg" points="[0, 0, -85, 29]$[85, -29, 0, 0]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_3bWOYOyZEfCJ7Ir8TmI2hg" id="(0.660377358490566,0.0)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_3bWOYeyZEfCJ7Ir8TmI2hg" id="(0.4090909090909091,1.0)"/>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_adTP8e40EfCs4_zQrLUTww"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_adTP8u40EfCs4_zQrLUTww" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_adTP8-40EfCs4_zQrLUTww" points="[0, 0, 75, -29]$[-75, 29, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_adT3Bu40EfCs4_zQrLUTww" id="(0.4090909090909091,1.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_adT3B-40EfCs4_zQrLUTww" id="(0.7547169811320755,0.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_a2aTgO40EfCs4_zQrLUTww" type="4001" element="_a2M4JO40EfCs4_zQrLUTww" source="_tTqzwOyZEfCJ7Ir8TmI2hg" target="_4a71YOyUEfCJ7Ir8TmI2hg">
+          <children xmi:type="notation:Node" xmi:id="_a2aThO40EfCs4_zQrLUTww" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_a2aThe40EfCs4_zQrLUTww" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_a2aThu40EfCs4_zQrLUTww" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_a2aTh-40EfCs4_zQrLUTww" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_a2a6kO40EfCs4_zQrLUTww" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_a2a6ke40EfCs4_zQrLUTww" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_a2aTge40EfCs4_zQrLUTww"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_a2aTgu40EfCs4_zQrLUTww" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_a2aTg-40EfCs4_zQrLUTww" points="[0, 0, 89, 55]$[-89, -55, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_a2a6ku40EfCs4_zQrLUTww" id="(0.4716981132075472,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_a2a6k-40EfCs4_zQrLUTww" id="(1.0,0.7333333333333333)"/>
         </edges>
       </data>
     </ownedAnnotationEntries>
     <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_ZtkHAOvBEfC-Orl9FF90JA" source="DANNOTATION_CUSTOMIZATION_KEY">
       <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_ZtkHAevBEfC-Orl9FF90JA"/>
     </ownedAnnotationEntries>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_UX0D4ex9EfCcGb54_K0fxQ" name="RED" visible="false" width="3" height="3" resizeKind="NSEW">
-      <target xmi:type="trafficLightSystem:StateMachine" href="MyFirstTrafficModel.trafficlightsystem#//@systemBehaviors.0/@behaviors.0"/>
-      <semanticElements xmi:type="trafficLightSystem:StateMachine" href="MyFirstTrafficModel.trafficlightsystem#//@systemBehaviors.0/@behaviors.0"/>
-      <ownedStyle xmi:type="diagram:Ellipse" uid="_MNCzIeyDEfCcGb54_K0fxQ" labelSize="12" labelPosition="node" color="246,139,139">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='BehaviorDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightState']/@conditionnalStyles.0/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='BehaviorDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightState']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_CTAL4OyDEfCcGb54_K0fxQ" name="Yellow" visible="false" width="3" height="3" resizeKind="NSEW">
-      <target xmi:type="trafficLightSystem:TrafficLightState" href="MyFirstTrafficModel.trafficlightsystem#//@systemBehaviors.0/@behaviors.1"/>
-      <semanticElements xmi:type="trafficLightSystem:TrafficLightState" href="MyFirstTrafficModel.trafficlightsystem#//@systemBehaviors.0/@behaviors.1"/>
-      <ownedStyle xmi:type="diagram:Ellipse" uid="_FVOmw-yDEfCcGb54_K0fxQ" labelSize="12" labelPosition="node" color="255,245,181">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='BehaviorDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightState']/@conditionnalStyles.1/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='BehaviorDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightState']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_HQFw8OyDEfCcGb54_K0fxQ" name="Green" visible="false" width="3" height="3" resizeKind="NSEW">
-      <target xmi:type="trafficLightSystem:TrafficLightState" href="MyFirstTrafficModel.trafficlightsystem#//@systemBehaviors.0/@behaviors.2"/>
-      <semanticElements xmi:type="trafficLightSystem:TrafficLightState" href="MyFirstTrafficModel.trafficlightsystem#//@systemBehaviors.0/@behaviors.2"/>
-      <ownedStyle xmi:type="diagram:Ellipse" uid="_Iu4qNeyDEfCcGb54_K0fxQ" labelSize="12" labelPosition="node" color="204,242,166">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='BehaviorDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightState']/@conditionnalStyles.2/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='BehaviorDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightState']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_ovrXEOyMEfCJ7Ir8TmI2hg" visible="false" width="3" height="3" resizeKind="NSEW">
-      <target xmi:type="trafficLightSystem:StateMachine" href="MyFirstTrafficModel.trafficlightsystem#//@systemBehaviors.0/@behaviors.0"/>
-      <semanticElements xmi:type="trafficLightSystem:StateMachine" href="MyFirstTrafficModel.trafficlightsystem#//@systemBehaviors.0/@behaviors.0"/>
-      <ownedStyle xmi:type="diagram:BundledImage" uid="_2RTwEeyMEfCJ7Ir8TmI2hg" labelSize="12" borderColor="69,69,69" labelPosition="node" color="255,255,255">
-        <description xmi:type="style:BundledImageDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='BehaviorDiagram']/@defaultLayer/@nodeMappings[name='State']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='BehaviorDiagram']/@defaultLayer/@nodeMappings[name='State']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_MPbJAOyUEfCJ7Ir8TmI2hg" visible="false" width="3" height="3" resizeKind="NSEW">
-      <target xmi:type="trafficLightSystem:StateMachine" href="MyFirstTrafficModel.trafficlightsystem#//@systemBehaviors.0/@behaviors.0"/>
-      <semanticElements xmi:type="trafficLightSystem:StateMachine" href="MyFirstTrafficModel.trafficlightsystem#//@systemBehaviors.0/@behaviors.0"/>
-      <ownedStyle xmi:type="diagram:BundledImage" uid="_MPcXIOyUEfCJ7Ir8TmI2hg" labelSize="12" borderColor="69,69,69" labelPosition="node" color="255,255,255">
-        <description xmi:type="style:BundledImageDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='BehaviorDiagram']/@defaultLayer/@nodeMappings[name='StateMachine']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='BehaviorDiagram']/@defaultLayer/@nodeMappings[name='StateMachine']"/>
-    </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_TfePMOyUEfCJ7Ir8TmI2hg">
       <target xmi:type="trafficLightSystem:StateMachine" href="MyFirstTrafficModel.trafficlightsystem#//@systemBehaviors.0/@behaviors.0"/>
       <semanticElements xmi:type="trafficLightSystem:StateMachine" href="MyFirstTrafficModel.trafficlightsystem#//@systemBehaviors.0/@behaviors.0"/>
@@ -544,7 +938,7 @@
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='BehaviorDiagram']/@defaultLayer/@containerMappings[name='StateMachine']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='BehaviorDiagram']/@defaultLayer/@containerMappings[name='StateMachine']"/>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_4WFxoeyUEfCJ7Ir8TmI2hg" name="RED" outgoingEdges="_229H4OyZEfCJ7Ir8TmI2hg" width="3" height="3" resizeKind="NSEW">
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_4WFxoeyUEfCJ7Ir8TmI2hg" name="RED" outgoingEdges="_YrtWgO40EfCs4_zQrLUTww" incomingEdges="_a2M4JO40EfCs4_zQrLUTww" width="3" height="3" resizeKind="NSEW">
         <target xmi:type="trafficLightSystem:TrafficLightState" href="MyFirstTrafficModel.trafficlightsystem#//@systemBehaviors.0/@behaviors.0/@states.0"/>
         <semanticElements xmi:type="trafficLightSystem:TrafficLightState" href="MyFirstTrafficModel.trafficlightsystem#//@systemBehaviors.0/@behaviors.0/@states.0"/>
         <ownedStyle xmi:type="diagram:Ellipse" uid="_65uzEuyUEfCJ7Ir8TmI2hg" labelSize="12" showIcon="false" labelPosition="node" color="246,139,139">
@@ -553,7 +947,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='BehaviorDiagram']/@defaultLayer/@containerMappings[name='StateMachine']/@subNodeMappings[name='TrafficLightState']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_S05LsOyVEfCJ7Ir8TmI2hg" name="GREEN" incomingEdges="_3bOSlOyZEfCJ7Ir8TmI2hg" width="3" height="3" resizeKind="NSEW">
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_S05LsOyVEfCJ7Ir8TmI2hg" name="GREEN" outgoingEdges="_adIQ0u40EfCs4_zQrLUTww" incomingEdges="_YrtWgO40EfCs4_zQrLUTww" width="3" height="3" resizeKind="NSEW">
         <target xmi:type="trafficLightSystem:TrafficLightState" href="MyFirstTrafficModel.trafficlightsystem#//@systemBehaviors.0/@behaviors.0/@states.1"/>
         <semanticElements xmi:type="trafficLightSystem:TrafficLightState" href="MyFirstTrafficModel.trafficlightsystem#//@systemBehaviors.0/@behaviors.0/@states.1"/>
         <ownedStyle xmi:type="diagram:Ellipse" uid="_UcpMoeyVEfCJ7Ir8TmI2hg" labelSize="12" showIcon="false" labelPosition="node" color="204,242,166">
@@ -562,7 +956,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='BehaviorDiagram']/@defaultLayer/@containerMappings[name='StateMachine']/@subNodeMappings[name='TrafficLightState']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_tTl7QOyZEfCJ7Ir8TmI2hg" name="YELLOW" outgoingEdges="_3bOSlOyZEfCJ7Ir8TmI2hg" incomingEdges="_229H4OyZEfCJ7Ir8TmI2hg" width="3" height="3" resizeKind="NSEW">
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_tTl7QOyZEfCJ7Ir8TmI2hg" name="YELLOW" outgoingEdges="_a2M4JO40EfCs4_zQrLUTww" incomingEdges="_adIQ0u40EfCs4_zQrLUTww" width="3" height="3" resizeKind="NSEW">
         <target xmi:type="trafficLightSystem:TrafficLightState" href="MyFirstTrafficModel.trafficlightsystem#//@systemBehaviors.0/@behaviors.0/@states.2"/>
         <semanticElements xmi:type="trafficLightSystem:TrafficLightState" href="MyFirstTrafficModel.trafficlightsystem#//@systemBehaviors.0/@behaviors.0/@states.2"/>
         <ownedStyle xmi:type="diagram:Ellipse" uid="_0RAZU-yZEfCJ7Ir8TmI2hg" labelSize="12" labelPosition="node" color="255,245,181">
@@ -571,21 +965,30 @@
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='BehaviorDiagram']/@defaultLayer/@containerMappings[name='StateMachine']/@subNodeMappings[name='TrafficLightState']"/>
       </ownedDiagramElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_229H4OyZEfCJ7Ir8TmI2hg" sourceNode="_4WFxoeyUEfCJ7Ir8TmI2hg" targetNode="_tTl7QOyZEfCJ7Ir8TmI2hg">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_YrtWgO40EfCs4_zQrLUTww" sourceNode="_4WFxoeyUEfCJ7Ir8TmI2hg" targetNode="_S05LsOyVEfCJ7Ir8TmI2hg">
       <target xmi:type="trafficLightSystem:Transition" href="MyFirstTrafficModel.trafficlightsystem#//@systemBehaviors.0/@behaviors.0/@transitions.0"/>
       <semanticElements xmi:type="trafficLightSystem:Transition" href="MyFirstTrafficModel.trafficlightsystem#//@systemBehaviors.0/@behaviors.0/@transitions.0"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_229u8OyZEfCJ7Ir8TmI2hg" size="2" strokeColor="0,0,0">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_YrvLsO40EfCs4_zQrLUTww" size="2" strokeColor="0,0,0">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='BehaviorDiagram']/@defaultLayer/@edgeMappings[name='TransitionEdge']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_229u8eyZEfCJ7Ir8TmI2hg" labelSize="12"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_YrvLse40EfCs4_zQrLUTww" labelSize="12"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='BehaviorDiagram']/@defaultLayer/@edgeMappings[name='TransitionEdge']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_3bOSlOyZEfCJ7Ir8TmI2hg" sourceNode="_tTl7QOyZEfCJ7Ir8TmI2hg" targetNode="_S05LsOyVEfCJ7Ir8TmI2hg">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_adIQ0u40EfCs4_zQrLUTww" sourceNode="_S05LsOyVEfCJ7Ir8TmI2hg" targetNode="_tTl7QOyZEfCJ7Ir8TmI2hg">
       <target xmi:type="trafficLightSystem:Transition" href="MyFirstTrafficModel.trafficlightsystem#//@systemBehaviors.0/@behaviors.0/@transitions.1"/>
       <semanticElements xmi:type="trafficLightSystem:Transition" href="MyFirstTrafficModel.trafficlightsystem#//@systemBehaviors.0/@behaviors.0/@transitions.1"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_3bO5oOyZEfCJ7Ir8TmI2hg" size="2" strokeColor="0,0,0">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_adI34O40EfCs4_zQrLUTww" size="2" strokeColor="0,0,0">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='BehaviorDiagram']/@defaultLayer/@edgeMappings[name='TransitionEdge']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_3bO5oeyZEfCJ7Ir8TmI2hg" labelSize="12"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_adI34e40EfCs4_zQrLUTww" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='BehaviorDiagram']/@defaultLayer/@edgeMappings[name='TransitionEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_a2M4JO40EfCs4_zQrLUTww" sourceNode="_tTl7QOyZEfCJ7Ir8TmI2hg" targetNode="_4WFxoeyUEfCJ7Ir8TmI2hg">
+      <target xmi:type="trafficLightSystem:Transition" href="MyFirstTrafficModel.trafficlightsystem#//@systemBehaviors.0/@behaviors.0/@transitions.2"/>
+      <semanticElements xmi:type="trafficLightSystem:Transition" href="MyFirstTrafficModel.trafficlightsystem#//@systemBehaviors.0/@behaviors.0/@transitions.2"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_a2M4Je40EfCs4_zQrLUTww" size="2" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='BehaviorDiagram']/@defaultLayer/@edgeMappings[name='TransitionEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_a2M4Ju40EfCs4_zQrLUTww" labelSize="12"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/TrafficLightSystem.project.design/description/project.odesign#//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='BehaviorDiagram']/@defaultLayer/@edgeMappings[name='TransitionEdge']"/>
     </ownedDiagramElements>

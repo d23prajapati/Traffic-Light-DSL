@@ -14,6 +14,7 @@ package trafficLightSystem;
  *   <li>{@link trafficLightSystem.TrafficLightState#getDuration <em>Duration</em>}</li>
  *   <li>{@link trafficLightSystem.TrafficLightState#getActiveColor <em>Active Color</em>}</li>
  *   <li>{@link trafficLightSystem.TrafficLightState#getTrafficLightModule <em>Traffic Light Module</em>}</li>
+ *   <li>{@link trafficLightSystem.TrafficLightState#getBoard <em>Board</em>}</li>
  * </ul>
  *
  * @see trafficLightSystem.TrafficLightSystemPackage#getTrafficLightState()
@@ -89,5 +90,27 @@ public interface TrafficLightState extends State {
 	 * @generated
 	 */
 	void setTrafficLightModule(TrafficLightModule value);
+
+	/**
+	 * Returns the value of the '<em><b>Board</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Board</em>' reference.
+	 * @see #setBoard(Board)
+	 * @see trafficLightSystem.TrafficLightSystemPackage#getTrafficLightState_Board()
+	 * @model
+	 * @generated
+	 */
+	Board getBoard();
+
+	/**
+	 * Sets the value of the '{@link trafficLightSystem.TrafficLightState#getBoard <em>Board</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Board</em>' reference.
+	 * @see #getBoard()
+	 * @generated
+	 */
+	void setBoard(Board value);
 
 } // TrafficLightState

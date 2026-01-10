@@ -5,7 +5,7 @@
     <semanticResources>trafficLightSystem.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_tjeIQOiREfCbk8pinDXzQA">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_tnrS0OiREfCbk8pinDXzQA" name="trafficLightSystem" repPath="#_tmHMkOiREfCbk8pinDXzQA" changeId="1767906595769">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_tnrS0OiREfCbk8pinDXzQA" name="trafficLightSystem" repPath="#_tmHMkOiREfCbk8pinDXzQA" changeId="1768047166732">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="trafficLightSystem.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -721,19 +721,35 @@
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_VeFK8OzWEfCxsdm2AZOOnQ" type="4001" element="_Vd_ruuzWEfCxsdm2AZOOnQ" source="_4O9DIOx5EfCxsdm2AZOOnQ" target="_rhogoOjDEfCj-4Wn2ZE-LA">
           <children xmi:type="notation:Node" xmi:id="_VeGZEOzWEfCxsdm2AZOOnQ" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VeGZEezWEfCxsdm2AZOOnQ" x="-33" y="-11"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VeGZEezWEfCxsdm2AZOOnQ" x="-12" y="-11"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_VeGZEuzWEfCxsdm2AZOOnQ" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VeGZE-zWEfCxsdm2AZOOnQ" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VeGZE-zWEfCxsdm2AZOOnQ" x="7" y="10"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_VeGZFOzWEfCxsdm2AZOOnQ" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VeGZFezWEfCxsdm2AZOOnQ" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VeGZFezWEfCxsdm2AZOOnQ" x="-6" y="10"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_VeFK8ezWEfCxsdm2AZOOnQ" routing="Rectilinear"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_VeFK8uzWEfCxsdm2AZOOnQ" fontColor="7490599" fontName="Segoe UI" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_VeFK8-zWEfCxsdm2AZOOnQ" points="[0, 0, -702, 458]$[702, 0, 0, 458]$[702, -458, 0, 0]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_VeFK8-zWEfCxsdm2AZOOnQ" points="[0, 0, -702, 458]$[661, 0, -41, 458]$[661, -458, -41, 0]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_VeGZFuzWEfCxsdm2AZOOnQ" id="(1.0,0.5916666666666667)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_VeGZF-zWEfCxsdm2AZOOnQ" id="(0.5821917808219178,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_pgUaoO4dEfCxsdm2AZOOnQ" type="4001" element="_pgO7EO4dEfCxsdm2AZOOnQ" source="_4O9DIOx5EfCxsdm2AZOOnQ" target="_KORN4OiUEfCbk8pinDXzQA">
+          <children xmi:type="notation:Node" xmi:id="_pgW24-4dEfCxsdm2AZOOnQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pgW25O4dEfCxsdm2AZOOnQ" x="231" y="100"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_pgXd8O4dEfCxsdm2AZOOnQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pgXd8e4dEfCxsdm2AZOOnQ" x="-1" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_pgXd8u4dEfCxsdm2AZOOnQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pgXd8-4dEfCxsdm2AZOOnQ" x="-10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_pgW24O4dEfCxsdm2AZOOnQ" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_pgW24e4dEfCxsdm2AZOOnQ" fontColor="7490599" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_pgW24u4dEfCxsdm2AZOOnQ" points="[0, 0, -937, 671]$[791, 0, -146, 671]$[791, -233, -146, 438]$[997, -233, 60, 438]$[997, -622, 60, 49]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_pgXd9O4dEfCxsdm2AZOOnQ" id="(1.0,0.7083333333333334)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_pgXd9e4dEfCxsdm2AZOOnQ" id="(0.0,0.5)"/>
         </edges>
       </data>
     </ownedAnnotationEntries>
@@ -782,7 +798,7 @@
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_KOLHQOiUEfCbk8pinDXzQA" name="Board" tooltipText="" outgoingEdges="_HODIHumuEfCj-4Wn2ZE-LA" incomingEdges="_1lcd1uiVEfCbk8pinDXzQA" width="12" height="10">
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_KOLHQOiUEfCbk8pinDXzQA" name="Board" tooltipText="" outgoingEdges="_HODIHumuEfCj-4Wn2ZE-LA" incomingEdges="_1lcd1uiVEfCbk8pinDXzQA _pgO7EO4dEfCxsdm2AZOOnQ" width="12" height="10">
       <target xmi:type="ecore:EClass" href="trafficLightSystem.ecore#//Board"/>
       <semanticElements xmi:type="ecore:EClass" href="trafficLightSystem.ecore#//Board"/>
       <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_R5tPleiUEfCbk8pinDXzQA" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
@@ -1289,7 +1305,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC%20ESupertypes']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_4OM1MOx5EfCxsdm2AZOOnQ" name="TrafficLightState" tooltipText="" outgoingEdges="_sUNVPuyJEfCxsdm2AZOOnQ _Vd_ruuzWEfCxsdm2AZOOnQ" width="12" height="10">
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_4OM1MOx5EfCxsdm2AZOOnQ" name="TrafficLightState" tooltipText="" outgoingEdges="_sUNVPuyJEfCxsdm2AZOOnQ _Vd_ruuzWEfCxsdm2AZOOnQ _pgO7EO4dEfCxsdm2AZOOnQ" width="12" height="10">
       <target xmi:type="ecore:EClass" href="trafficLightSystem.ecore#//TrafficLightState"/>
       <semanticElements xmi:type="ecore:EClass" href="trafficLightSystem.ecore#//TrafficLightState"/>
       <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_xNpuLux6EfCxsdm2AZOOnQ" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
@@ -1455,6 +1471,18 @@
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_VeAScuzWEfCxsdm2AZOOnQ" showIcon="false"/>
         <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_VeAScezWEfCxsdm2AZOOnQ" showIcon="false" labelColor="39,76,114">
+          <customFeatures>labelSize</customFeatures>
+        </endLabelStyle>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_pgO7EO4dEfCxsdm2AZOOnQ" name="[0..1] board" sourceNode="_4OM1MOx5EfCxsdm2AZOOnQ" targetNode="_KOLHQOiUEfCbk8pinDXzQA">
+      <target xmi:type="ecore:EReference" href="trafficLightSystem.ecore#//TrafficLightState/board"/>
+      <semanticElements xmi:type="ecore:EReference" href="trafficLightSystem.ecore#//TrafficLightState/board"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_pgO7Ee4dEfCxsdm2AZOOnQ" routingStyle="manhattan" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_pgO7E-4dEfCxsdm2AZOOnQ" showIcon="false"/>
+        <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_pgO7Eu4dEfCxsdm2AZOOnQ" showIcon="false" labelColor="39,76,114">
           <customFeatures>labelSize</customFeatures>
         </endLabelStyle>
       </ownedStyle>

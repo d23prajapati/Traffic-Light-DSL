@@ -25,7 +25,7 @@
 			[/if]
 		[/for]
 	[/let]
-TrafficState currentState = [getInitialState(aSystemBehavior)/];
+TrafficState currentState = TrafficState::[getInitialState(aSystemBehavior)/];
 unsigned long stateStartTime = millis();
 [/let]
 

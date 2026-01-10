@@ -3,32 +3,64 @@
   <systemstructure name="new Component">
     <board name="ArduinoUNO">
       <pinGroups>
-        <pins pinNr="8" name="D8"/>
-        <pins pinNr="9" name="D9"/>
-        <pins pinNr="10" name="D10"/>
+        <pins pinNr="8" name="RED" type="DIGITAL_OUT"/>
+        <pins pinNr="9" name="YELLOW" type="DIGITAL_OUT"/>
+        <pins pinNr="10" name="GREEN" type="DIGITAL_OUT"/>
         <pins pinNr="14" name="GND" type="GND"/>
+      </pinGroups>
+      <pinGroups name="BOARD_PED_LEDs_PINGRP">
+        <pins pinNr="11" name="RED_LED" type="DIGITAL_OUT"/>
+        <pins pinNr="12" name="GREEN_LED" type="DIGITAL_OUT"/>
+      </pinGroups>
+      <pinGroups name="BOARD_PED_BTN_PINGRP">
+        <pins pinNr="2" name="PED_BTN"/>
       </pinGroups>
     </board>
     <components xsi:type="trafficLightSystem:TrafficLightModule" name="TrafficLight">
       <pinGroups>
-        <pins name="RED"/>
-        <pins pinNr="1" name="YELLOW"/>
-        <pins pinNr="2" name="GREEN"/>
+        <pins name="RED" type="DIGITAL_OUT"/>
+        <pins pinNr="1" name="YELLOW" type="DIGITAL_OUT"/>
+        <pins pinNr="2" name="GREEN" type="DIGITAL_OUT"/>
         <pins pinNr="3" name="GND" type="GND"/>
+      </pinGroups>
+    </components>
+    <components xsi:type="trafficLightSystem:LED" name="new LED" color="GREEN">
+      <pinGroups name="GREEN_PED_LED_GRP">
+        <pins name="GREEN_LED"/>
+        <pins name="GND" type="GND"/>
+      </pinGroups>
+    </components>
+    <components xsi:type="trafficLightSystem:LED" name="new LED">
+      <pinGroups name="RED_PED_LED_PINGRP">
+        <pins name="RED_LED"/>
+        <pins name="GND" type="GND"/>
+      </pinGroups>
+    </components>
+    <components xsi:type="trafficLightSystem:Button" name="PED_BUTTON">
+      <pinGroups name="PUSH_BTN_PINGRP">
+        <pins name="PED_BTN"/>
+        <pins name="GND" type="GND"/>
       </pinGroups>
     </components>
     <connections src="//@systemstructure/@components.0/@pinGroups.0/@pins.3" target="//@systemstructure/@board/@pinGroups.0/@pins.3"/>
     <connections src="//@systemstructure/@components.0/@pinGroups.0/@pins.0" target="//@systemstructure/@board/@pinGroups.0/@pins.0"/>
     <connections src="//@systemstructure/@components.0/@pinGroups.0/@pins.1" target="//@systemstructure/@board/@pinGroups.0/@pins.1"/>
     <connections src="//@systemstructure/@components.0/@pinGroups.0/@pins.2" target="//@systemstructure/@board/@pinGroups.0/@pins.2"/>
+    <connections src="//@systemstructure/@components.1/@pinGroups.0/@pins.0" target="//@systemstructure/@board/@pinGroups.1/@pins.1"/>
+    <connections src="//@systemstructure/@components.1/@pinGroups.0/@pins.1" target="//@systemstructure/@board/@pinGroups.0/@pins.3"/>
+    <connections src="//@systemstructure/@components.2/@pinGroups.0/@pins.1" target="//@systemstructure/@board/@pinGroups.0/@pins.3"/>
+    <connections src="//@systemstructure/@components.2/@pinGroups.0/@pins.0" target="//@systemstructure/@board/@pinGroups.1/@pins.0"/>
+    <connections src="//@systemstructure/@components.3/@pinGroups.0/@pins.0" target="//@systemstructure/@board/@pinGroups.2/@pins.0"/>
+    <connections src="//@systemstructure/@components.3/@pinGroups.0/@pins.1" target="//@systemstructure/@board/@pinGroups.0/@pins.3"/>
   </systemstructure>
   <systemBehaviors name="TrafficLightBehavior">
     <behaviors xsi:type="trafficLightSystem:StateMachine" name="TrafficLightSystem">
-      <transitions src="//@systemBehaviors.0/@behaviors.0/@states.0" target="//@systemBehaviors.0/@behaviors.0/@states.2"/>
-      <transitions src="//@systemBehaviors.0/@behaviors.0/@states.2" target="//@systemBehaviors.0/@behaviors.0/@states.1"/>
-      <states xsi:type="trafficLightSystem:TrafficLightState" name="RED" isInitialState="true" duration="30"/>
-      <states xsi:type="trafficLightSystem:TrafficLightState" name="GREEN" activeColor="GREEN"/>
-      <states xsi:type="trafficLightSystem:TrafficLightState" name="YELLOW" duration="15" activeColor="YELLOW"/>
+      <transitions src="//@systemBehaviors.0/@behaviors.0/@states.0" target="//@systemBehaviors.0/@behaviors.0/@states.1"/>
+      <transitions src="//@systemBehaviors.0/@behaviors.0/@states.1" target="//@systemBehaviors.0/@behaviors.0/@states.2"/>
+      <transitions src="//@systemBehaviors.0/@behaviors.0/@states.2" target="//@systemBehaviors.0/@behaviors.0/@states.0"/>
+      <states xsi:type="trafficLightSystem:TrafficLightState" name="RED" isInitialState="true" behavior="//@systemBehaviors.0/@behaviors.0" duration="5000" trafficLightModule="//@systemstructure/@components.0" board="//@systemstructure/@board"/>
+      <states xsi:type="trafficLightSystem:TrafficLightState" name="GREEN" behavior="//@systemBehaviors.0/@behaviors.0" duration="7000" activeColor="GREEN" trafficLightModule="//@systemstructure/@components.0" board="//@systemstructure/@board"/>
+      <states xsi:type="trafficLightSystem:TrafficLightState" name="YELLOW" behavior="//@systemBehaviors.0/@behaviors.0" duration="2000" activeColor="YELLOW" trafficLightModule="//@systemstructure/@components.0" board="//@systemstructure/@board"/>
     </behaviors>
   </systemBehaviors>
 </trafficLightSystem:TrafficLightSystem>

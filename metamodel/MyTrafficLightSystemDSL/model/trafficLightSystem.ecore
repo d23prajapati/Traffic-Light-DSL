@@ -89,6 +89,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="duration" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="activeColor" eType="#//LightColor"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="trafficLightModule" eType="#//TrafficLightModule"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="board" eType="#//Board"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="StateMachine" eSuperTypes="#//Behavior">
     <eStructuralFeatures xsi:type="ecore:EReference" name="transitions" upperBound="-1"
