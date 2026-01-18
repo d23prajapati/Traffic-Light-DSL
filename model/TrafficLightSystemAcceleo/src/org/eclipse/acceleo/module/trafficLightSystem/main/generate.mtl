@@ -28,7 +28,7 @@
 TrafficState currentState = TrafficState::[getInitialState(aSystemBehavior)/];
 unsigned long stateStartTime = millis();
 [/let]
-
+bool pedAllowed = false;
 
 
 [generateSetup(aTrafficLightSystem.systemstructure) /]

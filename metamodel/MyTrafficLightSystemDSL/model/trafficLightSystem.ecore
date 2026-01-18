@@ -67,6 +67,7 @@
     <eLiterals name="RED"/>
     <eLiterals name="YELLOW" value="1"/>
     <eLiterals name="GREEN" value="2"/>
+    <eLiterals name="RED_YELLOW" value="3"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PinGroup">
     <eStructuralFeatures xsi:type="ecore:EReference" name="pins" upperBound="-1" eType="#//Pin"
@@ -89,7 +90,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="duration" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="activeColor" eType="#//LightColor"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="trafficLightModule" eType="#//TrafficLightModule"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="board" eType="#//Board"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pedestrianLightState" eType="#//PedestrianLightState"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="StateMachine" eSuperTypes="#//Behavior">
     <eStructuralFeatures xsi:type="ecore:EReference" name="transitions" upperBound="-1"
@@ -107,5 +109,12 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="behavior" eType="#//Behavior"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="transitions" upperBound="-1"
         eType="#//Transition"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PedestrianLightState">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="led" upperBound="2" eType="#//LED"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="button" eType="#//Button"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="activePedestrianColor"
+        eType="#//LightColor"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>

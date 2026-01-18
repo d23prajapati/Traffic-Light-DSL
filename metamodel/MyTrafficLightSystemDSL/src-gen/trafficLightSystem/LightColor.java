@@ -46,7 +46,17 @@ public enum LightColor implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	GREEN(2, "GREEN", "GREEN");
+	GREEN(2, "GREEN", "GREEN"),
+
+	/**
+	 * The '<em><b>RED YELLOW</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #RED_YELLOW_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	RED_YELLOW(3, "RED_YELLOW", "RED_YELLOW");
 
 	/**
 	 * The '<em><b>RED</b></em>' literal value.
@@ -82,12 +92,23 @@ public enum LightColor implements Enumerator {
 	public static final int GREEN_VALUE = 2;
 
 	/**
+	 * The '<em><b>RED YELLOW</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #RED_YELLOW
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int RED_YELLOW_VALUE = 3;
+
+	/**
 	 * An array of all the '<em><b>Light Color</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final LightColor[] VALUES_ARRAY = new LightColor[] { RED, YELLOW, GREEN, };
+	private static final LightColor[] VALUES_ARRAY = new LightColor[] { RED, YELLOW, GREEN, RED_YELLOW, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Light Color</b></em>' enumerators.
@@ -149,6 +170,8 @@ public enum LightColor implements Enumerator {
 			return YELLOW;
 		case GREEN_VALUE:
 			return GREEN;
+		case RED_YELLOW_VALUE:
+			return RED_YELLOW;
 		}
 		return null;
 	}

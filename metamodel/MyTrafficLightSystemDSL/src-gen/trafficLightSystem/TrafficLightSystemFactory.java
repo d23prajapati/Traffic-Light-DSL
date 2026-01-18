@@ -148,6 +148,15 @@ public interface TrafficLightSystemFactory extends EFactory {
 	Transition createTransition();
 
 	/**
+	 * Returns a new object of class '<em>Pedestrian Light State</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Pedestrian Light State</em>'.
+	 * @generated
+	 */
+	PedestrianLightState createPedestrianLightState();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

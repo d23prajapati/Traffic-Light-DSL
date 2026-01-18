@@ -14,7 +14,7 @@ package trafficLightSystem;
  *   <li>{@link trafficLightSystem.TrafficLightState#getDuration <em>Duration</em>}</li>
  *   <li>{@link trafficLightSystem.TrafficLightState#getActiveColor <em>Active Color</em>}</li>
  *   <li>{@link trafficLightSystem.TrafficLightState#getTrafficLightModule <em>Traffic Light Module</em>}</li>
- *   <li>{@link trafficLightSystem.TrafficLightState#getBoard <em>Board</em>}</li>
+ *   <li>{@link trafficLightSystem.TrafficLightState#getPedestrianLightState <em>Pedestrian Light State</em>}</li>
  * </ul>
  *
  * @see trafficLightSystem.TrafficLightSystemPackage#getTrafficLightState()
@@ -92,25 +92,25 @@ public interface TrafficLightState extends State {
 	void setTrafficLightModule(TrafficLightModule value);
 
 	/**
-	 * Returns the value of the '<em><b>Board</b></em>' reference.
+	 * Returns the value of the '<em><b>Pedestrian Light State</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Board</em>' reference.
-	 * @see #setBoard(Board)
-	 * @see trafficLightSystem.TrafficLightSystemPackage#getTrafficLightState_Board()
-	 * @model
+	 * @return the value of the '<em>Pedestrian Light State</em>' containment reference.
+	 * @see #setPedestrianLightState(PedestrianLightState)
+	 * @see trafficLightSystem.TrafficLightSystemPackage#getTrafficLightState_PedestrianLightState()
+	 * @model containment="true"
 	 * @generated
 	 */
-	Board getBoard();
+	PedestrianLightState getPedestrianLightState();
 
 	/**
-	 * Sets the value of the '{@link trafficLightSystem.TrafficLightState#getBoard <em>Board</em>}' reference.
+	 * Sets the value of the '{@link trafficLightSystem.TrafficLightState#getPedestrianLightState <em>Pedestrian Light State</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Board</em>' reference.
-	 * @see #getBoard()
+	 * @param value the new value of the '<em>Pedestrian Light State</em>' containment reference.
+	 * @see #getPedestrianLightState()
 	 * @generated
 	 */
-	void setBoard(Board value);
+	void setPedestrianLightState(PedestrianLightState value);
 
 } // TrafficLightState

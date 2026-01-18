@@ -9,7 +9,12 @@ void setup()
 [for (aPin: Pin | aSystemStructure.board.pinGroups.pins)]
 		[if (not (aPin.type = PinType::GND)
 				or (aPin.type = PinType::VCC))]
-			pinMode([aPin.getPinVariableName()/], OUTPUT);
+			[if (aPin.type = PinType::DIGITAL_OUT)]
+				pinMode([aPin.getPinVariableName()/], OUTPUT);
+			[/if]
+			[if (aPin.type = PinType::DIGITAL_IN)]
+				pinMode([aPin.getPinVariableName()/], INPUT_PULLUP);
+			[/if]
 		[/if]
 [/for]
 }

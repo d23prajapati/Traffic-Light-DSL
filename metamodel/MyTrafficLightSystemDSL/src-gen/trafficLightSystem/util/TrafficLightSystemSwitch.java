@@ -197,6 +197,13 @@ public class TrafficLightSystemSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case TrafficLightSystemPackage.PEDESTRIAN_LIGHT_STATE: {
+			PedestrianLightState pedestrianLightState = (PedestrianLightState) theEObject;
+			T result = casePedestrianLightState(pedestrianLightState);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		default:
 			return defaultCase(theEObject);
 		}
@@ -454,6 +461,21 @@ public class TrafficLightSystemSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseState(State object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Pedestrian Light State</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Pedestrian Light State</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePedestrianLightState(PedestrianLightState object) {
 		return null;
 	}
 

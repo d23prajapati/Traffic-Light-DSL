@@ -85,6 +85,8 @@ public class TrafficLightSystemFactoryImpl extends EFactoryImpl implements Traff
 			return createStateMachine();
 		case TrafficLightSystemPackage.TRANSITION:
 			return createTransition();
+		case TrafficLightSystemPackage.PEDESTRIAN_LIGHT_STATE:
+			return createPedestrianLightState();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -280,6 +282,17 @@ public class TrafficLightSystemFactoryImpl extends EFactoryImpl implements Traff
 	public Transition createTransition() {
 		TransitionImpl transition = new TransitionImpl();
 		return transition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public PedestrianLightState createPedestrianLightState() {
+		PedestrianLightStateImpl pedestrianLightState = new PedestrianLightStateImpl();
+		return pedestrianLightState;
 	}
 
 	/**

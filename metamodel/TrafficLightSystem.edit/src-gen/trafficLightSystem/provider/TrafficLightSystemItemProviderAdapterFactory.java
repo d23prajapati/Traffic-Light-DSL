@@ -395,6 +395,29 @@ public class TrafficLightSystemItemProviderAdapterFactory extends TrafficLightSy
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link trafficLightSystem.PedestrianLightState} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PedestrianLightStateItemProvider pedestrianLightStateItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link trafficLightSystem.PedestrianLightState}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPedestrianLightStateAdapter() {
+		if (pedestrianLightStateItemProvider == null) {
+			pedestrianLightStateItemProvider = new PedestrianLightStateItemProvider(this);
+		}
+
+		return pedestrianLightStateItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -527,6 +550,8 @@ public class TrafficLightSystemItemProviderAdapterFactory extends TrafficLightSy
 			stateMachineItemProvider.dispose();
 		if (transitionItemProvider != null)
 			transitionItemProvider.dispose();
+		if (pedestrianLightStateItemProvider != null)
+			pedestrianLightStateItemProvider.dispose();
 	}
 
 }

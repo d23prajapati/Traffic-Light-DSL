@@ -20,6 +20,7 @@ import trafficLightSystem.Connection;
 import trafficLightSystem.Direction;
 import trafficLightSystem.LightColor;
 import trafficLightSystem.OpaqueBehavior;
+import trafficLightSystem.PedestrianLightState;
 import trafficLightSystem.Pin;
 import trafficLightSystem.PinGroup;
 import trafficLightSystem.PinType;
@@ -159,6 +160,13 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 	 * @generated
 	 */
 	private EClass stateEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass pedestrianLightStateEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -685,7 +693,7 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 	 * @generated
 	 */
 	@Override
-	public EReference getTrafficLightState_Board() {
+	public EReference getTrafficLightState_PedestrianLightState() {
 		return (EReference) trafficLightStateEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -805,6 +813,56 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 	 * @generated
 	 */
 	@Override
+	public EClass getPedestrianLightState() {
+		return pedestrianLightStateEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getPedestrianLightState_Led() {
+		return (EReference) pedestrianLightStateEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getPedestrianLightState_Button() {
+		return (EReference) pedestrianLightStateEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getPedestrianLightState_ActivePedestrianColor() {
+		return (EAttribute) pedestrianLightStateEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getPedestrianLightState_Name() {
+		return (EAttribute) pedestrianLightStateEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EEnum getPinType() {
 		return pinTypeEEnum;
 	}
@@ -915,7 +973,7 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 		createEAttribute(trafficLightStateEClass, TRAFFIC_LIGHT_STATE__DURATION);
 		createEAttribute(trafficLightStateEClass, TRAFFIC_LIGHT_STATE__ACTIVE_COLOR);
 		createEReference(trafficLightStateEClass, TRAFFIC_LIGHT_STATE__TRAFFIC_LIGHT_MODULE);
-		createEReference(trafficLightStateEClass, TRAFFIC_LIGHT_STATE__BOARD);
+		createEReference(trafficLightStateEClass, TRAFFIC_LIGHT_STATE__PEDESTRIAN_LIGHT_STATE);
 
 		stateMachineEClass = createEClass(STATE_MACHINE);
 		createEReference(stateMachineEClass, STATE_MACHINE__TRANSITIONS);
@@ -930,6 +988,12 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 		createEAttribute(stateEClass, STATE__IS_INITIAL_STATE);
 		createEReference(stateEClass, STATE__BEHAVIOR);
 		createEReference(stateEClass, STATE__TRANSITIONS);
+
+		pedestrianLightStateEClass = createEClass(PEDESTRIAN_LIGHT_STATE);
+		createEReference(pedestrianLightStateEClass, PEDESTRIAN_LIGHT_STATE__LED);
+		createEReference(pedestrianLightStateEClass, PEDESTRIAN_LIGHT_STATE__BUTTON);
+		createEAttribute(pedestrianLightStateEClass, PEDESTRIAN_LIGHT_STATE__ACTIVE_PEDESTRIAN_COLOR);
+		createEAttribute(pedestrianLightStateEClass, PEDESTRIAN_LIGHT_STATE__NAME);
 
 		// Create enums
 		pinTypeEEnum = createEEnum(PIN_TYPE);
@@ -1092,9 +1156,9 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 		initEReference(getTrafficLightState_TrafficLightModule(), this.getTrafficLightModule(), null,
 				"trafficLightModule", null, 0, 1, TrafficLightState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTrafficLightState_Board(), this.getBoard(), null, "board", null, 0, 1,
-				TrafficLightState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTrafficLightState_PedestrianLightState(), this.getPedestrianLightState(), null,
+				"pedestrianLightState", null, 0, 1, TrafficLightState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(stateMachineEClass, StateMachine.class, "StateMachine", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1127,6 +1191,21 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(pedestrianLightStateEClass, PedestrianLightState.class, "PedestrianLightState", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPedestrianLightState_Led(), this.getLED(), null, "led", null, 0, 2,
+				PedestrianLightState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPedestrianLightState_Button(), this.getButton(), null, "button", null, 0, 1,
+				PedestrianLightState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPedestrianLightState_ActivePedestrianColor(), this.getLightColor(), "activePedestrianColor",
+				null, 0, 1, PedestrianLightState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
+				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPedestrianLightState_Name(), ecorePackage.getEString(), "name", null, 0, 1,
+				PedestrianLightState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		// Initialize enums and add enum literals
 		initEEnum(pinTypeEEnum, PinType.class, "PinType");
 		addEEnumLiteral(pinTypeEEnum, PinType.DIGITAL_IN);
@@ -1147,6 +1226,7 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 		addEEnumLiteral(lightColorEEnum, LightColor.RED);
 		addEEnumLiteral(lightColorEEnum, LightColor.YELLOW);
 		addEEnumLiteral(lightColorEEnum, LightColor.GREEN);
+		addEEnumLiteral(lightColorEEnum, LightColor.RED_YELLOW);
 
 		// Create resource
 		createResource(eNS_URI);

@@ -152,6 +152,11 @@ public class TrafficLightSystemAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter casePedestrianLightState(PedestrianLightState object) {
+			return createPedestrianLightStateAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -405,6 +410,20 @@ public class TrafficLightSystemAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createStateAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link trafficLightSystem.PedestrianLightState <em>Pedestrian Light State</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see trafficLightSystem.PedestrianLightState
+	 * @generated
+	 */
+	public Adapter createPedestrianLightStateAdapter() {
 		return null;
 	}
 

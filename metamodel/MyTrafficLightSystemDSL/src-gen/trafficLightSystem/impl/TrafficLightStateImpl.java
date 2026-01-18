@@ -3,14 +3,15 @@
 package trafficLightSystem.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import trafficLightSystem.Board;
 import trafficLightSystem.LightColor;
+import trafficLightSystem.PedestrianLightState;
 import trafficLightSystem.TrafficLightModule;
 import trafficLightSystem.TrafficLightState;
 import trafficLightSystem.TrafficLightSystemPackage;
@@ -26,7 +27,7 @@ import trafficLightSystem.TrafficLightSystemPackage;
  *   <li>{@link trafficLightSystem.impl.TrafficLightStateImpl#getDuration <em>Duration</em>}</li>
  *   <li>{@link trafficLightSystem.impl.TrafficLightStateImpl#getActiveColor <em>Active Color</em>}</li>
  *   <li>{@link trafficLightSystem.impl.TrafficLightStateImpl#getTrafficLightModule <em>Traffic Light Module</em>}</li>
- *   <li>{@link trafficLightSystem.impl.TrafficLightStateImpl#getBoard <em>Board</em>}</li>
+ *   <li>{@link trafficLightSystem.impl.TrafficLightStateImpl#getPedestrianLightState <em>Pedestrian Light State</em>}</li>
  * </ul>
  *
  * @generated
@@ -83,14 +84,14 @@ public class TrafficLightStateImpl extends StateImpl implements TrafficLightStat
 	protected TrafficLightModule trafficLightModule;
 
 	/**
-	 * The cached value of the '{@link #getBoard() <em>Board</em>}' reference.
+	 * The cached value of the '{@link #getPedestrianLightState() <em>Pedestrian Light State</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getBoard()
+	 * @see #getPedestrianLightState()
 	 * @generated
 	 * @ordered
 	 */
-	protected Board board;
+	protected PedestrianLightState pedestrianLightState;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -209,17 +210,8 @@ public class TrafficLightStateImpl extends StateImpl implements TrafficLightStat
 	 * @generated
 	 */
 	@Override
-	public Board getBoard() {
-		if (board != null && board.eIsProxy()) {
-			InternalEObject oldBoard = (InternalEObject) board;
-			board = (Board) eResolveProxy(oldBoard);
-			if (board != oldBoard) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							TrafficLightSystemPackage.TRAFFIC_LIGHT_STATE__BOARD, oldBoard, board));
-			}
-		}
-		return board;
+	public PedestrianLightState getPedestrianLightState() {
+		return pedestrianLightState;
 	}
 
 	/**
@@ -227,8 +219,20 @@ public class TrafficLightStateImpl extends StateImpl implements TrafficLightStat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Board basicGetBoard() {
-		return board;
+	public NotificationChain basicSetPedestrianLightState(PedestrianLightState newPedestrianLightState,
+			NotificationChain msgs) {
+		PedestrianLightState oldPedestrianLightState = pedestrianLightState;
+		pedestrianLightState = newPedestrianLightState;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					TrafficLightSystemPackage.TRAFFIC_LIGHT_STATE__PEDESTRIAN_LIGHT_STATE, oldPedestrianLightState,
+					newPedestrianLightState);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -237,12 +241,38 @@ public class TrafficLightStateImpl extends StateImpl implements TrafficLightStat
 	 * @generated
 	 */
 	@Override
-	public void setBoard(Board newBoard) {
-		Board oldBoard = board;
-		board = newBoard;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TrafficLightSystemPackage.TRAFFIC_LIGHT_STATE__BOARD,
-					oldBoard, board));
+	public void setPedestrianLightState(PedestrianLightState newPedestrianLightState) {
+		if (newPedestrianLightState != pedestrianLightState) {
+			NotificationChain msgs = null;
+			if (pedestrianLightState != null)
+				msgs = ((InternalEObject) pedestrianLightState).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - TrafficLightSystemPackage.TRAFFIC_LIGHT_STATE__PEDESTRIAN_LIGHT_STATE,
+						null, msgs);
+			if (newPedestrianLightState != null)
+				msgs = ((InternalEObject) newPedestrianLightState).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - TrafficLightSystemPackage.TRAFFIC_LIGHT_STATE__PEDESTRIAN_LIGHT_STATE,
+						null, msgs);
+			msgs = basicSetPedestrianLightState(newPedestrianLightState, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					TrafficLightSystemPackage.TRAFFIC_LIGHT_STATE__PEDESTRIAN_LIGHT_STATE, newPedestrianLightState,
+					newPedestrianLightState));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case TrafficLightSystemPackage.TRAFFIC_LIGHT_STATE__PEDESTRIAN_LIGHT_STATE:
+			return basicSetPedestrianLightState(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -261,10 +291,8 @@ public class TrafficLightStateImpl extends StateImpl implements TrafficLightStat
 			if (resolve)
 				return getTrafficLightModule();
 			return basicGetTrafficLightModule();
-		case TrafficLightSystemPackage.TRAFFIC_LIGHT_STATE__BOARD:
-			if (resolve)
-				return getBoard();
-			return basicGetBoard();
+		case TrafficLightSystemPackage.TRAFFIC_LIGHT_STATE__PEDESTRIAN_LIGHT_STATE:
+			return getPedestrianLightState();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -286,8 +314,8 @@ public class TrafficLightStateImpl extends StateImpl implements TrafficLightStat
 		case TrafficLightSystemPackage.TRAFFIC_LIGHT_STATE__TRAFFIC_LIGHT_MODULE:
 			setTrafficLightModule((TrafficLightModule) newValue);
 			return;
-		case TrafficLightSystemPackage.TRAFFIC_LIGHT_STATE__BOARD:
-			setBoard((Board) newValue);
+		case TrafficLightSystemPackage.TRAFFIC_LIGHT_STATE__PEDESTRIAN_LIGHT_STATE:
+			setPedestrianLightState((PedestrianLightState) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -310,8 +338,8 @@ public class TrafficLightStateImpl extends StateImpl implements TrafficLightStat
 		case TrafficLightSystemPackage.TRAFFIC_LIGHT_STATE__TRAFFIC_LIGHT_MODULE:
 			setTrafficLightModule((TrafficLightModule) null);
 			return;
-		case TrafficLightSystemPackage.TRAFFIC_LIGHT_STATE__BOARD:
-			setBoard((Board) null);
+		case TrafficLightSystemPackage.TRAFFIC_LIGHT_STATE__PEDESTRIAN_LIGHT_STATE:
+			setPedestrianLightState((PedestrianLightState) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -331,8 +359,8 @@ public class TrafficLightStateImpl extends StateImpl implements TrafficLightStat
 			return activeColor != ACTIVE_COLOR_EDEFAULT;
 		case TrafficLightSystemPackage.TRAFFIC_LIGHT_STATE__TRAFFIC_LIGHT_MODULE:
 			return trafficLightModule != null;
-		case TrafficLightSystemPackage.TRAFFIC_LIGHT_STATE__BOARD:
-			return board != null;
+		case TrafficLightSystemPackage.TRAFFIC_LIGHT_STATE__PEDESTRIAN_LIGHT_STATE:
+			return pedestrianLightState != null;
 		}
 		return super.eIsSet(featureID);
 	}
