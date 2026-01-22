@@ -122,38 +122,23 @@ public class TrafficLightSystemAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseBehavior(Behavior object) {
-			return createBehaviorAdapter();
+		public Adapter caseJunctionController(JunctionController object) {
+			return createJunctionControllerAdapter();
 		}
 
 		@Override
-		public Adapter caseOpaqueBehavior(OpaqueBehavior object) {
-			return createOpaqueBehaviorAdapter();
+		public Adapter casePhase(Phase object) {
+			return createPhaseAdapter();
 		}
 
 		@Override
-		public Adapter caseTrafficLightState(TrafficLightState object) {
-			return createTrafficLightStateAdapter();
+		public Adapter caseTrafficLightAssignment(TrafficLightAssignment object) {
+			return createTrafficLightAssignmentAdapter();
 		}
 
 		@Override
-		public Adapter caseStateMachine(StateMachine object) {
-			return createStateMachineAdapter();
-		}
-
-		@Override
-		public Adapter caseTransition(Transition object) {
-			return createTransitionAdapter();
-		}
-
-		@Override
-		public Adapter caseState(State object) {
-			return createStateAdapter();
-		}
-
-		@Override
-		public Adapter casePedestrianLightState(PedestrianLightState object) {
-			return createPedestrianLightStateAdapter();
+		public Adapter casePedestrianAssignment(PedestrianAssignment object) {
+			return createPedestrianAssignmentAdapter();
 		}
 
 		@Override
@@ -330,100 +315,58 @@ public class TrafficLightSystemAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link trafficLightSystem.Behavior <em>Behavior</em>}'.
+	 * Creates a new adapter for an object of class '{@link trafficLightSystem.JunctionController <em>Junction Controller</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see trafficLightSystem.Behavior
+	 * @see trafficLightSystem.JunctionController
 	 * @generated
 	 */
-	public Adapter createBehaviorAdapter() {
+	public Adapter createJunctionControllerAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link trafficLightSystem.OpaqueBehavior <em>Opaque Behavior</em>}'.
+	 * Creates a new adapter for an object of class '{@link trafficLightSystem.Phase <em>Phase</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see trafficLightSystem.OpaqueBehavior
+	 * @see trafficLightSystem.Phase
 	 * @generated
 	 */
-	public Adapter createOpaqueBehaviorAdapter() {
+	public Adapter createPhaseAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link trafficLightSystem.TrafficLightState <em>Traffic Light State</em>}'.
+	 * Creates a new adapter for an object of class '{@link trafficLightSystem.TrafficLightAssignment <em>Traffic Light Assignment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see trafficLightSystem.TrafficLightState
+	 * @see trafficLightSystem.TrafficLightAssignment
 	 * @generated
 	 */
-	public Adapter createTrafficLightStateAdapter() {
+	public Adapter createTrafficLightAssignmentAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link trafficLightSystem.StateMachine <em>State Machine</em>}'.
+	 * Creates a new adapter for an object of class '{@link trafficLightSystem.PedestrianAssignment <em>Pedestrian Assignment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see trafficLightSystem.StateMachine
+	 * @see trafficLightSystem.PedestrianAssignment
 	 * @generated
 	 */
-	public Adapter createStateMachineAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link trafficLightSystem.Transition <em>Transition</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see trafficLightSystem.Transition
-	 * @generated
-	 */
-	public Adapter createTransitionAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link trafficLightSystem.State <em>State</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see trafficLightSystem.State
-	 * @generated
-	 */
-	public Adapter createStateAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link trafficLightSystem.PedestrianLightState <em>Pedestrian Light State</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see trafficLightSystem.PedestrianLightState
-	 * @generated
-	 */
-	public Adapter createPedestrianLightStateAdapter() {
+	public Adapter createPedestrianAssignmentAdapter() {
 		return null;
 	}
 

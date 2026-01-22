@@ -303,118 +303,95 @@ public class TrafficLightSystemItemProviderAdapterFactory extends TrafficLightSy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link trafficLightSystem.OpaqueBehavior} instances.
+	 * This keeps track of the one adapter used for all {@link trafficLightSystem.JunctionController} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected OpaqueBehaviorItemProvider opaqueBehaviorItemProvider;
+	protected JunctionControllerItemProvider junctionControllerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link trafficLightSystem.OpaqueBehavior}.
+	 * This creates an adapter for a {@link trafficLightSystem.JunctionController}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createOpaqueBehaviorAdapter() {
-		if (opaqueBehaviorItemProvider == null) {
-			opaqueBehaviorItemProvider = new OpaqueBehaviorItemProvider(this);
+	public Adapter createJunctionControllerAdapter() {
+		if (junctionControllerItemProvider == null) {
+			junctionControllerItemProvider = new JunctionControllerItemProvider(this);
 		}
 
-		return opaqueBehaviorItemProvider;
+		return junctionControllerItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link trafficLightSystem.TrafficLightState} instances.
+	 * This keeps track of the one adapter used for all {@link trafficLightSystem.Phase} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TrafficLightStateItemProvider trafficLightStateItemProvider;
+	protected PhaseItemProvider phaseItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link trafficLightSystem.TrafficLightState}.
+	 * This creates an adapter for a {@link trafficLightSystem.Phase}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createTrafficLightStateAdapter() {
-		if (trafficLightStateItemProvider == null) {
-			trafficLightStateItemProvider = new TrafficLightStateItemProvider(this);
+	public Adapter createPhaseAdapter() {
+		if (phaseItemProvider == null) {
+			phaseItemProvider = new PhaseItemProvider(this);
 		}
 
-		return trafficLightStateItemProvider;
+		return phaseItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link trafficLightSystem.StateMachine} instances.
+	 * This keeps track of the one adapter used for all {@link trafficLightSystem.TrafficLightAssignment} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected StateMachineItemProvider stateMachineItemProvider;
+	protected TrafficLightAssignmentItemProvider trafficLightAssignmentItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link trafficLightSystem.StateMachine}.
+	 * This creates an adapter for a {@link trafficLightSystem.TrafficLightAssignment}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createStateMachineAdapter() {
-		if (stateMachineItemProvider == null) {
-			stateMachineItemProvider = new StateMachineItemProvider(this);
+	public Adapter createTrafficLightAssignmentAdapter() {
+		if (trafficLightAssignmentItemProvider == null) {
+			trafficLightAssignmentItemProvider = new TrafficLightAssignmentItemProvider(this);
 		}
 
-		return stateMachineItemProvider;
+		return trafficLightAssignmentItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link trafficLightSystem.Transition} instances.
+	 * This keeps track of the one adapter used for all {@link trafficLightSystem.PedestrianAssignment} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TransitionItemProvider transitionItemProvider;
+	protected PedestrianAssignmentItemProvider pedestrianAssignmentItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link trafficLightSystem.Transition}.
+	 * This creates an adapter for a {@link trafficLightSystem.PedestrianAssignment}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createTransitionAdapter() {
-		if (transitionItemProvider == null) {
-			transitionItemProvider = new TransitionItemProvider(this);
+	public Adapter createPedestrianAssignmentAdapter() {
+		if (pedestrianAssignmentItemProvider == null) {
+			pedestrianAssignmentItemProvider = new PedestrianAssignmentItemProvider(this);
 		}
 
-		return transitionItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link trafficLightSystem.PedestrianLightState} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected PedestrianLightStateItemProvider pedestrianLightStateItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link trafficLightSystem.PedestrianLightState}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createPedestrianLightStateAdapter() {
-		if (pedestrianLightStateItemProvider == null) {
-			pedestrianLightStateItemProvider = new PedestrianLightStateItemProvider(this);
-		}
-
-		return pedestrianLightStateItemProvider;
+		return pedestrianAssignmentItemProvider;
 	}
 
 	/**
@@ -542,16 +519,14 @@ public class TrafficLightSystemItemProviderAdapterFactory extends TrafficLightSy
 			pinGroupItemProvider.dispose();
 		if (systemBehaviorItemProvider != null)
 			systemBehaviorItemProvider.dispose();
-		if (opaqueBehaviorItemProvider != null)
-			opaqueBehaviorItemProvider.dispose();
-		if (trafficLightStateItemProvider != null)
-			trafficLightStateItemProvider.dispose();
-		if (stateMachineItemProvider != null)
-			stateMachineItemProvider.dispose();
-		if (transitionItemProvider != null)
-			transitionItemProvider.dispose();
-		if (pedestrianLightStateItemProvider != null)
-			pedestrianLightStateItemProvider.dispose();
+		if (junctionControllerItemProvider != null)
+			junctionControllerItemProvider.dispose();
+		if (phaseItemProvider != null)
+			phaseItemProvider.dispose();
+		if (trafficLightAssignmentItemProvider != null)
+			trafficLightAssignmentItemProvider.dispose();
+		if (pedestrianAssignmentItemProvider != null)
+			pedestrianAssignmentItemProvider.dispose();
 	}
 
 }

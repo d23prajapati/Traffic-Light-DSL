@@ -19,10 +19,8 @@
       <genEnumLiterals ecoreEnumLiteral="trafficLightSystem.ecore#//PinType/VCC"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="trafficLightSystem.ecore#//Direction">
-      <genEnumLiterals ecoreEnumLiteral="trafficLightSystem.ecore#//Direction/NORTH"/>
-      <genEnumLiterals ecoreEnumLiteral="trafficLightSystem.ecore#//Direction/EAST"/>
-      <genEnumLiterals ecoreEnumLiteral="trafficLightSystem.ecore#//Direction/WEST"/>
-      <genEnumLiterals ecoreEnumLiteral="trafficLightSystem.ecore#//Direction/SOUTH"/>
+      <genEnumLiterals ecoreEnumLiteral="trafficLightSystem.ecore#//Direction/NORTH_SOUTH"/>
+      <genEnumLiterals ecoreEnumLiteral="trafficLightSystem.ecore#//Direction/EAST_WEST"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="trafficLightSystem.ecore#//LightColor">
       <genEnumLiterals ecoreEnumLiteral="trafficLightSystem.ecore#//LightColor/RED"/>
@@ -59,6 +57,10 @@
     </genClasses>
     <genClasses ecoreClass="trafficLightSystem.ecore#//TrafficLightModule">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference trafficLightSystem.ecore#//TrafficLightModule/pinGroups"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trafficLightSystem.ecore#//TrafficLightModule/direction"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference trafficLightSystem.ecore#//TrafficLightModule/redPin"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference trafficLightSystem.ecore#//TrafficLightModule/yellowPin"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference trafficLightSystem.ecore#//TrafficLightModule/greenPin"/>
     </genClasses>
     <genClasses ecoreClass="trafficLightSystem.ecore#//LED">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trafficLightSystem.ecore#//LED/color"/>
@@ -73,40 +75,27 @@
     </genClasses>
     <genClasses ecoreClass="trafficLightSystem.ecore#//SystemBehavior">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trafficLightSystem.ecore#//SystemBehavior/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference trafficLightSystem.ecore#//SystemBehavior/behaviors"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference trafficLightSystem.ecore#//SystemBehavior/junctionController"/>
     </genClasses>
-    <genClasses ecoreClass="trafficLightSystem.ecore#//Behavior">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trafficLightSystem.ecore#//Behavior/name"/>
+    <genClasses ecoreClass="trafficLightSystem.ecore#//JunctionController">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trafficLightSystem.ecore#//JunctionController/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference trafficLightSystem.ecore#//JunctionController/trafficLightModules"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference trafficLightSystem.ecore#//JunctionController/phases"/>
     </genClasses>
-    <genClasses ecoreClass="trafficLightSystem.ecore#//OpaqueBehavior">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trafficLightSystem.ecore#//OpaqueBehavior/commandLine"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trafficLightSystem.ecore#//OpaqueBehavior/isMain"/>
+    <genClasses ecoreClass="trafficLightSystem.ecore#//Phase">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trafficLightSystem.ecore#//Phase/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trafficLightSystem.ecore#//Phase/duration"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference trafficLightSystem.ecore#//Phase/trafficLightAssignments"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference trafficLightSystem.ecore#//Phase/pedestrianAssignments"/>
     </genClasses>
-    <genClasses ecoreClass="trafficLightSystem.ecore#//TrafficLightState">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trafficLightSystem.ecore#//TrafficLightState/duration"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trafficLightSystem.ecore#//TrafficLightState/activeColor"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference trafficLightSystem.ecore#//TrafficLightState/trafficLightModule"/>
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference trafficLightSystem.ecore#//TrafficLightState/pedestrianLightState"/>
+    <genClasses ecoreClass="trafficLightSystem.ecore#//TrafficLightAssignment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trafficLightSystem.ecore#//TrafficLightAssignment/color"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference trafficLightSystem.ecore#//TrafficLightAssignment/trafficLightModule"/>
     </genClasses>
-    <genClasses ecoreClass="trafficLightSystem.ecore#//StateMachine">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference trafficLightSystem.ecore#//StateMachine/transitions"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference trafficLightSystem.ecore#//StateMachine/states"/>
-    </genClasses>
-    <genClasses ecoreClass="trafficLightSystem.ecore#//Transition">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference trafficLightSystem.ecore#//Transition/src"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference trafficLightSystem.ecore#//Transition/target"/>
-    </genClasses>
-    <genClasses ecoreClass="trafficLightSystem.ecore#//State">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trafficLightSystem.ecore#//State/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trafficLightSystem.ecore#//State/isInitialState"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference trafficLightSystem.ecore#//State/behavior"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference trafficLightSystem.ecore#//State/transitions"/>
-    </genClasses>
-    <genClasses ecoreClass="trafficLightSystem.ecore#//PedestrianLightState">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference trafficLightSystem.ecore#//PedestrianLightState/led"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference trafficLightSystem.ecore#//PedestrianLightState/button"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trafficLightSystem.ecore#//PedestrianLightState/activePedestrianColor"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trafficLightSystem.ecore#//PedestrianLightState/name"/>
+    <genClasses ecoreClass="trafficLightSystem.ecore#//PedestrianAssignment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trafficLightSystem.ecore#//PedestrianAssignment/color"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference trafficLightSystem.ecore#//PedestrianAssignment/led"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference trafficLightSystem.ecore#//PedestrianAssignment/button"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -2,8 +2,6 @@
  */
 package trafficLightSystem;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -16,7 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link trafficLightSystem.SystemBehavior#getName <em>Name</em>}</li>
- *   <li>{@link trafficLightSystem.SystemBehavior#getBehaviors <em>Behaviors</em>}</li>
+ *   <li>{@link trafficLightSystem.SystemBehavior#getJunctionController <em>Junction Controller</em>}</li>
  * </ul>
  *
  * @see trafficLightSystem.TrafficLightSystemPackage#getSystemBehavior()
@@ -47,15 +45,25 @@ public interface SystemBehavior extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Behaviors</b></em>' containment reference list.
-	 * The list contents are of type {@link trafficLightSystem.Behavior}.
+	 * Returns the value of the '<em><b>Junction Controller</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Behaviors</em>' containment reference list.
-	 * @see trafficLightSystem.TrafficLightSystemPackage#getSystemBehavior_Behaviors()
+	 * @return the value of the '<em>Junction Controller</em>' containment reference.
+	 * @see #setJunctionController(JunctionController)
+	 * @see trafficLightSystem.TrafficLightSystemPackage#getSystemBehavior_JunctionController()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Behavior> getBehaviors();
+	JunctionController getJunctionController();
+
+	/**
+	 * Sets the value of the '{@link trafficLightSystem.SystemBehavior#getJunctionController <em>Junction Controller</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Junction Controller</em>' containment reference.
+	 * @see #getJunctionController()
+	 * @generated
+	 */
+	void setJunctionController(JunctionController value);
 
 } // SystemBehavior

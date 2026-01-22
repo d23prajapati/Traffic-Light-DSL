@@ -112,49 +112,40 @@ public interface TrafficLightSystemFactory extends EFactory {
 	SystemBehavior createSystemBehavior();
 
 	/**
-	 * Returns a new object of class '<em>Opaque Behavior</em>'.
+	 * Returns a new object of class '<em>Junction Controller</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Opaque Behavior</em>'.
+	 * @return a new object of class '<em>Junction Controller</em>'.
 	 * @generated
 	 */
-	OpaqueBehavior createOpaqueBehavior();
+	JunctionController createJunctionController();
 
 	/**
-	 * Returns a new object of class '<em>Traffic Light State</em>'.
+	 * Returns a new object of class '<em>Phase</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Traffic Light State</em>'.
+	 * @return a new object of class '<em>Phase</em>'.
 	 * @generated
 	 */
-	TrafficLightState createTrafficLightState();
+	Phase createPhase();
 
 	/**
-	 * Returns a new object of class '<em>State Machine</em>'.
+	 * Returns a new object of class '<em>Traffic Light Assignment</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>State Machine</em>'.
+	 * @return a new object of class '<em>Traffic Light Assignment</em>'.
 	 * @generated
 	 */
-	StateMachine createStateMachine();
+	TrafficLightAssignment createTrafficLightAssignment();
 
 	/**
-	 * Returns a new object of class '<em>Transition</em>'.
+	 * Returns a new object of class '<em>Pedestrian Assignment</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Transition</em>'.
+	 * @return a new object of class '<em>Pedestrian Assignment</em>'.
 	 * @generated
 	 */
-	Transition createTransition();
-
-	/**
-	 * Returns a new object of class '<em>Pedestrian Light State</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Pedestrian Light State</em>'.
-	 * @generated
-	 */
-	PedestrianLightState createPedestrianLightState();
+	PedestrianAssignment createPedestrianAssignment();
 
 	/**
 	 * Returns the package supported by this factory.

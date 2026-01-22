@@ -1,39 +1,21 @@
-[comment encoding = UTF-8 /]
-[**
- * The documentation of the module generate.
- */]
 [module generate('http://www.example.org/trafficLightSystem')]
-[import org::eclipse::acceleo::module::trafficLightSystem::main::generateSetup /]
-[import org::eclipse::acceleo::module::trafficLightSystem::main::generateMainLoop /]
-[import org::eclipse::acceleo::module::trafficLightSystem::main::generateEnumStates/]
-[import org::eclipse::acceleo::module::trafficLightSystem::requests::getInitialState /]
-[import org::eclipse::acceleo::module::trafficLightSystem::main::generatePinVariables /]
-[**
-[**
- * The documentation of the template generateElement.
- * @param aTrafficLightSystem
- */]
+[import org::eclipse::acceleo::module::trafficLightSystem::main::generatePinConstants /]
+
 [template public generateElement(aTrafficLightSystem : TrafficLightSystem)]
 [file (aTrafficLightSystem.name+'/'+aTrafficLightSystem.name+'.ino', false, 'UTF-8')]
-[aTrafficLightSystem.systemstructure.generatePinVariables() /]
 
-[let aSystemBehavior : SystemBehavior = aTrafficLightSystem.systemBehaviors->first()]
-	[let aBehaviors : OrderedSet(Behavior) = aSystemBehavior.behaviors]
-		[for (aBehavior : Behavior | aBehaviors)]
-			[if (aBehavior.oclIsKindOf(StateMachine))]
-				[generateEnumStates(aBehavior.oclAsType(StateMachine))/]
-			[/if]
-		[/for]
-	[/let]
-TrafficState currentState = TrafficState::[getInitialState(aSystemBehavior)/];
-unsigned long stateStartTime = millis();
-[/let]
-bool pedAllowed = false;
+[generatePinConstants(aTrafficLightSystem.systemstructure)/]
 
+void setup() 
+{
 
-[generateSetup(aTrafficLightSystem.systemstructure) /]
+}
 
-[generateMainLoop(aTrafficLightSystem)/]
+void loop()
+{
+
+}
+
 [/file]
 [comment @main/]
 [/template]

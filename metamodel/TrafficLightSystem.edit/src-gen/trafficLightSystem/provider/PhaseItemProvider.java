@@ -10,6 +10,8 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
+import org.eclipse.emf.ecore.EStructuralFeature;
+
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -21,16 +23,17 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import trafficLightSystem.Behavior;
+import trafficLightSystem.Phase;
+import trafficLightSystem.TrafficLightSystemFactory;
 import trafficLightSystem.TrafficLightSystemPackage;
 
 /**
- * This is the item provider adapter for a {@link trafficLightSystem.Behavior} object.
+ * This is the item provider adapter for a {@link trafficLightSystem.Phase} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class BehaviorItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
+public class PhaseItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
 		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
@@ -38,7 +41,7 @@ public class BehaviorItemProvider extends ItemProviderAdapter implements IEditin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BehaviorItemProvider(AdapterFactory adapterFactory) {
+	public PhaseItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -54,6 +57,7 @@ public class BehaviorItemProvider extends ItemProviderAdapter implements IEditin
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
+			addDurationPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -67,22 +71,67 @@ public class BehaviorItemProvider extends ItemProviderAdapter implements IEditin
 	protected void addNamePropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Behavior_name_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Behavior_name_feature",
-								"_UI_Behavior_type"),
-						TrafficLightSystemPackage.Literals.BEHAVIOR__NAME, true, false, false,
+						getResourceLocator(), getString("_UI_Phase_name_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Phase_name_feature", "_UI_Phase_type"),
+						TrafficLightSystemPackage.Literals.PHASE__NAME, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
-	 * This returns Behavior.gif.
+	 * This adds a property descriptor for the Duration feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDurationPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Phase_duration_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Phase_duration_feature", "_UI_Phase_type"),
+						TrafficLightSystemPackage.Literals.PHASE__DURATION, true, false, false,
+						ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
+		if (childrenFeatures == null) {
+			super.getChildrenFeatures(object);
+			childrenFeatures.add(TrafficLightSystemPackage.Literals.PHASE__TRAFFIC_LIGHT_ASSIGNMENTS);
+			childrenFeatures.add(TrafficLightSystemPackage.Literals.PHASE__PEDESTRIAN_ASSIGNMENTS);
+		}
+		return childrenFeatures;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EStructuralFeature getChildFeature(Object object, Object child) {
+		// Check the type of the specified child object and return the proper feature to use for
+		// adding (see {@link AddCommand}) it as a child.
+
+		return super.getChildFeature(object, child);
+	}
+
+	/**
+	 * This returns Phase.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Behavior"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Phase"));
 	}
 
 	/**
@@ -103,9 +152,9 @@ public class BehaviorItemProvider extends ItemProviderAdapter implements IEditin
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Behavior) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_Behavior_type")
-				: getString("_UI_Behavior_type") + " " + label;
+		String label = ((Phase) object).getName();
+		return label == null || label.length() == 0 ? getString("_UI_Phase_type")
+				: getString("_UI_Phase_type") + " " + label;
 	}
 
 	/**
@@ -119,9 +168,14 @@ public class BehaviorItemProvider extends ItemProviderAdapter implements IEditin
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(Behavior.class)) {
-		case TrafficLightSystemPackage.BEHAVIOR__NAME:
+		switch (notification.getFeatureID(Phase.class)) {
+		case TrafficLightSystemPackage.PHASE__NAME:
+		case TrafficLightSystemPackage.PHASE__DURATION:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+			return;
+		case TrafficLightSystemPackage.PHASE__TRAFFIC_LIGHT_ASSIGNMENTS:
+		case TrafficLightSystemPackage.PHASE__PEDESTRIAN_ASSIGNMENTS:
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -137,6 +191,13 @@ public class BehaviorItemProvider extends ItemProviderAdapter implements IEditin
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors
+				.add(createChildParameter(TrafficLightSystemPackage.Literals.PHASE__TRAFFIC_LIGHT_ASSIGNMENTS,
+						TrafficLightSystemFactory.eINSTANCE.createTrafficLightAssignment()));
+
+		newChildDescriptors.add(createChildParameter(TrafficLightSystemPackage.Literals.PHASE__PEDESTRIAN_ASSIGNMENTS,
+				TrafficLightSystemFactory.eINSTANCE.createPedestrianAssignment()));
 	}
 
 	/**

@@ -1,8 +1,0 @@
-[comment encoding = UTF-8 /]
-[module generateTargetState('http://www.example.org/trafficLightSystem')]
-
-
-[query public generateTargetState (aStateMachine : StateMachine, aState: State) : String = 
-	aStateMachine.transitions->select(transition | transition.src=aState)
-	.target->first().name.toString().toUpper()
-/]

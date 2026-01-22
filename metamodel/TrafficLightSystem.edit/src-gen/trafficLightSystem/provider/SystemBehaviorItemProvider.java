@@ -89,7 +89,7 @@ public class SystemBehaviorItemProvider extends ItemProviderAdapter implements I
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(TrafficLightSystemPackage.Literals.SYSTEM_BEHAVIOR__BEHAVIORS);
+			childrenFeatures.add(TrafficLightSystemPackage.Literals.SYSTEM_BEHAVIOR__JUNCTION_CONTROLLER);
 		}
 		return childrenFeatures;
 	}
@@ -156,7 +156,7 @@ public class SystemBehaviorItemProvider extends ItemProviderAdapter implements I
 		case TrafficLightSystemPackage.SYSTEM_BEHAVIOR__NAME:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
-		case TrafficLightSystemPackage.SYSTEM_BEHAVIOR__BEHAVIORS:
+		case TrafficLightSystemPackage.SYSTEM_BEHAVIOR__JUNCTION_CONTROLLER:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -174,11 +174,9 @@ public class SystemBehaviorItemProvider extends ItemProviderAdapter implements I
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(TrafficLightSystemPackage.Literals.SYSTEM_BEHAVIOR__BEHAVIORS,
-				TrafficLightSystemFactory.eINSTANCE.createOpaqueBehavior()));
-
-		newChildDescriptors.add(createChildParameter(TrafficLightSystemPackage.Literals.SYSTEM_BEHAVIOR__BEHAVIORS,
-				TrafficLightSystemFactory.eINSTANCE.createStateMachine()));
+		newChildDescriptors
+				.add(createChildParameter(TrafficLightSystemPackage.Literals.SYSTEM_BEHAVIOR__JUNCTION_CONTROLLER,
+						TrafficLightSystemFactory.eINSTANCE.createJunctionController()));
 	}
 
 	/**

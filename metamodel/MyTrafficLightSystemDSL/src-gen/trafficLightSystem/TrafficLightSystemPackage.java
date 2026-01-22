@@ -389,13 +389,49 @@ public interface TrafficLightSystemPackage extends EPackage {
 	int TRAFFIC_LIGHT_MODULE__PIN_GROUPS = COMPONENT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Direction</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAFFIC_LIGHT_MODULE__DIRECTION = COMPONENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Red Pin</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAFFIC_LIGHT_MODULE__RED_PIN = COMPONENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Yellow Pin</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAFFIC_LIGHT_MODULE__YELLOW_PIN = COMPONENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Green Pin</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAFFIC_LIGHT_MODULE__GREEN_PIN = COMPONENT_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>Traffic Light Module</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRAFFIC_LIGHT_MODULE_FEATURE_COUNT = COMPONENT_FEATURE_COUNT + 1;
+	int TRAFFIC_LIGHT_MODULE_FEATURE_COUNT = COMPONENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Traffic Light Module</em>' class.
@@ -573,13 +609,13 @@ public interface TrafficLightSystemPackage extends EPackage {
 	int SYSTEM_BEHAVIOR__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Behaviors</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Junction Controller</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM_BEHAVIOR__BEHAVIORS = 1;
+	int SYSTEM_BEHAVIOR__JUNCTION_CONTROLLER = 1;
 
 	/**
 	 * The number of structural features of the '<em>System Behavior</em>' class.
@@ -600,14 +636,14 @@ public interface TrafficLightSystemPackage extends EPackage {
 	int SYSTEM_BEHAVIOR_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link trafficLightSystem.impl.BehaviorImpl <em>Behavior</em>}' class.
+	 * The meta object id for the '{@link trafficLightSystem.impl.JunctionControllerImpl <em>Junction Controller</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see trafficLightSystem.impl.BehaviorImpl
-	 * @see trafficLightSystem.impl.TrafficLightSystemPackageImpl#getBehavior()
+	 * @see trafficLightSystem.impl.JunctionControllerImpl
+	 * @see trafficLightSystem.impl.TrafficLightSystemPackageImpl#getJunctionController()
 	 * @generated
 	 */
-	int BEHAVIOR = 11;
+	int JUNCTION_CONTROLLER = 11;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -616,35 +652,53 @@ public interface TrafficLightSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BEHAVIOR__NAME = 0;
+	int JUNCTION_CONTROLLER__NAME = 0;
 
 	/**
-	 * The number of structural features of the '<em>Behavior</em>' class.
+	 * The feature id for the '<em><b>Traffic Light Modules</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BEHAVIOR_FEATURE_COUNT = 1;
+	int JUNCTION_CONTROLLER__TRAFFIC_LIGHT_MODULES = 1;
 
 	/**
-	 * The number of operations of the '<em>Behavior</em>' class.
+	 * The feature id for the '<em><b>Phases</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BEHAVIOR_OPERATION_COUNT = 0;
+	int JUNCTION_CONTROLLER__PHASES = 2;
 
 	/**
-	 * The meta object id for the '{@link trafficLightSystem.impl.OpaqueBehaviorImpl <em>Opaque Behavior</em>}' class.
+	 * The number of structural features of the '<em>Junction Controller</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see trafficLightSystem.impl.OpaqueBehaviorImpl
-	 * @see trafficLightSystem.impl.TrafficLightSystemPackageImpl#getOpaqueBehavior()
+	 * @generated
+	 * @ordered
+	 */
+	int JUNCTION_CONTROLLER_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Junction Controller</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JUNCTION_CONTROLLER_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link trafficLightSystem.impl.PhaseImpl <em>Phase</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see trafficLightSystem.impl.PhaseImpl
+	 * @see trafficLightSystem.impl.TrafficLightSystemPackageImpl#getPhase()
 	 * @generated
 	 */
-	int OPAQUE_BEHAVIOR = 12;
+	int PHASE = 12;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -653,153 +707,7 @@ public interface TrafficLightSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPAQUE_BEHAVIOR__NAME = BEHAVIOR__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Command Line</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OPAQUE_BEHAVIOR__COMMAND_LINE = BEHAVIOR_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Is Main</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OPAQUE_BEHAVIOR__IS_MAIN = BEHAVIOR_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Opaque Behavior</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OPAQUE_BEHAVIOR_FEATURE_COUNT = BEHAVIOR_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Opaque Behavior</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OPAQUE_BEHAVIOR_OPERATION_COUNT = BEHAVIOR_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link trafficLightSystem.impl.StateImpl <em>State</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see trafficLightSystem.impl.StateImpl
-	 * @see trafficLightSystem.impl.TrafficLightSystemPackageImpl#getState()
-	 * @generated
-	 */
-	int STATE = 16;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATE__NAME = 0;
-
-	/**
-	 * The feature id for the '<em><b>Is Initial State</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATE__IS_INITIAL_STATE = 1;
-
-	/**
-	 * The feature id for the '<em><b>Behavior</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATE__BEHAVIOR = 2;
-
-	/**
-	 * The feature id for the '<em><b>Transitions</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATE__TRANSITIONS = 3;
-
-	/**
-	 * The number of structural features of the '<em>State</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATE_FEATURE_COUNT = 4;
-
-	/**
-	 * The number of operations of the '<em>State</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link trafficLightSystem.impl.TrafficLightStateImpl <em>Traffic Light State</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see trafficLightSystem.impl.TrafficLightStateImpl
-	 * @see trafficLightSystem.impl.TrafficLightSystemPackageImpl#getTrafficLightState()
-	 * @generated
-	 */
-	int TRAFFIC_LIGHT_STATE = 13;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRAFFIC_LIGHT_STATE__NAME = STATE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Is Initial State</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRAFFIC_LIGHT_STATE__IS_INITIAL_STATE = STATE__IS_INITIAL_STATE;
-
-	/**
-	 * The feature id for the '<em><b>Behavior</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRAFFIC_LIGHT_STATE__BEHAVIOR = STATE__BEHAVIOR;
-
-	/**
-	 * The feature id for the '<em><b>Transitions</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRAFFIC_LIGHT_STATE__TRANSITIONS = STATE__TRANSITIONS;
+	int PHASE__NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Duration</b></em>' attribute.
@@ -808,16 +716,62 @@ public interface TrafficLightSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAFFIC_LIGHT_STATE__DURATION = STATE_FEATURE_COUNT + 0;
+	int PHASE__DURATION = 1;
 
 	/**
-	 * The feature id for the '<em><b>Active Color</b></em>' attribute.
+	 * The feature id for the '<em><b>Traffic Light Assignments</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRAFFIC_LIGHT_STATE__ACTIVE_COLOR = STATE_FEATURE_COUNT + 1;
+	int PHASE__TRAFFIC_LIGHT_ASSIGNMENTS = 2;
+
+	/**
+	 * The feature id for the '<em><b>Pedestrian Assignments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHASE__PEDESTRIAN_ASSIGNMENTS = 3;
+
+	/**
+	 * The number of structural features of the '<em>Phase</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHASE_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>Phase</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHASE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link trafficLightSystem.impl.TrafficLightAssignmentImpl <em>Traffic Light Assignment</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see trafficLightSystem.impl.TrafficLightAssignmentImpl
+	 * @see trafficLightSystem.impl.TrafficLightSystemPackageImpl#getTrafficLightAssignment()
+	 * @generated
+	 */
+	int TRAFFIC_LIGHT_ASSIGNMENT = 13;
+
+	/**
+	 * The feature id for the '<em><b>Color</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAFFIC_LIGHT_ASSIGNMENT__COLOR = 0;
 
 	/**
 	 * The feature id for the '<em><b>Traffic Light Module</b></em>' reference.
@@ -826,154 +780,53 @@ public interface TrafficLightSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAFFIC_LIGHT_STATE__TRAFFIC_LIGHT_MODULE = STATE_FEATURE_COUNT + 2;
+	int TRAFFIC_LIGHT_ASSIGNMENT__TRAFFIC_LIGHT_MODULE = 1;
 
 	/**
-	 * The feature id for the '<em><b>Pedestrian Light State</b></em>' containment reference.
+	 * The number of structural features of the '<em>Traffic Light Assignment</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRAFFIC_LIGHT_STATE__PEDESTRIAN_LIGHT_STATE = STATE_FEATURE_COUNT + 3;
+	int TRAFFIC_LIGHT_ASSIGNMENT_FEATURE_COUNT = 2;
 
 	/**
-	 * The number of structural features of the '<em>Traffic Light State</em>' class.
+	 * The number of operations of the '<em>Traffic Light Assignment</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRAFFIC_LIGHT_STATE_FEATURE_COUNT = STATE_FEATURE_COUNT + 4;
+	int TRAFFIC_LIGHT_ASSIGNMENT_OPERATION_COUNT = 0;
 
 	/**
-	 * The number of operations of the '<em>Traffic Light State</em>' class.
+	 * The meta object id for the '{@link trafficLightSystem.impl.PedestrianAssignmentImpl <em>Pedestrian Assignment</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see trafficLightSystem.impl.PedestrianAssignmentImpl
+	 * @see trafficLightSystem.impl.TrafficLightSystemPackageImpl#getPedestrianAssignment()
+	 * @generated
+	 */
+	int PEDESTRIAN_ASSIGNMENT = 14;
+
+	/**
+	 * The feature id for the '<em><b>Color</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRAFFIC_LIGHT_STATE_OPERATION_COUNT = STATE_OPERATION_COUNT + 0;
+	int PEDESTRIAN_ASSIGNMENT__COLOR = 0;
 
 	/**
-	 * The meta object id for the '{@link trafficLightSystem.impl.StateMachineImpl <em>State Machine</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see trafficLightSystem.impl.StateMachineImpl
-	 * @see trafficLightSystem.impl.TrafficLightSystemPackageImpl#getStateMachine()
-	 * @generated
-	 */
-	int STATE_MACHINE = 14;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Led</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STATE_MACHINE__NAME = BEHAVIOR__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Transitions</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATE_MACHINE__TRANSITIONS = BEHAVIOR_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>States</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATE_MACHINE__STATES = BEHAVIOR_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>State Machine</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATE_MACHINE_FEATURE_COUNT = BEHAVIOR_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>State Machine</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATE_MACHINE_OPERATION_COUNT = BEHAVIOR_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link trafficLightSystem.impl.TransitionImpl <em>Transition</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see trafficLightSystem.impl.TransitionImpl
-	 * @see trafficLightSystem.impl.TrafficLightSystemPackageImpl#getTransition()
-	 * @generated
-	 */
-	int TRANSITION = 15;
-
-	/**
-	 * The feature id for the '<em><b>Src</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRANSITION__SRC = 0;
-
-	/**
-	 * The feature id for the '<em><b>Target</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRANSITION__TARGET = 1;
-
-	/**
-	 * The number of structural features of the '<em>Transition</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRANSITION_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Transition</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRANSITION_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link trafficLightSystem.impl.PedestrianLightStateImpl <em>Pedestrian Light State</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see trafficLightSystem.impl.PedestrianLightStateImpl
-	 * @see trafficLightSystem.impl.TrafficLightSystemPackageImpl#getPedestrianLightState()
-	 * @generated
-	 */
-	int PEDESTRIAN_LIGHT_STATE = 17;
-
-	/**
-	 * The feature id for the '<em><b>Led</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PEDESTRIAN_LIGHT_STATE__LED = 0;
+	int PEDESTRIAN_ASSIGNMENT__LED = 1;
 
 	/**
 	 * The feature id for the '<em><b>Button</b></em>' reference.
@@ -982,43 +835,25 @@ public interface TrafficLightSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PEDESTRIAN_LIGHT_STATE__BUTTON = 1;
+	int PEDESTRIAN_ASSIGNMENT__BUTTON = 2;
 
 	/**
-	 * The feature id for the '<em><b>Active Pedestrian Color</b></em>' attribute.
+	 * The number of structural features of the '<em>Pedestrian Assignment</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PEDESTRIAN_LIGHT_STATE__ACTIVE_PEDESTRIAN_COLOR = 2;
+	int PEDESTRIAN_ASSIGNMENT_FEATURE_COUNT = 3;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * The number of operations of the '<em>Pedestrian Assignment</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PEDESTRIAN_LIGHT_STATE__NAME = 3;
-
-	/**
-	 * The number of structural features of the '<em>Pedestrian Light State</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PEDESTRIAN_LIGHT_STATE_FEATURE_COUNT = 4;
-
-	/**
-	 * The number of operations of the '<em>Pedestrian Light State</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PEDESTRIAN_LIGHT_STATE_OPERATION_COUNT = 0;
+	int PEDESTRIAN_ASSIGNMENT_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link trafficLightSystem.PinType <em>Pin Type</em>}' enum.
@@ -1028,7 +863,7 @@ public interface TrafficLightSystemPackage extends EPackage {
 	 * @see trafficLightSystem.impl.TrafficLightSystemPackageImpl#getPinType()
 	 * @generated
 	 */
-	int PIN_TYPE = 18;
+	int PIN_TYPE = 15;
 
 	/**
 	 * The meta object id for the '{@link trafficLightSystem.Direction <em>Direction</em>}' enum.
@@ -1038,7 +873,7 @@ public interface TrafficLightSystemPackage extends EPackage {
 	 * @see trafficLightSystem.impl.TrafficLightSystemPackageImpl#getDirection()
 	 * @generated
 	 */
-	int DIRECTION = 19;
+	int DIRECTION = 16;
 
 	/**
 	 * The meta object id for the '{@link trafficLightSystem.LightColor <em>Light Color</em>}' enum.
@@ -1048,7 +883,7 @@ public interface TrafficLightSystemPackage extends EPackage {
 	 * @see trafficLightSystem.impl.TrafficLightSystemPackageImpl#getLightColor()
 	 * @generated
 	 */
-	int LIGHT_COLOR = 20;
+	int LIGHT_COLOR = 17;
 
 	/**
 	 * Returns the meta object for class '{@link trafficLightSystem.TrafficLightSystem <em>Traffic Light System</em>}'.
@@ -1297,6 +1132,50 @@ public interface TrafficLightSystemPackage extends EPackage {
 	EReference getTrafficLightModule_PinGroups();
 
 	/**
+	 * Returns the meta object for the attribute '{@link trafficLightSystem.TrafficLightModule#getDirection <em>Direction</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Direction</em>'.
+	 * @see trafficLightSystem.TrafficLightModule#getDirection()
+	 * @see #getTrafficLightModule()
+	 * @generated
+	 */
+	EAttribute getTrafficLightModule_Direction();
+
+	/**
+	 * Returns the meta object for the reference '{@link trafficLightSystem.TrafficLightModule#getRedPin <em>Red Pin</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Red Pin</em>'.
+	 * @see trafficLightSystem.TrafficLightModule#getRedPin()
+	 * @see #getTrafficLightModule()
+	 * @generated
+	 */
+	EReference getTrafficLightModule_RedPin();
+
+	/**
+	 * Returns the meta object for the reference '{@link trafficLightSystem.TrafficLightModule#getYellowPin <em>Yellow Pin</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Yellow Pin</em>'.
+	 * @see trafficLightSystem.TrafficLightModule#getYellowPin()
+	 * @see #getTrafficLightModule()
+	 * @generated
+	 */
+	EReference getTrafficLightModule_YellowPin();
+
+	/**
+	 * Returns the meta object for the reference '{@link trafficLightSystem.TrafficLightModule#getGreenPin <em>Green Pin</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Green Pin</em>'.
+	 * @see trafficLightSystem.TrafficLightModule#getGreenPin()
+	 * @see #getTrafficLightModule()
+	 * @generated
+	 */
+	EReference getTrafficLightModule_GreenPin();
+
+	/**
 	 * Returns the meta object for class '{@link trafficLightSystem.LED <em>LED</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1403,294 +1282,187 @@ public interface TrafficLightSystemPackage extends EPackage {
 	EAttribute getSystemBehavior_Name();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link trafficLightSystem.SystemBehavior#getBehaviors <em>Behaviors</em>}'.
+	 * Returns the meta object for the containment reference '{@link trafficLightSystem.SystemBehavior#getJunctionController <em>Junction Controller</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Behaviors</em>'.
-	 * @see trafficLightSystem.SystemBehavior#getBehaviors()
+	 * @return the meta object for the containment reference '<em>Junction Controller</em>'.
+	 * @see trafficLightSystem.SystemBehavior#getJunctionController()
 	 * @see #getSystemBehavior()
 	 * @generated
 	 */
-	EReference getSystemBehavior_Behaviors();
+	EReference getSystemBehavior_JunctionController();
 
 	/**
-	 * Returns the meta object for class '{@link trafficLightSystem.Behavior <em>Behavior</em>}'.
+	 * Returns the meta object for class '{@link trafficLightSystem.JunctionController <em>Junction Controller</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Behavior</em>'.
-	 * @see trafficLightSystem.Behavior
+	 * @return the meta object for class '<em>Junction Controller</em>'.
+	 * @see trafficLightSystem.JunctionController
 	 * @generated
 	 */
-	EClass getBehavior();
+	EClass getJunctionController();
 
 	/**
-	 * Returns the meta object for the attribute '{@link trafficLightSystem.Behavior#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link trafficLightSystem.JunctionController#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see trafficLightSystem.Behavior#getName()
-	 * @see #getBehavior()
+	 * @see trafficLightSystem.JunctionController#getName()
+	 * @see #getJunctionController()
 	 * @generated
 	 */
-	EAttribute getBehavior_Name();
+	EAttribute getJunctionController_Name();
 
 	/**
-	 * Returns the meta object for class '{@link trafficLightSystem.OpaqueBehavior <em>Opaque Behavior</em>}'.
+	 * Returns the meta object for the reference list '{@link trafficLightSystem.JunctionController#getTrafficLightModules <em>Traffic Light Modules</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Opaque Behavior</em>'.
-	 * @see trafficLightSystem.OpaqueBehavior
+	 * @return the meta object for the reference list '<em>Traffic Light Modules</em>'.
+	 * @see trafficLightSystem.JunctionController#getTrafficLightModules()
+	 * @see #getJunctionController()
 	 * @generated
 	 */
-	EClass getOpaqueBehavior();
+	EReference getJunctionController_TrafficLightModules();
 
 	/**
-	 * Returns the meta object for the attribute '{@link trafficLightSystem.OpaqueBehavior#getCommandLine <em>Command Line</em>}'.
+	 * Returns the meta object for the containment reference list '{@link trafficLightSystem.JunctionController#getPhases <em>Phases</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Command Line</em>'.
-	 * @see trafficLightSystem.OpaqueBehavior#getCommandLine()
-	 * @see #getOpaqueBehavior()
+	 * @return the meta object for the containment reference list '<em>Phases</em>'.
+	 * @see trafficLightSystem.JunctionController#getPhases()
+	 * @see #getJunctionController()
 	 * @generated
 	 */
-	EAttribute getOpaqueBehavior_CommandLine();
+	EReference getJunctionController_Phases();
 
 	/**
-	 * Returns the meta object for the attribute '{@link trafficLightSystem.OpaqueBehavior#isIsMain <em>Is Main</em>}'.
+	 * Returns the meta object for class '{@link trafficLightSystem.Phase <em>Phase</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Is Main</em>'.
-	 * @see trafficLightSystem.OpaqueBehavior#isIsMain()
-	 * @see #getOpaqueBehavior()
+	 * @return the meta object for class '<em>Phase</em>'.
+	 * @see trafficLightSystem.Phase
 	 * @generated
 	 */
-	EAttribute getOpaqueBehavior_IsMain();
+	EClass getPhase();
 
 	/**
-	 * Returns the meta object for class '{@link trafficLightSystem.TrafficLightState <em>Traffic Light State</em>}'.
+	 * Returns the meta object for the attribute '{@link trafficLightSystem.Phase#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Traffic Light State</em>'.
-	 * @see trafficLightSystem.TrafficLightState
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see trafficLightSystem.Phase#getName()
+	 * @see #getPhase()
 	 * @generated
 	 */
-	EClass getTrafficLightState();
+	EAttribute getPhase_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link trafficLightSystem.TrafficLightState#getDuration <em>Duration</em>}'.
+	 * Returns the meta object for the attribute '{@link trafficLightSystem.Phase#getDuration <em>Duration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Duration</em>'.
-	 * @see trafficLightSystem.TrafficLightState#getDuration()
-	 * @see #getTrafficLightState()
+	 * @see trafficLightSystem.Phase#getDuration()
+	 * @see #getPhase()
 	 * @generated
 	 */
-	EAttribute getTrafficLightState_Duration();
+	EAttribute getPhase_Duration();
 
 	/**
-	 * Returns the meta object for the attribute '{@link trafficLightSystem.TrafficLightState#getActiveColor <em>Active Color</em>}'.
+	 * Returns the meta object for the containment reference list '{@link trafficLightSystem.Phase#getTrafficLightAssignments <em>Traffic Light Assignments</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Active Color</em>'.
-	 * @see trafficLightSystem.TrafficLightState#getActiveColor()
-	 * @see #getTrafficLightState()
+	 * @return the meta object for the containment reference list '<em>Traffic Light Assignments</em>'.
+	 * @see trafficLightSystem.Phase#getTrafficLightAssignments()
+	 * @see #getPhase()
 	 * @generated
 	 */
-	EAttribute getTrafficLightState_ActiveColor();
+	EReference getPhase_TrafficLightAssignments();
 
 	/**
-	 * Returns the meta object for the reference '{@link trafficLightSystem.TrafficLightState#getTrafficLightModule <em>Traffic Light Module</em>}'.
+	 * Returns the meta object for the containment reference list '{@link trafficLightSystem.Phase#getPedestrianAssignments <em>Pedestrian Assignments</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Pedestrian Assignments</em>'.
+	 * @see trafficLightSystem.Phase#getPedestrianAssignments()
+	 * @see #getPhase()
+	 * @generated
+	 */
+	EReference getPhase_PedestrianAssignments();
+
+	/**
+	 * Returns the meta object for class '{@link trafficLightSystem.TrafficLightAssignment <em>Traffic Light Assignment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Traffic Light Assignment</em>'.
+	 * @see trafficLightSystem.TrafficLightAssignment
+	 * @generated
+	 */
+	EClass getTrafficLightAssignment();
+
+	/**
+	 * Returns the meta object for the attribute '{@link trafficLightSystem.TrafficLightAssignment#getColor <em>Color</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Color</em>'.
+	 * @see trafficLightSystem.TrafficLightAssignment#getColor()
+	 * @see #getTrafficLightAssignment()
+	 * @generated
+	 */
+	EAttribute getTrafficLightAssignment_Color();
+
+	/**
+	 * Returns the meta object for the reference '{@link trafficLightSystem.TrafficLightAssignment#getTrafficLightModule <em>Traffic Light Module</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Traffic Light Module</em>'.
-	 * @see trafficLightSystem.TrafficLightState#getTrafficLightModule()
-	 * @see #getTrafficLightState()
+	 * @see trafficLightSystem.TrafficLightAssignment#getTrafficLightModule()
+	 * @see #getTrafficLightAssignment()
 	 * @generated
 	 */
-	EReference getTrafficLightState_TrafficLightModule();
+	EReference getTrafficLightAssignment_TrafficLightModule();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link trafficLightSystem.TrafficLightState#getPedestrianLightState <em>Pedestrian Light State</em>}'.
+	 * Returns the meta object for class '{@link trafficLightSystem.PedestrianAssignment <em>Pedestrian Assignment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Pedestrian Light State</em>'.
-	 * @see trafficLightSystem.TrafficLightState#getPedestrianLightState()
-	 * @see #getTrafficLightState()
+	 * @return the meta object for class '<em>Pedestrian Assignment</em>'.
+	 * @see trafficLightSystem.PedestrianAssignment
 	 * @generated
 	 */
-	EReference getTrafficLightState_PedestrianLightState();
+	EClass getPedestrianAssignment();
 
 	/**
-	 * Returns the meta object for class '{@link trafficLightSystem.StateMachine <em>State Machine</em>}'.
+	 * Returns the meta object for the attribute '{@link trafficLightSystem.PedestrianAssignment#getColor <em>Color</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>State Machine</em>'.
-	 * @see trafficLightSystem.StateMachine
+	 * @return the meta object for the attribute '<em>Color</em>'.
+	 * @see trafficLightSystem.PedestrianAssignment#getColor()
+	 * @see #getPedestrianAssignment()
 	 * @generated
 	 */
-	EClass getStateMachine();
+	EAttribute getPedestrianAssignment_Color();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link trafficLightSystem.StateMachine#getTransitions <em>Transitions</em>}'.
+	 * Returns the meta object for the reference '{@link trafficLightSystem.PedestrianAssignment#getLed <em>Led</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Transitions</em>'.
-	 * @see trafficLightSystem.StateMachine#getTransitions()
-	 * @see #getStateMachine()
+	 * @return the meta object for the reference '<em>Led</em>'.
+	 * @see trafficLightSystem.PedestrianAssignment#getLed()
+	 * @see #getPedestrianAssignment()
 	 * @generated
 	 */
-	EReference getStateMachine_Transitions();
+	EReference getPedestrianAssignment_Led();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link trafficLightSystem.StateMachine#getStates <em>States</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>States</em>'.
-	 * @see trafficLightSystem.StateMachine#getStates()
-	 * @see #getStateMachine()
-	 * @generated
-	 */
-	EReference getStateMachine_States();
-
-	/**
-	 * Returns the meta object for class '{@link trafficLightSystem.Transition <em>Transition</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Transition</em>'.
-	 * @see trafficLightSystem.Transition
-	 * @generated
-	 */
-	EClass getTransition();
-
-	/**
-	 * Returns the meta object for the reference '{@link trafficLightSystem.Transition#getSrc <em>Src</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Src</em>'.
-	 * @see trafficLightSystem.Transition#getSrc()
-	 * @see #getTransition()
-	 * @generated
-	 */
-	EReference getTransition_Src();
-
-	/**
-	 * Returns the meta object for the reference '{@link trafficLightSystem.Transition#getTarget <em>Target</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Target</em>'.
-	 * @see trafficLightSystem.Transition#getTarget()
-	 * @see #getTransition()
-	 * @generated
-	 */
-	EReference getTransition_Target();
-
-	/**
-	 * Returns the meta object for class '{@link trafficLightSystem.State <em>State</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>State</em>'.
-	 * @see trafficLightSystem.State
-	 * @generated
-	 */
-	EClass getState();
-
-	/**
-	 * Returns the meta object for the attribute '{@link trafficLightSystem.State#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see trafficLightSystem.State#getName()
-	 * @see #getState()
-	 * @generated
-	 */
-	EAttribute getState_Name();
-
-	/**
-	 * Returns the meta object for the attribute '{@link trafficLightSystem.State#isIsInitialState <em>Is Initial State</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Is Initial State</em>'.
-	 * @see trafficLightSystem.State#isIsInitialState()
-	 * @see #getState()
-	 * @generated
-	 */
-	EAttribute getState_IsInitialState();
-
-	/**
-	 * Returns the meta object for the reference '{@link trafficLightSystem.State#getBehavior <em>Behavior</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Behavior</em>'.
-	 * @see trafficLightSystem.State#getBehavior()
-	 * @see #getState()
-	 * @generated
-	 */
-	EReference getState_Behavior();
-
-	/**
-	 * Returns the meta object for the reference list '{@link trafficLightSystem.State#getTransitions <em>Transitions</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Transitions</em>'.
-	 * @see trafficLightSystem.State#getTransitions()
-	 * @see #getState()
-	 * @generated
-	 */
-	EReference getState_Transitions();
-
-	/**
-	 * Returns the meta object for class '{@link trafficLightSystem.PedestrianLightState <em>Pedestrian Light State</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Pedestrian Light State</em>'.
-	 * @see trafficLightSystem.PedestrianLightState
-	 * @generated
-	 */
-	EClass getPedestrianLightState();
-
-	/**
-	 * Returns the meta object for the reference list '{@link trafficLightSystem.PedestrianLightState#getLed <em>Led</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Led</em>'.
-	 * @see trafficLightSystem.PedestrianLightState#getLed()
-	 * @see #getPedestrianLightState()
-	 * @generated
-	 */
-	EReference getPedestrianLightState_Led();
-
-	/**
-	 * Returns the meta object for the reference '{@link trafficLightSystem.PedestrianLightState#getButton <em>Button</em>}'.
+	 * Returns the meta object for the reference '{@link trafficLightSystem.PedestrianAssignment#getButton <em>Button</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Button</em>'.
-	 * @see trafficLightSystem.PedestrianLightState#getButton()
-	 * @see #getPedestrianLightState()
+	 * @see trafficLightSystem.PedestrianAssignment#getButton()
+	 * @see #getPedestrianAssignment()
 	 * @generated
 	 */
-	EReference getPedestrianLightState_Button();
-
-	/**
-	 * Returns the meta object for the attribute '{@link trafficLightSystem.PedestrianLightState#getActivePedestrianColor <em>Active Pedestrian Color</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Active Pedestrian Color</em>'.
-	 * @see trafficLightSystem.PedestrianLightState#getActivePedestrianColor()
-	 * @see #getPedestrianLightState()
-	 * @generated
-	 */
-	EAttribute getPedestrianLightState_ActivePedestrianColor();
-
-	/**
-	 * Returns the meta object for the attribute '{@link trafficLightSystem.PedestrianLightState#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see trafficLightSystem.PedestrianLightState#getName()
-	 * @see #getPedestrianLightState()
-	 * @generated
-	 */
-	EAttribute getPedestrianLightState_Name();
+	EReference getPedestrianAssignment_Button();
 
 	/**
 	 * Returns the meta object for enum '{@link trafficLightSystem.PinType <em>Pin Type</em>}'.
@@ -1944,6 +1716,38 @@ public interface TrafficLightSystemPackage extends EPackage {
 		EReference TRAFFIC_LIGHT_MODULE__PIN_GROUPS = eINSTANCE.getTrafficLightModule_PinGroups();
 
 		/**
+		 * The meta object literal for the '<em><b>Direction</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRAFFIC_LIGHT_MODULE__DIRECTION = eINSTANCE.getTrafficLightModule_Direction();
+
+		/**
+		 * The meta object literal for the '<em><b>Red Pin</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRAFFIC_LIGHT_MODULE__RED_PIN = eINSTANCE.getTrafficLightModule_RedPin();
+
+		/**
+		 * The meta object literal for the '<em><b>Yellow Pin</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRAFFIC_LIGHT_MODULE__YELLOW_PIN = eINSTANCE.getTrafficLightModule_YellowPin();
+
+		/**
+		 * The meta object literal for the '<em><b>Green Pin</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRAFFIC_LIGHT_MODULE__GREEN_PIN = eINSTANCE.getTrafficLightModule_GreenPin();
+
+		/**
 		 * The meta object literal for the '{@link trafficLightSystem.impl.LEDImpl <em>LED</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2032,22 +1836,22 @@ public interface TrafficLightSystemPackage extends EPackage {
 		EAttribute SYSTEM_BEHAVIOR__NAME = eINSTANCE.getSystemBehavior_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Behaviors</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Junction Controller</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SYSTEM_BEHAVIOR__BEHAVIORS = eINSTANCE.getSystemBehavior_Behaviors();
+		EReference SYSTEM_BEHAVIOR__JUNCTION_CONTROLLER = eINSTANCE.getSystemBehavior_JunctionController();
 
 		/**
-		 * The meta object literal for the '{@link trafficLightSystem.impl.BehaviorImpl <em>Behavior</em>}' class.
+		 * The meta object literal for the '{@link trafficLightSystem.impl.JunctionControllerImpl <em>Junction Controller</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see trafficLightSystem.impl.BehaviorImpl
-		 * @see trafficLightSystem.impl.TrafficLightSystemPackageImpl#getBehavior()
+		 * @see trafficLightSystem.impl.JunctionControllerImpl
+		 * @see trafficLightSystem.impl.TrafficLightSystemPackageImpl#getJunctionController()
 		 * @generated
 		 */
-		EClass BEHAVIOR = eINSTANCE.getBehavior();
+		EClass JUNCTION_CONTROLLER = eINSTANCE.getJunctionController();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -2055,43 +1859,41 @@ public interface TrafficLightSystemPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute BEHAVIOR__NAME = eINSTANCE.getBehavior_Name();
+		EAttribute JUNCTION_CONTROLLER__NAME = eINSTANCE.getJunctionController_Name();
 
 		/**
-		 * The meta object literal for the '{@link trafficLightSystem.impl.OpaqueBehaviorImpl <em>Opaque Behavior</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see trafficLightSystem.impl.OpaqueBehaviorImpl
-		 * @see trafficLightSystem.impl.TrafficLightSystemPackageImpl#getOpaqueBehavior()
-		 * @generated
-		 */
-		EClass OPAQUE_BEHAVIOR = eINSTANCE.getOpaqueBehavior();
-
-		/**
-		 * The meta object literal for the '<em><b>Command Line</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Traffic Light Modules</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute OPAQUE_BEHAVIOR__COMMAND_LINE = eINSTANCE.getOpaqueBehavior_CommandLine();
+		EReference JUNCTION_CONTROLLER__TRAFFIC_LIGHT_MODULES = eINSTANCE.getJunctionController_TrafficLightModules();
 
 		/**
-		 * The meta object literal for the '<em><b>Is Main</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Phases</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute OPAQUE_BEHAVIOR__IS_MAIN = eINSTANCE.getOpaqueBehavior_IsMain();
+		EReference JUNCTION_CONTROLLER__PHASES = eINSTANCE.getJunctionController_Phases();
 
 		/**
-		 * The meta object literal for the '{@link trafficLightSystem.impl.TrafficLightStateImpl <em>Traffic Light State</em>}' class.
+		 * The meta object literal for the '{@link trafficLightSystem.impl.PhaseImpl <em>Phase</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see trafficLightSystem.impl.TrafficLightStateImpl
-		 * @see trafficLightSystem.impl.TrafficLightSystemPackageImpl#getTrafficLightState()
+		 * @see trafficLightSystem.impl.PhaseImpl
+		 * @see trafficLightSystem.impl.TrafficLightSystemPackageImpl#getPhase()
 		 * @generated
 		 */
-		EClass TRAFFIC_LIGHT_STATE = eINSTANCE.getTrafficLightState();
+		EClass PHASE = eINSTANCE.getPhase();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PHASE__NAME = eINSTANCE.getPhase_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Duration</b></em>' attribute feature.
@@ -2099,15 +1901,41 @@ public interface TrafficLightSystemPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TRAFFIC_LIGHT_STATE__DURATION = eINSTANCE.getTrafficLightState_Duration();
+		EAttribute PHASE__DURATION = eINSTANCE.getPhase_Duration();
 
 		/**
-		 * The meta object literal for the '<em><b>Active Color</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Traffic Light Assignments</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TRAFFIC_LIGHT_STATE__ACTIVE_COLOR = eINSTANCE.getTrafficLightState_ActiveColor();
+		EReference PHASE__TRAFFIC_LIGHT_ASSIGNMENTS = eINSTANCE.getPhase_TrafficLightAssignments();
+
+		/**
+		 * The meta object literal for the '<em><b>Pedestrian Assignments</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PHASE__PEDESTRIAN_ASSIGNMENTS = eINSTANCE.getPhase_PedestrianAssignments();
+
+		/**
+		 * The meta object literal for the '{@link trafficLightSystem.impl.TrafficLightAssignmentImpl <em>Traffic Light Assignment</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see trafficLightSystem.impl.TrafficLightAssignmentImpl
+		 * @see trafficLightSystem.impl.TrafficLightSystemPackageImpl#getTrafficLightAssignment()
+		 * @generated
+		 */
+		EClass TRAFFIC_LIGHT_ASSIGNMENT = eINSTANCE.getTrafficLightAssignment();
+
+		/**
+		 * The meta object literal for the '<em><b>Color</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRAFFIC_LIGHT_ASSIGNMENT__COLOR = eINSTANCE.getTrafficLightAssignment_Color();
 
 		/**
 		 * The meta object literal for the '<em><b>Traffic Light Module</b></em>' reference feature.
@@ -2115,127 +1943,34 @@ public interface TrafficLightSystemPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TRAFFIC_LIGHT_STATE__TRAFFIC_LIGHT_MODULE = eINSTANCE.getTrafficLightState_TrafficLightModule();
+		EReference TRAFFIC_LIGHT_ASSIGNMENT__TRAFFIC_LIGHT_MODULE = eINSTANCE
+				.getTrafficLightAssignment_TrafficLightModule();
 
 		/**
-		 * The meta object literal for the '<em><b>Pedestrian Light State</b></em>' containment reference feature.
+		 * The meta object literal for the '{@link trafficLightSystem.impl.PedestrianAssignmentImpl <em>Pedestrian Assignment</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see trafficLightSystem.impl.PedestrianAssignmentImpl
+		 * @see trafficLightSystem.impl.TrafficLightSystemPackageImpl#getPedestrianAssignment()
+		 * @generated
+		 */
+		EClass PEDESTRIAN_ASSIGNMENT = eINSTANCE.getPedestrianAssignment();
+
+		/**
+		 * The meta object literal for the '<em><b>Color</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TRAFFIC_LIGHT_STATE__PEDESTRIAN_LIGHT_STATE = eINSTANCE.getTrafficLightState_PedestrianLightState();
+		EAttribute PEDESTRIAN_ASSIGNMENT__COLOR = eINSTANCE.getPedestrianAssignment_Color();
 
 		/**
-		 * The meta object literal for the '{@link trafficLightSystem.impl.StateMachineImpl <em>State Machine</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see trafficLightSystem.impl.StateMachineImpl
-		 * @see trafficLightSystem.impl.TrafficLightSystemPackageImpl#getStateMachine()
-		 * @generated
-		 */
-		EClass STATE_MACHINE = eINSTANCE.getStateMachine();
-
-		/**
-		 * The meta object literal for the '<em><b>Transitions</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Led</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference STATE_MACHINE__TRANSITIONS = eINSTANCE.getStateMachine_Transitions();
-
-		/**
-		 * The meta object literal for the '<em><b>States</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference STATE_MACHINE__STATES = eINSTANCE.getStateMachine_States();
-
-		/**
-		 * The meta object literal for the '{@link trafficLightSystem.impl.TransitionImpl <em>Transition</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see trafficLightSystem.impl.TransitionImpl
-		 * @see trafficLightSystem.impl.TrafficLightSystemPackageImpl#getTransition()
-		 * @generated
-		 */
-		EClass TRANSITION = eINSTANCE.getTransition();
-
-		/**
-		 * The meta object literal for the '<em><b>Src</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TRANSITION__SRC = eINSTANCE.getTransition_Src();
-
-		/**
-		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TRANSITION__TARGET = eINSTANCE.getTransition_Target();
-
-		/**
-		 * The meta object literal for the '{@link trafficLightSystem.impl.StateImpl <em>State</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see trafficLightSystem.impl.StateImpl
-		 * @see trafficLightSystem.impl.TrafficLightSystemPackageImpl#getState()
-		 * @generated
-		 */
-		EClass STATE = eINSTANCE.getState();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute STATE__NAME = eINSTANCE.getState_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Is Initial State</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute STATE__IS_INITIAL_STATE = eINSTANCE.getState_IsInitialState();
-
-		/**
-		 * The meta object literal for the '<em><b>Behavior</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference STATE__BEHAVIOR = eINSTANCE.getState_Behavior();
-
-		/**
-		 * The meta object literal for the '<em><b>Transitions</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference STATE__TRANSITIONS = eINSTANCE.getState_Transitions();
-
-		/**
-		 * The meta object literal for the '{@link trafficLightSystem.impl.PedestrianLightStateImpl <em>Pedestrian Light State</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see trafficLightSystem.impl.PedestrianLightStateImpl
-		 * @see trafficLightSystem.impl.TrafficLightSystemPackageImpl#getPedestrianLightState()
-		 * @generated
-		 */
-		EClass PEDESTRIAN_LIGHT_STATE = eINSTANCE.getPedestrianLightState();
-
-		/**
-		 * The meta object literal for the '<em><b>Led</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PEDESTRIAN_LIGHT_STATE__LED = eINSTANCE.getPedestrianLightState_Led();
+		EReference PEDESTRIAN_ASSIGNMENT__LED = eINSTANCE.getPedestrianAssignment_Led();
 
 		/**
 		 * The meta object literal for the '<em><b>Button</b></em>' reference feature.
@@ -2243,24 +1978,7 @@ public interface TrafficLightSystemPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PEDESTRIAN_LIGHT_STATE__BUTTON = eINSTANCE.getPedestrianLightState_Button();
-
-		/**
-		 * The meta object literal for the '<em><b>Active Pedestrian Color</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PEDESTRIAN_LIGHT_STATE__ACTIVE_PEDESTRIAN_COLOR = eINSTANCE
-				.getPedestrianLightState_ActivePedestrianColor();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PEDESTRIAN_LIGHT_STATE__NAME = eINSTANCE.getPedestrianLightState_Name();
+		EReference PEDESTRIAN_ASSIGNMENT__BUTTON = eINSTANCE.getPedestrianAssignment_Button();
 
 		/**
 		 * The meta object literal for the '{@link trafficLightSystem.PinType <em>Pin Type</em>}' enum.

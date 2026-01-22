@@ -19,88 +19,46 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum Direction implements Enumerator {
 	/**
-	 * The '<em><b>NORTH</b></em>' literal object.
+	 * The '<em><b>NORTH SOUTH</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #NORTH_VALUE
+	 * @see #NORTH_SOUTH_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	NORTH(0, "NORTH", "NORTH"),
+	NORTH_SOUTH(0, "NORTH_SOUTH", "NORTH_SOUTH"),
 
 	/**
-	 * The '<em><b>EAST</b></em>' literal object.
+	 * The '<em><b>EAST WEST</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #EAST_VALUE
+	 * @see #EAST_WEST_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	EAST(1, "EAST", "EAST"),
+	EAST_WEST(1, "EAST_WEST", "EAST_WEST");
 
 	/**
-	 * The '<em><b>WEST</b></em>' literal object.
+	 * The '<em><b>NORTH SOUTH</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #WEST_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	WEST(2, "WEST", "WEST"),
-
-	/**
-	 * The '<em><b>SOUTH</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #SOUTH_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	SOUTH(3, "SOUTH", "SOUTH");
-
-	/**
-	 * The '<em><b>NORTH</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #NORTH
+	 * @see #NORTH_SOUTH
 	 * @model
 	 * @generated
 	 * @ordered
 	 */
-	public static final int NORTH_VALUE = 0;
+	public static final int NORTH_SOUTH_VALUE = 0;
 
 	/**
-	 * The '<em><b>EAST</b></em>' literal value.
+	 * The '<em><b>EAST WEST</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #EAST
+	 * @see #EAST_WEST
 	 * @model
 	 * @generated
 	 * @ordered
 	 */
-	public static final int EAST_VALUE = 1;
-
-	/**
-	 * The '<em><b>WEST</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #WEST
-	 * @model
-	 * @generated
-	 * @ordered
-	 */
-	public static final int WEST_VALUE = 2;
-
-	/**
-	 * The '<em><b>SOUTH</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #SOUTH
-	 * @model
-	 * @generated
-	 * @ordered
-	 */
-	public static final int SOUTH_VALUE = 3;
+	public static final int EAST_WEST_VALUE = 1;
 
 	/**
 	 * An array of all the '<em><b>Direction</b></em>' enumerators.
@@ -108,7 +66,7 @@ public enum Direction implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final Direction[] VALUES_ARRAY = new Direction[] { NORTH, EAST, WEST, SOUTH, };
+	private static final Direction[] VALUES_ARRAY = new Direction[] { NORTH_SOUTH, EAST_WEST, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Direction</b></em>' enumerators.
@@ -164,14 +122,10 @@ public enum Direction implements Enumerator {
 	 */
 	public static Direction get(int value) {
 		switch (value) {
-		case NORTH_VALUE:
-			return NORTH;
-		case EAST_VALUE:
-			return EAST;
-		case WEST_VALUE:
-			return WEST;
-		case SOUTH_VALUE:
-			return SOUTH;
+		case NORTH_SOUTH_VALUE:
+			return NORTH_SOUTH;
+		case EAST_WEST_VALUE:
+			return EAST_WEST;
 		}
 		return null;
 	}

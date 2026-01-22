@@ -21,16 +21,17 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import trafficLightSystem.State;
+import trafficLightSystem.LightColor;
+import trafficLightSystem.TrafficLightAssignment;
 import trafficLightSystem.TrafficLightSystemPackage;
 
 /**
- * This is the item provider adapter for a {@link trafficLightSystem.State} object.
+ * This is the item provider adapter for a {@link trafficLightSystem.TrafficLightAssignment} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class StateItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
+public class TrafficLightAssignmentItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
 		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
@@ -38,7 +39,7 @@ public class StateItemProvider extends ItemProviderAdapter implements IEditingDo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public StateItemProvider(AdapterFactory adapterFactory) {
+	public TrafficLightAssignmentItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -53,83 +54,53 @@ public class StateItemProvider extends ItemProviderAdapter implements IEditingDo
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNamePropertyDescriptor(object);
-			addIsInitialStatePropertyDescriptor(object);
-			addBehaviorPropertyDescriptor(object);
-			addTransitionsPropertyDescriptor(object);
+			addColorPropertyDescriptor(object);
+			addTrafficLightModulePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Name feature.
+	 * This adds a property descriptor for the Color feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addNamePropertyDescriptor(Object object) {
+	protected void addColorPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_State_name_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_State_name_feature", "_UI_State_type"),
-						TrafficLightSystemPackage.Literals.STATE__NAME, true, false, false,
+						getResourceLocator(), getString("_UI_TrafficLightAssignment_color_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_TrafficLightAssignment_color_feature",
+								"_UI_TrafficLightAssignment_type"),
+						TrafficLightSystemPackage.Literals.TRAFFIC_LIGHT_ASSIGNMENT__COLOR, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Is Initial State feature.
+	 * This adds a property descriptor for the Traffic Light Module feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addIsInitialStatePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_State_isInitialState_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_State_isInitialState_feature",
-								"_UI_State_type"),
-						TrafficLightSystemPackage.Literals.STATE__IS_INITIAL_STATE, true, false, false,
-						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+	protected void addTrafficLightModulePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_TrafficLightAssignment_trafficLightModule_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_TrafficLightAssignment_trafficLightModule_feature",
+						"_UI_TrafficLightAssignment_type"),
+				TrafficLightSystemPackage.Literals.TRAFFIC_LIGHT_ASSIGNMENT__TRAFFIC_LIGHT_MODULE, true, false, true,
+				null, null, null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Behavior feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addBehaviorPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_State_behavior_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_State_behavior_feature", "_UI_State_type"),
-						TrafficLightSystemPackage.Literals.STATE__BEHAVIOR, true, false, true, null, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Transitions feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addTransitionsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_State_transitions_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_State_transitions_feature",
-								"_UI_State_type"),
-						TrafficLightSystemPackage.Literals.STATE__TRANSITIONS, true, false, true, null, null, null));
-	}
-
-	/**
-	 * This returns State.gif.
+	 * This returns TrafficLightAssignment.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/State"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/TrafficLightAssignment"));
 	}
 
 	/**
@@ -150,9 +121,10 @@ public class StateItemProvider extends ItemProviderAdapter implements IEditingDo
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((State) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_State_type")
-				: getString("_UI_State_type") + " " + label;
+		LightColor labelValue = ((TrafficLightAssignment) object).getColor();
+		String label = labelValue == null ? null : labelValue.toString();
+		return label == null || label.length() == 0 ? getString("_UI_TrafficLightAssignment_type")
+				: getString("_UI_TrafficLightAssignment_type") + " " + label;
 	}
 
 	/**
@@ -166,9 +138,8 @@ public class StateItemProvider extends ItemProviderAdapter implements IEditingDo
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(State.class)) {
-		case TrafficLightSystemPackage.STATE__NAME:
-		case TrafficLightSystemPackage.STATE__IS_INITIAL_STATE:
+		switch (notification.getFeatureID(TrafficLightAssignment.class)) {
+		case TrafficLightSystemPackage.TRAFFIC_LIGHT_ASSIGNMENT__COLOR:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

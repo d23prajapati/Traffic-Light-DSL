@@ -2,8 +2,12 @@
  */
 package trafficLightSystem.impl;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -11,25 +15,31 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
 import trafficLightSystem.JunctionController;
-import trafficLightSystem.SystemBehavior;
+import trafficLightSystem.Phase;
+import trafficLightSystem.TrafficLightModule;
 import trafficLightSystem.TrafficLightSystemPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>System Behavior</b></em>'.
+ * An implementation of the model object '<em><b>Junction Controller</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link trafficLightSystem.impl.SystemBehaviorImpl#getName <em>Name</em>}</li>
- *   <li>{@link trafficLightSystem.impl.SystemBehaviorImpl#getJunctionController <em>Junction Controller</em>}</li>
+ *   <li>{@link trafficLightSystem.impl.JunctionControllerImpl#getName <em>Name</em>}</li>
+ *   <li>{@link trafficLightSystem.impl.JunctionControllerImpl#getTrafficLightModules <em>Traffic Light Modules</em>}</li>
+ *   <li>{@link trafficLightSystem.impl.JunctionControllerImpl#getPhases <em>Phases</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class SystemBehaviorImpl extends MinimalEObjectImpl.Container implements SystemBehavior {
+public class JunctionControllerImpl extends MinimalEObjectImpl.Container implements JunctionController {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -51,21 +61,31 @@ public class SystemBehaviorImpl extends MinimalEObjectImpl.Container implements 
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getJunctionController() <em>Junction Controller</em>}' containment reference.
+	 * The cached value of the '{@link #getTrafficLightModules() <em>Traffic Light Modules</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getJunctionController()
+	 * @see #getTrafficLightModules()
 	 * @generated
 	 * @ordered
 	 */
-	protected JunctionController junctionController;
+	protected EList<TrafficLightModule> trafficLightModules;
+
+	/**
+	 * The cached value of the '{@link #getPhases() <em>Phases</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPhases()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Phase> phases;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected SystemBehaviorImpl() {
+	protected JunctionControllerImpl() {
 		super();
 	}
 
@@ -76,7 +96,7 @@ public class SystemBehaviorImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TrafficLightSystemPackage.Literals.SYSTEM_BEHAVIOR;
+		return TrafficLightSystemPackage.Literals.JUNCTION_CONTROLLER;
 	}
 
 	/**
@@ -99,7 +119,7 @@ public class SystemBehaviorImpl extends MinimalEObjectImpl.Container implements 
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TrafficLightSystemPackage.SYSTEM_BEHAVIOR__NAME,
+			eNotify(new ENotificationImpl(this, Notification.SET, TrafficLightSystemPackage.JUNCTION_CONTROLLER__NAME,
 					oldName, name));
 	}
 
@@ -109,29 +129,12 @@ public class SystemBehaviorImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	@Override
-	public JunctionController getJunctionController() {
-		return junctionController;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetJunctionController(JunctionController newJunctionController,
-			NotificationChain msgs) {
-		JunctionController oldJunctionController = junctionController;
-		junctionController = newJunctionController;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					TrafficLightSystemPackage.SYSTEM_BEHAVIOR__JUNCTION_CONTROLLER, oldJunctionController,
-					newJunctionController);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
+	public EList<TrafficLightModule> getTrafficLightModules() {
+		if (trafficLightModules == null) {
+			trafficLightModules = new EObjectResolvingEList<TrafficLightModule>(TrafficLightModule.class, this,
+					TrafficLightSystemPackage.JUNCTION_CONTROLLER__TRAFFIC_LIGHT_MODULES);
 		}
-		return msgs;
+		return trafficLightModules;
 	}
 
 	/**
@@ -140,24 +143,12 @@ public class SystemBehaviorImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	@Override
-	public void setJunctionController(JunctionController newJunctionController) {
-		if (newJunctionController != junctionController) {
-			NotificationChain msgs = null;
-			if (junctionController != null)
-				msgs = ((InternalEObject) junctionController).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - TrafficLightSystemPackage.SYSTEM_BEHAVIOR__JUNCTION_CONTROLLER, null,
-						msgs);
-			if (newJunctionController != null)
-				msgs = ((InternalEObject) newJunctionController).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - TrafficLightSystemPackage.SYSTEM_BEHAVIOR__JUNCTION_CONTROLLER, null,
-						msgs);
-			msgs = basicSetJunctionController(newJunctionController, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					TrafficLightSystemPackage.SYSTEM_BEHAVIOR__JUNCTION_CONTROLLER, newJunctionController,
-					newJunctionController));
+	public EList<Phase> getPhases() {
+		if (phases == null) {
+			phases = new EObjectContainmentEList<Phase>(Phase.class, this,
+					TrafficLightSystemPackage.JUNCTION_CONTROLLER__PHASES);
+		}
+		return phases;
 	}
 
 	/**
@@ -168,8 +159,8 @@ public class SystemBehaviorImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case TrafficLightSystemPackage.SYSTEM_BEHAVIOR__JUNCTION_CONTROLLER:
-			return basicSetJunctionController(null, msgs);
+		case TrafficLightSystemPackage.JUNCTION_CONTROLLER__PHASES:
+			return ((InternalEList<?>) getPhases()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -182,10 +173,12 @@ public class SystemBehaviorImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case TrafficLightSystemPackage.SYSTEM_BEHAVIOR__NAME:
+		case TrafficLightSystemPackage.JUNCTION_CONTROLLER__NAME:
 			return getName();
-		case TrafficLightSystemPackage.SYSTEM_BEHAVIOR__JUNCTION_CONTROLLER:
-			return getJunctionController();
+		case TrafficLightSystemPackage.JUNCTION_CONTROLLER__TRAFFIC_LIGHT_MODULES:
+			return getTrafficLightModules();
+		case TrafficLightSystemPackage.JUNCTION_CONTROLLER__PHASES:
+			return getPhases();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -195,14 +188,20 @@ public class SystemBehaviorImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case TrafficLightSystemPackage.SYSTEM_BEHAVIOR__NAME:
+		case TrafficLightSystemPackage.JUNCTION_CONTROLLER__NAME:
 			setName((String) newValue);
 			return;
-		case TrafficLightSystemPackage.SYSTEM_BEHAVIOR__JUNCTION_CONTROLLER:
-			setJunctionController((JunctionController) newValue);
+		case TrafficLightSystemPackage.JUNCTION_CONTROLLER__TRAFFIC_LIGHT_MODULES:
+			getTrafficLightModules().clear();
+			getTrafficLightModules().addAll((Collection<? extends TrafficLightModule>) newValue);
+			return;
+		case TrafficLightSystemPackage.JUNCTION_CONTROLLER__PHASES:
+			getPhases().clear();
+			getPhases().addAll((Collection<? extends Phase>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -216,11 +215,14 @@ public class SystemBehaviorImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case TrafficLightSystemPackage.SYSTEM_BEHAVIOR__NAME:
+		case TrafficLightSystemPackage.JUNCTION_CONTROLLER__NAME:
 			setName(NAME_EDEFAULT);
 			return;
-		case TrafficLightSystemPackage.SYSTEM_BEHAVIOR__JUNCTION_CONTROLLER:
-			setJunctionController((JunctionController) null);
+		case TrafficLightSystemPackage.JUNCTION_CONTROLLER__TRAFFIC_LIGHT_MODULES:
+			getTrafficLightModules().clear();
+			return;
+		case TrafficLightSystemPackage.JUNCTION_CONTROLLER__PHASES:
+			getPhases().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -234,10 +236,12 @@ public class SystemBehaviorImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case TrafficLightSystemPackage.SYSTEM_BEHAVIOR__NAME:
+		case TrafficLightSystemPackage.JUNCTION_CONTROLLER__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case TrafficLightSystemPackage.SYSTEM_BEHAVIOR__JUNCTION_CONTROLLER:
-			return junctionController != null;
+		case TrafficLightSystemPackage.JUNCTION_CONTROLLER__TRAFFIC_LIGHT_MODULES:
+			return trafficLightModules != null && !trafficLightModules.isEmpty();
+		case TrafficLightSystemPackage.JUNCTION_CONTROLLER__PHASES:
+			return phases != null && !phases.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -259,4 +263,4 @@ public class SystemBehaviorImpl extends MinimalEObjectImpl.Container implements 
 		return result.toString();
 	}
 
-} //SystemBehaviorImpl
+} //JunctionControllerImpl

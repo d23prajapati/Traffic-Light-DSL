@@ -21,16 +21,17 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import trafficLightSystem.PedestrianLightState;
+import trafficLightSystem.LightColor;
+import trafficLightSystem.PedestrianAssignment;
 import trafficLightSystem.TrafficLightSystemPackage;
 
 /**
- * This is the item provider adapter for a {@link trafficLightSystem.PedestrianLightState} object.
+ * This is the item provider adapter for a {@link trafficLightSystem.PedestrianAssignment} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class PedestrianLightStateItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
+public class PedestrianAssignmentItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
 		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
@@ -38,7 +39,7 @@ public class PedestrianLightStateItemProvider extends ItemProviderAdapter implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PedestrianLightStateItemProvider(AdapterFactory adapterFactory) {
+	public PedestrianAssignmentItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -53,12 +54,27 @@ public class PedestrianLightStateItemProvider extends ItemProviderAdapter implem
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addColorPropertyDescriptor(object);
 			addLedPropertyDescriptor(object);
 			addButtonPropertyDescriptor(object);
-			addActivePedestrianColorPropertyDescriptor(object);
-			addNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Color feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addColorPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_PedestrianAssignment_color_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_PedestrianAssignment_color_feature",
+								"_UI_PedestrianAssignment_type"),
+						TrafficLightSystemPackage.Literals.PEDESTRIAN_ASSIGNMENT__COLOR, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -70,10 +86,10 @@ public class PedestrianLightStateItemProvider extends ItemProviderAdapter implem
 	protected void addLedPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add(createItemPropertyDescriptor(
 				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_PedestrianLightState_led_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_PedestrianLightState_led_feature",
-						"_UI_PedestrianLightState_type"),
-				TrafficLightSystemPackage.Literals.PEDESTRIAN_LIGHT_STATE__LED, true, false, true, null, null, null));
+				getString("_UI_PedestrianAssignment_led_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_PedestrianAssignment_led_feature",
+						"_UI_PedestrianAssignment_type"),
+				TrafficLightSystemPackage.Literals.PEDESTRIAN_ASSIGNMENT__LED, true, false, true, null, null, null));
 	}
 
 	/**
@@ -83,56 +99,23 @@ public class PedestrianLightStateItemProvider extends ItemProviderAdapter implem
 	 * @generated
 	 */
 	protected void addButtonPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_PedestrianLightState_button_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_PedestrianLightState_button_feature",
-								"_UI_PedestrianLightState_type"),
-						TrafficLightSystemPackage.Literals.PEDESTRIAN_LIGHT_STATE__BUTTON, true, false, true, null,
-						null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Active Pedestrian Color feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addActivePedestrianColorPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add(createItemPropertyDescriptor(
 				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_PedestrianLightState_activePedestrianColor_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_PedestrianLightState_activePedestrianColor_feature", "_UI_PedestrianLightState_type"),
-				TrafficLightSystemPackage.Literals.PEDESTRIAN_LIGHT_STATE__ACTIVE_PEDESTRIAN_COLOR, true, false, false,
-				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+				getString("_UI_PedestrianAssignment_button_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_PedestrianAssignment_button_feature",
+						"_UI_PedestrianAssignment_type"),
+				TrafficLightSystemPackage.Literals.PEDESTRIAN_ASSIGNMENT__BUTTON, true, false, true, null, null, null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Name feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_PedestrianLightState_name_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_PedestrianLightState_name_feature",
-								"_UI_PedestrianLightState_type"),
-						TrafficLightSystemPackage.Literals.PEDESTRIAN_LIGHT_STATE__NAME, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
-	}
-
-	/**
-	 * This returns PedestrianLightState.gif.
+	 * This returns PedestrianAssignment.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/PedestrianLightState"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/PedestrianAssignment"));
 	}
 
 	/**
@@ -153,9 +136,10 @@ public class PedestrianLightStateItemProvider extends ItemProviderAdapter implem
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((PedestrianLightState) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_PedestrianLightState_type")
-				: getString("_UI_PedestrianLightState_type") + " " + label;
+		LightColor labelValue = ((PedestrianAssignment) object).getColor();
+		String label = labelValue == null ? null : labelValue.toString();
+		return label == null || label.length() == 0 ? getString("_UI_PedestrianAssignment_type")
+				: getString("_UI_PedestrianAssignment_type") + " " + label;
 	}
 
 	/**
@@ -169,9 +153,8 @@ public class PedestrianLightStateItemProvider extends ItemProviderAdapter implem
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(PedestrianLightState.class)) {
-		case TrafficLightSystemPackage.PEDESTRIAN_LIGHT_STATE__ACTIVE_PEDESTRIAN_COLOR:
-		case TrafficLightSystemPackage.PEDESTRIAN_LIGHT_STATE__NAME:
+		switch (notification.getFeatureID(PedestrianAssignment.class)) {
+		case TrafficLightSystemPackage.PEDESTRIAN_ASSIGNMENT__COLOR:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

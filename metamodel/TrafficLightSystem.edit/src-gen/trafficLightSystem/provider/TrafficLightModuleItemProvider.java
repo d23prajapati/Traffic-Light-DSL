@@ -10,7 +10,9 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import trafficLightSystem.TrafficLightModule;
@@ -45,8 +47,75 @@ public class TrafficLightModuleItemProvider extends ComponentItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addDirectionPropertyDescriptor(object);
+			addRedPinPropertyDescriptor(object);
+			addYellowPinPropertyDescriptor(object);
+			addGreenPinPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Direction feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDirectionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_TrafficLightModule_direction_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_TrafficLightModule_direction_feature",
+								"_UI_TrafficLightModule_type"),
+						TrafficLightSystemPackage.Literals.TRAFFIC_LIGHT_MODULE__DIRECTION, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Red Pin feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addRedPinPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_TrafficLightModule_redPin_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_TrafficLightModule_redPin_feature",
+						"_UI_TrafficLightModule_type"),
+				TrafficLightSystemPackage.Literals.TRAFFIC_LIGHT_MODULE__RED_PIN, true, false, true, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Yellow Pin feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addYellowPinPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_TrafficLightModule_yellowPin_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_TrafficLightModule_yellowPin_feature",
+								"_UI_TrafficLightModule_type"),
+						TrafficLightSystemPackage.Literals.TRAFFIC_LIGHT_MODULE__YELLOW_PIN, true, false, true, null,
+						null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Green Pin feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addGreenPinPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_TrafficLightModule_greenPin_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_TrafficLightModule_greenPin_feature",
+								"_UI_TrafficLightModule_type"),
+						TrafficLightSystemPackage.Literals.TRAFFIC_LIGHT_MODULE__GREEN_PIN, true, false, true, null,
+						null, null));
 	}
 
 	/**
@@ -125,6 +194,9 @@ public class TrafficLightModuleItemProvider extends ComponentItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TrafficLightModule.class)) {
+		case TrafficLightSystemPackage.TRAFFIC_LIGHT_MODULE__DIRECTION:
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+			return;
 		case TrafficLightSystemPackage.TRAFFIC_LIGHT_MODULE__PIN_GROUPS:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;

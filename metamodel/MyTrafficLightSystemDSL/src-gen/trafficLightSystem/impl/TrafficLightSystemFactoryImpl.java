@@ -77,16 +77,14 @@ public class TrafficLightSystemFactoryImpl extends EFactoryImpl implements Traff
 			return createPinGroup();
 		case TrafficLightSystemPackage.SYSTEM_BEHAVIOR:
 			return createSystemBehavior();
-		case TrafficLightSystemPackage.OPAQUE_BEHAVIOR:
-			return createOpaqueBehavior();
-		case TrafficLightSystemPackage.TRAFFIC_LIGHT_STATE:
-			return createTrafficLightState();
-		case TrafficLightSystemPackage.STATE_MACHINE:
-			return createStateMachine();
-		case TrafficLightSystemPackage.TRANSITION:
-			return createTransition();
-		case TrafficLightSystemPackage.PEDESTRIAN_LIGHT_STATE:
-			return createPedestrianLightState();
+		case TrafficLightSystemPackage.JUNCTION_CONTROLLER:
+			return createJunctionController();
+		case TrafficLightSystemPackage.PHASE:
+			return createPhase();
+		case TrafficLightSystemPackage.TRAFFIC_LIGHT_ASSIGNMENT:
+			return createTrafficLightAssignment();
+		case TrafficLightSystemPackage.PEDESTRIAN_ASSIGNMENT:
+			return createPedestrianAssignment();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -246,9 +244,9 @@ public class TrafficLightSystemFactoryImpl extends EFactoryImpl implements Traff
 	 * @generated
 	 */
 	@Override
-	public OpaqueBehavior createOpaqueBehavior() {
-		OpaqueBehaviorImpl opaqueBehavior = new OpaqueBehaviorImpl();
-		return opaqueBehavior;
+	public JunctionController createJunctionController() {
+		JunctionControllerImpl junctionController = new JunctionControllerImpl();
+		return junctionController;
 	}
 
 	/**
@@ -257,9 +255,9 @@ public class TrafficLightSystemFactoryImpl extends EFactoryImpl implements Traff
 	 * @generated
 	 */
 	@Override
-	public TrafficLightState createTrafficLightState() {
-		TrafficLightStateImpl trafficLightState = new TrafficLightStateImpl();
-		return trafficLightState;
+	public Phase createPhase() {
+		PhaseImpl phase = new PhaseImpl();
+		return phase;
 	}
 
 	/**
@@ -268,9 +266,9 @@ public class TrafficLightSystemFactoryImpl extends EFactoryImpl implements Traff
 	 * @generated
 	 */
 	@Override
-	public StateMachine createStateMachine() {
-		StateMachineImpl stateMachine = new StateMachineImpl();
-		return stateMachine;
+	public TrafficLightAssignment createTrafficLightAssignment() {
+		TrafficLightAssignmentImpl trafficLightAssignment = new TrafficLightAssignmentImpl();
+		return trafficLightAssignment;
 	}
 
 	/**
@@ -279,20 +277,9 @@ public class TrafficLightSystemFactoryImpl extends EFactoryImpl implements Traff
 	 * @generated
 	 */
 	@Override
-	public Transition createTransition() {
-		TransitionImpl transition = new TransitionImpl();
-		return transition;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public PedestrianLightState createPedestrianLightState() {
-		PedestrianLightStateImpl pedestrianLightState = new PedestrianLightStateImpl();
-		return pedestrianLightState;
+	public PedestrianAssignment createPedestrianAssignment() {
+		PedestrianAssignmentImpl pedestrianAssignment = new PedestrianAssignmentImpl();
+		return pedestrianAssignment;
 	}
 
 	/**
