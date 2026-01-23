@@ -1,0 +1,17 @@
+[comment encoding = UTF-8 /]
+[module generateButtonPolling('http://www.example.org/trafficLightSystem')]
+
+
+[template public generateButtonPolling(aSystemStructure : SystemStructure)]
+void pollButtons() {
+[for (aButton : Button | aSystemStructure.components->select(c | c.oclIsTypeOf(Button)))]
+	bool current_[aButton.name/] = digitalRead(PIN_[aButton.name/]);
+	
+	if(LAST_[aButton.name/] == HIGH && current_[aButton.name/] == LOW) {
+		REQ_[aButton.name/] = true;
+	}
+	
+	LAST_[aButton.name/] = current_[aButton.name/];
+[/for]
+}
+[/template]

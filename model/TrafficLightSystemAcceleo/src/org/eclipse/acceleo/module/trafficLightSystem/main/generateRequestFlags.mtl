@@ -1,0 +1,11 @@
+[comment encoding = UTF-8 /]
+[module generateRequestFlags('http://www.example.org/trafficLightSystem')]
+
+
+[template public generateRequestFlags(aSystemStructure : SystemStructure)]
+/* PEDESTRIAN REQUEST FLAGS */
+[for (aButton : Button | aSystemStructure.components->select(c | c.oclIsTypeOf(Button)))]
+	bool REQ_[aButton.name/] = false;
+[/for]
+
+[/template]

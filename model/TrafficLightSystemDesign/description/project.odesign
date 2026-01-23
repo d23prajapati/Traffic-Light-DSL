@@ -175,35 +175,117 @@
           </style>
         </edgeMappings>
         <containerMappings name="JunctionController" semanticCandidatesExpression="aql:self.junctionController" domainClass="trafficLightSystem::JunctionController">
-          <subContainerMappings name="PhaseContainer" semanticCandidatesExpression="aql:self.phases" domainClass="trafficLightSystem::Phase" childrenPresentation="List">
+          <subContainerMappings name="PhaseContainer" semanticCandidatesExpression="aql:self.phases" domainClass="trafficLightSystem::Phase">
             <subNodeMappings name="TrafficAssignmentNode" semanticCandidatesExpression="aql:self.trafficLightAssignments" domainClass="trafficLightSystem::TrafficLightAssignment">
-              <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql:self.trafficLightModule.direction + ' (' + self.trafficLightModule.name + ' )'" labelPosition="node" resizeKind="NSEW">
+              <style xsi:type="style:SquareDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
               </style>
+              <conditionnalStyles predicateExpression="aql:self.color = trafficLightSystem::LightColor::RED">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:self.trafficLightModule.name" sizeComputationExpression="10" resizeKind="NSEW" workspacePath="/TrafficLightSystem.project.design/arduinoImages/images/svg/TrafficLight_RED.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:self.color = trafficLightSystem::LightColor::RED_YELLOW">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:self.trafficLightModule.name" sizeComputationExpression="10" resizeKind="NSEW" workspacePath="/TrafficLightSystem.project.design/arduinoImages/images/svg/TrafficLight_RED_YELLOW.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:self.color = trafficLightSystem::LightColor::GREEN">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:self.trafficLightModule.name" sizeComputationExpression="10" resizeKind="NSEW" workspacePath="/TrafficLightSystem.project.design/arduinoImages/images/svg/TrafficLight_GREEN.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:self.color = trafficLightSystem::LightColor::YELLOW">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:self.trafficLightModule.name" sizeComputationExpression="10" resizeKind="NSEW" workspacePath="/TrafficLightSystem.project.design/arduinoImages/images/svg/TrafficLight_YELLOW.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
             </subNodeMappings>
             <subNodeMappings name="PedestrianAssignmentNode" semanticCandidatesExpression="aql:self.pedestrianAssignments" domainClass="trafficLightSystem::PedestrianAssignment">
-              <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql:self.led.name + ' -> ' + self.color.toString()" labelPosition="node" resizeKind="NSEW">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:self.led.name" sizeComputationExpression="5" labelPosition="node" resizeKind="NSEW" workspacePath="/TrafficLightSystem.project.design/arduinoImages/images/svg/led_unit.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
               </style>
+              <conditionnalStyles predicateExpression="aql:self.color = trafficLightSystem::LightColor::RED">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:self.led.name" sizeComputationExpression="5" labelPosition="node" resizeKind="NSEW" workspacePath="/TrafficLightSystem.project.design/arduinoImages/images/svg/led-red.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:self.color= trafficLightSystem::LightColor::GREEN">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:self.led.name" sizeComputationExpression="5" labelPosition="node" resizeKind="NSEW" workspacePath="/TrafficLightSystem.project.design/arduinoImages/images/svg/led-green.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
             </subNodeMappings>
-            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false">
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" widthComputationExpression="30" heightComputationExpression="30">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
               <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_orange']"/>
             </style>
           </subContainerMappings>
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:self.name">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:self.name" widthComputationExpression="100" heightComputationExpression="100">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
           </style>
         </containerMappings>
+        <toolSections name="BehaviorTools">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Create Junction Controller" containerMappings="//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemBehaviorDiagram']/@defaultLayer/@containerMappings[name='JunctionController']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="trafficLightSystem::JunctionController" referenceName="junctionController">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="new Junction Controller"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Create Phase" containerMappings="//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemBehaviorDiagram']/@defaultLayer/@containerMappings[name='JunctionController']/@subContainerMappings[name='PhaseContainer']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="trafficLightSystem::Phase" referenceName="phases">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="new Phase"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="duration" valueExpression="0"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Create TrafficLightAssignment" nodeMappings="//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemBehaviorDiagram']/@defaultLayer/@containerMappings[name='JunctionController']/@subContainerMappings[name='PhaseContainer']/@subNodeMappings[name='TrafficAssignmentNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="trafficLightSystem::TrafficLightAssignment" referenceName="trafficLightAssignments">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="color" valueExpression="RED"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Create PedestrianAssignment" nodeMappings="//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemBehaviorDiagram']/@defaultLayer/@containerMappings[name='JunctionController']/@subContainerMappings[name='PhaseContainer']/@subNodeMappings[name='PedestrianAssignmentNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="trafficLightSystem::PedestrianAssignment" referenceName="pedestrianAssignments">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="color" valueExpression="RED"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
       </defaultLayer>
     </ownedRepresentations>
     <ownedJavaExtensions qualifiedClassName="TrafficLightSystem.project.design.Services"/>
@@ -281,55 +363,20 @@
       </groups>
     </categories>
     <categories name="BehaviorCategory">
-      <pages name="OpaqueBehaviorPage" labelExpression="Page" domainClass="trafficLightSystem::Opaque" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.1/@groups.0"/>
-      <pages name="TrafficLightStatePage" labelExpression="Setup" domainClass="trafficLightSystem::TrafficLightState" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.1/@groups.1">
-        <validationSet>
-          <semanticValidationRules name="PositiveInteger" level="ERROR" message="Duration should be Positive integer" targetClass="trafficLightSystem::TrafficLightState">
-            <audits auditExpression="aql:self.oclAsType(trafficLightSystem::TrafficLightState).duration >= 0"/>
-          </semanticValidationRules>
-          <semanticValidationRules name="EmptyName" level="ERROR" message="Name must not be empty" targetClass="trafficLightSystem::TrafficLightState">
-            <audits auditExpression="aql:self.oclAsType(trafficLightSystem::TrafficLightState).name.size()>0"/>
-          </semanticValidationRules>
-        </validationSet>
-      </pages>
-      <groups name="OpaqueBehaviorGroup" labelExpression="Setup Opaque Behavior" domainClass="trafficLightSystem::OpaqueBehavior" semanticCandidateExpression="var:self">
-        <controls xsi:type="properties:TextDescription" name="name" labelExpression="Name" valueExpression="aql:self.name">
+      <pages name="JunctionControllerPage" labelExpression="JunctionControllerSetup" domainClass="trafficLightSystem::JunctionController" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.1/@groups.0"/>
+      <pages name="PhasePage" labelExpression="Setup Phase" domainClass="trafficLightSystem::Phase" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.1/@groups.0 //@extensions.0/@categories.1/@groups.1"/>
+      <pages name="TrafficAssignmentPage" labelExpression="Page" domainClass="trafficLightSystem::TrafficLightAssignment" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.1/@groups.2"/>
+      <pages name="PedestrianAssignmentPage" labelExpression="Setup Pedestrian Assignment" domainClass="trafficLightSystem::PedestrianAssignment" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.1/@groups.3"/>
+      <groups name="NameGroup" labelExpression="Setup Name" domainClass="EObject" semanticCandidateExpression="var:self" preconditionExpression="aql:self.oclIsKindOf(trafficLightSystem::JunctionController) or self.oclIsKindOf(trafficLightSystem::Phase)">
+        <controls xsi:type="properties:TextDescription" name="NameTextEdit" labelExpression="Name" valueExpression="aql:if self.oclIsKindOf(trafficLightSystem::JunctionController) then self.oclAsType(trafficLightSystem::JunctionController).name else if self.oclIsKindOf(trafficLightSystem::Phase)  then self.oclAsType(trafficLightSystem::Phase).name else '' endif  endif">
           <initialOperation>
             <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
               <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:newValue"/>
-            </firstModelOperations>
-          </initialOperation>
-        </controls>
-        <controls xsi:type="properties:CheckboxDescription" name="IsMain" labelExpression="Is Main" valueExpression="aql:self.isMain">
-          <initialOperation>
-            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
-              <subModelOperations xsi:type="tool_1:SetValue" featureName="isMain" valueExpression="var:newValue"/>
-            </firstModelOperations>
-          </initialOperation>
-        </controls>
-        <controls xsi:type="properties:TextAreaDescription" name="CommandLine" labelExpression="Command Line" valueExpression="aql:self.commandLine">
-          <initialOperation>
-            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
-              <subModelOperations xsi:type="tool_1:SetValue" featureName="commandLine" valueExpression="var:newValue"/>
             </firstModelOperations>
           </initialOperation>
         </controls>
       </groups>
-      <groups name="TrafficLightStateGroup" labelExpression="Configure Traffic Light State Behavior" domainClass="trafficLightSystem::TrafficLightState" semanticCandidateExpression="var:self">
-        <controls xsi:type="properties:TextDescription" name="name" labelExpression="Name" valueExpression="aql:self.name">
-          <initialOperation>
-            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
-              <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:newValue"/>
-            </firstModelOperations>
-          </initialOperation>
-        </controls>
-        <controls xsi:type="properties:CheckboxDescription" name="IsInitialState" labelExpression="Is Initial State" valueExpression="aql:self.isInitialState">
-          <initialOperation>
-            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
-              <subModelOperations xsi:type="tool_1:SetValue" featureName="isInitialState" valueExpression="var:newValue"/>
-            </firstModelOperations>
-          </initialOperation>
-        </controls>
+      <groups name="PhaseGroup" labelExpression="Setup Phase" domainClass="trafficLightSystem::Phase" semanticCandidateExpression="var:self">
         <controls xsi:type="properties:TextDescription" name="Duration" labelExpression="Duration" valueExpression="aql:self.duration">
           <initialOperation>
             <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
@@ -337,10 +384,28 @@
             </firstModelOperations>
           </initialOperation>
         </controls>
-        <controls xsi:type="properties:RadioDescription" name="ActiveColor" labelExpression="Active Color" valueExpression="aql:self.activeColor.toString()" candidatesExpression="aql:trafficLightSystem::LightColor.eContents().toString()" candidateDisplayExpression="aql:candidate.toString()">
+      </groups>
+      <groups name="TrafficAssignmentGroup" labelExpression="Setup Traffic Assignment" domainClass="trafficLightSystem::TrafficLightAssignment" semanticCandidateExpression="var:self">
+        <controls xsi:type="properties:RadioDescription" name="ColorRadio" labelExpression="Color" valueExpression="aql:self.color.toString()" candidatesExpression="aql:trafficLightSystem::LightColor.eContents().toString()" candidateDisplayExpression="aql:candidate.toString()">
           <initialOperation>
             <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
-              <subModelOperations xsi:type="tool_1:SetValue" featureName="activeColor" valueExpression="var:newValue"/>
+              <subModelOperations xsi:type="tool_1:SetValue" featureName="color" valueExpression="var:newValue"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:RadioDescription" name="TrafficLightModuleRadio" labelExpression="TrafficLight Module" valueExpression="aql:self.trafficLightModule.name" candidatesExpression="aql:self.trafficLightModule" candidateDisplayExpression="aql:candidate">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:SetValue" featureName="trafficLightModule" valueExpression="var:newValue"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+      </groups>
+      <groups name="PedestrianAssignmentGroup" labelExpression="Setup Pedestrian Assignment" domainClass="trafficLightSystem::PedestrianAssignment" semanticCandidateExpression="var:self">
+        <controls xsi:type="properties:RadioDescription" name="ColorRadio" labelExpression="Color" valueExpression="aql:self.color.toString()" candidatesExpression="aql:trafficLightSystem::LightColor.eContents().toString()->select(c | c &lt;> 'YELLOW' and c&lt;>'RED_YELLOW')" candidateDisplayExpression="aql:candidate.toString()">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:SetValue" featureName="color" valueExpression="var:newValue"/>
             </firstModelOperations>
           </initialOperation>
         </controls>

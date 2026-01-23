@@ -39,13 +39,13 @@
     </components>
     <components xsi:type="trafficLightSystem:LED" name="PED_NS_RED">
       <pinGroups>
-        <pins name="RED_LED"/>
+        <pins pinNr="8" name="RED_LED" type="DIGITAL_OUT"/>
         <pins name="GND" type="GND"/>
       </pinGroups>
     </components>
     <components xsi:type="trafficLightSystem:LED" name="PED_NS_GREEN" color="GREEN">
       <pinGroups>
-        <pins name="GREEN_LED"/>
+        <pins pinNr="9" name="GREEN_LED" type="DIGITAL_OUT"/>
         <pins name="GND" type="GND"/>
       </pinGroups>
     </components>
@@ -108,9 +108,9 @@
     <connections src="//@systemstructure/@components.7/@pinGroups.0/@pins.1" target="//@systemstructure/@board/@pinGroups.3/@pins.3"/>
     <connections src="//@systemstructure/@components.7/@pinGroups.0/@pins.0" target="//@systemstructure/@board/@pinGroups.5/@pins.0"/>
   </systemstructure>
-  <systemBehaviors>
-    <junctionController name="" trafficLightModules="//@systemstructure/@components.0 //@systemstructure/@components.4">
-      <phases name="NS_RED" duration="5000">
+  <systemBehaviors name="new Junction Controller">
+    <junctionController name="Main Junction" trafficLightModules="//@systemstructure/@components.0 //@systemstructure/@components.4">
+      <phases name="NS_RED" duration="6000">
         <trafficLightAssignments trafficLightModule="//@systemstructure/@components.0"/>
         <trafficLightAssignments color="GREEN" trafficLightModule="//@systemstructure/@components.4"/>
         <pedestrianAssignments led="//@systemstructure/@components.1" button="//@systemstructure/@components.3"/>
@@ -118,7 +118,7 @@
         <pedestrianAssignments color="GREEN" led="//@systemstructure/@components.2" button="//@systemstructure/@components.3"/>
         <pedestrianAssignments led="//@systemstructure/@components.6" button="//@systemstructure/@components.7"/>
       </phases>
-      <phases name="NS_RED_YELLOW" duration="1000">
+      <phases name="NS_RED_YELLOW" duration="2500">
         <trafficLightAssignments color="RED_YELLOW" trafficLightModule="//@systemstructure/@components.0"/>
         <trafficLightAssignments color="YELLOW" trafficLightModule="//@systemstructure/@components.4"/>
         <pedestrianAssignments color="GREEN" led="//@systemstructure/@components.1" button="//@systemstructure/@components.3"/>
@@ -126,7 +126,7 @@
         <pedestrianAssignments led="//@systemstructure/@components.2" button="//@systemstructure/@components.3"/>
         <pedestrianAssignments led="//@systemstructure/@components.6" button="//@systemstructure/@components.7"/>
       </phases>
-      <phases name="NS_GREEN" duration="5000">
+      <phases name="NS_GREEN" duration="7500">
         <trafficLightAssignments color="GREEN" trafficLightModule="//@systemstructure/@components.0"/>
         <trafficLightAssignments trafficLightModule="//@systemstructure/@components.4"/>
         <pedestrianAssignments color="GREEN" led="//@systemstructure/@components.1" button="//@systemstructure/@components.3"/>
@@ -134,9 +134,9 @@
         <pedestrianAssignments led="//@systemstructure/@components.5" button="//@systemstructure/@components.7"/>
         <pedestrianAssignments color="GREEN" led="//@systemstructure/@components.6" button="//@systemstructure/@components.7"/>
       </phases>
-      <phases name="NS_YELLOW" duration="2000">
+      <phases name="NS_YELLOW" duration="3000">
         <trafficLightAssignments color="YELLOW" trafficLightModule="//@systemstructure/@components.0"/>
-        <trafficLightAssignments trafficLightModule="//@systemstructure/@components.4"/>
+        <trafficLightAssignments color="RED_YELLOW" trafficLightModule="//@systemstructure/@components.4"/>
         <pedestrianAssignments color="GREEN" led="//@systemstructure/@components.1" button="//@systemstructure/@components.3"/>
         <pedestrianAssignments led="//@systemstructure/@components.2" button="//@systemstructure/@components.3"/>
         <pedestrianAssignments color="GREEN" led="//@systemstructure/@components.5" button="//@systemstructure/@components.7"/>

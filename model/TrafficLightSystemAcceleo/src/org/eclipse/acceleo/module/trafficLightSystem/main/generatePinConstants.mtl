@@ -2,6 +2,7 @@
 [module generatePinConstants('http://www.example.org/trafficLightSystem')]
 
 [import org::eclipse::acceleo::module::trafficLightSystem::requests::getPinNumber /]
+
 [template public generatePinConstants(aSystemStructure : SystemStructure)]
 /* PIN DEFINITIONS */
 
@@ -12,7 +13,10 @@
 [/for]
 
 [for (aLED : LED | aSystemStructure.components->select(c | c.oclIsTypeOf(LED)))]
-	const int PIN_LED_[aLED.name/] = [getPinNumber(aLED, '')/];
+	const int PIN_[aLED.name/] = [getPinNumber(aLED)/];
 [/for]
 
+[for (aButton : Button | aSystemStructure.components->select(c | c.oclIsTypeOf(Button)))]
+	const int PIN_[aButton.name/] = [getPinNumber(aButton)/];
+[/for]
 [/template]

@@ -1,0 +1,13 @@
+[comment encoding = UTF-8 /]
+[module getNextPhase('http://www.example.org/trafficLightSystem')]
+
+
+[query public getNextPhase (aPhase : Phase, aController : JunctionController) : String = 
+
+if (aController.phases->indexOf(aPhase) = aController.phases->size()) then
+	aController.phases->first().name
+else 
+	aController.phases->at(aController.phases->indexOf(aPhase) + 1).name
+endif
+
+/]

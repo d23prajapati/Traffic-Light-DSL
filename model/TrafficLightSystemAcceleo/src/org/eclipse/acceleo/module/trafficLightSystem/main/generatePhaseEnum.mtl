@@ -1,0 +1,11 @@
+[comment encoding = UTF-8 /]
+[module generatePhaseEnum('http://www.example.org/trafficLightSystem')]
+
+
+[template public generatePhaseEnum(aJunctionController : JunctionController)]
+enum Phase {
+[for (aPhase : Phase | aJunctionController.phases)]
+	PHASE_[aPhase.name.toUpper()/],
+[/for]
+};
+[/template]

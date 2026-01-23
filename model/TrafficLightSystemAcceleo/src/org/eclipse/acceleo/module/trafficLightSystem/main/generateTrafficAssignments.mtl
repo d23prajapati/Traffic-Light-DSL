@@ -1,0 +1,12 @@
+[comment encoding = UTF-8 /]
+[module generateTrafficAssignments('http://www.example.org/trafficLightSystem')]
+
+
+[template public generateTrafficAssignments(aPhase : Phase)]
+[for (ta : TrafficLightAssignment | aPhase.trafficLightAssignments)]
+digitalWrite(PIN_[ta.trafficLightModule.name/]_RED, [if (ta.color = LightColor::RED or ta.color = LightColor::RED_YELLOW)]HIGH [else] LOW [/if]);
+digitalWrite(PIN_[ta.trafficLightModule.name/]_YELLOW, [if (ta.color = LightColor::YELLOW or ta.color = LightColor::RED_YELLOW)] HIGH [else] LOW [/if]);
+digitalWrite(PIN_[ta.trafficLightModule.name/]_GREEN, [if (ta.color = LightColor::GREEN)] HIGH [else] LOW [/if]);
+
+[/for]
+[/template]

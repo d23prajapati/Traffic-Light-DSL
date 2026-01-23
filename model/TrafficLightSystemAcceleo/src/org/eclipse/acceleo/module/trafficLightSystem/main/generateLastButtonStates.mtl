@@ -1,0 +1,9 @@
+[comment encoding = UTF-8 /]
+[module generateLastButtonStates('http://www.example.org/trafficLightSystem')]
+
+
+[template public generateLastButtonStates(aSystemStructure : SystemStructure)]
+[for (aButton : Button | aSystemStructure.components->select(c | c.oclIsTypeOf(Button)))]
+	bool LAST_[aButton.name/] = HIGH;
+[/for]
+[/template]

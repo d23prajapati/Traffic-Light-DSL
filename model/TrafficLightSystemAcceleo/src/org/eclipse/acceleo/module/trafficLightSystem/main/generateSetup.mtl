@@ -1,0 +1,24 @@
+[comment encoding = UTF-8 /]
+[module generateSetup('http://www.example.org/trafficLightSystem')]
+
+
+[template public generateSetup(aSystemStructure : SystemStructure)]
+/* TRAFFIC LIGHTS */
+[for (aTrafficLightModule : TrafficLightModule | aSystemStructure.components->select(c | c.oclIsTypeOf(TrafficLightModule)))]
+	pinMode(PIN_[aTrafficLightModule.name/]_RED, OUTPUT);
+	pinMode(PIN_[aTrafficLightModule.name/]_YELLOW, OUTPUT);
+	pinMode(PIN_[aTrafficLightModule.name/]_GREEN, OUTPUT);
+
+[/for]
+/* LEDs */
+[for (aLED : LED | aSystemStructure.components->select(c | c.oclIsTypeOf(LED)))]
+	pinMode(PIN_[aLED.name/], OUTPUT);
+[/for]
+
+/* Buttons */
+[for (aButton : Button | aSystemStructure.components->select(c | c.oclIsTypeOf(Button)))]
+	pinMode(PIN_[aButton.name/], INPUT_PULLUP);
+[/for]
+
+phaseStartTime = millis();
+[/template]

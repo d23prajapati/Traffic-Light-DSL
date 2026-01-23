@@ -1,21 +1,43 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module generate.
+ */]
 [module generate('http://www.example.org/trafficLightSystem')]
-[import org::eclipse::acceleo::module::trafficLightSystem::main::generatePinConstants /]
 
-[template public generateElement(aTrafficLightSystem : TrafficLightSystem)]
+[import org::eclipse::acceleo::module::trafficLightSystem::main::generatePinConstants /]
+[import org::eclipse::acceleo::module::trafficLightSystem::main::generateRequestFlags /]
+[import org::eclipse::acceleo::module::trafficLightSystem::main::generateLastButtonStates /]
+[import org::eclipse::acceleo::module::trafficLightSystem::main::generatePhaseEnum /]
+[import org::eclipse::acceleo::module::trafficLightSystem::main::generatePhaseVariable /]
+[import org::eclipse::acceleo::module::trafficLightSystem::main::generateButtonPolling /]
+[import org::eclipse::acceleo::module::trafficLightSystem::main::generateSetup /]
+[import org::eclipse::acceleo::module::trafficLightSystem::main::generateUpdatePhase /]
+
+[**
+ * The documentation of the template generate.
+ * @param aTrafficLightSystem
+ */]
+[template public generate(aTrafficLightSystem : TrafficLightSystem)]
+[comment @main/]
 [file (aTrafficLightSystem.name+'/'+aTrafficLightSystem.name+'.ino', false, 'UTF-8')]
 
 [generatePinConstants(aTrafficLightSystem.systemstructure)/]
+[generateRequestFlags(aTrafficLightSystem.systemstructure)/]
+[generateLastButtonStates(aTrafficLightSystem.systemstructure)/]
+[generatePhaseEnum(aTrafficLightSystem.systemBehaviors->first().junctionController)/]
+[generatePhaseVariable(aTrafficLightSystem.systemBehaviors->first().junctionController)/]
+[generateButtonPolling(aTrafficLightSystem.systemstructure)/]
 
 void setup() 
 {
-
+[generateSetup(aTrafficLightSystem.systemstructure)/]
 }
 
 void loop()
 {
-
+	pollButtons();
+	updatePhase();
 }
-
+[generateUpdatePhase(aTrafficLightSystem.systemBehaviors->first().junctionController)/]
 [/file]
-[comment @main/]
 [/template]

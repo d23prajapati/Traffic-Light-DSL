@@ -2,14 +2,27 @@
 [module getPinNumber('http://www.example.org/trafficLightSystem')]
 
 
-[query public getPinNumber (aTrafficLightModule : TrafficLightModule, pinName : String) : Integer = 
+[query public getPinNumber (aTrafficLightModule : TrafficLightModule, pinName : String) : Integer  = 
 
-	aTrafficLightModule.pinGroups->collect(pg | pg.pins)->flatten()->select(p | p.name = pinName)->first().pinNr
+	aTrafficLightModule.pinGroups->collect(pg | pg.pins)
+    ->flatten()
+    ->select(p | p.name = pinName)
+    ->first().pinNr
 
 /]
 
-[query public getPinNumber (aLED : LED, pinName : String) : Integer = 
+[query public getPinNumber (aLED : LED) : Integer  = 
 
-	aLED.pinGroups->collect(pg | pg.pins)->flatten()->select(p | p.name = pinName)->first().pinNr
+	aLED.pinGroups->collect(pg | pg.pins)
+    ->flatten()
+    ->first().pinNr
+
+/]
+
+[query public getPinNumber (aButton : Button) : Integer  = 
+
+	aButton.pinGroups->collect(pg | pg.pins)
+    ->flatten()
+    ->first().pinNr
 
 /]

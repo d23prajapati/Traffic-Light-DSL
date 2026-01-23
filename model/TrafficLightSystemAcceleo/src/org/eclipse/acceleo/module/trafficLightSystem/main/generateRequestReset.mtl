@@ -1,0 +1,11 @@
+[comment encoding = UTF-8 /]
+[module generateRequestReset('http://www.example.org/trafficLightSystem')]
+
+
+[template public generateRequestReset(aPhase : Phase)]
+[for (pa : PedestrianAssignment | aPhase.pedestrianAssignments)]
+[if (pa.color = pa.led.color)]
+	REQ_[pa.button.name/] = false;
+[/if]
+[/for]
+[/template]

@@ -1,0 +1,30 @@
+[comment encoding = UTF-8 /]
+[module generateUpdatePhase('http://www.example.org/trafficLightSystem')]
+[import org::eclipse::acceleo::module::trafficLightSystem::main::generateTrafficAssignments /]
+[import org::eclipse::acceleo::module::trafficLightSystem::main::generatePedestrianAssignments /]
+[import org::eclipse::acceleo::module::trafficLightSystem::main::generateRequestReset /]
+[import org::eclipse::acceleo::module::trafficLightSystem::requests::getNextPhase /]
+
+[template public generateUpdatePhase(aJunctionController : JunctionController)]
+void updatePhase() {
+	unsigned long now = millis();
+	
+	switch(currentPhase) {
+	[for (aPhase : Phase | aJunctionController.phases)]
+		case PHASE_[aPhase.name.toUpper()/]: 
+			/* Traffic Lights */
+			[generateTrafficAssignments(aPhase)/]
+			
+			/* Pedestrian Lights */
+			[generatePedestrianAssignments(aPhase)/]
+			
+			if(now - phaseStartTime  >= [aPhase.duration/]) {
+				[generateRequestReset(aPhase)/]
+				currentPhase = PHASE_[getNextPhase(aPhase, aJunctionController)/];
+				phaseStartTime = now;
+			}				
+		break;
+	[/for]
+	}
+}
+[/template]

@@ -1,0 +1,8 @@
+[comment encoding = UTF-8 /]
+[module generatePhaseVariable('http://www.example.org/trafficLightSystem')]
+
+
+[template public generatePhaseVariable(aJunctionController : JunctionController)]
+Phase currentPhase = PHASE_[aJunctionController.phases->first().name.toUpper()/];
+unsigned long phaseStartTime = 0;
+[/template]

@@ -1,0 +1,16 @@
+[comment encoding = UTF-8 /]
+[module generatePedestrianAssignments('http://www.example.org/trafficLightSystem')]
+
+
+[template public generatePedestrianAssignments(aPhase : Phase)]
+[for (pa : PedestrianAssignment | aPhase.pedestrianAssignments)]
+digitalWrite(PIN_[pa.led.name/], [if (pa.led.color = LightColor::GREEN)]LOW[else]HIGH[/if]);
+[/for]
+[for (pa : PedestrianAssignment | aPhase.pedestrianAssignments)]
+if(REQ_[pa.button.name/]) {
+[if (pa.color = pa.led.color)]
+	digitalWrite(PIN_[pa.led.name/], [if (pa.led.color = LightColor::GREEN)]HIGH[else]LOW[/if]);
+[/if]
+}
+[/for]
+[/template]
