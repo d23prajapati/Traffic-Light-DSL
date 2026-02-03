@@ -1,146 +1,201 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <trafficLightSystem:TrafficLightSystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:trafficLightSystem="http://www.example.org/trafficLightSystem" name="TrafficLightSystem">
-  <systemstructure name="new Component">
-    <board name="ArduinoUNO">
+  <systemstructure name="Traffic Light System Structure">
+    <board name="Arduino UNO">
       <pinGroups>
-        <pins pinNr="8" name="RED" type="DIGITAL_OUT"/>
-        <pins pinNr="9" name="YELLOW" type="DIGITAL_OUT"/>
-        <pins pinNr="10" name="GREEN" type="DIGITAL_OUT"/>
-        <pins pinNr="14" name="GND" type="GND"/>
-      </pinGroups>
-      <pinGroups name="BOARD_PED_LEDs_PINGRP">
-        <pins pinNr="11" name="RED_LED" type="DIGITAL_OUT"/>
-        <pins pinNr="12" name="GREEN_LED" type="DIGITAL_OUT"/>
-      </pinGroups>
-      <pinGroups name="BOARD_PED_BTN_PINGRP">
-        <pins pinNr="2" name="PED_BTN"/>
+        <pins pinNr="8" name="redPin" type="DIGITAL_OUT"/>
+        <pins pinNr="9" name="yellowPin" type="DIGITAL_OUT"/>
+        <pins pinNr="10" name="greenPin" type="DIGITAL_OUT"/>
       </pinGroups>
       <pinGroups>
-        <pins pinNr="5" name="RED"/>
-        <pins pinNr="6" name="YELLOW"/>
-        <pins pinNr="7" name="GREEN"/>
+        <pins pinNr="7" name="PED_RED_NORTH_PIN" type="DIGITAL_OUT"/>
         <pins name="GND" type="GND"/>
       </pinGroups>
       <pinGroups>
-        <pins pinNr="10" name="PED_EW_RED" type="DIGITAL_OUT"/>
-        <pins pinNr="11" name="PED_EW_GREEN" type="DIGITAL_OUT"/>
+        <pins pinNr="6" name="PED_GREEN_NORTH_PIN" type="DIGITAL_OUT"/>
+        <pins name="GND" type="GND"/>
       </pinGroups>
       <pinGroups>
-        <pins pinNr="13" name="BTN_EW" type="DIGITAL_OUT"/>
+        <pins pinNr="11" name="PED_BTN_NORTH_PIN"/>
+        <pins name="GND" type="GND"/>
+      </pinGroups>
+      <pinGroups>
+        <pins pinNr="22" name="redPin" type="DIGITAL_OUT"/>
+        <pins pinNr="23" name="yellowPin" type="DIGITAL_OUT"/>
+        <pins pinNr="24" name="greenPin" type="DIGITAL_OUT"/>
+      </pinGroups>
+      <pinGroups>
+        <pins pinNr="24" name="PED_RED_EAST_PIN" type="DIGITAL_OUT"/>
+        <pins name="GND" type="GND"/>
+      </pinGroups>
+      <pinGroups>
+        <pins pinNr="25" name="PED_GREEN_EAST_PIN" type="DIGITAL_OUT"/>
+        <pins name="GND" type="GND"/>
+      </pinGroups>
+      <pinGroups>
+        <pins pinNr="27" name="PED_BTN_NORTH_PIN"/>
+        <pins name="GND" type="GND"/>
+      </pinGroups>
+      <pinGroups>
+        <pins pinNr="14" name="redPin" type="DIGITAL_OUT"/>
+        <pins pinNr="15" name="yellowPin" type="DIGITAL_OUT"/>
+        <pins pinNr="16" name="greenPin" type="DIGITAL_OUT"/>
+      </pinGroups>
+      <pinGroups>
+        <pins pinNr="2" name="PED_RED_SOUTH_PIN" type="DIGITAL_OUT"/>
+        <pins name="GND" type="GND"/>
+      </pinGroups>
+      <pinGroups>
+        <pins pinNr="3" name="PED_GREEN_SOUTH_PIN" type="DIGITAL_OUT"/>
+        <pins name="GND" type="GND"/>
+      </pinGroups>
+      <pinGroups>
+        <pins pinNr="4" name="PED_BTN_SOUTH_PIN" type="DIGITAL_OUT"/>
+        <pins name="GND" type="GND"/>
       </pinGroups>
     </board>
-    <components xsi:type="trafficLightSystem:TrafficLightModule" name="TrafficLight_NS" redPin="//@systemstructure/@components.0/@pinGroups.0/@pins.2" yellowPin="//@systemstructure/@components.0/@pinGroups.0/@pins.0" greenPin="//@systemstructure/@components.0/@pinGroups.0/@pins.1">
-      <pinGroups>
-        <pins pinNr="3" name="TL1_YELLOW" type="DIGITAL_OUT"/>
-        <pins pinNr="4" name="TL1_GREEN" type="DIGITAL_OUT"/>
-        <pins pinNr="2" name="TL1_RED" type="DIGITAL_OUT"/>
-        <pins pinNr="3" name="GND" type="GND"/>
-      </pinGroups>
+    <components xsi:type="trafficLightSystem:TrafficLightModule" name="TrafficLight_NORTH">
+      <redPin pinNr="8" name="redPin" type="DIGITAL_OUT"/>
+      <yellowPin pinNr="9" name="yellowPin" type="DIGITAL_OUT"/>
+      <greenPin pinNr="10" name="greenPin" type="DIGITAL_OUT"/>
     </components>
-    <components xsi:type="trafficLightSystem:LED" name="PED_NS_RED">
+    <components xsi:type="trafficLightSystem:LED" name="PED_RED_NORTH">
       <pinGroups>
-        <pins pinNr="8" name="RED_LED" type="DIGITAL_OUT"/>
+        <pins pinNr="7" name="PED_RED_NORTH_PIN" type="DIGITAL_OUT"/>
         <pins name="GND" type="GND"/>
       </pinGroups>
     </components>
-    <components xsi:type="trafficLightSystem:LED" name="PED_NS_GREEN" color="GREEN">
+    <components xsi:type="trafficLightSystem:LED" name="PED_GREEN_NORTH" color="GREEN">
       <pinGroups>
-        <pins pinNr="9" name="GREEN_LED" type="DIGITAL_OUT"/>
+        <pins pinNr="6" name="PED_GREEN_NORTH_PIN" type="DIGITAL_OUT"/>
         <pins name="GND" type="GND"/>
       </pinGroups>
     </components>
-    <components xsi:type="trafficLightSystem:Button" name="BTN_NS">
+    <components xsi:type="trafficLightSystem:Button" name="BTN_NORTH">
       <pinGroups>
-        <pins pinNr="12" name="PED_BTN"/>
-        <pins name="Name" type="GND"/>
+        <pins name="GND" type="GND"/>
+        <pins pinNr="11" name="PED_BTN_NORTH_PIN"/>
       </pinGroups>
     </components>
-    <components xsi:type="trafficLightSystem:TrafficLightModule" name="TrafficLight_EW" direction="EAST_WEST" redPin="//@systemstructure/@components.4/@pinGroups.0/@pins.0" yellowPin="//@systemstructure/@components.4/@pinGroups.0/@pins.1" greenPin="//@systemstructure/@components.4/@pinGroups.0/@pins.2">
+    <components xsi:type="trafficLightSystem:TrafficLightModule" name="TrafficLight_EAST" direction="EAST_WEST">
+      <redPin pinNr="22" name="redPin" type="DIGITAL_OUT"/>
+      <yellowPin pinNr="23" name="yellowPin" type="DIGITAL_OUT"/>
+      <greenPin pinNr="24" name="greenPin" type="DIGITAL_OUT"/>
+    </components>
+    <components xsi:type="trafficLightSystem:LED" name="PED_RED_EAST">
       <pinGroups>
-        <pins pinNr="5" name="TL2_RED" type="DIGITAL_OUT"/>
-        <pins pinNr="6" name="TL2_YELLOW" type="DIGITAL_OUT"/>
-        <pins pinNr="7" name="TL2_GREEN" type="DIGITAL_OUT"/>
+        <pins pinNr="25" name="PED_RED_EAST_PIN" type="DIGITAL_OUT"/>
         <pins name="GND" type="GND"/>
       </pinGroups>
     </components>
-    <components xsi:type="trafficLightSystem:LED" name="PED_EW_RED">
+    <components xsi:type="trafficLightSystem:LED" name="PED_GREEN_EAST" color="GREEN">
       <pinGroups>
-        <pins pinNr="10" name="PED_EW_RED" type="DIGITAL_OUT"/>
-        <pins name="Name" type="GND"/>
-      </pinGroups>
-    </components>
-    <components xsi:type="trafficLightSystem:LED" name="PED_EW_GREEN" color="GREEN">
-      <pinGroups>
-        <pins pinNr="11" name="PED_EW_GREEN" type="DIGITAL_OUT"/>
+        <pins pinNr="26" name="PED_GREEN_EAST_PIN" type="DIGITAL_OUT"/>
         <pins name="GND" type="GND"/>
       </pinGroups>
     </components>
-    <components xsi:type="trafficLightSystem:Button" name="BTN_EW">
+    <components xsi:type="trafficLightSystem:Button" name="BTN_EAST">
       <pinGroups>
-        <pins pinNr="13" name="BTN_EW" type="DIGITAL_OUT"/>
-        <pins name="Name" type="GND"/>
+        <pins pinNr="27" name="PED_BTN_EAST_PIN"/>
+        <pins name="GND" type="GND"/>
       </pinGroups>
     </components>
-    <connections src="//@systemstructure/@components.0/@pinGroups.0/@pins.3" target="//@systemstructure/@board/@pinGroups.0/@pins.3"/>
-    <connections src="//@systemstructure/@components.0/@pinGroups.0/@pins.0" target="//@systemstructure/@board/@pinGroups.0/@pins.0"/>
-    <connections src="//@systemstructure/@components.0/@pinGroups.0/@pins.1" target="//@systemstructure/@board/@pinGroups.0/@pins.1"/>
-    <connections src="//@systemstructure/@components.0/@pinGroups.0/@pins.2" target="//@systemstructure/@board/@pinGroups.0/@pins.2"/>
-    <connections target="//@systemstructure/@board/@pinGroups.1/@pins.1"/>
-    <connections target="//@systemstructure/@board/@pinGroups.0/@pins.3"/>
-    <connections target="//@systemstructure/@board/@pinGroups.0/@pins.3"/>
-    <connections target="//@systemstructure/@board/@pinGroups.1/@pins.0"/>
-    <connections target="//@systemstructure/@board/@pinGroups.2/@pins.0"/>
-    <connections target="//@systemstructure/@board/@pinGroups.0/@pins.3"/>
-    <connections src="//@systemstructure/@components.1/@pinGroups.0/@pins.1" target="//@systemstructure/@board/@pinGroups.0/@pins.3"/>
-    <connections src="//@systemstructure/@components.2/@pinGroups.0/@pins.1" target="//@systemstructure/@board/@pinGroups.0/@pins.3"/>
-    <connections src="//@systemstructure/@board/@pinGroups.1/@pins.0" target="//@systemstructure/@components.1/@pinGroups.0/@pins.0"/>
-    <connections src="//@systemstructure/@board/@pinGroups.1/@pins.1" target="//@systemstructure/@components.2/@pinGroups.0/@pins.0"/>
-    <connections src="//@systemstructure/@components.3/@pinGroups.0/@pins.1" target="//@systemstructure/@board/@pinGroups.0/@pins.3"/>
-    <connections src="//@systemstructure/@board/@pinGroups.2/@pins.0" target="//@systemstructure/@components.3/@pinGroups.0/@pins.0"/>
-    <connections src="//@systemstructure/@board/@pinGroups.3/@pins.0" target="//@systemstructure/@components.4/@pinGroups.0/@pins.0"/>
-    <connections src="//@systemstructure/@board/@pinGroups.3/@pins.1" target="//@systemstructure/@components.4/@pinGroups.0/@pins.1"/>
-    <connections src="//@systemstructure/@board/@pinGroups.3/@pins.2" target="//@systemstructure/@components.4/@pinGroups.0/@pins.2"/>
-    <connections src="//@systemstructure/@board/@pinGroups.3/@pins.3" target="//@systemstructure/@components.4/@pinGroups.0/@pins.3"/>
-    <connections src="//@systemstructure/@components.5/@pinGroups.0/@pins.1" target="//@systemstructure/@board/@pinGroups.3/@pins.3"/>
-    <connections src="//@systemstructure/@components.5/@pinGroups.0/@pins.0" target="//@systemstructure/@board/@pinGroups.4/@pins.0"/>
-    <connections src="//@systemstructure/@components.6/@pinGroups.0/@pins.1" target="//@systemstructure/@board/@pinGroups.3/@pins.3"/>
-    <connections src="//@systemstructure/@components.6/@pinGroups.0/@pins.0" target="//@systemstructure/@board/@pinGroups.4/@pins.1"/>
-    <connections src="//@systemstructure/@components.7/@pinGroups.0/@pins.1" target="//@systemstructure/@board/@pinGroups.3/@pins.3"/>
-    <connections src="//@systemstructure/@components.7/@pinGroups.0/@pins.0" target="//@systemstructure/@board/@pinGroups.5/@pins.0"/>
+    <components xsi:type="trafficLightSystem:TrafficLightModule" name="TrafficLight_SOUTH">
+      <redPin pinNr="32" name="redPin" type="DIGITAL_OUT"/>
+      <yellowPin pinNr="33" name="yellowPin" type="DIGITAL_OUT"/>
+      <greenPin pinNr="34" name="greenPin" type="DIGITAL_OUT"/>
+    </components>
+    <components xsi:type="trafficLightSystem:LED" name="PED_RED_SOUTH">
+      <pinGroups>
+        <pins pinNr="36" name="PED_RED_SOUTH_PIN" type="DIGITAL_OUT"/>
+        <pins name="GND" type="GND"/>
+      </pinGroups>
+    </components>
+    <components xsi:type="trafficLightSystem:LED" name="PED_GREEN_SOUTH" color="GREEN">
+      <pinGroups>
+        <pins pinNr="37" name="PED_GREEN_SOUTH_PIN" type="DIGITAL_OUT"/>
+        <pins name="GND" type="GND"/>
+      </pinGroups>
+    </components>
+    <components xsi:type="trafficLightSystem:Button" name="BTN_SOUTH">
+      <pinGroups>
+        <pins pinNr="38" name="PED_BTN_SOUTH_PIN" type="DIGITAL_OUT"/>
+        <pins name="GND" type="GND"/>
+      </pinGroups>
+    </components>
+    <connections src="//@systemstructure/@components.0/@redPin" target="//@systemstructure/@board/@pinGroups.0/@pins.0"/>
+    <connections src="//@systemstructure/@components.0/@yellowPin" target="//@systemstructure/@board/@pinGroups.0/@pins.1"/>
+    <connections src="//@systemstructure/@components.0/@greenPin" target="//@systemstructure/@board/@pinGroups.0/@pins.2"/>
+    <connections src="//@systemstructure/@components.1/@pinGroups.0/@pins.0" target="//@systemstructure/@board/@pinGroups.1/@pins.0"/>
+    <connections src="//@systemstructure/@components.1/@pinGroups.0/@pins.1" target="//@systemstructure/@board/@pinGroups.1/@pins.1"/>
+    <connections src="//@systemstructure/@components.2/@pinGroups.0/@pins.0" target="//@systemstructure/@board/@pinGroups.2/@pins.0"/>
+    <connections src="//@systemstructure/@components.2/@pinGroups.0/@pins.1" target="//@systemstructure/@board/@pinGroups.2/@pins.1"/>
+    <connections src="//@systemstructure/@components.3/@pinGroups.0/@pins.1" target="//@systemstructure/@board/@pinGroups.3/@pins.0"/>
+    <connections src="//@systemstructure/@components.3/@pinGroups.0/@pins.0" target="//@systemstructure/@board/@pinGroups.3/@pins.1"/>
+    <connections src="//@systemstructure/@components.4/@redPin" target="//@systemstructure/@board/@pinGroups.4/@pins.0"/>
+    <connections src="//@systemstructure/@components.4/@yellowPin" target="//@systemstructure/@board/@pinGroups.4/@pins.1"/>
+    <connections src="//@systemstructure/@components.4/@greenPin" target="//@systemstructure/@board/@pinGroups.4/@pins.2"/>
+    <connections src="//@systemstructure/@components.6/@pinGroups.0/@pins.0" target="//@systemstructure/@board/@pinGroups.6/@pins.0"/>
+    <connections src="//@systemstructure/@components.6/@pinGroups.0/@pins.1" target="//@systemstructure/@board/@pinGroups.6/@pins.1"/>
+    <connections src="//@systemstructure/@components.5/@pinGroups.0/@pins.0" target="//@systemstructure/@board/@pinGroups.5/@pins.0"/>
+    <connections src="//@systemstructure/@components.5/@pinGroups.0/@pins.1" target="//@systemstructure/@board/@pinGroups.5/@pins.1"/>
+    <connections src="//@systemstructure/@components.7/@pinGroups.0/@pins.0" target="//@systemstructure/@board/@pinGroups.7/@pins.0"/>
+    <connections src="//@systemstructure/@components.7/@pinGroups.0/@pins.1" target="//@systemstructure/@board/@pinGroups.7/@pins.1"/>
+    <connections src="//@systemstructure/@components.8/@redPin" target="//@systemstructure/@board/@pinGroups.8/@pins.0"/>
+    <connections src="//@systemstructure/@components.8/@yellowPin" target="//@systemstructure/@board/@pinGroups.8/@pins.1"/>
+    <connections src="//@systemstructure/@components.8/@greenPin" target="//@systemstructure/@board/@pinGroups.8/@pins.2"/>
+    <connections src="//@systemstructure/@board/@pinGroups.9/@pins.0" target="//@systemstructure/@components.9/@pinGroups.0/@pins.0"/>
+    <connections src="//@systemstructure/@components.10/@pinGroups.0/@pins.0" target="//@systemstructure/@board/@pinGroups.10/@pins.0"/>
+    <connections src="//@systemstructure/@components.11/@pinGroups.0/@pins.0" target="//@systemstructure/@board/@pinGroups.11/@pins.0"/>
+    <connections src="//@systemstructure/@components.9/@pinGroups.0/@pins.1" target="//@systemstructure/@board/@pinGroups.9/@pins.1"/>
+    <connections src="//@systemstructure/@components.10/@pinGroups.0/@pins.1" target="//@systemstructure/@board/@pinGroups.10/@pins.1"/>
+    <connections src="//@systemstructure/@components.11/@pinGroups.0/@pins.1" target="//@systemstructure/@board/@pinGroups.11/@pins.1"/>
   </systemstructure>
-  <systemBehaviors name="new Junction Controller">
-    <junctionController name="Main Junction" trafficLightModules="//@systemstructure/@components.0 //@systemstructure/@components.4">
-      <phases name="NS_RED" duration="6000">
+  <systemBehaviors name="Traffic Light System Behavior">
+    <junctionController name="Traffic Light Junction Controller" trafficLightModules="//@systemstructure/@components.0 //@systemstructure/@components.4 //@systemstructure/@components.8">
+      <phases name="NS_RED_PHASE" duration="6000">
         <trafficLightAssignments trafficLightModule="//@systemstructure/@components.0"/>
         <trafficLightAssignments color="GREEN" trafficLightModule="//@systemstructure/@components.4"/>
+        <trafficLightAssignments trafficLightModule="//@systemstructure/@components.8"/>
         <pedestrianAssignments led="//@systemstructure/@components.1" button="//@systemstructure/@components.3"/>
-        <pedestrianAssignments color="GREEN" led="//@systemstructure/@components.5" button="//@systemstructure/@components.7"/>
         <pedestrianAssignments color="GREEN" led="//@systemstructure/@components.2" button="//@systemstructure/@components.3"/>
         <pedestrianAssignments led="//@systemstructure/@components.6" button="//@systemstructure/@components.7"/>
+        <pedestrianAssignments color="GREEN" led="//@systemstructure/@components.5" button="//@systemstructure/@components.7"/>
+        <pedestrianAssignments led="//@systemstructure/@components.9" button="//@systemstructure/@components.11"/>
+        <pedestrianAssignments color="GREEN" led="//@systemstructure/@components.10" button="//@systemstructure/@components.11"/>
       </phases>
-      <phases name="NS_RED_YELLOW" duration="2500">
+      <phases name="NS_RED_YELLOW_PHASE" duration="2000">
         <trafficLightAssignments color="RED_YELLOW" trafficLightModule="//@systemstructure/@components.0"/>
         <trafficLightAssignments color="YELLOW" trafficLightModule="//@systemstructure/@components.4"/>
-        <pedestrianAssignments color="GREEN" led="//@systemstructure/@components.1" button="//@systemstructure/@components.3"/>
-        <pedestrianAssignments color="GREEN" led="//@systemstructure/@components.5" button="//@systemstructure/@components.7"/>
+        <trafficLightAssignments color="RED_YELLOW" trafficLightModule="//@systemstructure/@components.8"/>
         <pedestrianAssignments led="//@systemstructure/@components.2" button="//@systemstructure/@components.3"/>
+        <pedestrianAssignments color="GREEN" led="//@systemstructure/@components.1" button="//@systemstructure/@components.3"/>
         <pedestrianAssignments led="//@systemstructure/@components.6" button="//@systemstructure/@components.7"/>
+        <pedestrianAssignments color="GREEN" led="//@systemstructure/@components.5" button="//@systemstructure/@components.7"/>
+        <pedestrianAssignments color="GREEN" led="//@systemstructure/@components.9" button="//@systemstructure/@components.11"/>
+        <pedestrianAssignments led="//@systemstructure/@components.10" button="//@systemstructure/@components.11"/>
       </phases>
-      <phases name="NS_GREEN" duration="7500">
+      <phases name="NS_GREEN_PHASE" duration="8000">
         <trafficLightAssignments color="GREEN" trafficLightModule="//@systemstructure/@components.0"/>
         <trafficLightAssignments trafficLightModule="//@systemstructure/@components.4"/>
-        <pedestrianAssignments color="GREEN" led="//@systemstructure/@components.1" button="//@systemstructure/@components.3"/>
+        <trafficLightAssignments color="GREEN" trafficLightModule="//@systemstructure/@components.8"/>
         <pedestrianAssignments led="//@systemstructure/@components.2" button="//@systemstructure/@components.3"/>
+        <pedestrianAssignments color="GREEN" led="//@systemstructure/@components.1" button="//@systemstructure/@components.3"/>
         <pedestrianAssignments led="//@systemstructure/@components.5" button="//@systemstructure/@components.7"/>
         <pedestrianAssignments color="GREEN" led="//@systemstructure/@components.6" button="//@systemstructure/@components.7"/>
+        <pedestrianAssignments led="//@systemstructure/@components.10" button="//@systemstructure/@components.11"/>
+        <pedestrianAssignments color="GREEN" led="//@systemstructure/@components.9" button="//@systemstructure/@components.11"/>
       </phases>
-      <phases name="NS_YELLOW" duration="3000">
+      <phases name="NS_YELLOW_PHASE" duration="3000">
         <trafficLightAssignments color="YELLOW" trafficLightModule="//@systemstructure/@components.0"/>
         <trafficLightAssignments color="RED_YELLOW" trafficLightModule="//@systemstructure/@components.4"/>
-        <pedestrianAssignments color="GREEN" led="//@systemstructure/@components.1" button="//@systemstructure/@components.3"/>
+        <trafficLightAssignments color="YELLOW" trafficLightModule="//@systemstructure/@components.8"/>
         <pedestrianAssignments led="//@systemstructure/@components.2" button="//@systemstructure/@components.3"/>
-        <pedestrianAssignments color="GREEN" led="//@systemstructure/@components.5" button="//@systemstructure/@components.7"/>
+        <pedestrianAssignments color="GREEN" led="//@systemstructure/@components.1" button="//@systemstructure/@components.3"/>
         <pedestrianAssignments led="//@systemstructure/@components.6" button="//@systemstructure/@components.7"/>
+        <pedestrianAssignments color="GREEN" led="//@systemstructure/@components.5" button="//@systemstructure/@components.7"/>
+        <pedestrianAssignments led="//@systemstructure/@components.10" button="//@systemstructure/@components.11"/>
+        <pedestrianAssignments color="GREEN" led="//@systemstructure/@components.9" button="//@systemstructure/@components.11"/>
       </phases>
     </junctionController>
   </systemBehaviors>

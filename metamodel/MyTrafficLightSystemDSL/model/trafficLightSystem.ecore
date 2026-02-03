@@ -45,12 +45,13 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Pin"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TrafficLightModule" eSuperTypes="#//Component">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="pinGroups" upperBound="-1"
-        eType="#//PinGroup" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="direction" eType="#//Direction"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="redPin" eType="#//Pin"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="yellowPin" eType="#//Pin"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="greenPin" eType="#//Pin"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="redPin" eType="#//Pin"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="yellowPin" eType="#//Pin"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="greenPin" eType="#//Pin"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LED" eSuperTypes="#//Component">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="color" eType="#//LightColor"/>

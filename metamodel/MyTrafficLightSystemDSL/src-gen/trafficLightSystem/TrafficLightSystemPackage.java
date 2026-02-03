@@ -380,49 +380,40 @@ public interface TrafficLightSystemPackage extends EPackage {
 	int TRAFFIC_LIGHT_MODULE__NAME = COMPONENT__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Pin Groups</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRAFFIC_LIGHT_MODULE__PIN_GROUPS = COMPONENT_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Direction</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRAFFIC_LIGHT_MODULE__DIRECTION = COMPONENT_FEATURE_COUNT + 1;
+	int TRAFFIC_LIGHT_MODULE__DIRECTION = COMPONENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Red Pin</b></em>' reference.
+	 * The feature id for the '<em><b>Red Pin</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRAFFIC_LIGHT_MODULE__RED_PIN = COMPONENT_FEATURE_COUNT + 2;
+	int TRAFFIC_LIGHT_MODULE__RED_PIN = COMPONENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Yellow Pin</b></em>' reference.
+	 * The feature id for the '<em><b>Yellow Pin</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRAFFIC_LIGHT_MODULE__YELLOW_PIN = COMPONENT_FEATURE_COUNT + 3;
+	int TRAFFIC_LIGHT_MODULE__YELLOW_PIN = COMPONENT_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Green Pin</b></em>' reference.
+	 * The feature id for the '<em><b>Green Pin</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRAFFIC_LIGHT_MODULE__GREEN_PIN = COMPONENT_FEATURE_COUNT + 4;
+	int TRAFFIC_LIGHT_MODULE__GREEN_PIN = COMPONENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Traffic Light Module</em>' class.
@@ -431,7 +422,7 @@ public interface TrafficLightSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAFFIC_LIGHT_MODULE_FEATURE_COUNT = COMPONENT_FEATURE_COUNT + 5;
+	int TRAFFIC_LIGHT_MODULE_FEATURE_COUNT = COMPONENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Traffic Light Module</em>' class.
@@ -1121,17 +1112,6 @@ public interface TrafficLightSystemPackage extends EPackage {
 	EClass getTrafficLightModule();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link trafficLightSystem.TrafficLightModule#getPinGroups <em>Pin Groups</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Pin Groups</em>'.
-	 * @see trafficLightSystem.TrafficLightModule#getPinGroups()
-	 * @see #getTrafficLightModule()
-	 * @generated
-	 */
-	EReference getTrafficLightModule_PinGroups();
-
-	/**
 	 * Returns the meta object for the attribute '{@link trafficLightSystem.TrafficLightModule#getDirection <em>Direction</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1143,10 +1123,10 @@ public interface TrafficLightSystemPackage extends EPackage {
 	EAttribute getTrafficLightModule_Direction();
 
 	/**
-	 * Returns the meta object for the reference '{@link trafficLightSystem.TrafficLightModule#getRedPin <em>Red Pin</em>}'.
+	 * Returns the meta object for the containment reference '{@link trafficLightSystem.TrafficLightModule#getRedPin <em>Red Pin</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Red Pin</em>'.
+	 * @return the meta object for the containment reference '<em>Red Pin</em>'.
 	 * @see trafficLightSystem.TrafficLightModule#getRedPin()
 	 * @see #getTrafficLightModule()
 	 * @generated
@@ -1154,10 +1134,10 @@ public interface TrafficLightSystemPackage extends EPackage {
 	EReference getTrafficLightModule_RedPin();
 
 	/**
-	 * Returns the meta object for the reference '{@link trafficLightSystem.TrafficLightModule#getYellowPin <em>Yellow Pin</em>}'.
+	 * Returns the meta object for the containment reference '{@link trafficLightSystem.TrafficLightModule#getYellowPin <em>Yellow Pin</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Yellow Pin</em>'.
+	 * @return the meta object for the containment reference '<em>Yellow Pin</em>'.
 	 * @see trafficLightSystem.TrafficLightModule#getYellowPin()
 	 * @see #getTrafficLightModule()
 	 * @generated
@@ -1165,10 +1145,10 @@ public interface TrafficLightSystemPackage extends EPackage {
 	EReference getTrafficLightModule_YellowPin();
 
 	/**
-	 * Returns the meta object for the reference '{@link trafficLightSystem.TrafficLightModule#getGreenPin <em>Green Pin</em>}'.
+	 * Returns the meta object for the containment reference '{@link trafficLightSystem.TrafficLightModule#getGreenPin <em>Green Pin</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Green Pin</em>'.
+	 * @return the meta object for the containment reference '<em>Green Pin</em>'.
 	 * @see trafficLightSystem.TrafficLightModule#getGreenPin()
 	 * @see #getTrafficLightModule()
 	 * @generated
@@ -1708,14 +1688,6 @@ public interface TrafficLightSystemPackage extends EPackage {
 		EClass TRAFFIC_LIGHT_MODULE = eINSTANCE.getTrafficLightModule();
 
 		/**
-		 * The meta object literal for the '<em><b>Pin Groups</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TRAFFIC_LIGHT_MODULE__PIN_GROUPS = eINSTANCE.getTrafficLightModule_PinGroups();
-
-		/**
 		 * The meta object literal for the '<em><b>Direction</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1724,7 +1696,7 @@ public interface TrafficLightSystemPackage extends EPackage {
 		EAttribute TRAFFIC_LIGHT_MODULE__DIRECTION = eINSTANCE.getTrafficLightModule_Direction();
 
 		/**
-		 * The meta object literal for the '<em><b>Red Pin</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Red Pin</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1732,7 +1704,7 @@ public interface TrafficLightSystemPackage extends EPackage {
 		EReference TRAFFIC_LIGHT_MODULE__RED_PIN = eINSTANCE.getTrafficLightModule_RedPin();
 
 		/**
-		 * The meta object literal for the '<em><b>Yellow Pin</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Yellow Pin</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1740,7 +1712,7 @@ public interface TrafficLightSystemPackage extends EPackage {
 		EReference TRAFFIC_LIGHT_MODULE__YELLOW_PIN = eINSTANCE.getTrafficLightModule_YellowPin();
 
 		/**
-		 * The meta object literal for the '<em><b>Green Pin</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Green Pin</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

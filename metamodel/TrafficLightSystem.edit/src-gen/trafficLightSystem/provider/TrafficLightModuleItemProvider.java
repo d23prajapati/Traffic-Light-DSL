@@ -130,7 +130,9 @@ public class TrafficLightModuleItemProvider extends ComponentItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(TrafficLightSystemPackage.Literals.TRAFFIC_LIGHT_MODULE__PIN_GROUPS);
+			childrenFeatures.add(TrafficLightSystemPackage.Literals.TRAFFIC_LIGHT_MODULE__RED_PIN);
+			childrenFeatures.add(TrafficLightSystemPackage.Literals.TRAFFIC_LIGHT_MODULE__YELLOW_PIN);
+			childrenFeatures.add(TrafficLightSystemPackage.Literals.TRAFFIC_LIGHT_MODULE__GREEN_PIN);
 		}
 		return childrenFeatures;
 	}
@@ -197,7 +199,9 @@ public class TrafficLightModuleItemProvider extends ComponentItemProvider {
 		case TrafficLightSystemPackage.TRAFFIC_LIGHT_MODULE__DIRECTION:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
-		case TrafficLightSystemPackage.TRAFFIC_LIGHT_MODULE__PIN_GROUPS:
+		case TrafficLightSystemPackage.TRAFFIC_LIGHT_MODULE__RED_PIN:
+		case TrafficLightSystemPackage.TRAFFIC_LIGHT_MODULE__YELLOW_PIN:
+		case TrafficLightSystemPackage.TRAFFIC_LIGHT_MODULE__GREEN_PIN:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -215,9 +219,37 @@ public class TrafficLightModuleItemProvider extends ComponentItemProvider {
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
+		newChildDescriptors.add(createChildParameter(TrafficLightSystemPackage.Literals.TRAFFIC_LIGHT_MODULE__RED_PIN,
+				TrafficLightSystemFactory.eINSTANCE.createPin()));
+
 		newChildDescriptors
-				.add(createChildParameter(TrafficLightSystemPackage.Literals.TRAFFIC_LIGHT_MODULE__PIN_GROUPS,
-						TrafficLightSystemFactory.eINSTANCE.createPinGroup()));
+				.add(createChildParameter(TrafficLightSystemPackage.Literals.TRAFFIC_LIGHT_MODULE__YELLOW_PIN,
+						TrafficLightSystemFactory.eINSTANCE.createPin()));
+
+		newChildDescriptors.add(createChildParameter(TrafficLightSystemPackage.Literals.TRAFFIC_LIGHT_MODULE__GREEN_PIN,
+				TrafficLightSystemFactory.eINSTANCE.createPin()));
+	}
+
+	/**
+	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+		Object childFeature = feature;
+		Object childObject = child;
+
+		boolean qualify = childFeature == TrafficLightSystemPackage.Literals.TRAFFIC_LIGHT_MODULE__RED_PIN
+				|| childFeature == TrafficLightSystemPackage.Literals.TRAFFIC_LIGHT_MODULE__YELLOW_PIN
+				|| childFeature == TrafficLightSystemPackage.Literals.TRAFFIC_LIGHT_MODULE__GREEN_PIN;
+
+		if (qualify) {
+			return getString("_UI_CreateChild_text2",
+					new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+		}
+		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 }

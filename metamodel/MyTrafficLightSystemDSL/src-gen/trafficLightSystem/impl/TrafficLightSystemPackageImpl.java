@@ -454,18 +454,8 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 	 * @generated
 	 */
 	@Override
-	public EReference getTrafficLightModule_PinGroups() {
-		return (EReference) trafficLightModuleEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EAttribute getTrafficLightModule_Direction() {
-		return (EAttribute) trafficLightModuleEClass.getEStructuralFeatures().get(1);
+		return (EAttribute) trafficLightModuleEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -475,7 +465,7 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 	 */
 	@Override
 	public EReference getTrafficLightModule_RedPin() {
-		return (EReference) trafficLightModuleEClass.getEStructuralFeatures().get(2);
+		return (EReference) trafficLightModuleEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -485,7 +475,7 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 	 */
 	@Override
 	public EReference getTrafficLightModule_YellowPin() {
-		return (EReference) trafficLightModuleEClass.getEStructuralFeatures().get(3);
+		return (EReference) trafficLightModuleEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -495,7 +485,7 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 	 */
 	@Override
 	public EReference getTrafficLightModule_GreenPin() {
-		return (EReference) trafficLightModuleEClass.getEStructuralFeatures().get(4);
+		return (EReference) trafficLightModuleEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -856,7 +846,6 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 		createEReference(connectionEClass, CONNECTION__TARGET);
 
 		trafficLightModuleEClass = createEClass(TRAFFIC_LIGHT_MODULE);
-		createEReference(trafficLightModuleEClass, TRAFFIC_LIGHT_MODULE__PIN_GROUPS);
 		createEAttribute(trafficLightModuleEClass, TRAFFIC_LIGHT_MODULE__DIRECTION);
 		createEReference(trafficLightModuleEClass, TRAFFIC_LIGHT_MODULE__RED_PIN);
 		createEReference(trafficLightModuleEClass, TRAFFIC_LIGHT_MODULE__YELLOW_PIN);
@@ -994,20 +983,17 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 
 		initEClass(trafficLightModuleEClass, TrafficLightModule.class, "TrafficLightModule", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTrafficLightModule_PinGroups(), this.getPinGroup(), null, "pinGroups", null, 0, -1,
-				TrafficLightModule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTrafficLightModule_Direction(), this.getDirection(), "direction", null, 0, 1,
 				TrafficLightModule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 		initEReference(getTrafficLightModule_RedPin(), this.getPin(), null, "redPin", null, 0, 1,
-				TrafficLightModule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				TrafficLightModule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTrafficLightModule_YellowPin(), this.getPin(), null, "yellowPin", null, 0, 1,
-				TrafficLightModule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				TrafficLightModule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTrafficLightModule_GreenPin(), this.getPin(), null, "greenPin", null, 0, 1,
-				TrafficLightModule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				TrafficLightModule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(ledEClass, trafficLightSystem.LED.class, "LED", !IS_ABSTRACT, !IS_INTERFACE,

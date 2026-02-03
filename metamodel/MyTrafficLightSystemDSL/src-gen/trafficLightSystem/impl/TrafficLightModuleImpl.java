@@ -2,24 +2,16 @@
  */
 package trafficLightSystem.impl;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
-
 import trafficLightSystem.Direction;
 import trafficLightSystem.Pin;
-import trafficLightSystem.PinGroup;
 import trafficLightSystem.TrafficLightModule;
 import trafficLightSystem.TrafficLightSystemPackage;
 
@@ -31,7 +23,6 @@ import trafficLightSystem.TrafficLightSystemPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link trafficLightSystem.impl.TrafficLightModuleImpl#getPinGroups <em>Pin Groups</em>}</li>
  *   <li>{@link trafficLightSystem.impl.TrafficLightModuleImpl#getDirection <em>Direction</em>}</li>
  *   <li>{@link trafficLightSystem.impl.TrafficLightModuleImpl#getRedPin <em>Red Pin</em>}</li>
  *   <li>{@link trafficLightSystem.impl.TrafficLightModuleImpl#getYellowPin <em>Yellow Pin</em>}</li>
@@ -41,16 +32,6 @@ import trafficLightSystem.TrafficLightSystemPackage;
  * @generated
  */
 public class TrafficLightModuleImpl extends ComponentImpl implements TrafficLightModule {
-	/**
-	 * The cached value of the '{@link #getPinGroups() <em>Pin Groups</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPinGroups()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<PinGroup> pinGroups;
-
 	/**
 	 * The default value of the '{@link #getDirection() <em>Direction</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -72,7 +53,7 @@ public class TrafficLightModuleImpl extends ComponentImpl implements TrafficLigh
 	protected Direction direction = DIRECTION_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getRedPin() <em>Red Pin</em>}' reference.
+	 * The cached value of the '{@link #getRedPin() <em>Red Pin</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRedPin()
@@ -82,7 +63,7 @@ public class TrafficLightModuleImpl extends ComponentImpl implements TrafficLigh
 	protected Pin redPin;
 
 	/**
-	 * The cached value of the '{@link #getYellowPin() <em>Yellow Pin</em>}' reference.
+	 * The cached value of the '{@link #getYellowPin() <em>Yellow Pin</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getYellowPin()
@@ -92,7 +73,7 @@ public class TrafficLightModuleImpl extends ComponentImpl implements TrafficLigh
 	protected Pin yellowPin;
 
 	/**
-	 * The cached value of the '{@link #getGreenPin() <em>Green Pin</em>}' reference.
+	 * The cached value of the '{@link #getGreenPin() <em>Green Pin</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getGreenPin()
@@ -126,20 +107,6 @@ public class TrafficLightModuleImpl extends ComponentImpl implements TrafficLigh
 	 * @generated
 	 */
 	@Override
-	public EList<PinGroup> getPinGroups() {
-		if (pinGroups == null) {
-			pinGroups = new EObjectContainmentEList<PinGroup>(PinGroup.class, this,
-					TrafficLightSystemPackage.TRAFFIC_LIGHT_MODULE__PIN_GROUPS);
-		}
-		return pinGroups;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Direction getDirection() {
 		return direction;
 	}
@@ -165,15 +132,6 @@ public class TrafficLightModuleImpl extends ComponentImpl implements TrafficLigh
 	 */
 	@Override
 	public Pin getRedPin() {
-		if (redPin != null && redPin.eIsProxy()) {
-			InternalEObject oldRedPin = (InternalEObject) redPin;
-			redPin = (Pin) eResolveProxy(oldRedPin);
-			if (redPin != oldRedPin) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							TrafficLightSystemPackage.TRAFFIC_LIGHT_MODULE__RED_PIN, oldRedPin, redPin));
-			}
-		}
 		return redPin;
 	}
 
@@ -182,8 +140,18 @@ public class TrafficLightModuleImpl extends ComponentImpl implements TrafficLigh
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Pin basicGetRedPin() {
-		return redPin;
+	public NotificationChain basicSetRedPin(Pin newRedPin, NotificationChain msgs) {
+		Pin oldRedPin = redPin;
+		redPin = newRedPin;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					TrafficLightSystemPackage.TRAFFIC_LIGHT_MODULE__RED_PIN, oldRedPin, newRedPin);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -193,11 +161,20 @@ public class TrafficLightModuleImpl extends ComponentImpl implements TrafficLigh
 	 */
 	@Override
 	public void setRedPin(Pin newRedPin) {
-		Pin oldRedPin = redPin;
-		redPin = newRedPin;
-		if (eNotificationRequired())
+		if (newRedPin != redPin) {
+			NotificationChain msgs = null;
+			if (redPin != null)
+				msgs = ((InternalEObject) redPin).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - TrafficLightSystemPackage.TRAFFIC_LIGHT_MODULE__RED_PIN, null, msgs);
+			if (newRedPin != null)
+				msgs = ((InternalEObject) newRedPin).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - TrafficLightSystemPackage.TRAFFIC_LIGHT_MODULE__RED_PIN, null, msgs);
+			msgs = basicSetRedPin(newRedPin, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					TrafficLightSystemPackage.TRAFFIC_LIGHT_MODULE__RED_PIN, oldRedPin, redPin));
+					TrafficLightSystemPackage.TRAFFIC_LIGHT_MODULE__RED_PIN, newRedPin, newRedPin));
 	}
 
 	/**
@@ -207,15 +184,6 @@ public class TrafficLightModuleImpl extends ComponentImpl implements TrafficLigh
 	 */
 	@Override
 	public Pin getYellowPin() {
-		if (yellowPin != null && yellowPin.eIsProxy()) {
-			InternalEObject oldYellowPin = (InternalEObject) yellowPin;
-			yellowPin = (Pin) eResolveProxy(oldYellowPin);
-			if (yellowPin != oldYellowPin) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							TrafficLightSystemPackage.TRAFFIC_LIGHT_MODULE__YELLOW_PIN, oldYellowPin, yellowPin));
-			}
-		}
 		return yellowPin;
 	}
 
@@ -224,8 +192,18 @@ public class TrafficLightModuleImpl extends ComponentImpl implements TrafficLigh
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Pin basicGetYellowPin() {
-		return yellowPin;
+	public NotificationChain basicSetYellowPin(Pin newYellowPin, NotificationChain msgs) {
+		Pin oldYellowPin = yellowPin;
+		yellowPin = newYellowPin;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					TrafficLightSystemPackage.TRAFFIC_LIGHT_MODULE__YELLOW_PIN, oldYellowPin, newYellowPin);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -235,11 +213,22 @@ public class TrafficLightModuleImpl extends ComponentImpl implements TrafficLigh
 	 */
 	@Override
 	public void setYellowPin(Pin newYellowPin) {
-		Pin oldYellowPin = yellowPin;
-		yellowPin = newYellowPin;
-		if (eNotificationRequired())
+		if (newYellowPin != yellowPin) {
+			NotificationChain msgs = null;
+			if (yellowPin != null)
+				msgs = ((InternalEObject) yellowPin).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - TrafficLightSystemPackage.TRAFFIC_LIGHT_MODULE__YELLOW_PIN, null,
+						msgs);
+			if (newYellowPin != null)
+				msgs = ((InternalEObject) newYellowPin).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - TrafficLightSystemPackage.TRAFFIC_LIGHT_MODULE__YELLOW_PIN, null,
+						msgs);
+			msgs = basicSetYellowPin(newYellowPin, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					TrafficLightSystemPackage.TRAFFIC_LIGHT_MODULE__YELLOW_PIN, oldYellowPin, yellowPin));
+					TrafficLightSystemPackage.TRAFFIC_LIGHT_MODULE__YELLOW_PIN, newYellowPin, newYellowPin));
 	}
 
 	/**
@@ -249,15 +238,6 @@ public class TrafficLightModuleImpl extends ComponentImpl implements TrafficLigh
 	 */
 	@Override
 	public Pin getGreenPin() {
-		if (greenPin != null && greenPin.eIsProxy()) {
-			InternalEObject oldGreenPin = (InternalEObject) greenPin;
-			greenPin = (Pin) eResolveProxy(oldGreenPin);
-			if (greenPin != oldGreenPin) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							TrafficLightSystemPackage.TRAFFIC_LIGHT_MODULE__GREEN_PIN, oldGreenPin, greenPin));
-			}
-		}
 		return greenPin;
 	}
 
@@ -266,8 +246,18 @@ public class TrafficLightModuleImpl extends ComponentImpl implements TrafficLigh
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Pin basicGetGreenPin() {
-		return greenPin;
+	public NotificationChain basicSetGreenPin(Pin newGreenPin, NotificationChain msgs) {
+		Pin oldGreenPin = greenPin;
+		greenPin = newGreenPin;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					TrafficLightSystemPackage.TRAFFIC_LIGHT_MODULE__GREEN_PIN, oldGreenPin, newGreenPin);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -277,11 +267,20 @@ public class TrafficLightModuleImpl extends ComponentImpl implements TrafficLigh
 	 */
 	@Override
 	public void setGreenPin(Pin newGreenPin) {
-		Pin oldGreenPin = greenPin;
-		greenPin = newGreenPin;
-		if (eNotificationRequired())
+		if (newGreenPin != greenPin) {
+			NotificationChain msgs = null;
+			if (greenPin != null)
+				msgs = ((InternalEObject) greenPin).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - TrafficLightSystemPackage.TRAFFIC_LIGHT_MODULE__GREEN_PIN, null, msgs);
+			if (newGreenPin != null)
+				msgs = ((InternalEObject) newGreenPin).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - TrafficLightSystemPackage.TRAFFIC_LIGHT_MODULE__GREEN_PIN, null, msgs);
+			msgs = basicSetGreenPin(newGreenPin, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					TrafficLightSystemPackage.TRAFFIC_LIGHT_MODULE__GREEN_PIN, oldGreenPin, greenPin));
+					TrafficLightSystemPackage.TRAFFIC_LIGHT_MODULE__GREEN_PIN, newGreenPin, newGreenPin));
 	}
 
 	/**
@@ -292,8 +291,12 @@ public class TrafficLightModuleImpl extends ComponentImpl implements TrafficLigh
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case TrafficLightSystemPackage.TRAFFIC_LIGHT_MODULE__PIN_GROUPS:
-			return ((InternalEList<?>) getPinGroups()).basicRemove(otherEnd, msgs);
+		case TrafficLightSystemPackage.TRAFFIC_LIGHT_MODULE__RED_PIN:
+			return basicSetRedPin(null, msgs);
+		case TrafficLightSystemPackage.TRAFFIC_LIGHT_MODULE__YELLOW_PIN:
+			return basicSetYellowPin(null, msgs);
+		case TrafficLightSystemPackage.TRAFFIC_LIGHT_MODULE__GREEN_PIN:
+			return basicSetGreenPin(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -306,22 +309,14 @@ public class TrafficLightModuleImpl extends ComponentImpl implements TrafficLigh
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case TrafficLightSystemPackage.TRAFFIC_LIGHT_MODULE__PIN_GROUPS:
-			return getPinGroups();
 		case TrafficLightSystemPackage.TRAFFIC_LIGHT_MODULE__DIRECTION:
 			return getDirection();
 		case TrafficLightSystemPackage.TRAFFIC_LIGHT_MODULE__RED_PIN:
-			if (resolve)
-				return getRedPin();
-			return basicGetRedPin();
+			return getRedPin();
 		case TrafficLightSystemPackage.TRAFFIC_LIGHT_MODULE__YELLOW_PIN:
-			if (resolve)
-				return getYellowPin();
-			return basicGetYellowPin();
+			return getYellowPin();
 		case TrafficLightSystemPackage.TRAFFIC_LIGHT_MODULE__GREEN_PIN:
-			if (resolve)
-				return getGreenPin();
-			return basicGetGreenPin();
+			return getGreenPin();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -331,14 +326,9 @@ public class TrafficLightModuleImpl extends ComponentImpl implements TrafficLigh
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case TrafficLightSystemPackage.TRAFFIC_LIGHT_MODULE__PIN_GROUPS:
-			getPinGroups().clear();
-			getPinGroups().addAll((Collection<? extends PinGroup>) newValue);
-			return;
 		case TrafficLightSystemPackage.TRAFFIC_LIGHT_MODULE__DIRECTION:
 			setDirection((Direction) newValue);
 			return;
@@ -363,9 +353,6 @@ public class TrafficLightModuleImpl extends ComponentImpl implements TrafficLigh
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case TrafficLightSystemPackage.TRAFFIC_LIGHT_MODULE__PIN_GROUPS:
-			getPinGroups().clear();
-			return;
 		case TrafficLightSystemPackage.TRAFFIC_LIGHT_MODULE__DIRECTION:
 			setDirection(DIRECTION_EDEFAULT);
 			return;
@@ -390,8 +377,6 @@ public class TrafficLightModuleImpl extends ComponentImpl implements TrafficLigh
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case TrafficLightSystemPackage.TRAFFIC_LIGHT_MODULE__PIN_GROUPS:
-			return pinGroups != null && !pinGroups.isEmpty();
 		case TrafficLightSystemPackage.TRAFFIC_LIGHT_MODULE__DIRECTION:
 			return direction != DIRECTION_EDEFAULT;
 		case TrafficLightSystemPackage.TRAFFIC_LIGHT_MODULE__RED_PIN:

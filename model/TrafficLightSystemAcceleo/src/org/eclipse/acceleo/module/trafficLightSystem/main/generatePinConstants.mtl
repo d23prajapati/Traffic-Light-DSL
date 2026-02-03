@@ -7,9 +7,9 @@
 /* PIN DEFINITIONS */
 
 [for (aTrafficLightModule : TrafficLightModule | aSystemStructure.components->select(c | c.oclIsTypeOf(TrafficLightModule)))]
-	const int PIN_[aTrafficLightModule.name/]_RED = [getPinNumber(aTrafficLightModule, aTrafficLightModule.redPin.name)/];
-	const int PIN_[aTrafficLightModule.name/]_YELLOW = [getPinNumber(aTrafficLightModule, aTrafficLightModule.yellowPin.name)/];
-	const int PIN_[aTrafficLightModule.name/]_GREEN = [getPinNumber(aTrafficLightModule, aTrafficLightModule.greenPin.name)/];
+	const int PIN_[aTrafficLightModule.name/]_RED = [getRedPinNumber(aTrafficLightModule)/];
+	const int PIN_[aTrafficLightModule.name/]_YELLOW = [getYellowPinNumber(aTrafficLightModule)/];
+	const int PIN_[aTrafficLightModule.name/]_GREEN = [getGreenPinNumber(aTrafficLightModule)/];
 [/for]
 
 [for (aLED : LED | aSystemStructure.components->select(c | c.oclIsTypeOf(LED)))]

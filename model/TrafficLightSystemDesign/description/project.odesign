@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:properties="http://www.eclipse.org/sirius/properties/1.0.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" xmlns:validation="http://www.eclipse.org/sirius/description/validation/1.1.0" name="project" version="12.0.0.2017041100">
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:properties="http://www.eclipse.org/sirius/properties/1.0.0" xmlns:properties-ext-widgets-reference="http://www.eclipse.org/sirius/properties/1.0.0/ext/widgets/reference" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" xmlns:validation="http://www.eclipse.org/sirius/description/validation/1.1.0" name="project" version="12.0.0.2017041100">
   <ownedViewpoints name="TrafficLightSystemViewPoint">
     <validationSet name="ModelCheck">
       <ownedRules xsi:type="validation:SemanticValidationRule" name="CheckWire" level="ERROR" message="There is a short circuit" targetClass="trafficLightSystem::Connection">
@@ -9,13 +9,7 @@
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="SystemStructureDiagram" domainClass="trafficLightSystem::SystemStructure" enablePopupBars="true">
       <metamodel href="http://www.example.org/trafficLightSystem#/"/>
       <defaultLayer name="Default">
-        <nodeMappings name="BoardNode" semanticCandidatesExpression="aql:self.board" domainClass="trafficLightSystem::Board" reusedBorderedNodeMappings="//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']">
-          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/TrafficLightSystem.project.design/arduinoImages/images/arduino.png">
-            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-          </style>
-        </nodeMappings>
-        <nodeMappings name="TrafficLightModuleNode" semanticCandidatesExpression="aql:self.components" domainClass="trafficLightSystem::TrafficLightModule">
+        <nodeMappings name="BoardNode" semanticCandidatesExpression="aql:self.board" domainClass="trafficLightSystem::Board">
           <borderedNodeMappings name="PinGroupNode" semanticCandidatesExpression="aql:self.pinGroups" domainClass="trafficLightSystem::PinGroup">
             <borderedNodeMappings name="PinNode" semanticCandidatesExpression="aql:self.pins" domainClass="trafficLightSystem::Pin">
               <style xsi:type="style:DotDescription" labelSize="12" showIcon="false" labelExpression="aql:''" labelPosition="node" resizeKind="NSEW">
@@ -37,30 +31,78 @@
               <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='chocolate']"/>
             </style>
           </borderedNodeMappings>
-          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/TrafficLightSystem.project.design/arduinoImages/images/svg/vertical-traffic-light-modlue.svg">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="40" labelPosition="node" resizeKind="NSEW" workspacePath="/TrafficLightSystem.project.design/arduinoImages/images/arduino.png">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
         </nodeMappings>
-        <nodeMappings name="LEDNode" semanticCandidatesExpression="aql:self.components" domainClass="trafficLightSystem::LED" reusedBorderedNodeMappings="//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']">
-          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/TrafficLightSystem.project.design/arduinoImages/images/svg/led-green.svg">
+        <nodeMappings name="TrafficLightModuleNode" semanticCandidatesExpression="aql:self.components" domainClass="trafficLightSystem::TrafficLightModule">
+          <borderedNodeMappings name="RedPinNode" semanticCandidatesExpression="aql:self.redPin" domainClass="trafficLightSystem::Pin">
+            <style xsi:type="style:DotDescription" labelSize="12" showIcon="false" labelExpression="aql:''" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+            </style>
+            <conditionnalStyles predicateExpression="aql:self.type=trafficLightSystem::PinType::GND">
+              <style xsi:type="style:DotDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </style>
+            </conditionnalStyles>
+          </borderedNodeMappings>
+          <borderedNodeMappings name="YellowPinNode" semanticCandidatesExpression="aql:self.yellowPin" domainClass="trafficLightSystem::Pin">
+            <style xsi:type="style:DotDescription" labelSize="12" showIcon="false" labelExpression="aql:''" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
+            </style>
+            <conditionnalStyles predicateExpression="aql:self.type=trafficLightSystem::PinType::GND">
+              <style xsi:type="style:DotDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </style>
+            </conditionnalStyles>
+          </borderedNodeMappings>
+          <borderedNodeMappings name="GreenPinNode" semanticCandidatesExpression="aql:self.greenPin" domainClass="trafficLightSystem::Pin">
+            <style xsi:type="style:DotDescription" labelSize="12" showIcon="false" labelExpression="aql:''" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+            </style>
+            <conditionnalStyles predicateExpression="aql:self.type=trafficLightSystem::PinType::GND">
+              <style xsi:type="style:DotDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </style>
+            </conditionnalStyles>
+          </borderedNodeMappings>
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" iconPath="/TrafficLightSystem.project.design/arduinoImages/images/svg/TrafficLight_RED.svg" sizeComputationExpression="15" labelPosition="node" resizeKind="NSEW" workspacePath="/TrafficLightSystem.project.design/arduinoImages/images/svg/vertical-traffic-light-modlue.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="LEDNode" semanticCandidatesExpression="aql:self.components" domainClass="trafficLightSystem::LED" reusedBorderedNodeMappings="//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='BoardNode']/@borderedNodeMappings[name='PinGroupNode']">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW" workspacePath="/TrafficLightSystem.project.design/arduinoImages/images/svg/led-green.svg">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
           <conditionnalStyles predicateExpression="aql:self.color=trafficLightSystem::LightColor::RED">
-            <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/TrafficLightSystem.project.design/arduinoImages/images/svg/led-red.svg">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW" workspacePath="/TrafficLightSystem.project.design/arduinoImages/images/svg/led-red.svg">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </style>
           </conditionnalStyles>
         </nodeMappings>
-        <nodeMappings name="ButtonNode" semanticCandidatesExpression="aql:self.components" domainClass="trafficLightSystem::Button" reusedBorderedNodeMappings="//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']">
-          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/TrafficLightSystem.project.design/arduinoImages/images/svg/Push_button.svg">
+        <nodeMappings name="ButtonNode" semanticCandidatesExpression="aql:self.components" domainClass="trafficLightSystem::Button" reusedBorderedNodeMappings="//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='BoardNode']/@borderedNodeMappings[name='PinGroupNode']">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW" workspacePath="/TrafficLightSystem.project.design/arduinoImages/images/svg/Push_button.svg">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
         </nodeMappings>
-        <edgeMappings name="WireEdge" semanticCandidatesExpression="aql:self.connections" sourceMapping="//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']/@borderedNodeMappings[name='PinNode']" targetMapping="//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']/@borderedNodeMappings[name='PinNode']" targetFinderExpression="aql:self.target" sourceFinderExpression="aql:self.src" domainClass="trafficLightSystem::Connection" useDomainElement="true">
+        <edgeMappings name="WireEdge" semanticCandidatesExpression="aql:self.connections" sourceMapping="//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='RedPinNode'] //@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='BoardNode']/@borderedNodeMappings[name='PinGroupNode']/@borderedNodeMappings[name='PinNode'] //@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='GreenPinNode'] //@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='YellowPinNode']" targetMapping="//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='RedPinNode'] //@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='BoardNode']/@borderedNodeMappings[name='PinGroupNode']/@borderedNodeMappings[name='PinNode'] //@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='GreenPinNode'] //@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='YellowPinNode']" targetFinderExpression="aql:self.target" sourceFinderExpression="aql:self.src" domainClass="trafficLightSystem::Connection" useDomainElement="true">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <centerLabelStyleDescription labelSize="12" showIcon="false">
@@ -69,7 +111,7 @@
           </style>
         </edgeMappings>
         <toolSections name="TrafficLightSystemTools">
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="Create TrafficLight Module" nodeMappings="//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Create TrafficLight Module" nodeMappings="//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']" iconPath="/TrafficLightSystem.project.design/arduinoImages/images/svg/traffic-light-icon.jpg">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -80,7 +122,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="Create LED" nodeMappings="//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='LEDNode']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Create LED" nodeMappings="//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='LEDNode']" iconPath="/TrafficLightSystem.project.design/arduinoImages/images/svg/LED_ICON.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -91,7 +133,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="Create Button" nodeMappings="//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='ButtonNode']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Create Button" nodeMappings="//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='ButtonNode']" iconPath="/TrafficLightSystem.project.design/arduinoImages/images/svg/BUTTON_ICON.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -102,7 +144,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="Create Pin" precondition="aql:container.oclIsKindOf(trafficLightSystem::PinGroup) or container.oclIsKindOf(trafficLightSystem::Board) or container.oclIsKindOf(trafficLightSystem::LED) or container.oclIsKindOf(trafficLightSystem::TrafficLightModule) or container.oclIsKindOf(trafficLightSystem::Button)" nodeMappings="//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='PinGroupNode']/@borderedNodeMappings[name='PinNode']" extraMappings="//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='BoardNode'] //@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='ButtonNode'] //@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='LEDNode'] //@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Create Pin" precondition="aql:container.oclIsKindOf(trafficLightSystem::PinGroup) or container.oclIsKindOf(trafficLightSystem::Board) or container.oclIsKindOf(trafficLightSystem::LED)  or container.oclIsKindOf(trafficLightSystem::TrafficLightModule) or container.oclIsKindOf(trafficLightSystem::Button)" nodeMappings="//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']/@borderedNodeMappings[name='RedPinNode'] //@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='BoardNode']/@borderedNodeMappings[name='PinGroupNode']/@borderedNodeMappings[name='PinNode']" extraMappings="//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='BoardNode'] //@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='ButtonNode'] //@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='LEDNode'] //@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='TrafficLightModuleNode']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -118,13 +160,32 @@
                     </subModelOperations>
                   </subModelOperations>
                 </cases>
-                <cases conditionExpression="aql:container.oclIsKindOf(trafficLightSystem::Board) or container.oclIsKindOf(trafficLightSystem::LED) or container.oclIsKindOf(trafficLightSystem::TrafficLightModule) or container.oclIsKindOf(trafficLightSystem::Button)">
+                <cases conditionExpression="aql:container.oclIsKindOf(trafficLightSystem::Board) or container.oclIsKindOf(trafficLightSystem::LED)  or container.oclIsKindOf(trafficLightSystem::Button)">
                   <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
                     <subModelOperations xsi:type="tool_1:CreateInstance" typeName="trafficLightSystem::PinGroup" referenceName="pinGroups" variableName="groupInstance">
                       <subModelOperations xsi:type="tool_1:CreateInstance" typeName="trafficLightSystem::Pin" referenceName="pins" variableName="pinInstance">
                         <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:pinInstance">
                           <subModelOperations xsi:type="tool_1:SetValue" featureName="pinNr" valueExpression="0"/>
                         </subModelOperations>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                </cases>
+                <cases conditionExpression="aql:container.oclIsKindOf(trafficLightSystem::TrafficLightModule)">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="trafficLightSystem::Pin" referenceName="redPin" variableName="redPinInstance">
+                      <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:redPinInstance">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="pinNr" valueExpression="0"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="trafficLightSystem::Pin" referenceName="yellowPin" variableName="yellowPinInstance">
+                      <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:yellowPinInstance">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="pinNr" valueExpression="0"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="trafficLightSystem::Pin" referenceName="greenPin" variableName="greenPinInstance">
+                      <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:greenPinInstance">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="pinNr" valueExpression="0"/>
                       </subModelOperations>
                     </subModelOperations>
                   </subModelOperations>
@@ -160,6 +221,17 @@
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.oclAsType(trafficLightSystem::Component).printComponentName()"/>
             </initialOperation>
           </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Create Board" nodeMappings="//@ownedViewpoints[name='TrafficLightSystemViewPoint']/@ownedRepresentations[name='SystemStructureDiagram']/@defaultLayer/@nodeMappings[name='BoardNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="trafficLightSystem::Board" referenceName="board">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="new Board"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
@@ -177,7 +249,7 @@
         <containerMappings name="JunctionController" semanticCandidatesExpression="aql:self.junctionController" domainClass="trafficLightSystem::JunctionController">
           <subContainerMappings name="PhaseContainer" semanticCandidatesExpression="aql:self.phases" domainClass="trafficLightSystem::Phase">
             <subNodeMappings name="TrafficAssignmentNode" semanticCandidatesExpression="aql:self.trafficLightAssignments" domainClass="trafficLightSystem::TrafficLightAssignment">
-              <style xsi:type="style:SquareDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+              <style xsi:type="style:SquareDescription" labelSize="12" labelExpression="aql:''" labelPosition="node" resizeKind="NSEW">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
@@ -231,6 +303,14 @@
               <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
               <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_orange']"/>
             </style>
+            <conditionnalStyles predicateExpression="aql:self.eContainer().eContents()->indexOf(self) = 1">
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" widthComputationExpression="30" heightComputationExpression="30">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
+              </style>
+            </conditionnalStyles>
           </subContainerMappings>
           <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:self.name" widthComputationExpression="100" heightComputationExpression="100">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -292,7 +372,7 @@
   </ownedViewpoints>
   <extensions xsi:type="properties:ViewExtensionDescription" name="Properties">
     <categories name="StructureCategory">
-      <pages name="TrafficLightModulePage" labelExpression="Traffic Light Module Setup" domainClass="trafficLightSystem::TrafficLightModule" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.0">
+      <pages name="TrafficLightModulePage" labelExpression="Traffic Light Module Setup" domainClass="trafficLightSystem::TrafficLightModule" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.0 //@extensions.0/@categories.0/@groups.3">
         <validationSet>
           <semanticValidationRules name="NameCheck" level="ERROR" message="Empty name" targetClass="trafficLightSystem::TrafficLightModule">
             <audits auditExpression="aql:self.oclAsType(trafficLightSystem::TrafficLightModule).name.size()>0"/>
@@ -361,9 +441,18 @@
           </initialOperation>
         </controls>
       </groups>
+      <groups name="TrafficLightModuleGroup" labelExpression="Setup Traffic Light Module" domainClass="trafficLightSystem::TrafficLightModule" semanticCandidateExpression="var:self">
+        <controls xsi:type="properties:RadioDescription" name="DirectionRadio" labelExpression="Direction" valueExpression="aql:self.direction.toString()" candidatesExpression="aql:trafficLightSystem::Direction.eContents().toString()" candidateDisplayExpression="aql:candidate.toString()">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:SetValue" featureName="direction" valueExpression="var:newValue"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+      </groups>
     </categories>
     <categories name="BehaviorCategory">
-      <pages name="JunctionControllerPage" labelExpression="JunctionControllerSetup" domainClass="trafficLightSystem::JunctionController" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.1/@groups.0"/>
+      <pages name="JunctionControllerPage" labelExpression="JunctionControllerSetup" domainClass="trafficLightSystem::JunctionController" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.1/@groups.0 //@extensions.0/@categories.1/@groups.4"/>
       <pages name="PhasePage" labelExpression="Setup Phase" domainClass="trafficLightSystem::Phase" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.1/@groups.0 //@extensions.0/@categories.1/@groups.1"/>
       <pages name="TrafficAssignmentPage" labelExpression="Page" domainClass="trafficLightSystem::TrafficLightAssignment" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.1/@groups.2"/>
       <pages name="PedestrianAssignmentPage" labelExpression="Setup Pedestrian Assignment" domainClass="trafficLightSystem::PedestrianAssignment" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.1/@groups.3"/>
@@ -385,7 +474,7 @@
           </initialOperation>
         </controls>
       </groups>
-      <groups name="TrafficAssignmentGroup" labelExpression="Setup Traffic Assignment" domainClass="trafficLightSystem::TrafficLightAssignment" semanticCandidateExpression="var:self">
+      <groups name="TrafficAssignmentGroup" labelExpression="Setup Traffic Assignment" domainClass="trafficLightSystem::TrafficLightAssignment" semanticCandidateExpression="aql:self">
         <controls xsi:type="properties:RadioDescription" name="ColorRadio" labelExpression="Color" valueExpression="aql:self.color.toString()" candidatesExpression="aql:trafficLightSystem::LightColor.eContents().toString()" candidateDisplayExpression="aql:candidate.toString()">
           <initialOperation>
             <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
@@ -393,13 +482,7 @@
             </firstModelOperations>
           </initialOperation>
         </controls>
-        <controls xsi:type="properties:RadioDescription" name="TrafficLightModuleRadio" labelExpression="TrafficLight Module" valueExpression="aql:self.trafficLightModule.name" candidatesExpression="aql:self.trafficLightModule" candidateDisplayExpression="aql:candidate">
-          <initialOperation>
-            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
-              <subModelOperations xsi:type="tool_1:SetValue" featureName="trafficLightModule" valueExpression="var:newValue"/>
-            </firstModelOperations>
-          </initialOperation>
-        </controls>
+        <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="TrafficLightModule" labelExpression="Traffic Light Module" helpExpression="Its associated traffic light module" referenceNameExpression="trafficLightModule" referenceOwnerExpression="aql:self"/>
       </groups>
       <groups name="PedestrianAssignmentGroup" labelExpression="Setup Pedestrian Assignment" domainClass="trafficLightSystem::PedestrianAssignment" semanticCandidateExpression="var:self">
         <controls xsi:type="properties:RadioDescription" name="ColorRadio" labelExpression="Color" valueExpression="aql:self.color.toString()" candidatesExpression="aql:trafficLightSystem::LightColor.eContents().toString()->select(c | c &lt;> 'YELLOW' and c&lt;>'RED_YELLOW')" candidateDisplayExpression="aql:candidate.toString()">
@@ -409,6 +492,11 @@
             </firstModelOperations>
           </initialOperation>
         </controls>
+        <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="ButtonReference" labelExpression="Button Reference" helpExpression="Its associated Button" referenceNameExpression="button" referenceOwnerExpression="aql:self"/>
+        <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="LEDReference" labelExpression="LED Reference" helpExpression="Its associated LED Reference" referenceNameExpression="led" referenceOwnerExpression="aql:self"/>
+      </groups>
+      <groups name="JunctionControllerGroup" labelExpression="Group" domainClass="trafficLightSystem::JunctionController" semanticCandidateExpression="var:self">
+        <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="TrafficLightModuleReference" labelExpression="Traffic Light Module Reference" referenceNameExpression="trafficLightModules" referenceOwnerExpression="aql:self"/>
       </groups>
     </categories>
   </extensions>
