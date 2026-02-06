@@ -117,37 +117,47 @@ void updatePhase() {
 			
 			
 			/* Pedestrian Lights */
-			digitalWrite(PIN_PED_RED_NORTH, HIGH);
-			digitalWrite(PIN_PED_GREEN_NORTH, LOW);
-			digitalWrite(PIN_PED_GREEN_EAST, LOW);
-			digitalWrite(PIN_PED_RED_EAST, HIGH);
-			digitalWrite(PIN_PED_RED_SOUTH, HIGH);
-			digitalWrite(PIN_PED_GREEN_SOUTH, LOW);
 			if(REQ_North_South) {
 				digitalWrite(PIN_PED_RED_NORTH, LOW);
+			} else {
+					digitalWrite(PIN_PED_RED_NORTH, HIGH);
+				
 			}	
 			
 			
 			if(REQ_North_South) {
 				digitalWrite(PIN_PED_GREEN_NORTH, HIGH);
+			} else {
+					digitalWrite(PIN_PED_GREEN_NORTH, LOW);
+				
 			}	
 			
 			
 			
 			if(REQ_East_West) {
-			}	
+			} else {
+					digitalWrite(PIN_PED_GREEN_EAST, LOW);
+			}
 			
 			
 			if(REQ_East_West) {
-			}	
+			} else {
+					digitalWrite(PIN_PED_RED_EAST, HIGH);
+			}
 			
 			if(REQ_North_South) {
 				digitalWrite(PIN_PED_RED_SOUTH, LOW);
+			} else {
+					digitalWrite(PIN_PED_RED_SOUTH, HIGH);
+				
 			}	
 			
 			
 			if(REQ_North_South) {
 				digitalWrite(PIN_PED_GREEN_SOUTH, HIGH);
+			} else {
+					digitalWrite(PIN_PED_GREEN_SOUTH, LOW);
+				
 			}	
 			
 			
@@ -184,33 +194,43 @@ void updatePhase() {
 			
 			
 			/* Pedestrian Lights */
-			digitalWrite(PIN_PED_GREEN_NORTH, LOW);
-			digitalWrite(PIN_PED_RED_NORTH, HIGH);
-			digitalWrite(PIN_PED_GREEN_EAST, LOW);
-			digitalWrite(PIN_PED_RED_EAST, HIGH);
-			digitalWrite(PIN_PED_RED_SOUTH, HIGH);
-			digitalWrite(PIN_PED_GREEN_SOUTH, LOW);
 			if(REQ_North_South) {
+			} else {
+					digitalWrite(PIN_PED_GREEN_NORTH, LOW);
+				
 			}	
 			
 			
 			if(REQ_North_South) {
+			} else {
+					digitalWrite(PIN_PED_RED_NORTH, HIGH);
+				
 			}	
 			
 			
 			
 			if(REQ_East_West) {
-			}	
+			} else {
+					digitalWrite(PIN_PED_GREEN_EAST, LOW);
+			}
 			
 			
 			if(REQ_East_West) {
-			}	
+			} else {
+					digitalWrite(PIN_PED_RED_EAST, HIGH);
+			}
 			
 			if(REQ_North_South) {
+			} else {
+					digitalWrite(PIN_PED_RED_SOUTH, HIGH);
+				
 			}	
 			
 			
 			if(REQ_North_South) {
+			} else {
+					digitalWrite(PIN_PED_GREEN_SOUTH, LOW);
+				
 			}	
 			
 			
@@ -239,35 +259,45 @@ void updatePhase() {
 			
 			
 			/* Pedestrian Lights */
-			digitalWrite(PIN_PED_GREEN_NORTH, LOW);
-			digitalWrite(PIN_PED_RED_NORTH, HIGH);
-			digitalWrite(PIN_PED_RED_EAST, HIGH);
-			digitalWrite(PIN_PED_GREEN_EAST, LOW);
-			digitalWrite(PIN_PED_GREEN_SOUTH, LOW);
-			digitalWrite(PIN_PED_RED_SOUTH, HIGH);
 			if(REQ_North_South) {
+			} else {
+					digitalWrite(PIN_PED_GREEN_NORTH, LOW);
+				
 			}	
 			
 			
 			if(REQ_North_South) {
+			} else {
+					digitalWrite(PIN_PED_RED_NORTH, HIGH);
+				
 			}	
 			
 			
 			
 			if(REQ_East_West) {
 				digitalWrite(PIN_PED_RED_EAST, LOW);
-			}	
+			} else {
+					digitalWrite(PIN_PED_RED_EAST, HIGH);
+			}
 			
 			
 			if(REQ_East_West) {
 				digitalWrite(PIN_PED_GREEN_EAST, HIGH);
-			}	
+			} else {
+					digitalWrite(PIN_PED_GREEN_EAST, LOW);
+			}
 			
 			if(REQ_North_South) {
+			} else {
+					digitalWrite(PIN_PED_GREEN_SOUTH, LOW);
+				
 			}	
 			
 			
 			if(REQ_North_South) {
+			} else {
+					digitalWrite(PIN_PED_RED_SOUTH, HIGH);
+				
 			}	
 			
 			
@@ -300,33 +330,43 @@ void updatePhase() {
 			
 			
 			/* Pedestrian Lights */
-			digitalWrite(PIN_PED_GREEN_NORTH, LOW);
-			digitalWrite(PIN_PED_RED_NORTH, HIGH);
-			digitalWrite(PIN_PED_GREEN_EAST, LOW);
-			digitalWrite(PIN_PED_RED_EAST, HIGH);
-			digitalWrite(PIN_PED_GREEN_SOUTH, LOW);
-			digitalWrite(PIN_PED_RED_SOUTH, HIGH);
 			if(REQ_North_South) {
+			} else {
+					digitalWrite(PIN_PED_GREEN_NORTH, LOW);
+				
 			}	
 			
 			
 			if(REQ_North_South) {
+			} else {
+					digitalWrite(PIN_PED_RED_NORTH, HIGH);
+				
 			}	
 			
 			
 			
 			if(REQ_East_West) {
-			}	
+			} else {
+					digitalWrite(PIN_PED_GREEN_EAST, LOW);
+			}
 			
 			
 			if(REQ_East_West) {
-			}	
+			} else {
+					digitalWrite(PIN_PED_RED_EAST, HIGH);
+			}
 			
 			if(REQ_North_South) {
+			} else {
+					digitalWrite(PIN_PED_GREEN_SOUTH, LOW);
+				
 			}	
 			
 			
 			if(REQ_North_South) {
+			} else {
+					digitalWrite(PIN_PED_RED_SOUTH, HIGH);
+				
 			}	
 			
 			

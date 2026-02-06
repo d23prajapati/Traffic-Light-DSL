@@ -4,14 +4,18 @@
 
 [template public generatePedestrianAssignments(aPhase : Phase)]
 [for (pa : PedestrianAssignment | aPhase.pedestrianAssignments)]
-digitalWrite(PIN_[pa.led.name/], [if (pa.led.color = LightColor::GREEN)]LOW[else]HIGH[/if]);
-[/for]
-[for (pa : PedestrianAssignment | aPhase.pedestrianAssignments)]
 [if (pa.led.direction.toString() = 'NORTH_SOUTH')]
 if(REQ_North_South) {
 [if (pa.color = pa.led.color)]
 	digitalWrite(PIN_[pa.led.name/], [if (pa.led.color = LightColor::GREEN)]HIGH[else]LOW[/if]);
 [/if]
+} else {
+	[if (pa.color = pa.led.color)]
+		digitalWrite(PIN_[pa.led.name/], [if (pa.led.color = LightColor::GREEN)]LOW[else]HIGH[/if]);
+	[else]
+		digitalWrite(PIN_[pa.led.name/], [if (pa.led.color = LightColor::GREEN)]LOW[else]HIGH[/if]);
+	[/if]
+	
 }	
 [/if]
 
@@ -20,7 +24,13 @@ if(REQ_East_West) {
 [if (pa.color = pa.led.color)]
 	digitalWrite(PIN_[pa.led.name/], [if (pa.led.color = LightColor::GREEN)]HIGH[else]LOW[/if]);
 [/if]
-}	
+} else {
+	[if (pa.color = pa.led.color)]
+		digitalWrite(PIN_[pa.led.name/], [if (pa.led.color = LightColor::GREEN)]LOW[else]HIGH[/if]);
+	[else]
+		digitalWrite(PIN_[pa.led.name/], [if (pa.led.color = LightColor::GREEN)]LOW[else]HIGH[/if]);
+	[/if]
+}
 [/if]
 
 [/for]
