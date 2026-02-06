@@ -54,6 +54,7 @@ public class ComponentItemProvider extends ItemProviderAdapter implements IEditi
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
+			addDirectionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -71,6 +72,22 @@ public class ComponentItemProvider extends ItemProviderAdapter implements IEditi
 						getString("_UI_PropertyDescriptor_description", "_UI_Component_name_feature",
 								"_UI_Component_type"),
 						TrafficLightSystemPackage.Literals.COMPONENT__NAME, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Direction feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDirectionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Component_direction_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Component_direction_feature",
+								"_UI_Component_type"),
+						TrafficLightSystemPackage.Literals.COMPONENT__DIRECTION, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -121,6 +138,7 @@ public class ComponentItemProvider extends ItemProviderAdapter implements IEditi
 
 		switch (notification.getFeatureID(Component.class)) {
 		case TrafficLightSystemPackage.COMPONENT__NAME:
+		case TrafficLightSystemPackage.COMPONENT__DIRECTION:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

@@ -45,6 +45,7 @@
     </genClasses>
     <genClasses ecoreClass="trafficLightSystem.ecore#//Component">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trafficLightSystem.ecore#//Component/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trafficLightSystem.ecore#//Component/direction"/>
     </genClasses>
     <genClasses ecoreClass="trafficLightSystem.ecore#//Pin">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trafficLightSystem.ecore#//Pin/pinNr"/>
@@ -56,7 +57,6 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference trafficLightSystem.ecore#//Connection/target"/>
     </genClasses>
     <genClasses ecoreClass="trafficLightSystem.ecore#//TrafficLightModule">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trafficLightSystem.ecore#//TrafficLightModule/direction"/>
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference trafficLightSystem.ecore#//TrafficLightModule/redPin"/>
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference trafficLightSystem.ecore#//TrafficLightModule/yellowPin"/>
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference trafficLightSystem.ecore#//TrafficLightModule/greenPin"/>

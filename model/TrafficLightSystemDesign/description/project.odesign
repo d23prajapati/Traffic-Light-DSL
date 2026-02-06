@@ -386,7 +386,7 @@
           </semanticValidationRules>
         </validationSet>
       </pages>
-      <pages name="ButtonPage" labelExpression="Button Setup" domainClass="trafficLightSystem::Button" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.0">
+      <pages name="ButtonPage" labelExpression="Button Setup" domainClass="trafficLightSystem::Button" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.0 //@extensions.0/@categories.0/@groups.4">
         <validationSet>
           <semanticValidationRules name="NameCheck" level="ERROR" message="Empty name" targetClass="trafficLightSystem::Button">
             <audits auditExpression="aql:self.oclAsType(trafficLightSystem::Button).name.size()>0"/>
@@ -440,8 +440,24 @@
             </firstModelOperations>
           </initialOperation>
         </controls>
+        <controls xsi:type="properties:RadioDescription" name="DirectionRadio" labelExpression="Direction" valueExpression="aql:self.direction.toString()" candidatesExpression="aql:trafficLightSystem::Direction.eContents().toString()" candidateDisplayExpression="aql:candidate.toString()">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:SetValue" featureName="direction" valueExpression="var:newValue"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
       </groups>
       <groups name="TrafficLightModuleGroup" labelExpression="Setup Traffic Light Module" domainClass="trafficLightSystem::TrafficLightModule" semanticCandidateExpression="var:self">
+        <controls xsi:type="properties:RadioDescription" name="DirectionRadio" labelExpression="Direction" valueExpression="aql:self.direction.toString()" candidatesExpression="aql:trafficLightSystem::Direction.eContents().toString()" candidateDisplayExpression="aql:candidate.toString()">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:SetValue" featureName="direction" valueExpression="var:newValue"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+      </groups>
+      <groups name="ButtonGroup" labelExpression="Button Setup" domainClass="trafficLightSystem::Button" semanticCandidateExpression="var:self">
         <controls xsi:type="properties:RadioDescription" name="DirectionRadio" labelExpression="Direction" valueExpression="aql:self.direction.toString()" candidatesExpression="aql:trafficLightSystem::Direction.eContents().toString()" candidateDisplayExpression="aql:candidate.toString()">
           <initialOperation>
             <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">

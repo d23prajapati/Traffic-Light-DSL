@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link trafficLightSystem.Component#getName <em>Name</em>}</li>
+ *   <li>{@link trafficLightSystem.Component#getDirection <em>Direction</em>}</li>
  * </ul>
  *
  * @see trafficLightSystem.TrafficLightSystemPackage#getComponent()
@@ -42,5 +43,30 @@ public interface Component extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Direction</b></em>' attribute.
+	 * The literals are from the enumeration {@link trafficLightSystem.Direction}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Direction</em>' attribute.
+	 * @see trafficLightSystem.Direction
+	 * @see #setDirection(Direction)
+	 * @see trafficLightSystem.TrafficLightSystemPackage#getComponent_Direction()
+	 * @model
+	 * @generated
+	 */
+	Direction getDirection();
+
+	/**
+	 * Sets the value of the '{@link trafficLightSystem.Component#getDirection <em>Direction</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Direction</em>' attribute.
+	 * @see trafficLightSystem.Direction
+	 * @see #getDirection()
+	 * @generated
+	 */
+	void setDirection(Direction value);
 
 } // Component

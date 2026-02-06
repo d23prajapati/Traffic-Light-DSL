@@ -5,7 +5,13 @@
 [template public generateRequestReset(aPhase : Phase)]
 [for (pa : PedestrianAssignment | aPhase.pedestrianAssignments)]
 [if (pa.color = pa.led.color)]
-	REQ_[pa.button.name/] = false;
+	[if (pa.led.direction.toString() = 'NORTH_SOUTH')]
+		REQ_North_South = false;
+	[/if]
+	
+	[if (pa.led.direction.toString() = 'EAST_WEST')]
+		REQ_East_West = false;
+	[/if]
 [/if]
 [/for]
 [/template]

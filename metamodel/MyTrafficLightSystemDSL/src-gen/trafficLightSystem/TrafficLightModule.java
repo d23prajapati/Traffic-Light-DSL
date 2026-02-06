@@ -11,7 +11,6 @@ package trafficLightSystem;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link trafficLightSystem.TrafficLightModule#getDirection <em>Direction</em>}</li>
  *   <li>{@link trafficLightSystem.TrafficLightModule#getRedPin <em>Red Pin</em>}</li>
  *   <li>{@link trafficLightSystem.TrafficLightModule#getYellowPin <em>Yellow Pin</em>}</li>
  *   <li>{@link trafficLightSystem.TrafficLightModule#getGreenPin <em>Green Pin</em>}</li>
@@ -22,31 +21,6 @@ package trafficLightSystem;
  * @generated
  */
 public interface TrafficLightModule extends Component {
-	/**
-	 * Returns the value of the '<em><b>Direction</b></em>' attribute.
-	 * The literals are from the enumeration {@link trafficLightSystem.Direction}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Direction</em>' attribute.
-	 * @see trafficLightSystem.Direction
-	 * @see #setDirection(Direction)
-	 * @see trafficLightSystem.TrafficLightSystemPackage#getTrafficLightModule_Direction()
-	 * @model
-	 * @generated
-	 */
-	Direction getDirection();
-
-	/**
-	 * Sets the value of the '{@link trafficLightSystem.TrafficLightModule#getDirection <em>Direction</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Direction</em>' attribute.
-	 * @see trafficLightSystem.Direction
-	 * @see #getDirection()
-	 * @generated
-	 */
-	void setDirection(Direction value);
-
 	/**
 	 * Returns the value of the '<em><b>Red Pin</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

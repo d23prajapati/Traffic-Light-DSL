@@ -25,6 +25,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Component" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="direction" eType="#//Direction"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Pin">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinNr" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -45,7 +46,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Pin"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TrafficLightModule" eSuperTypes="#//Component">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="direction" eType="#//Direction"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="redPin" eType="#//Pin"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="yellowPin" eType="#//Pin"

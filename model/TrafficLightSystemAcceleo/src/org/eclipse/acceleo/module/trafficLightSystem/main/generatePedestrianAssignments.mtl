@@ -7,10 +7,21 @@
 digitalWrite(PIN_[pa.led.name/], [if (pa.led.color = LightColor::GREEN)]LOW[else]HIGH[/if]);
 [/for]
 [for (pa : PedestrianAssignment | aPhase.pedestrianAssignments)]
-if(REQ_[pa.button.name/]) {
+[if (pa.led.direction.toString() = 'NORTH_SOUTH')]
+if(REQ_North_South) {
 [if (pa.color = pa.led.color)]
 	digitalWrite(PIN_[pa.led.name/], [if (pa.led.color = LightColor::GREEN)]HIGH[else]LOW[/if]);
 [/if]
-}
+}	
+[/if]
+
+[if (pa.led.direction.toString() = 'EAST_WEST')]
+if(REQ_East_West) {
+[if (pa.color = pa.led.color)]
+	digitalWrite(PIN_[pa.led.name/], [if (pa.led.color = LightColor::GREEN)]HIGH[else]LOW[/if]);
+[/if]
+}	
+[/if]
+
 [/for]
 [/template]

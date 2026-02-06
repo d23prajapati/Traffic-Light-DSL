@@ -3,7 +3,6 @@
 
 
 [template public generateLastButtonStates(aSystemStructure : SystemStructure)]
-[for (aButton : Button | aSystemStructure.components->select(c | c.oclIsTypeOf(Button)))]
-	bool LAST_[aButton.name/] = HIGH;
-[/for]
+bool LAST_North_South = HIGH;
+bool LAST_East_West = HIGH;
 [/template]

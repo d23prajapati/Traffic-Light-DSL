@@ -10,7 +10,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import trafficLightSystem.Direction;
 import trafficLightSystem.Pin;
 import trafficLightSystem.TrafficLightModule;
 import trafficLightSystem.TrafficLightSystemPackage;
@@ -23,7 +22,6 @@ import trafficLightSystem.TrafficLightSystemPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link trafficLightSystem.impl.TrafficLightModuleImpl#getDirection <em>Direction</em>}</li>
  *   <li>{@link trafficLightSystem.impl.TrafficLightModuleImpl#getRedPin <em>Red Pin</em>}</li>
  *   <li>{@link trafficLightSystem.impl.TrafficLightModuleImpl#getYellowPin <em>Yellow Pin</em>}</li>
  *   <li>{@link trafficLightSystem.impl.TrafficLightModuleImpl#getGreenPin <em>Green Pin</em>}</li>
@@ -32,26 +30,6 @@ import trafficLightSystem.TrafficLightSystemPackage;
  * @generated
  */
 public class TrafficLightModuleImpl extends ComponentImpl implements TrafficLightModule {
-	/**
-	 * The default value of the '{@link #getDirection() <em>Direction</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDirection()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Direction DIRECTION_EDEFAULT = Direction.NORTH_SOUTH;
-
-	/**
-	 * The cached value of the '{@link #getDirection() <em>Direction</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDirection()
-	 * @generated
-	 * @ordered
-	 */
-	protected Direction direction = DIRECTION_EDEFAULT;
-
 	/**
 	 * The cached value of the '{@link #getRedPin() <em>Red Pin</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -99,30 +77,6 @@ public class TrafficLightModuleImpl extends ComponentImpl implements TrafficLigh
 	@Override
 	protected EClass eStaticClass() {
 		return TrafficLightSystemPackage.Literals.TRAFFIC_LIGHT_MODULE;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Direction getDirection() {
-		return direction;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setDirection(Direction newDirection) {
-		Direction oldDirection = direction;
-		direction = newDirection == null ? DIRECTION_EDEFAULT : newDirection;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					TrafficLightSystemPackage.TRAFFIC_LIGHT_MODULE__DIRECTION, oldDirection, direction));
 	}
 
 	/**
@@ -309,8 +263,6 @@ public class TrafficLightModuleImpl extends ComponentImpl implements TrafficLigh
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case TrafficLightSystemPackage.TRAFFIC_LIGHT_MODULE__DIRECTION:
-			return getDirection();
 		case TrafficLightSystemPackage.TRAFFIC_LIGHT_MODULE__RED_PIN:
 			return getRedPin();
 		case TrafficLightSystemPackage.TRAFFIC_LIGHT_MODULE__YELLOW_PIN:
@@ -329,9 +281,6 @@ public class TrafficLightModuleImpl extends ComponentImpl implements TrafficLigh
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case TrafficLightSystemPackage.TRAFFIC_LIGHT_MODULE__DIRECTION:
-			setDirection((Direction) newValue);
-			return;
 		case TrafficLightSystemPackage.TRAFFIC_LIGHT_MODULE__RED_PIN:
 			setRedPin((Pin) newValue);
 			return;
@@ -353,9 +302,6 @@ public class TrafficLightModuleImpl extends ComponentImpl implements TrafficLigh
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case TrafficLightSystemPackage.TRAFFIC_LIGHT_MODULE__DIRECTION:
-			setDirection(DIRECTION_EDEFAULT);
-			return;
 		case TrafficLightSystemPackage.TRAFFIC_LIGHT_MODULE__RED_PIN:
 			setRedPin((Pin) null);
 			return;
@@ -377,8 +323,6 @@ public class TrafficLightModuleImpl extends ComponentImpl implements TrafficLigh
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case TrafficLightSystemPackage.TRAFFIC_LIGHT_MODULE__DIRECTION:
-			return direction != DIRECTION_EDEFAULT;
 		case TrafficLightSystemPackage.TRAFFIC_LIGHT_MODULE__RED_PIN:
 			return redPin != null;
 		case TrafficLightSystemPackage.TRAFFIC_LIGHT_MODULE__YELLOW_PIN:
@@ -387,23 +331,6 @@ public class TrafficLightModuleImpl extends ComponentImpl implements TrafficLigh
 			return greenPin != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (direction: ");
-		result.append(direction);
-		result.append(')');
-		return result.toString();
 	}
 
 } //TrafficLightModuleImpl

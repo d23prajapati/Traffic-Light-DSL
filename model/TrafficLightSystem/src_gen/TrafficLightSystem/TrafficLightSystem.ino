@@ -23,15 +23,14 @@
 	const int PIN_BTN_SOUTH = 38;
 
 /* PEDESTRIAN REQUEST FLAGS */
-	bool REQ_BTN_NORTH = false;
-	bool REQ_BTN_EAST = false;
-	bool REQ_BTN_SOUTH = false;
+
+bool REQ_North_South = false;
+bool REQ_East_West = false;
 
 
-	bool LAST_BTN_NORTH = HIGH;
-	bool LAST_BTN_EAST = HIGH;
-	bool LAST_BTN_SOUTH = HIGH;
 
+bool LAST_North_South = HIGH;
+bool LAST_East_West = HIGH;
 enum Phase {
 	PHASE_NS_RED_PHASE,
 	PHASE_NS_RED_YELLOW_PHASE,
@@ -43,25 +42,22 @@ unsigned long phaseStartTime = 0;
 void pollButtons() {
 	bool current_BTN_NORTH = digitalRead(PIN_BTN_NORTH);
 	
-	if(LAST_BTN_NORTH == HIGH && current_BTN_NORTH == LOW) {
-		REQ_BTN_NORTH = true;
-	}
-	
-	LAST_BTN_NORTH = current_BTN_NORTH;
+		if(LAST_North_South == HIGH && current_BTN_NORTH == LOW) {
+			REQ_North_South = true;
+		}
+		LAST_North_South = current_BTN_NORTH;
 	bool current_BTN_EAST = digitalRead(PIN_BTN_EAST);
 	
-	if(LAST_BTN_EAST == HIGH && current_BTN_EAST == LOW) {
-		REQ_BTN_EAST = true;
-	}
-	
-	LAST_BTN_EAST = current_BTN_EAST;
+		if(LAST_East_West == HIGH && current_BTN_EAST == LOW) {
+			REQ_East_West = true;
+		}
+		LAST_East_West = current_BTN_EAST;
 	bool current_BTN_SOUTH = digitalRead(PIN_BTN_SOUTH);
 	
-	if(LAST_BTN_SOUTH == HIGH && current_BTN_SOUTH == LOW) {
-		REQ_BTN_SOUTH = true;
-	}
-	
-	LAST_BTN_SOUTH = current_BTN_SOUTH;
+		if(LAST_North_South == HIGH && current_BTN_SOUTH == LOW) {
+			REQ_North_South = true;
+		}
+		LAST_North_South = current_BTN_SOUTH;
 }
 
 void setup() 
@@ -127,29 +123,45 @@ void updatePhase() {
 			digitalWrite(PIN_PED_RED_EAST, HIGH);
 			digitalWrite(PIN_PED_RED_SOUTH, HIGH);
 			digitalWrite(PIN_PED_GREEN_SOUTH, LOW);
-			if(REQ_BTN_NORTH) {
+			if(REQ_North_South) {
 				digitalWrite(PIN_PED_RED_NORTH, LOW);
-			}
-			if(REQ_BTN_NORTH) {
+			}	
+			
+			
+			if(REQ_North_South) {
 				digitalWrite(PIN_PED_GREEN_NORTH, HIGH);
-			}
-			if(REQ_BTN_EAST) {
-			}
-			if(REQ_BTN_EAST) {
-			}
-			if(REQ_BTN_SOUTH) {
+			}	
+			
+			
+			
+			if(REQ_East_West) {
+			}	
+			
+			
+			if(REQ_East_West) {
+			}	
+			
+			if(REQ_North_South) {
 				digitalWrite(PIN_PED_RED_SOUTH, LOW);
-			}
-			if(REQ_BTN_SOUTH) {
+			}	
+			
+			
+			if(REQ_North_South) {
 				digitalWrite(PIN_PED_GREEN_SOUTH, HIGH);
-			}
+			}	
+			
+			
 			
 			
 			if(now - phaseStartTime  >= 6000) {
-					REQ_BTN_NORTH = false;
-					REQ_BTN_NORTH = false;
-					REQ_BTN_SOUTH = false;
-					REQ_BTN_SOUTH = false;
+						REQ_North_South = false;
+					
+						REQ_North_South = false;
+					
+						REQ_North_South = false;
+					
+						REQ_North_South = false;
+					
 				
 				currentPhase = PHASE_NS_RED_YELLOW_PHASE;
 				phaseStartTime = now;
@@ -178,18 +190,30 @@ void updatePhase() {
 			digitalWrite(PIN_PED_RED_EAST, HIGH);
 			digitalWrite(PIN_PED_RED_SOUTH, HIGH);
 			digitalWrite(PIN_PED_GREEN_SOUTH, LOW);
-			if(REQ_BTN_NORTH) {
-			}
-			if(REQ_BTN_NORTH) {
-			}
-			if(REQ_BTN_EAST) {
-			}
-			if(REQ_BTN_EAST) {
-			}
-			if(REQ_BTN_SOUTH) {
-			}
-			if(REQ_BTN_SOUTH) {
-			}
+			if(REQ_North_South) {
+			}	
+			
+			
+			if(REQ_North_South) {
+			}	
+			
+			
+			
+			if(REQ_East_West) {
+			}	
+			
+			
+			if(REQ_East_West) {
+			}	
+			
+			if(REQ_North_South) {
+			}	
+			
+			
+			if(REQ_North_South) {
+			}	
+			
+			
 			
 			
 			if(now - phaseStartTime  >= 2000) {
@@ -221,25 +245,39 @@ void updatePhase() {
 			digitalWrite(PIN_PED_GREEN_EAST, LOW);
 			digitalWrite(PIN_PED_GREEN_SOUTH, LOW);
 			digitalWrite(PIN_PED_RED_SOUTH, HIGH);
-			if(REQ_BTN_NORTH) {
-			}
-			if(REQ_BTN_NORTH) {
-			}
-			if(REQ_BTN_EAST) {
+			if(REQ_North_South) {
+			}	
+			
+			
+			if(REQ_North_South) {
+			}	
+			
+			
+			
+			if(REQ_East_West) {
 				digitalWrite(PIN_PED_RED_EAST, LOW);
-			}
-			if(REQ_BTN_EAST) {
+			}	
+			
+			
+			if(REQ_East_West) {
 				digitalWrite(PIN_PED_GREEN_EAST, HIGH);
-			}
-			if(REQ_BTN_SOUTH) {
-			}
-			if(REQ_BTN_SOUTH) {
-			}
+			}	
+			
+			if(REQ_North_South) {
+			}	
+			
+			
+			if(REQ_North_South) {
+			}	
+			
+			
 			
 			
 			if(now - phaseStartTime  >= 8000) {
-					REQ_BTN_EAST = false;
-					REQ_BTN_EAST = false;
+					
+						REQ_East_West = false;
+					
+						REQ_East_West = false;
 				
 				currentPhase = PHASE_NS_YELLOW_PHASE;
 				phaseStartTime = now;
@@ -268,18 +306,30 @@ void updatePhase() {
 			digitalWrite(PIN_PED_RED_EAST, HIGH);
 			digitalWrite(PIN_PED_GREEN_SOUTH, LOW);
 			digitalWrite(PIN_PED_RED_SOUTH, HIGH);
-			if(REQ_BTN_NORTH) {
-			}
-			if(REQ_BTN_NORTH) {
-			}
-			if(REQ_BTN_EAST) {
-			}
-			if(REQ_BTN_EAST) {
-			}
-			if(REQ_BTN_SOUTH) {
-			}
-			if(REQ_BTN_SOUTH) {
-			}
+			if(REQ_North_South) {
+			}	
+			
+			
+			if(REQ_North_South) {
+			}	
+			
+			
+			
+			if(REQ_East_West) {
+			}	
+			
+			
+			if(REQ_East_West) {
+			}	
+			
+			if(REQ_North_South) {
+			}	
+			
+			
+			if(REQ_North_South) {
+			}	
+			
+			
 			
 			
 			if(now - phaseStartTime  >= 3000) {

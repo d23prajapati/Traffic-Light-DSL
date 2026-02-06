@@ -7,11 +7,18 @@ void pollButtons() {
 [for (aButton : Button | aSystemStructure.components->select(c | c.oclIsTypeOf(Button)))]
 	bool current_[aButton.name/] = digitalRead(PIN_[aButton.name/]);
 	
-	if(LAST_[aButton.name/] == HIGH && current_[aButton.name/] == LOW) {
-		REQ_[aButton.name/] = true;
-	}
-	
-	LAST_[aButton.name/] = current_[aButton.name/];
+	[if (aButton.direction.toString() = 'NORTH_SOUTH')]
+		if(LAST_North_South == HIGH && current_[aButton.name/] == LOW) {
+			REQ_North_South = true;
+		}
+		LAST_North_South = current_[aButton.name/];
+	[/if]
+	[if (aButton.direction.toString() = 'EAST_WEST')]
+		if(LAST_East_West == HIGH && current_[aButton.name/] == LOW) {
+			REQ_East_West = true;
+		}
+		LAST_East_West = current_[aButton.name/];
+	[/if]	
 [/for]
 }
 [/template]

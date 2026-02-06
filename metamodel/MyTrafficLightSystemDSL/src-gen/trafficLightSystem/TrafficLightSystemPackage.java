@@ -242,13 +242,22 @@ public interface TrafficLightSystemPackage extends EPackage {
 	int COMPONENT__NAME = 0;
 
 	/**
+	 * The feature id for the '<em><b>Direction</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT__DIRECTION = 1;
+
+	/**
 	 * The number of structural features of the '<em>Component</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_FEATURE_COUNT = 1;
+	int COMPONENT_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Component</em>' class.
@@ -386,7 +395,7 @@ public interface TrafficLightSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAFFIC_LIGHT_MODULE__DIRECTION = COMPONENT_FEATURE_COUNT + 0;
+	int TRAFFIC_LIGHT_MODULE__DIRECTION = COMPONENT__DIRECTION;
 
 	/**
 	 * The feature id for the '<em><b>Red Pin</b></em>' containment reference.
@@ -395,7 +404,7 @@ public interface TrafficLightSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAFFIC_LIGHT_MODULE__RED_PIN = COMPONENT_FEATURE_COUNT + 1;
+	int TRAFFIC_LIGHT_MODULE__RED_PIN = COMPONENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Yellow Pin</b></em>' containment reference.
@@ -404,7 +413,7 @@ public interface TrafficLightSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAFFIC_LIGHT_MODULE__YELLOW_PIN = COMPONENT_FEATURE_COUNT + 2;
+	int TRAFFIC_LIGHT_MODULE__YELLOW_PIN = COMPONENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Green Pin</b></em>' containment reference.
@@ -413,7 +422,7 @@ public interface TrafficLightSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAFFIC_LIGHT_MODULE__GREEN_PIN = COMPONENT_FEATURE_COUNT + 3;
+	int TRAFFIC_LIGHT_MODULE__GREEN_PIN = COMPONENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Traffic Light Module</em>' class.
@@ -422,7 +431,7 @@ public interface TrafficLightSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAFFIC_LIGHT_MODULE_FEATURE_COUNT = COMPONENT_FEATURE_COUNT + 4;
+	int TRAFFIC_LIGHT_MODULE_FEATURE_COUNT = COMPONENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Traffic Light Module</em>' class.
@@ -451,6 +460,15 @@ public interface TrafficLightSystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int LED__NAME = COMPONENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Direction</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LED__DIRECTION = COMPONENT__DIRECTION;
 
 	/**
 	 * The feature id for the '<em><b>Color</b></em>' attribute.
@@ -506,6 +524,15 @@ public interface TrafficLightSystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int BUTTON__NAME = COMPONENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Direction</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUTTON__DIRECTION = COMPONENT__DIRECTION;
 
 	/**
 	 * The feature id for the '<em><b>Pin Groups</b></em>' containment reference list.
@@ -1027,6 +1054,17 @@ public interface TrafficLightSystemPackage extends EPackage {
 	EAttribute getComponent_Name();
 
 	/**
+	 * Returns the meta object for the attribute '{@link trafficLightSystem.Component#getDirection <em>Direction</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Direction</em>'.
+	 * @see trafficLightSystem.Component#getDirection()
+	 * @see #getComponent()
+	 * @generated
+	 */
+	EAttribute getComponent_Direction();
+
+	/**
 	 * Returns the meta object for class '{@link trafficLightSystem.Pin <em>Pin</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1110,17 +1148,6 @@ public interface TrafficLightSystemPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getTrafficLightModule();
-
-	/**
-	 * Returns the meta object for the attribute '{@link trafficLightSystem.TrafficLightModule#getDirection <em>Direction</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Direction</em>'.
-	 * @see trafficLightSystem.TrafficLightModule#getDirection()
-	 * @see #getTrafficLightModule()
-	 * @generated
-	 */
-	EAttribute getTrafficLightModule_Direction();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link trafficLightSystem.TrafficLightModule#getRedPin <em>Red Pin</em>}'.
@@ -1618,6 +1645,14 @@ public interface TrafficLightSystemPackage extends EPackage {
 		EAttribute COMPONENT__NAME = eINSTANCE.getComponent_Name();
 
 		/**
+		 * The meta object literal for the '<em><b>Direction</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COMPONENT__DIRECTION = eINSTANCE.getComponent_Direction();
+
+		/**
 		 * The meta object literal for the '{@link trafficLightSystem.impl.PinImpl <em>Pin</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1686,14 +1721,6 @@ public interface TrafficLightSystemPackage extends EPackage {
 		 * @generated
 		 */
 		EClass TRAFFIC_LIGHT_MODULE = eINSTANCE.getTrafficLightModule();
-
-		/**
-		 * The meta object literal for the '<em><b>Direction</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TRAFFIC_LIGHT_MODULE__DIRECTION = eINSTANCE.getTrafficLightModule_Direction();
 
 		/**
 		 * The meta object literal for the '<em><b>Red Pin</b></em>' containment reference feature.

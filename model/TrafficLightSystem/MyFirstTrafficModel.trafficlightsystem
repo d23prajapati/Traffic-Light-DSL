@@ -82,19 +82,19 @@
       <yellowPin pinNr="23" name="yellowPin" type="DIGITAL_OUT"/>
       <greenPin pinNr="24" name="greenPin" type="DIGITAL_OUT"/>
     </components>
-    <components xsi:type="trafficLightSystem:LED" name="PED_RED_EAST">
+    <components xsi:type="trafficLightSystem:LED" name="PED_RED_EAST" direction="EAST_WEST">
       <pinGroups>
         <pins pinNr="25" name="PED_RED_EAST_PIN" type="DIGITAL_OUT"/>
         <pins name="GND" type="GND"/>
       </pinGroups>
     </components>
-    <components xsi:type="trafficLightSystem:LED" name="PED_GREEN_EAST" color="GREEN">
+    <components xsi:type="trafficLightSystem:LED" name="PED_GREEN_EAST" direction="EAST_WEST" color="GREEN">
       <pinGroups>
         <pins pinNr="26" name="PED_GREEN_EAST_PIN" type="DIGITAL_OUT"/>
         <pins name="GND" type="GND"/>
       </pinGroups>
     </components>
-    <components xsi:type="trafficLightSystem:Button" name="BTN_EAST">
+    <components xsi:type="trafficLightSystem:Button" name="BTN_EAST" direction="EAST_WEST">
       <pinGroups>
         <pins pinNr="27" name="PED_BTN_EAST_PIN"/>
         <pins name="GND" type="GND"/>

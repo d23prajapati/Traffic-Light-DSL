@@ -374,6 +374,16 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 	 * @generated
 	 */
 	@Override
+	public EAttribute getComponent_Direction() {
+		return (EAttribute) componentEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getPin() {
 		return pinEClass;
 	}
@@ -454,18 +464,8 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 	 * @generated
 	 */
 	@Override
-	public EAttribute getTrafficLightModule_Direction() {
-		return (EAttribute) trafficLightModuleEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EReference getTrafficLightModule_RedPin() {
-		return (EReference) trafficLightModuleEClass.getEStructuralFeatures().get(1);
+		return (EReference) trafficLightModuleEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -475,7 +475,7 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 	 */
 	@Override
 	public EReference getTrafficLightModule_YellowPin() {
-		return (EReference) trafficLightModuleEClass.getEStructuralFeatures().get(2);
+		return (EReference) trafficLightModuleEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -485,7 +485,7 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 	 */
 	@Override
 	public EReference getTrafficLightModule_GreenPin() {
-		return (EReference) trafficLightModuleEClass.getEStructuralFeatures().get(3);
+		return (EReference) trafficLightModuleEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -835,6 +835,7 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 
 		componentEClass = createEClass(COMPONENT);
 		createEAttribute(componentEClass, COMPONENT__NAME);
+		createEAttribute(componentEClass, COMPONENT__DIRECTION);
 
 		pinEClass = createEClass(PIN);
 		createEAttribute(pinEClass, PIN__PIN_NR);
@@ -846,7 +847,6 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 		createEReference(connectionEClass, CONNECTION__TARGET);
 
 		trafficLightModuleEClass = createEClass(TRAFFIC_LIGHT_MODULE);
-		createEAttribute(trafficLightModuleEClass, TRAFFIC_LIGHT_MODULE__DIRECTION);
 		createEReference(trafficLightModuleEClass, TRAFFIC_LIGHT_MODULE__RED_PIN);
 		createEReference(trafficLightModuleEClass, TRAFFIC_LIGHT_MODULE__YELLOW_PIN);
 		createEReference(trafficLightModuleEClass, TRAFFIC_LIGHT_MODULE__GREEN_PIN);
@@ -963,6 +963,8 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getComponent_Name(), ecorePackage.getEString(), "name", null, 0, 1, Component.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getComponent_Direction(), this.getDirection(), "direction", null, 0, 1, Component.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(pinEClass, Pin.class, "Pin", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPin_PinNr(), ecorePackage.getEInt(), "pinNr", null, 0, 1, Pin.class, !IS_TRANSIENT,
@@ -983,9 +985,6 @@ public class TrafficLightSystemPackageImpl extends EPackageImpl implements Traff
 
 		initEClass(trafficLightModuleEClass, TrafficLightModule.class, "TrafficLightModule", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getTrafficLightModule_Direction(), this.getDirection(), "direction", null, 0, 1,
-				TrafficLightModule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
 		initEReference(getTrafficLightModule_RedPin(), this.getPin(), null, "redPin", null, 0, 1,
 				TrafficLightModule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

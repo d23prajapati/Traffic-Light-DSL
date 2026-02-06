@@ -5,7 +5,7 @@
     <semanticResources>trafficLightSystem.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_tjeIQOiREfCbk8pinDXzQA">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_tnrS0OiREfCbk8pinDXzQA" name="trafficLightSystem" repPath="#_tmHMkOiREfCbk8pinDXzQA" changeId="1770115420924">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_tnrS0OiREfCbk8pinDXzQA" name="trafficLightSystem" repPath="#_tmHMkOiREfCbk8pinDXzQA" changeId="1770157225658">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="trafficLightSystem.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -59,6 +59,10 @@
             <children xmi:type="notation:Node" xmi:id="_WAdpkOiUEfCbk8pinDXzQA" type="3010" element="_WAVtwOiUEfCbk8pinDXzQA">
               <styles xmi:type="notation:FontStyle" xmi:id="_WAdpkeiUEfCbk8pinDXzQA" fontColor="2697711" fontName="Segoe UI" fontHeight="8"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_WAdpkuiUEfCbk8pinDXzQA"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_gedrIAFOEfG8ZO5c8ld4hQ" type="3010" element="_geQP0gFOEfG8ZO5c8ld4hQ">
+              <styles xmi:type="notation:FontStyle" xmi:id="_gedrIQFOEfG8ZO5c8ld4hQ" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_gedrIgFOEfG8ZO5c8ld4hQ"/>
             </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_UZBxsuiUEfCbk8pinDXzQA"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_UZBxs-iUEfCbk8pinDXzQA"/>
@@ -136,10 +140,6 @@
         <children xmi:type="notation:Node" xmi:id="_rhogoOjDEfCj-4Wn2ZE-LA" type="2003" element="_rhbFQOjDEfCj-4Wn2ZE-LA">
           <children xmi:type="notation:Node" xmi:id="_rhpuwOjDEfCj-4Wn2ZE-LA" type="5007"/>
           <children xmi:type="notation:Node" xmi:id="_rhpuwejDEfCj-4Wn2ZE-LA" type="7004">
-            <children xmi:type="notation:Node" xmi:id="_LSu1wPehEfChmauogwSCZg" type="3010" element="_LSBrIPehEfChmauogwSCZg">
-              <styles xmi:type="notation:FontStyle" xmi:id="_LSu1wfehEfChmauogwSCZg" fontColor="2697711" fontName="Segoe UI" fontHeight="8"/>
-              <layoutConstraint xmi:type="notation:Location" xmi:id="_LSu1wvehEfChmauogwSCZg"/>
-            </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_rhpuwujDEfCj-4Wn2ZE-LA"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_rhpuw-jDEfCj-4Wn2ZE-LA"/>
           </children>
@@ -772,6 +772,14 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_geQP0gFOEfG8ZO5c8ld4hQ" name="direction : Direction = NORTH_SOUTH" tooltipText="">
+        <target xmi:type="ecore:EAttribute" href="trafficLightSystem.ecore#//Component/direction"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="trafficLightSystem.ecore#//Component/direction"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_geQ20AFOEfG8ZO5c8ld4hQ" labelAlignment="LEFT">
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+      </ownedElements>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_oVsUcOiUEfCbk8pinDXzQA" name="Pin" tooltipText="" incomingEdges="_iQ4ni-iWEfCbk8pinDXzQA _oONhleiWEfCbk8pinDXzQA _K_ZdaumvEfCj-4Wn2ZE-LA _HnwPuPffEfChmauogwSCZg _PdzmAfffEfChmauogwSCZg _XHU8JPffEfChmauogwSCZg" width="12" height="10">
       <target xmi:type="ecore:EClass" href="trafficLightSystem.ecore#//Pin"/>
@@ -952,14 +960,6 @@
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_LSBrIPehEfChmauogwSCZg" name="direction : Direction = NORTH_SOUTH" tooltipText="">
-        <target xmi:type="ecore:EAttribute" href="trafficLightSystem.ecore#//TrafficLightModule/direction"/>
-        <semanticElements xmi:type="ecore:EAttribute" href="trafficLightSystem.ecore#//TrafficLightModule/direction"/>
-        <ownedStyle xmi:type="diagram:BundledImage" uid="_NsBBUfehEfChmauogwSCZg" labelAlignment="LEFT">
-          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
-      </ownedElements>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_Oz7JuujEEfCj-4Wn2ZE-LA" sourceNode="_rhbFQOjDEfCj-4Wn2ZE-LA" targetNode="_UY7rEOiUEfCbk8pinDXzQA">
       <target xmi:type="ecore:EClass" href="trafficLightSystem.ecore#//TrafficLightModule"/>
